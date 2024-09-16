@@ -1,0 +1,2 @@
+old method;new method;parameter
+org.antlr.v4.runtime.Parser.enterOuterAlt()@/antlr4_base1/runtime/Java/src/org/antlr/v4/runtime/Parser.java:441:1;org.antlr.v4.runtime.Parser.enterOuterAlt()@/antlr4_base2/runtime/Java/src/org/antlr/v4/runtime/Parser.java:552:1;int:altNum

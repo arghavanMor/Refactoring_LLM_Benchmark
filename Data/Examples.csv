@@ -1,0 +1,159 @@
+﻿ID,Parent,Project,Type,Fowler_type,path_before,path_after,name,LongName,StartLine,StartColumn,EndLine,EndColumn,BeforeRefact,AfterRefact
+L10937,L8817,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,tool\src\org\antlr\v4\codegen\ParserFactory.java,tool\src\org\antlr\v4\codegen\ParserFactory.java,"List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert)",org.antlr.v4.codegen.ParserFactory.set(Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/tool/ast/GrammarAST;Z)Ljava/util/List;,178,2,199,3,"
+	public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {
+		MatchSet matchOp;
+		if ( invert ) matchOp = new MatchNotSet(this, setAST);
+		else matchOp = new MatchSet(this, setAST);
+		if ( labelAST!=null ) {
+			String label = labelAST.getText();
+			Decl d = getTokenLabelDecl(label);
+			matchOp.labels.add(d);
+			getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);
+			if ( labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN ) {
+				TokenListDecl l = getTokenListLabelDecl(label);
+				getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);
+			}
+		}
+		if ( controller.needsImplicitLabel(setAST, matchOp) ) defineImplicitLabel(setAST, matchOp);
+		AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);
+		return list(matchOp, listLabelOp);
+	}","public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {
+		MatchSet matchOp;
+		if ( invert ) matchOp = new MatchNotSet(this, setAST);
+		else matchOp = new MatchSet(this, setAST);
+		if ( labelAST!=null ) {
+			String label = labelAST.getText();
+			RuleFunction rf = getCurrentRuleFunction();
+			if ( labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN ) {
+				defineImplicitLabel(setAST, matchOp);
+				TokenListDecl l = getTokenListLabelDecl(label);
+				rf.addContextDecl(setAST.getAltLabel(), l);
+			}
+			else {
+				Decl d = getTokenLabelDecl(label);
+				matchOp.labels.add(d);
+				rf.addContextDecl(setAST.getAltLabel(), d);
+			}
+		}
+		if ( controller.needsImplicitLabel(setAST, matchOp) ) defineImplicitLabel(setAST, matchOp);
+		AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);
+		return list(matchOp, listLabelOp);
+	}"
+L5343,L543,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\Parser.java,runtime\Java\src\org\antlr\v4\runtime\Parser.java,List<ParseTreeListener> getParseListeners(),org.antlr.v4.runtime.Parser.getParseListeners()Ljava/util/List;,298,2,305,3,"public List<ParseTreeListener> getParseListeners() {
+        return _parseListeners;
+    }","public List<ParseTreeListener> getParseListeners() {
+		List<ParseTreeListener> listeners = _parseListeners;
+		if (listeners == null) {
+			return Collections.emptyList();
+		}
+
+		return listeners;
+	}"
+L3671,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportAmbiguity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, boolean exact, BitSet ambigAlts, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportAmbiguity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIZLjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,89,2,107,3," public void reportAmbiguity(@NotNull Parser recognizer,
+								DFA dfa, int startIndex, int stopIndex,
+								@NotNull BitSet ambigAlts,
+								@NotNull ATNConfigSet configs)
+    {
+        recognizer.notifyErrorListeners(""reportAmbiguity d="" + dfa.decision +
+			"": ambigAlts="" + ambigAlts + "", input='"" +
+			recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex)) + ""'"");
+    }","public void reportAmbiguity(@NotNull Parser recognizer,
+								DFA dfa,
+								int startIndex,
+								int stopIndex,
+								boolean exact,
+								@Nullable BitSet ambigAlts,
+								@NotNull ATNConfigSet configs)
+	{
+		if (exactOnly && !exact) {
+			return;
+		}
+
+		String format = ""reportAmbiguity d=%s: ambigAlts=%s, input='%s'"";
+		String decision = getDecisionDescription(recognizer, dfa);
+		BitSet conflictingAlts = getConflictingAlts(ambigAlts, configs);
+		String text = recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex));
+		String message = String.format(format, decision, conflictingAlts, text);
+		recognizer.notifyErrorListeners(message);
+	}"
+L3692,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportContextSensitivity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, int prediction, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportContextSensitivity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIILorg/antlr/v4/runtime/atn/ATNConfigSet;)V,125,2,137,3,"public void reportContextSensitivity(@NotNull Parser recognizer,
+										 @NotNull DFA dfa,
+                                         int startIndex, int stopIndex,
+										 @NotNull ATNConfigSet configs)
+    {
+        recognizer.notifyErrorListeners(""reportContextSensitivity d="" +
+			dfa.decision + "", input='"" +
+			recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex)) + ""'"");
+    }
+}","public void reportContextSensitivity(@NotNull Parser recognizer,
+										 @NotNull DFA dfa,
+										 int startIndex,
+										 int stopIndex,
+										 int prediction,
+										 @NotNull ATNConfigSet configs)
+	{
+		String format = ""reportContextSensitivity d=%s, input='%s'"";
+		String decision = getDecisionDescription(recognizer, dfa);
+		String text = recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex));
+		String message = String.format(format, decision, text);
+		recognizer.notifyErrorListeners(message);
+	}"
+L7413,L7392,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,void processParser(),org.antlr.v4.analysis.AnalysisPipeline.processParser()V,82,2,101,3,"protected void processParser() {
+		g.decisionLOOK = new ArrayList<IntervalSet[]>(g.atn.getNumberOfDecisions()+1);
+		for (DecisionState s : g.atn.decisionToState) {
+            g.tool.log(""LL1"", ""\nDECISION ""+s.decision+"" in rule ""+g.getRule(s.ruleIndex).name);
+			IntervalSet[] look;
+			if ( s.nonGreedy ) { // nongreedy decisions can't be LL(1)
+				look = new IntervalSet[s.getNumberOfTransitions()+1];
+			}
+			else {
+				LL1Analyzer anal = new LL1Analyzer(g.atn);
+				look = anal.getDecisionLookahead(s);
+				g.tool.log(""LL1"", ""look="" + Arrays.toString(look));
+			}
+			Utils.setSize(g.decisionLOOK, s.decision+1);
+			g.decisionLOOK.set(s.decision, look);
+			g.tool.log(""LL1"", ""LL(1)? "" + disjoint(look));
+		}
+	}","protected void processParser() {
+		g.decisionLOOK = new ArrayList<IntervalSet[]>(g.atn.getNumberOfDecisions()+1);
+		for (DecisionState s : g.atn.decisionToState) {
+            g.tool.log(""LL1"", ""\nDECISION ""+s.decision+"" in rule ""+g.getRule(s.ruleIndex).name);
+			IntervalSet[] look;
+			if ( s.nonGreedy ) { // nongreedy decisions can't be LL(1)
+				look = new IntervalSet[s.getNumberOfTransitions()+1];
+			}
+			else {
+				LL1Analyzer anal = new LL1Analyzer(g.atn);
+				look = anal.getDecisionLookahead(s);
+				g.tool.log(""LL1"", ""look="" + Arrays.toString(look));
+			}
+
+			assert s.decision + 1 >= g.decisionLOOK.size();
+			Utils.setSize(g.decisionLOOK, s.decision+1);
+			g.decisionLOOK.set(s.decision, look);
+			g.tool.log(""LL1"", ""LL(1)? "" + disjoint(look));
+		}
+	}"
+L10037,L10036,antlr5,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,"LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts)",org.antlr.v4.codegen.model.LL1StarBlockSingleAlt.<init>(Lorg/antlr/v4/codegen/OutputModelFactory;Lorg/antlr/v4/tool/ast/GrammarAST;Ljava/util/List;)V,42,2,53,3,"public LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts) {
+		super(factory, starRoot, alts);
+
+		StarLoopEntryState star = (StarLoopEntryState)starRoot.atnState;
+		loopBackStateNumber = star.loopBackState.stateNumber;
+		this.decision = star.decision;
+		IntervalSet[] altLookSets = factory.getGrammar().decisionLOOK.get(decision);
+		IntervalSet enterLook = altLookSets[1];
+		IntervalSet exitLook = altLookSets[2];
+		loopExpr = addCodeForLoopLookaheadTempVar(enterLook);
+	}","public LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts) {
+		super(factory, starRoot, alts);
+
+		StarLoopEntryState star = (StarLoopEntryState)starRoot.atnState;
+		loopBackStateNumber = star.loopBackState.stateNumber;
+		this.decision = star.decision;
+		IntervalSet[] altLookSets = factory.getGrammar().decisionLOOK.get(decision);
+		assert altLookSets.length == 2;
+		IntervalSet enterLook = altLookSets[0];
+		IntervalSet exitLook = altLookSets[1];
+		loopExpr = addCodeForLoopLookaheadTempVar(enterLook);
+	}"

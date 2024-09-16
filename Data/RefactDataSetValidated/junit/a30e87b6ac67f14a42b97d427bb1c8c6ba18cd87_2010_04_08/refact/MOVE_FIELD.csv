@@ -1,0 +1,2 @@
+field in old;field in new
+org.junit.tests.experimental.rules.NameRulesTest.name@/junit_base2/src/test/java/org/junit/tests/experimental/rules/NameRulesTest.java:9:23;org.junit.tests.experimental.rules.NameRulesTest.TestNames.name@/junit_base1/src/test/java/org/junit/tests/experimental/rules/NameRulesTest.java:16:18

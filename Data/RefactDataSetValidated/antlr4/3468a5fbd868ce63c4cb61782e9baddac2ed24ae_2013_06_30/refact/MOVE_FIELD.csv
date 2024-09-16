@@ -1,0 +1,3 @@
+field in old;field in new
+org.antlr.v4.codegen.Target.javaKeywords@/antlr4_base1/tool/src/org/antlr/v4/codegen/Target.java:67:24;org.antlr.v4.codegen.JavaTarget.javaKeywords@/antlr4_base2/tool/src/org/antlr/v4/codegen/JavaTarget.java:48:33
+org.antlr.v4.codegen.Target.badWords@/antlr4_base1/tool/src/org/antlr/v4/codegen/Target.java:65:20;org.antlr.v4.codegen.JavaTarget.badWords@/antlr4_base2/tool/src/org/antlr/v4/codegen/JavaTarget.java:60:29

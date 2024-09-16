@@ -1,0 +1,2 @@
+old method;new method;eliminated variable;inlined expression
+com.gmail.nossr50.commands.skills.TamingCommand.effectsDisplay()@/mcMMO_base1/src/main/java/com/gmail/nossr50/commands/skills/TamingCommand.java:67:4;com.gmail.nossr50.commands.skills.TamingCommand.effectsDisplay()@/mcMMO_base2/src/main/java/com/gmail/nossr50/commands/skills/TamingCommand.java:54:4;configInstance;Config.getInstance()
