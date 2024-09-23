@@ -1,0 +1,6 @@
+following are examples of the code snippets for <refactoring method> refactoring.
+    
+<refactoring example>
+
+ 
+Now, for the following code snippet apply <refactoring method>: <code>
