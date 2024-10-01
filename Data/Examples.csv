@@ -1,5 +1,5 @@
-﻿ID,Parent,Project,Type,Fowler_type,path_before,path_after,name,LongName,StartLine,StartColumn,EndLine,EndColumn,BeforeRefact,AfterRefact
-L10937,L8817,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,tool\src\org\antlr\v4\codegen\ParserFactory.java,tool\src\org\antlr\v4\codegen\ParserFactory.java,"List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert)",org.antlr.v4.codegen.ParserFactory.set(Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/tool/ast/GrammarAST;Z)Ljava/util/List;,178,2,199,3,"
+﻿ID,Parent,Project,Type,Fowler_type,path_before,path_after,name,LongName,b_StartLine,b_StartColumn,b_EndLine,b_EndColumn,a_StartLine,a_StartColumn,a_EndLine,a_EndColumn,BeforeRefact,AfterRefact
+L10937,L8817,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,tool\src\org\antlr\v4\codegen\ParserFactory.java,tool\src\org\antlr\v4\codegen\ParserFactory.java,"List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert)",org.antlr.v4.codegen.ParserFactory.set(Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/tool/ast/GrammarAST;Z)Ljava/util/List;,,,,,178,2,199,3,"
 	public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {
 		MatchSet matchOp;
 		if ( invert ) matchOp = new MatchNotSet(this, setAST);
@@ -39,7 +39,7 @@ L10937,L8817,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,tool\src\org\
 		AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);
 		return list(matchOp, listLabelOp);
 	}"
-L5343,L543,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\Parser.java,runtime\Java\src\org\antlr\v4\runtime\Parser.java,List<ParseTreeListener> getParseListeners(),org.antlr.v4.runtime.Parser.getParseListeners()Ljava/util/List;,298,2,305,3,"public List<ParseTreeListener> getParseListeners() {
+L5343,L543,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\Parser.java,runtime\Java\src\org\antlr\v4\runtime\Parser.java,List<ParseTreeListener> getParseListeners(),org.antlr.v4.runtime.Parser.getParseListeners()Ljava/util/List;,,,,,298,2,305,3,"public List<ParseTreeListener> getParseListeners() {
         return _parseListeners;
     }","public List<ParseTreeListener> getParseListeners() {
 		List<ParseTreeListener> listeners = _parseListeners;
@@ -49,7 +49,7 @@ L5343,L543,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\sr
 
 		return listeners;
 	}"
-L3671,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportAmbiguity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, boolean exact, BitSet ambigAlts, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportAmbiguity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIZLjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,89,2,107,3," public void reportAmbiguity(@NotNull Parser recognizer,
+L3671,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportAmbiguity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, boolean exact, BitSet ambigAlts, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportAmbiguity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIZLjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,,,,,89,2,107,3," public void reportAmbiguity(@NotNull Parser recognizer,
 								DFA dfa, int startIndex, int stopIndex,
 								@NotNull BitSet ambigAlts,
 								@NotNull ATNConfigSet configs)
@@ -76,7 +76,7 @@ L3671,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\s
 		String message = String.format(format, decision, conflictingAlts, text);
 		recognizer.notifyErrorListeners(message);
 	}"
-L3692,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportContextSensitivity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, int prediction, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportContextSensitivity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIILorg/antlr/v4/runtime/atn/ATNConfigSet;)V,125,2,137,3,"public void reportContextSensitivity(@NotNull Parser recognizer,
+L3692,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportContextSensitivity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, int prediction, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportContextSensitivity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIILorg/antlr/v4/runtime/atn/ATNConfigSet;)V,,,,,125,2,137,3,"public void reportContextSensitivity(@NotNull Parser recognizer,
 										 @NotNull DFA dfa,
                                          int startIndex, int stopIndex,
 										 @NotNull ATNConfigSet configs)
@@ -98,7 +98,7 @@ L3692,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\s
 		String message = String.format(format, decision, text);
 		recognizer.notifyErrorListeners(message);
 	}"
-L7413,L7392,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,void processParser(),org.antlr.v4.analysis.AnalysisPipeline.processParser()V,82,2,101,3,"protected void processParser() {
+L7413,L7392,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,void processParser(),org.antlr.v4.analysis.AnalysisPipeline.processParser()V,,,,,82,2,101,3,"protected void processParser() {
 		g.decisionLOOK = new ArrayList<IntervalSet[]>(g.atn.getNumberOfDecisions()+1);
 		for (DecisionState s : g.atn.decisionToState) {
             g.tool.log(""LL1"", ""\nDECISION ""+s.decision+"" in rule ""+g.getRule(s.ruleIndex).name);
@@ -135,7 +135,7 @@ L7413,L7392,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4
 			g.tool.log(""LL1"", ""LL(1)? "" + disjoint(look));
 		}
 	}"
-L10037,L10036,antlr5,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,"LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts)",org.antlr.v4.codegen.model.LL1StarBlockSingleAlt.<init>(Lorg/antlr/v4/codegen/OutputModelFactory;Lorg/antlr/v4/tool/ast/GrammarAST;Ljava/util/List;)V,42,2,53,3,"public LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts) {
+L10037,L10036,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,"LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts)",org.antlr.v4.codegen.model.LL1StarBlockSingleAlt.<init>(Lorg/antlr/v4/codegen/OutputModelFactory;Lorg/antlr/v4/tool/ast/GrammarAST;Ljava/util/List;)V,,,,,42,2,53,3,"public LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts) {
 		super(factory, starRoot, alts);
 
 		StarLoopEntryState star = (StarLoopEntryState)starRoot.atnState;
@@ -157,3 +157,265 @@ L10037,L10036,antlr5,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\
 		IntervalSet exitLook = altLookSets[1];
 		loopExpr = addCodeForLoopLookaheadTempVar(enterLook);
 	}"
+L3446,L3013,antlr4,EXTRACT_METHOD,Extract Function,runtime\Java\src\org\antlr\v4\runtime\DefaultErrorStrategy.java,runtime\Java\src\org\antlr\v4\runtime\DefaultErrorStrategy.java,"int execATN(@NotNull CharStream input, @NotNull DFAState ds0)",org.antlr.v4.runtime.atn.LexerATNSimulator. execATN(Lorg/antlr/v4/runtime/dfa/DFAState;I)Lorg/antlr/v4/runtime/dfa/DFAState;,340,,359,,536,2,554,3,"public Token singleTokenDeletion(Parser recognizer) {
+		int nextTokenType = recognizer.getInputStream().LA(2);
+		IntervalSet expecting = getExpectedTokens(recognizer);
+		if ( expecting.contains(nextTokenType) ) {
+			reportUnwantedToken(recognizer);
+			/*
+			System.err.println(""recoverFromMismatchedToken deleting ""+
+							   ((TokenStream)recognizer.getInputStream()).LT(1)+
+							   "" since ""+((TokenStream)recognizer.getInputStream()).LT(2)+
+							   "" is what we want"");
+			*/
+			recognizer.consume(); // simply delete extra token
+			// we want to return the token we're actually matching
+			Token matchedSymbol = recognizer.getCurrentToken();
+			endErrorCondition(recognizer);  // we know current token is correct
+			return matchedSymbol;
+		}
+		return null;
+	}","protected Token singleTokenDeletion(@NotNull Parser recognizer) {
+		int nextTokenType = recognizer.getInputStream().LA(2);
+		IntervalSet expecting = getExpectedTokens(recognizer);
+		if ( expecting.contains(nextTokenType) ) {
+			reportUnwantedToken(recognizer);
+			/*
+			System.err.println(""recoverFromMismatchedToken deleting ""+
+							   ((TokenStream)recognizer.getInputStream()).LT(1)+
+							   "" since ""+((TokenStream)recognizer.getInputStream()).LT(2)+
+							   "" is what we want"");
+			*/
+			recognizer.consume(); // simply delete extra token
+			// we want to return the token we're actually matching
+			Token matchedSymbol = recognizer.getCurrentToken();
+			reportMatch(recognizer);  // we know current token is correct
+			return matchedSymbol;
+		}
+		return null;
+	}
+
+@Override
+	public void reportMatch(Parser recognizer) {
+		endErrorCondition(recognizer);
+	}"
+L1927,L1833,antlr4,EXTRACT_METHOD,Extract Function,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,"int execATN(@NotNull CharStream input, @NotNull DFAState ds0)",org.antlr.v4.runtime.atn.LexerATNSimulator. execATN(Lorg/antlr/v4/runtime/dfa/DFAState;I)Lorg/antlr/v4/runtime/dfa/DFAState;,197,,282,,187,2,302,3,"protected int execATN(@NotNull CharStream input, @NotNull DFAState ds0) {
+		//System.out.println(""enter exec index ""+input.index()+"" from ""+ds0.configs);
+		if ( debug ) {
+			System.out.format(""start state closure=%s\n"", ds0.configs);
+		}
+
+		int t = input.LA(1);
+		@NotNull
+		DFAState s = ds0; // s is current/from DFA state
+
+		while ( true ) { // while more work
+			if ( debug ) {
+				System.out.format(""execATN loop starting closure: %s\n"", s.configs);
+			}
+
+			// As we move src->trg, src->trg, we keep track of the previous trg to
+			// avoid looking up the DFA state again, which is expensive.
+			// If the previous target was already part of the DFA, we might
+			// be able to avoid doing a reach operation upon t. If s!=null,
+			// it means that semantic predicates didn't prevent us from
+			// creating a DFA state. Once we know s!=null, we check to see if
+			// the DFA state has an edge already for t. If so, we can just reuse
+			// it's configuration set; there's no point in re-computing it.
+			// This is kind of like doing DFA simulation within the ATN
+			// simulation because DFA simulation is really just a way to avoid
+			// computing reach/closure sets. Technically, once we know that
+			// we have a previously added DFA state, we could jump over to
+			// the DFA simulator. But, that would mean popping back and forth
+			// a lot and making things more complicated algorithmically.
+			// This optimization makes a lot of sense for loops within DFA.
+			// A character will take us back to an existing DFA state
+			// that already has lots of edges out of it. e.g., .* in comments.
+			ATNConfigSet closure = s.configs;
+			DFAState target = null;
+			if ( s.edges != null && t >= MIN_DFA_EDGE && t <= MAX_DFA_EDGE ) {
+				target = s.edges[t - MIN_DFA_EDGE];
+				if (target == ERROR) {
+					break;
+				}
+
+				if (debug && target != null) {
+					System.out.println(""reuse state ""+s.stateNumber+
+									   "" edge to ""+target.stateNumber);
+				}
+			}
+
+			if (target == null) {
+				ATNConfigSet reach = new OrderedATNConfigSet();
+
+				// if we don't find an existing DFA state
+				// Fill reach starting from closure, following t transitions
+				getReachableConfigSet(input, closure, reach, t);
+
+				if ( reach.isEmpty() ) { // we got nowhere on t from s
+					// we reached state associated with closure for sure, so
+					// make sure it's defined. worst case, we define s0 from
+					// start state configs.
+					@NotNull
+					DFAState from = s != null ? s : addDFAState(closure);
+					// we got nowhere on t, don't throw out this knowledge; it'd
+					// cause a failover from DFA later.
+					addDFAEdge(from, t, ERROR);
+					break; // stop when we can't match any more char
+				}
+
+				// Add an edge from s to target DFA found/created for reach
+				target = addDFAEdge(s, t, reach);
+			}
+
+			if (target.isAcceptState) {
+				captureSimState(prevAccept, input, target);
+				if (t == IntStream.EOF) {
+					break;
+				}
+			}
+
+			if (t != IntStream.EOF) {
+				consume(input);
+				t = input.LA(1);
+			}
+
+			s = target; // flip; current DFA target becomes new src/from state
+		}
+
+		return failOrAccept(prevAccept, input, s.configs, t);
+	}","protected int execATN(@NotNull CharStream input, @NotNull DFAState ds0) {
+		//System.out.println(""enter exec index ""+input.index()+"" from ""+ds0.configs);
+		if ( debug ) {
+			System.out.format(Locale.getDefault(), ""start state closure=%s\n"", ds0.configs);
+		}
+
+		int t = input.LA(1);
+		@NotNull
+		DFAState s = ds0; // s is current/from DFA state
+
+		while ( true ) { // while more work
+			if ( debug ) {
+				System.out.format(Locale.getDefault(), ""execATN loop starting closure: %s\n"", s.configs);
+			}
+
+			// As we move src->trg, src->trg, we keep track of the previous trg to
+			// avoid looking up the DFA state again, which is expensive.
+			// If the previous target was already part of the DFA, we might
+			// be able to avoid doing a reach operation upon t. If s!=null,
+			// it means that semantic predicates didn't prevent us from
+			// creating a DFA state. Once we know s!=null, we check to see if
+			// the DFA state has an edge already for t. If so, we can just reuse
+			// it's configuration set; there's no point in re-computing it.
+			// This is kind of like doing DFA simulation within the ATN
+			// simulation because DFA simulation is really just a way to avoid
+			// computing reach/closure sets. Technically, once we know that
+			// we have a previously added DFA state, we could jump over to
+			// the DFA simulator. But, that would mean popping back and forth
+			// a lot and making things more complicated algorithmically.
+			// This optimization makes a lot of sense for loops within DFA.
+			// A character will take us back to an existing DFA state
+			// that already has lots of edges out of it. e.g., .* in comments.
+			DFAState target = getExistingTargetState(s, t);
+			if (target == null) {
+				target = computeTargetState(input, s, t);
+			}
+
+			if (target == ERROR) {
+				break;
+			}
+
+			if (target.isAcceptState) {
+				captureSimState(prevAccept, input, target);
+				if (t == IntStream.EOF) {
+					break;
+				}
+			}
+
+			if (t != IntStream.EOF) {
+				consume(input);
+				t = input.LA(1);
+			}
+
+			s = target; // flip; current DFA target becomes new src/from state
+		}
+
+		return failOrAccept(prevAccept, input, s.configs, t);
+	}
+
+	/**
+	 * Get an existing target state for an edge in the DFA. If the target state
+	 * for the edge has not yet been computed or is otherwise not available,
+	 * this method returns {@code null}.
+	 *
+	 * @param s The current DFA state
+	 * @param t The next input symbol
+	 * @return The existing target DFA state for the given input symbol
+	 * {@code t}, or {@code null} if the target state for this edge is not
+	 * already cached
+	 */
+	@Nullable
+	protected DFAState getExistingTargetState(@NotNull DFAState s, int t) {
+		if (s.edges == null || t < MIN_DFA_EDGE || t > MAX_DFA_EDGE) {
+			return null;
+		}
+		
+		DFAState target = s.edges[t - MIN_DFA_EDGE];
+		if (debug && target != null) {
+			System.out.println(""reuse state ""+s.stateNumber+
+							   "" edge to ""+target.stateNumber);
+		}
+
+		return target;
+	}
+
+	/**
+	 * Compute a target state for an edge in the DFA, and attempt to add the
+	 * computed state and corresponding edge to the DFA.
+	 *
+	 * @param input The input stream
+	 * @param s The current DFA state
+	 * @param t The next input symbol
+	 *
+	 * @return The computed target DFA state for the given input symbol
+	 * {@code t}. If {@code t} does not lead to a valid DFA state, this method
+	 * returns {@link #ERROR}.
+	 */
+	@NotNull
+	protected DFAState computeTargetState(@NotNull CharStream input, @NotNull DFAState s, int t) {
+		ATNConfigSet reach = new OrderedATNConfigSet();
+
+		// if we don't find an existing DFA state
+		// Fill reach starting from closure, following t transitions
+		getReachableConfigSet(input, s.configs, reach, t);
+
+		if ( reach.isEmpty() ) { // we got nowhere on t from s
+			// we got nowhere on t, don't throw out this knowledge; it'd
+			// cause a failover from DFA later.
+			addDFAEdge(s, t, ERROR);
+			// stop when we can't match any more char
+			return ERROR;
+		}
+
+		// Add an edge from s to target DFA found/created for reach
+		return addDFAEdge(s, t, reach);
+	}"
+L540,L515,antlr4,ADD_PARAMETER,Introduce Parameter Object,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,"void reportAmbiguity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, boolean exact, BitSet ambigAlts, ATNConfigSet configs)",org.antlr.v4.runtime.ANTLRErrorListener.reportAmbiguity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIZLjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,92,,95,,112,2,118,39,"void reportAmbiguity(@NotNull Parser recognizer,
+						 DFA dfa, int startIndex, int stopIndex,
+						 @NotNull BitSet ambigAlts,
+						 @NotNull ATNConfigSet configs);","void reportAmbiguity(@NotNull Parser recognizer,
+						 @NotNull DFA dfa,
+						 int startIndex,
+						 int stopIndex,
+						 boolean exact,
+						 @NotNull BitSet ambigAlts,
+						 @NotNull ATNConfigSet configs);"
+L561,L515,antlr4,ADD_PARAMETER,Introduce Parameter Object,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,"void reportAttemptingFullContext(Parser recognizer, DFA dfa, int startIndex, int stopIndex, BitSet conflictingAlts, ATNConfigSet configs)",org.antlr.v4.runtime.ANTLRErrorListener.reportAttemptingFullContext(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IILjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,97,,100,,141,2,146,42,"void reportAttemptingFullContext(@NotNull Parser recognizer,
+									 @NotNull DFA dfa,
+									 int startIndex, int stopIndex,
+									 @NotNull ATNConfigSet configs);","void reportAttemptingFullContext(@NotNull Parser recognizer,
+									 @NotNull DFA dfa,
+									 int startIndex,
+									 int stopIndex,
+									 @Nullable BitSet conflictingAlts,
+									 @NotNull ATNConfigSet configs);"
