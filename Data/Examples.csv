@@ -1,4 +1,4 @@
-﻿ID,Parent,Project,Type,Fowler_type,path_before,path_after,name,LongName,b_StartLine,b_StartColumn,b_EndLine,b_EndColumn,a_StartLine,a_StartColumn,a_EndLine,a_EndColumn,BeforeRefact,AfterRefact
+﻿ID,Parent,Project,Type,Fowler_type,path_before,path_after,name,LongName,b_StartLine,b_StartColumn,b_EndLine,b_EndColumn,a_StartLine,a_StartColumn,a_EndLine,a_EndColumn,BeforeRefact,AfterRefact,
 L10937,L8817,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,tool\src\org\antlr\v4\codegen\ParserFactory.java,tool\src\org\antlr\v4\codegen\ParserFactory.java,"List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert)",org.antlr.v4.codegen.ParserFactory.set(Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/tool/ast/GrammarAST;Z)Ljava/util/List;,,,,,178,2,199,3,"
 	public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {
 		MatchSet matchOp;
@@ -38,7 +38,7 @@ L10937,L8817,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,tool\src\org\
 		if ( controller.needsImplicitLabel(setAST, matchOp) ) defineImplicitLabel(setAST, matchOp);
 		AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);
 		return list(matchOp, listLabelOp);
-	}"
+	}",
 L5343,L543,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\Parser.java,runtime\Java\src\org\antlr\v4\runtime\Parser.java,List<ParseTreeListener> getParseListeners(),org.antlr.v4.runtime.Parser.getParseListeners()Ljava/util/List;,,,,,298,2,305,3,"public List<ParseTreeListener> getParseListeners() {
         return _parseListeners;
     }","public List<ParseTreeListener> getParseListeners() {
@@ -48,7 +48,7 @@ L5343,L543,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\sr
 		}
 
 		return listeners;
-	}"
+	}",
 L3671,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportAmbiguity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, boolean exact, BitSet ambigAlts, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportAmbiguity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIZLjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,,,,,89,2,107,3," public void reportAmbiguity(@NotNull Parser recognizer,
 								DFA dfa, int startIndex, int stopIndex,
 								@NotNull BitSet ambigAlts,
@@ -75,7 +75,7 @@ L3671,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\s
 		String text = recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex));
 		String message = String.format(format, decision, conflictingAlts, text);
 		recognizer.notifyErrorListeners(message);
-	}"
+	}",
 L3692,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\DiagnosticErrorListener.java,"void reportContextSensitivity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, int prediction, ATNConfigSet configs)",org.antlr.v4.runtime.DiagnosticErrorListener.reportContextSensitivity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIILorg/antlr/v4/runtime/atn/ATNConfigSet;)V,,,,,125,2,137,3,"public void reportContextSensitivity(@NotNull Parser recognizer,
 										 @NotNull DFA dfa,
                                          int startIndex, int stopIndex,
@@ -97,7 +97,7 @@ L3692,L3660,antlr4,INTRODUCE_EXPLAINING_VARIABLE,Extract Variable,runtime\Java\s
 		String text = recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex));
 		String message = String.format(format, decision, text);
 		recognizer.notifyErrorListeners(message);
-	}"
+	}",
 L7413,L7392,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,tool\src\org\antlr\v4\analysis\AnalysisPipeline.java,void processParser(),org.antlr.v4.analysis.AnalysisPipeline.processParser()V,,,,,82,2,101,3,"protected void processParser() {
 		g.decisionLOOK = new ArrayList<IntervalSet[]>(g.atn.getNumberOfDecisions()+1);
 		for (DecisionState s : g.atn.decisionToState) {
@@ -134,7 +134,7 @@ L7413,L7392,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4
 			g.decisionLOOK.set(s.decision, look);
 			g.tool.log(""LL1"", ""LL(1)? "" + disjoint(look));
 		}
-	}"
+	}",
 L10037,L10036,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,tool\src\org\antlr\v4\codegen\model\LL1StarBlockSingleAlt.java,"LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts)",org.antlr.v4.codegen.model.LL1StarBlockSingleAlt.<init>(Lorg/antlr/v4/codegen/OutputModelFactory;Lorg/antlr/v4/tool/ast/GrammarAST;Ljava/util/List;)V,,,,,42,2,53,3,"public LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts) {
 		super(factory, starRoot, alts);
 
@@ -156,7 +156,7 @@ L10037,L10036,antlr4,INTRODUCE_ASSERTION,Introduce Assertion,tool\src\org\antlr\
 		IntervalSet enterLook = altLookSets[0];
 		IntervalSet exitLook = altLookSets[1];
 		loopExpr = addCodeForLoopLookaheadTempVar(enterLook);
-	}"
+	}",
 L3446,L3013,antlr4,EXTRACT_METHOD,Extract Function,runtime\Java\src\org\antlr\v4\runtime\DefaultErrorStrategy.java,runtime\Java\src\org\antlr\v4\runtime\DefaultErrorStrategy.java,"int execATN(@NotNull CharStream input, @NotNull DFAState ds0)",org.antlr.v4.runtime.atn.LexerATNSimulator. execATN(Lorg/antlr/v4/runtime/dfa/DFAState;I)Lorg/antlr/v4/runtime/dfa/DFAState;,340,,359,,536,2,554,3,"public Token singleTokenDeletion(Parser recognizer) {
 		int nextTokenType = recognizer.getInputStream().LA(2);
 		IntervalSet expecting = getExpectedTokens(recognizer);
@@ -198,7 +198,7 @@ L3446,L3013,antlr4,EXTRACT_METHOD,Extract Function,runtime\Java\src\org\antlr\v4
 @Override
 	public void reportMatch(Parser recognizer) {
 		endErrorCondition(recognizer);
-	}"
+	}",
 L1927,L1833,antlr4,EXTRACT_METHOD,Extract Function,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,"int execATN(@NotNull CharStream input, @NotNull DFAState ds0)",org.antlr.v4.runtime.atn.LexerATNSimulator. execATN(Lorg/antlr/v4/runtime/dfa/DFAState;I)Lorg/antlr/v4/runtime/dfa/DFAState;,197,,282,,187,2,302,3,"protected int execATN(@NotNull CharStream input, @NotNull DFAState ds0) {
 		//System.out.println(""enter exec index ""+input.index()+"" from ""+ds0.configs);
 		if ( debug ) {
@@ -399,7 +399,7 @@ L1927,L1833,antlr4,EXTRACT_METHOD,Extract Function,runtime\Java\src\org\antlr\v4
 
 		// Add an edge from s to target DFA found/created for reach
 		return addDFAEdge(s, t, reach);
-	}"
+	}",
 L540,L515,antlr4,ADD_PARAMETER,Introduce Parameter Object,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,"void reportAmbiguity(Parser recognizer, DFA dfa, int startIndex, int stopIndex, boolean exact, BitSet ambigAlts, ATNConfigSet configs)",org.antlr.v4.runtime.ANTLRErrorListener.reportAmbiguity(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IIZLjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,92,,95,,112,2,118,39,"void reportAmbiguity(@NotNull Parser recognizer,
 						 DFA dfa, int startIndex, int stopIndex,
 						 @NotNull BitSet ambigAlts,
@@ -409,7 +409,7 @@ L540,L515,antlr4,ADD_PARAMETER,Introduce Parameter Object,runtime\Java\src\org\a
 						 int stopIndex,
 						 boolean exact,
 						 @NotNull BitSet ambigAlts,
-						 @NotNull ATNConfigSet configs);"
+						 @NotNull ATNConfigSet configs);",
 L561,L515,antlr4,ADD_PARAMETER,Introduce Parameter Object,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,runtime\Java\src\org\antlr\v4\runtime\ANTLRErrorListener.java,"void reportAttemptingFullContext(Parser recognizer, DFA dfa, int startIndex, int stopIndex, BitSet conflictingAlts, ATNConfigSet configs)",org.antlr.v4.runtime.ANTLRErrorListener.reportAttemptingFullContext(Lorg/antlr/v4/runtime/Parser;Lorg/antlr/v4/runtime/dfa/DFA;IILjava/util/BitSet;Lorg/antlr/v4/runtime/atn/ATNConfigSet;)V,97,,100,,141,2,146,42,"void reportAttemptingFullContext(@NotNull Parser recognizer,
 									 @NotNull DFA dfa,
 									 int startIndex, int stopIndex,
@@ -418,4 +418,93 @@ L561,L515,antlr4,ADD_PARAMETER,Introduce Parameter Object,runtime\Java\src\org\a
 									 int startIndex,
 									 int stopIndex,
 									 @Nullable BitSet conflictingAlts,
-									 @NotNull ATNConfigSet configs);"
+									 @NotNull ATNConfigSet configs);",
+L1114,L1049,antlr4,REPLACE_METHOD_WITH_METHOD_OBJECT,Replace Function with Command,runtime\Java\src\org\antlr\v4\runtime\atn\ATNConfig.java,runtime\Java\src\org\antlr\v4\runtime\misc/MurmurHash.java,int hashCode(),org.antlr.v4.runtime.atn.ATNConfig.hashCode()I,256,,262,,162,2,170,3,"public int hashCode(ATNConfig o) {
+			int hashCode = 7;
+			hashCode = 31 * hashCode + o.state.stateNumber;
+			hashCode = 31 * hashCode + o.alt;
+			hashCode = 31 * hashCode + o.semanticContext.hashCode();
+	        return hashCode;
+		}","public int hashCode() {
+		int hashCode = MurmurHash.initialize(7);
+		hashCode = MurmurHash.update(hashCode, state.stateNumber);
+		hashCode = MurmurHash.update(hashCode, alt);
+		hashCode = MurmurHash.update(hashCode, context);
+		hashCode = MurmurHash.update(hashCode, semanticContext);
+		hashCode = MurmurHash.finish(hashCode, 4);
+		return hashCode;
+	}","public static int update(int hash, int value) {
+		final int c1 = 0xCC9E2D51;
+		final int c2 = 0x1B873593;
+		final int r1 = 15;
+		final int r2 = 13;
+		final int m = 5;
+		final int n = 0xE6546B64;
+
+		int k = value;
+		k = k * c1;
+		k = (k << r1) | (k >>> (32 - r1));
+		k = k * c2;
+
+		hash = hash ^ k;
+		hash = (hash << r2) | (hash >>> (32 - r2));
+		hash = hash * m + n;
+
+		return hash;
+	}
+
+	/**
+	 * Update the intermediate hash value for the next input {@code value}.
+	 *
+	 * @param hash the intermediate hash value
+	 * @param value the value to add to the current hash
+	 * @return the updated intermediate hash value
+	 */
+	public static int update(int hash, Object value) {
+		return update(hash, value != null ? value.hashCode() : 0);
+	}"
+L4884,L4876,junit,INLINE_TEMP,Inline Variable,src\main\java\org\junit\internal\runners\model\EachTestNotifier.java,src\main\java\org\junit\internal\runners\model\EachTestNotifier.java,void addFailure(Throwable targetException),org.junit.internal.runners.model.EachTestNotifier.addFailure(Ljava/lang/Throwable;)V,22,,30,,21,2,33,3,"public void addFailure(Throwable targetException) {
+		if (targetException instanceof MultipleFailureException) {
+			MultipleFailureException mfe= (MultipleFailureException) targetException;
+			for (Throwable each : mfe.getFailures())
+				addFailure(each);
+			return;
+		}
+		fNotifier.fireTestFailure(new Failure(fDescription, targetException));
+	}","public void addFailure(Throwable targetException) {
+		if (targetException instanceof MultipleFailureException) {
+			addMultipleFailureException((MultipleFailureException) targetException);
+		} else {
+			fNotifier
+					.fireTestFailure(new Failure(fDescription, targetException));
+		}
+	}
+
+	private void addMultipleFailureException(MultipleFailureException mfe) {
+		for (Throwable each : mfe.getFailures())
+			addFailure(each);
+	}",
+L7126,L6751,junit,INTRODUCE_ASSERTION,Introduce Assertion,src\test\java\org\junit\tests\experimental\categories\CategoryTest.java,src\test\java\org\junit\tests\experimental\categories\CategoryTest.java,void testCountWithExplicitFilter(),org.junit.tests.experimental.categories.CategoryTest.testCountWithExplicitFilter()V,128,,133,,129,2,135,3,"public void testCountWithExplicitFilter() throws Throwable {
+
+		CategoryFilter include= CategoryFilter.include(SlowTests.class);
+
+		Request baseRequest= Request.aClass(TestSuiteWithNoCategories.class);
+
+		Result result= new JUnitCore().run(baseRequest.filterWith(include));
+
+		assertTrue(result.wasSuccessful());
+
+	}","
+public void testCountWithExplicitFilter() throws Throwable {
+
+		CategoryFilter include= CategoryFilter.include(SlowTests.class);
+
+		Request baseRequest= Request.aClass(TestSuiteWithNoCategories.class);
+
+		Result result= new JUnitCore().run(baseRequest.filterWith(include));
+
+		assertTrue(result.wasSuccessful());
+
+		assertEquals(2, result.getRunCount());
+
+	}",
