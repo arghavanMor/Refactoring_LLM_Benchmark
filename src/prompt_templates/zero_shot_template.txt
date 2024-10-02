@@ -1,0 +1,3 @@
+Apply <refactoring method> refactoring on the following code snippet: <code>
+
+Clean the output to only show the final version of the code.

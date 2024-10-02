@@ -7,7 +7,9 @@ TITLES_CONST = {
     "font": "Source Sans Pro"
 }
 
-JSON_FILE_NAME = "refactoring_methods.json"
+FOWLER_JSON_FILE_NAME = "refactoring_methods.json"
+LLM_CODE_JSON_FILE_NAME = "llm_generated_code.json"
 
-FEW_SHOT_TEMPLATE_NAME = "few_shot_template.txt"
-MECHANICS_TEMPLATE_NAME = "mechanics_template.txt"
+ZERO_SHOT_TEMPLATE_FILE = "./prompt_templates/zero_shot_template.txt"
+INSTRUCTIONS_TEMPLATE_FILE = "./prompt_templates/instructions_template.txt"
+FEW_SHOT_TEMPLATE_FILE = "./prompt_templates/few_shot_template.txt"

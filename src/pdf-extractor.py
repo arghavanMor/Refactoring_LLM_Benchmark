@@ -68,6 +68,6 @@ for page in doc.pages(constants.CHAP6_INDEX, constants.LAST_PAGE_INDEX, 1):
                     title_descr += text
 
 
-with open(constants.JSON_FILE_NAME, "w") as export:
+with open(constants.FOWLER_JSON_FILE_NAME, "w") as export:
     json.dump(json_data, export)
                 

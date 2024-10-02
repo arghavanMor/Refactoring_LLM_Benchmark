@@ -1,0 +1,8 @@
+following are examples of the code snippets for <refactoring method> refactoring.
+    
+<refactoring example>
+
+ 
+Now, for the following code snippet apply <refactoring method>: <code>
+
+Clean the output to only show the final version of the code.

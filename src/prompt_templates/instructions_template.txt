@@ -1,0 +1,5 @@
+Following are step-by-step instructions to apply the <refactoring method> refactoring: <steps>
+
+Apply <refactoring method> on the following code snippet: <code>
+
+Clean the output to only show the final version of the code.
