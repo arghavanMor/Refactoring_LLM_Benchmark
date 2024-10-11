@@ -813,7 +813,7 @@ L3168,L3038,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b3
 		if ( reach.isEmpty() ) return null;
 		return reach;
 	}",
-L10263,L10252,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,tool\src\org\antlr\v4\automata\ATNPrinter.java,tool\src\org\antlr\v4\automata\ATNPrinter.java,String asString(),org.antlr.v4.automata.ATNPrinter.asString()Ljava/lang/String;,69,2,123,3,69,2,123,3,"public String asString() {
+L10263,L10252,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,tool\src\org\antlr\v4\automata\ATNPrinter.java,tool\src\org\antlr\v4\automata\ATNPrinter.java,String asString(),org.antlr.v4.automata.ATNPrinter.asString()Ljava/lang/String;,69,2,123,3,69,2,123,3,"public String asString() {
 		if ( start==null ) return null;
 		marked = new HashSet<ATNState>();
 
@@ -922,7 +922,7 @@ L10263,L10252,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25
 		}
 		return buf.toString();
 	}",
-L10263,L10252,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,tool\src\org\antlr\v4\automata\ATNPrinter.java,tool\src\org\antlr\v4\automata\ATNPrinter.java,String getStateString(ATNState s),org.antlr.v4.automata.ATNPrinter.getStateString()Ljava/lang/String;,125,2,138,3,125,2,138,3,"String getStateString(ATNState s) {
+L102630,L10252,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,tool\src\org\antlr\v4\automata\ATNPrinter.java,tool\src\org\antlr\v4\automata\ATNPrinter.java,String getStateString(ATNState s),org.antlr.v4.automata.ATNPrinter.getStateString()Ljava/lang/String;,125,2,138,3,125,2,138,3,"String getStateString(ATNState s) {
 		int n = s.stateNumber;
 		String stateStr = ""s""+n;
 		if ( s instanceof StarBlockStartState ) stateStr = ""StarBlockStart_""+n;
@@ -949,7 +949,7 @@ L10263,L10252,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25
 		else if ( s instanceof StarLoopEntryState) stateStr = ""StarLoopEntry_""+n;
 		return stateStr;
 	}",
-L15668,L14958,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,tool\src\org\antlr\v4\tool\DOTGenerator.java,tool\src\org\antlr\v4\tool\DOTGenerator.java,"String getDOT(DFA dfa, boolean isLexer)",org.antlr.v4.tool.DOTGenerator.getDOT(Lorg/antlr/v4/runtime/dfa/DFA;Z)Ljava/lang/String;,83,2,132,3,83,2,132,3,"public String getDOT(DFA dfa, boolean isLexer) {
+L15668,L14958,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,tool\src\org\antlr\v4\tool\DOTGenerator.java,tool\src\org\antlr\v4\tool\DOTGenerator.java,"String getDOT(DFA dfa, boolean isLexer)",org.antlr.v4.tool.DOTGenerator.getDOT(Lorg/antlr/v4/runtime/dfa/DFA;Z)Ljava/lang/String;,83,2,132,3,83,2,132,3,"public String getDOT(DFA dfa, boolean isLexer) {
 		if ( dfa.s0==null )	return null;
 
 		ST dot = stlib.getInstanceOf(""dfa"");
@@ -1048,7 +1048,7 @@ L15668,L14958,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25
 		String output = dot.render();
 		return Utils.sortLinesInString(output);
 	}",
-L15668,L14958,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_COND_EXPRESSION,Consolidate Conditional Expression,tool\src\org\antlr\v4\tool\DOTGenerator.java,tool\src\org\antlr\v4\tool\DOTGenerator.java,"String getDOT(DFA dfa, boolean isLexer)",org.antlr.v4.tool.DOTGenerator.getDOT(Lorg/antlr/v4/runtime/dfa/DFA;Z)Ljava/lang/String;,83,2,132,3,83,2,132,3,"public String getDOT(DFA dfa, boolean isLexer) {
+L156680,L14958,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,https://github.com/antlr/antlr4,CONSOLIDATE_COND_EXPRESSION,Consolidate Conditional Expression,tool\src\org\antlr\v4\tool\DOTGenerator.java,tool\src\org\antlr\v4\tool\DOTGenerator.java,"String getDOT(DFA dfa, boolean isLexer)",org.antlr.v4.tool.DOTGenerator.getDOT(Lorg/antlr/v4/runtime/dfa/DFA;Z)Ljava/lang/String;,83,2,132,3,83,2,132,3,"public String getDOT(DFA dfa, boolean isLexer) {
 		if ( dfa.s0==null )	return null;
 
 		ST dot = stlib.getInstanceOf(""dfa"");
@@ -1147,7 +1147,7 @@ L15668,L14958,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,90a5aa469a09a9296fe3b9a25
 		String output = dot.render();
 		return Utils.sortLinesInString(output);
 	}",
-L3347,L3055,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,e1e12f0b419461c4fc63461a2776024ad9f4fd54,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,runtime\Java\src\org\antlr\v4\runtime\atn\ParserATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\ParserATNSimulator.java,"void closure_(ATNConfig config, ATNConfigSet configs, Set<ATNConfig> closureBusy, boolean collectPredicates, boolean fullCtx, int depth, boolean treatEofAsEpsilon)",org.antlr.v4.runtime.atn.ParserATNSimulator.closure_(Lorg/antlr/v4/runtime/atn/ATNConfig;Lorg/antlr/v4/runtime/atn/ATNConfigSet;Ljava/util/Set;ZZIZ)V,1436,2,1496,3,1550,2,1617,3,"protected void closure_(@NotNull ATNConfig config,
+L3347,L3055,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,e1e12f0b419461c4fc63461a2776024ad9f4fd54,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,runtime\Java\src\org\antlr\v4\runtime\atn\ParserATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\ParserATNSimulator.java,"void closure_(ATNConfig config, ATNConfigSet configs, Set<ATNConfig> closureBusy, boolean collectPredicates, boolean fullCtx, int depth, boolean treatEofAsEpsilon)",org.antlr.v4.runtime.atn.ParserATNSimulator.closure_(Lorg/antlr/v4/runtime/atn/ATNConfig;Lorg/antlr/v4/runtime/atn/ATNConfigSet;Ljava/util/Set;ZZIZ)V,1436,2,1496,3,1550,2,1617,3,"protected void closure_(@NotNull ATNConfig config,
 							@NotNull ATNConfigSet configs,
 							@NotNull Set<ATNConfig> closureBusy,
 							boolean collectPredicates,
@@ -1275,7 +1275,7 @@ L3347,L3055,90a5aa469a09a9296fe3b9a25b37ed8ebd3d627f,e1e12f0b419461c4fc63461a277
 			}
 		}
 	}",
-L2755,L1039,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,runtime\Java\src\org\antlr\v4\runtime\atn\LL1Analyzer.java,runtime\Java\src\org\antlr\v4\runtime\atn\LL1Analyzer.java,"void _LOOK(ATNState s, ATNState stopState, PredictionContext ctx, IntervalSet look, Set<ATNConfig> lookBusy, BitSet calledRuleStack, boolean seeThruPreds, boolean addEOF)",org.antlr.v4.runtime.atn.LL1Analyzer._LOOK(Lorg/antlr/v4/runtime/atn/ATNState;Lorg/antlr/v4/runtime/atn/ATNState;Lorg/antlr/v4/runtime/atn/PredictionContext;Lorg/antlr/v4/runtime/misc/IntervalSet;Ljava/util/Set;Ljava/util/BitSet;ZZ)V,166,5,262,3,166,5,262,3," protected void _LOOK(@NotNull ATNState s,
+L2755,L1039,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,runtime\Java\src\org\antlr\v4\runtime\atn\LL1Analyzer.java,runtime\Java\src\org\antlr\v4\runtime\atn\LL1Analyzer.java,"void _LOOK(ATNState s, ATNState stopState, PredictionContext ctx, IntervalSet look, Set<ATNConfig> lookBusy, BitSet calledRuleStack, boolean seeThruPreds, boolean addEOF)",org.antlr.v4.runtime.atn.LL1Analyzer._LOOK(Lorg/antlr/v4/runtime/atn/ATNState;Lorg/antlr/v4/runtime/atn/ATNState;Lorg/antlr/v4/runtime/atn/PredictionContext;Lorg/antlr/v4/runtime/misc/IntervalSet;Ljava/util/Set;Ljava/util/BitSet;ZZ)V,166,5,262,3,166,5,262,3," protected void _LOOK(@NotNull ATNState s,
 						 @Nullable ATNState stopState,
 						 @Nullable PredictionContext ctx,
 						 @NotNull IntervalSet look,
@@ -1468,7 +1468,7 @@ L2755,L1039,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,5e05b71e8b1cd52cf0e77559786
 			}
 		}
 	}",
-L13228,L13220,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,tool\src\org\antlr\v4\parse\TokenVocabParser.java,tool\src\org\antlr\v4\parse\TokenVocabParser.java,"Map<String, Integer> load()",org.antlr.v4.parse.TokenVocabParser.load()Ljava/util/Map;,58,2,106,3,59,2,123,3,"public Map<String,Integer> load() {
+L13228,L13220,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,5e05b71e8b1cd52cf0e77559786cc4c18dc85c37,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,tool\src\org\antlr\v4\parse\TokenVocabParser.java,tool\src\org\antlr\v4\parse\TokenVocabParser.java,"Map<String, Integer> load()",org.antlr.v4.parse.TokenVocabParser.load()Ljava/util/Map;,58,2,106,3,59,2,123,3,"public Map<String,Integer> load() {
 		Map<String,Integer> tokens = new LinkedHashMap<String,Integer>();
 		int maxTokenType = -1;
 		File fullFile = getImportedVocabFile();
@@ -1581,7 +1581,7 @@ L13228,L13220,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,5e05b71e8b1cd52cf0e775597
 		}
 		return tokens;
 	}",
-L8024,L7991,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,tool\src\org\antlr\v4\automata\ATNSerializer.java,tool\src\org\antlr\v4\automata\ATNSerializer.java,String decode(char[] data),org.antlr.v4.automata.ATNSerializer.decode([C)Ljava/lang/String;,273,2,361,3,334,2,444,3,"public String decode(char[] data) {
+L8024,L7991,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,tool\src\org\antlr\v4\automata\ATNSerializer.java,tool\src\org\antlr\v4\automata\ATNSerializer.java,String decode(char[] data),org.antlr.v4.automata.ATNSerializer.decode([C)Ljava/lang/String;,273,2,361,3,334,2,444,3,"public String decode(char[] data) {
 		data = data.clone();
 		// don't adjust the first value since that's the version number
 		for (int i = 1; i < data.length; i++) {
@@ -1780,7 +1780,7 @@ L8024,L7991,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9
 		}
 		return buf.toString();
 	}",
-L9806,L8817,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,tool\src\org\antlr\v4\codegen\ParserFactory.java,tool\src\org\antlr\v4\codegen\ParserFactory.java,"void defineImplicitLabel(GrammarAST ast, LabeledOp op)",org.antlr.v4.codegen.ParserFactory.defineImplicitLabel(Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/codegen/model/LabeledOp;)V,330,2,354,3,334,2,358,3,"public void defineImplicitLabel(GrammarAST ast, LabeledOp op) {
+L9806,L8817,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,tool\src\org\antlr\v4\codegen\ParserFactory.java,tool\src\org\antlr\v4\codegen\ParserFactory.java,"void defineImplicitLabel(GrammarAST ast, LabeledOp op)",org.antlr.v4.codegen.ParserFactory.defineImplicitLabel(Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/codegen/model/LabeledOp;)V,330,2,354,3,334,2,358,3,"public void defineImplicitLabel(GrammarAST ast, LabeledOp op) {
 		Decl d;
 		if ( ast.getType()==ANTLRParser.SET || ast.getType()==ANTLRParser.WILDCARD ) {
 			String implLabel =
@@ -1854,7 +1854,7 @@ L1506,L807,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9b
 
 		transitions.add(index, e);
 	}",
-L1991,L1833,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_NESTED_COND_WITH_GUARD_CLAUSES,REPLACE_NESTED_COND_WITH_GUARD_CLAUSES,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,"boolean closure(CharStream input, LexerATNConfig config, ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative)",org.antlr.v4.runtime.atn.LexerATNSimulator.closure(Lorg/antlr/v4/runtime/CharStream;Lorg/antlr/v4/runtime/atn/LexerATNConfig;Lorg/antlr/v4/runtime/atn/ATNConfigSet;ZZ)Z,389,2,456,3,409,2,466,3,"protected boolean closure(@NotNull CharStream input, @NotNull LexerATNConfig config, @NotNull ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative) {
+L1991,L1833,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_NESTED_COND_WITH_GUARD_CLAUSES,Replace Nested Conditional with Guard Clauses,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,"boolean closure(CharStream input, LexerATNConfig config, ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative)",org.antlr.v4.runtime.atn.LexerATNSimulator.closure(Lorg/antlr/v4/runtime/CharStream;Lorg/antlr/v4/runtime/atn/LexerATNConfig;Lorg/antlr/v4/runtime/atn/ATNConfigSet;ZZ)Z,389,2,456,3,409,2,466,3,"protected boolean closure(@NotNull CharStream input, @NotNull LexerATNConfig config, @NotNull ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative) {
 		if ( debug ) {
 			System.out.println(""closure(""+config.toString(recog, true)+"")"");
 		}
@@ -1979,7 +1979,7 @@ L1991,L1833,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9
 
 		return currentAltReachedAcceptState;
 	}",
-L1991,L1833,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,INTRODUCE_NULL_OBJECT,Introduce Null Object,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,"boolean closure(CharStream input, LexerATNConfig config, ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative)",org.antlr.v4.runtime.atn.LexerATNSimulator.closure(Lorg/antlr/v4/runtime/CharStream;Lorg/antlr/v4/runtime/atn/LexerATNConfig;Lorg/antlr/v4/runtime/atn/ATNConfigSet;ZZ)Z,389,2,456,3,409,2,466,3,"protected boolean closure(@NotNull CharStream input, @NotNull LexerATNConfig config, @NotNull ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative) {
+L19910,L1833,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,INTRODUCE_NULL_OBJECT,Introduce Special Case,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,runtime\Java\src\org\antlr\v4\runtime\atn\LexerATNSimulator.java,"boolean closure(CharStream input, LexerATNConfig config, ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative)",org.antlr.v4.runtime.atn.LexerATNSimulator.closure(Lorg/antlr/v4/runtime/CharStream;Lorg/antlr/v4/runtime/atn/LexerATNConfig;Lorg/antlr/v4/runtime/atn/ATNConfigSet;ZZ)Z,389,2,456,3,409,2,466,3,"protected boolean closure(@NotNull CharStream input, @NotNull LexerATNConfig config, @NotNull ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative) {
 		if ( debug ) {
 			System.out.println(""closure(""+config.toString(recog, true)+"")"");
 		}
@@ -2364,7 +2364,7 @@ L2427,L2178,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9
 			}
 		}
 	}",
-L9795,L9790,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Consolidate Duplicate Conditional Fragments,tool\src\org\antlr\v4\codegen\model\InvokeRule.java,tool\src\org\antlr\v4\codegen\model\InvokeRule.java,"InvokeRule(ParserFactory factory, GrammarAST ast, GrammarAST labelAST)",org.antlr.v4.codegen.model.InvokeRule.<init>(Lorg/antlr/v4/codegen/ParserFactory;Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/tool/ast/GrammarAST;)V,57,2,98,3,57,2,98,3,"public InvokeRule(ParserFactory factory, GrammarAST ast, GrammarAST labelAST) {
+L9795,L9790,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,CONSOLIDATE_DUPLICATE_COND_FRAGMENTS,Slide Statements,tool\src\org\antlr\v4\codegen\model\InvokeRule.java,tool\src\org\antlr\v4\codegen\model\InvokeRule.java,"InvokeRule(ParserFactory factory, GrammarAST ast, GrammarAST labelAST)",org.antlr.v4.codegen.model.InvokeRule.<init>(Lorg/antlr/v4/codegen/ParserFactory;Lorg/antlr/v4/tool/ast/GrammarAST;Lorg/antlr/v4/tool/ast/GrammarAST;)V,57,2,98,3,57,2,98,3,"public InvokeRule(ParserFactory factory, GrammarAST ast, GrammarAST labelAST) {
 		super(factory, ast);
 		if ( ast.atnState!=null ) {
 			RuleTransition ruleTrans = (RuleTransition)ast.atnState.transition(0);
@@ -2447,7 +2447,7 @@ L9795,L9790,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9
 			rf.addContextDecl(ast.getAltLabel(), d);
 		}
 	}",
-L9861,L8698,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_NESTED_COND_WITH_GUARD_CLAUSES,Replace Nested Conditional with Guard Clauses,tool\src\org\antlr\v4\codegen\model\Lexer.java,tool\src\org\antlr\v4\codegen\model\Lexer.java,"Lexer(OutputModelFactory factory, LexerFile file)",org.antlr.v4.codegen.model.Lexer.<init>(Lorg/antlr/v4/codegen/OutputModelFactory;Lorg/antlr/v4/codegen/model/LexerFile;)V,64,2,104,3,64,2,104,3,"public Lexer(OutputModelFactory factory, LexerFile file) {
+L9861,L8698,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_NESTED_COND_WITH_GUARD_CLAUSES,Slide Statements,tool\src\org\antlr\v4\codegen\model\Lexer.java,tool\src\org\antlr\v4\codegen\model\Lexer.java,"Lexer(OutputModelFactory factory, LexerFile file)",org.antlr.v4.codegen.model.Lexer.<init>(Lorg/antlr/v4/codegen/OutputModelFactory;Lorg/antlr/v4/codegen/model/LexerFile;)V,64,2,104,3,64,2,104,3,"public Lexer(OutputModelFactory factory, LexerFile file) {
 		this.factory = factory;
 		this.file = file; // who contains us?
 		Grammar g = factory.getGrammar();
@@ -2532,7 +2532,7 @@ L9861,L8698,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9
 	}
 
 }",
-L1114,L1049,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_METHOD_WITH_METHOD_OBJECT,Replace Method with Method Object,runtime\Java\src\org\antlr\v4\runtime\atn\ATNConfig.java,runtime\Java\src\org\antlr\v4\runtime\atn\ATNConfig.java,int hashCode(),org.antlr.v4.runtime.atn.ATNConfig.hashCode()I,161,2,168,3,162,2,170,3,"public int hashCode() {
+L1114,L1049,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_METHOD_WITH_METHOD_OBJECT,Replace Function with Command,runtime\Java\src\org\antlr\v4\runtime\atn\ATNConfig.java,runtime\Java\src\org\antlr\v4\runtime\atn\ATNConfig.java,int hashCode(),org.antlr.v4.runtime.atn.ATNConfig.hashCode()I,161,2,168,3,162,2,170,3,"public int hashCode() {
 		int hashCode = 7;
 		hashCode = 5 * hashCode + state.stateNumber;
 		hashCode = 5 * hashCode + alt;
@@ -2585,7 +2585,7 @@ L7413,L7392,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9
 			g.tool.log(""LL1"", ""LL(1)? "" + disjoint(look));
 		}
 	}",
-L2588,L832,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_MAGIC_NUMBER_WITH_CONSTANT,Replace Magic Number with Symbolic Constant,runtime\Java\src\org\antlr\v4\runtime\atn\PredictionContext.java,runtime\Java\src\org\antlr\v4\runtime\atn\PredictionContext.java,"int calculateHashCode(PredictionContext parent, int returnState)",org.antlr.v4.runtime.atn.PredictionContext.calculateHashCode(Lorg/antlr/v4/runtime/atn/PredictionContext;I)I,124,2,126,3,147,2,153,3,"protected static int calculateHashCode(int parentHashCode, int returnStateHashCode) {
+L2588,L832,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4,REPLACE_MAGIC_NUMBER_WITH_CONSTANT,Replace Magic Literal,runtime\Java\src\org\antlr\v4\runtime\atn\PredictionContext.java,runtime\Java\src\org\antlr\v4\runtime\atn\PredictionContext.java,"int calculateHashCode(PredictionContext parent, int returnState)",org.antlr.v4.runtime.atn.PredictionContext.calculateHashCode(Lorg/antlr/v4/runtime/atn/PredictionContext;I)I,124,2,126,3,147,2,153,3,"protected static int calculateHashCode(int parentHashCode, int returnStateHashCode) {
 		return 5 * 5 * 7 + 5 * parentHashCode + returnStateHashCode;
 	}","protected static int calculateHashCode(PredictionContext parent, int returnState) {
 		int hash = MurmurHash.initialize(INITIAL_HASH);
