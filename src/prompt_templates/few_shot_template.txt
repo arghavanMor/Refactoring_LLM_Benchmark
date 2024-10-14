@@ -5,4 +5,4 @@ following are examples of the code snippets for <refactoring method> refactoring
  
 Now, for the following code snippet apply <refactoring method>: <code>
 
-Clean the output to only show the final version of the code.
+Clean the output to only show the final version of the code and do not include non-programming language.

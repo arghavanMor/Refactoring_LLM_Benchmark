@@ -9,6 +9,7 @@ TITLES_CONST = {
 
 FOWLER_JSON_FILE_NAME = "refactoring_methods.json"
 LLM_CODE_JSON_FILE_NAME = "llm_generated_code.json"
+CODEBLEU_JSON_FILE_NAME = "codebleu.json"
 
 ZERO_SHOT_TEMPLATE_FILE = "./prompt_templates/zero_shot_template.txt"
 INSTRUCTIONS_TEMPLATE_FILE = "./prompt_templates/instructions_template.txt"

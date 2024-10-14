@@ -2,12 +2,12 @@ import constants
 import json
 import csv
 from openai import OpenAI
-
+from tqdm import tqdm
 
 def extract_csv():
     data_list = []
 
-    with open("../Data/Examples.csv", "r") as csv_file:
+    with open("../Data/Data_collection.csv", "r") as csv_file:
         reader = csv.DictReader(csv_file)
 
         for row in reader:
@@ -74,23 +74,23 @@ with open(constants.FOWLER_JSON_FILE_NAME, "r+") as fowler_json_file:
     data_list = extract_csv()
 
     client = OpenAI(api_key=API_KEY)
-    processed_refact_methods = []
 
     json_llm_generated_code = {}
 
-    for example in data_list:
+    for example in tqdm(data_list):
 
         fowler_type = example["Fowler_type"].upper()
-
-        # We only want one example per Refactoring method
-        if fowler_type in processed_refact_methods:
-            continue
 
         before_refact_code = example["BeforeRefact"]
 
         zero_shot_prompt = fill_zero_shot_template(fowler_type, before_refact_code)
 
         refact_examples = ""
+
+        if fowler_type not in json_data:
+            print("ERROR: " + fowler_type)
+            continue
+
         for subtitle in json_data[fowler_type]:
             if subtitle == "Mechanics":
                 instruc_prompt = fill_instructions_template(fowler_type, instruc=json_data[fowler_type]["Mechanics"], code=before_refact_code)
@@ -107,14 +107,13 @@ with open(constants.FOWLER_JSON_FILE_NAME, "r+") as fowler_json_file:
         few_shot_generated_code = chat_with_openai(few_shot_prompt, client)
 
         # Write to JSON format
-        json_llm_generated_code[fowler_type] = {}
-        json_llm_generated_code[fowler_type]["ID"] = example["ï»¿ID"]
-        json_llm_generated_code[fowler_type]["BeforeRefact"] = example["BeforeRefact"]
-        json_llm_generated_code[fowler_type]["ZeroShotCode"] = zero_shot_generated_code
-        json_llm_generated_code[fowler_type]["InstrucCode"] = instruc_generated_code
-        json_llm_generated_code[fowler_type]["FewShotCode"] = few_shot_generated_code
-
-        processed_refact_methods.append(fowler_type)
+        csv_id = example["ï»¿ID"]
+        json_llm_generated_code[csv_id] = {}
+        json_llm_generated_code[csv_id]["RefactMethod"] = fowler_type
+        json_llm_generated_code[csv_id]["BeforeRefact"] = example["BeforeRefact"]
+        json_llm_generated_code[csv_id]["ZeroShotCode"] = zero_shot_generated_code
+        json_llm_generated_code[csv_id]["InstrucCode"] = instruc_generated_code
+        json_llm_generated_code[csv_id]["FewShotCode"] = few_shot_generated_code
 
 with open(constants.LLM_CODE_JSON_FILE_NAME, "w") as llm_json:
     json.dump(json_llm_generated_code, llm_json)
