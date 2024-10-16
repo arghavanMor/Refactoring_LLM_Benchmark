@@ -12,7 +12,7 @@ with open(constants.LLM_CODE_JSON_FILE_NAME, "r+") as llm_generated_json_file:
 
     for test_case in tqdm(json_data):
 
-        reference = json_data[test_case]["BeforeRefact"]
+        reference = json_data[test_case]["AfterRefact"]
 
         zero_shot_code = json_data[test_case]["ZeroShotCode"]
         instruc_code = json_data[test_case]["InstrucCode"]

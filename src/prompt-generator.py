@@ -111,6 +111,7 @@ with open(constants.FOWLER_JSON_FILE_NAME, "r+") as fowler_json_file:
         json_llm_generated_code[csv_id] = {}
         json_llm_generated_code[csv_id]["RefactMethod"] = fowler_type
         json_llm_generated_code[csv_id]["BeforeRefact"] = example["BeforeRefact"]
+        json_llm_generated_code[csv_id]["BeforeRefact"] = example["AfterRefact"]
         json_llm_generated_code[csv_id]["ZeroShotCode"] = zero_shot_generated_code
         json_llm_generated_code[csv_id]["InstrucCode"] = instruc_generated_code
         json_llm_generated_code[csv_id]["FewShotCode"] = few_shot_generated_code
