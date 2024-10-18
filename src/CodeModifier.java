@@ -4,23 +4,10 @@ import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class CodeModifier {
-    private static final String ZERO_SHOT_CODE= "ZeroShotCode";
-    private static final String INTRUC_CODE= "InstrucCode";
-    private static final String FEW_SHOT_CODE= "FewShotCode";
-    private static final String PREFIX_PATH = "repositories/";
-    private static final String SUFIX_PATH = "/antlr4-ad9bac95199736c270940c4037b7ee7174bacca6/";
-
-    private static List<String> generationType = new ArrayList<>();
 
     public static Boolean codeModifier(String pathClass, String methodName, String newMethodCode) throws FileNotFoundException {
         File projectDir = new File(pathClass);
@@ -43,7 +30,6 @@ public class CodeModifier {
             throw new RuntimeException(e);
         }
         return true;
-
 
     }
 
