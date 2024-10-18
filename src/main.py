@@ -11,10 +11,10 @@ INSTRUC_CODE= "InstrucCode"
 FEW_SHOT_CODE= "FewShotCode"
 
 ANTLR4_REPOSITORY = "https://github.com/antlr/antlr4"
-ANTLR4_LOCAL_REPOSITORY = "/Users/jeancarlorspaul/IdeaProjects/antlr4/" # to change regarding to your own local repository
+ANTLR4_LOCAL_REPOSITORY = "/Users/jeancarlorspaul/IdeaProjects/antlr4/"
 ANTLR4_BEFORE_COMMIT_VERSION = "ad9bac95199736c270940c4037b7ee7174bacca6"
 INITIAL_BRANCH_NAME = "Initial"
-JAR_FILE_PATH = "./Refactoring_AST.main.jar" #to change 
+JAR_FILE_PATH = "../../Refactoring_AST.main.jar"
 
 if os.path.exists(ANTLR4_LOCAL_REPOSITORY):
     repo = Repo(ANTLR4_LOCAL_REPOSITORY)
@@ -37,21 +37,22 @@ def refact_versioning_init():
     return repo.active_branch.name, repo.head.commit.hexsha
 
 def modifier_caller():
+    initial_branch_name, initial_commit_hash = refact_versioning_init()
     commit_references = []
     prompt_approach = [ZERO_SHOT_CODE, INSTRUC_CODE, FEW_SHOT_CODE]
     with open('../llm_generated_code.json', 'r') as file:
        generated_code_data = json.load(file)
 
-    with open('../examples.json', 'r') as file:
+    with open('../Data_Collection.json', 'r') as file:
         collected_data = json.load(file)
 
-    for refactorings in generated_code_data.values():
-        refactoring_id = refactorings.get("ID")
+    for refactoring_id, refactorings in generated_code_data.items():
         for item in collected_data:
             if item.get("\ufeffID") == refactoring_id:
+
                 case_id = refactoring_id
-                #project =  item.get('Project') #refactorings.get("RefactMethod")
-                refactoring_type = item.get('Type')
+                #project =  item.get('Project')
+                refactoring_type = item.get("Type")
                 number_of_current_attempt = str(datetime.datetime.now().timestamp())
                 relative_path = item.get('path_before').replace("\\", "/")
                 repository_path = ANTLR4_LOCAL_REPOSITORY + relative_path
@@ -63,7 +64,9 @@ def modifier_caller():
                 for prompt_approach_item in prompt_approach:
                     prompt_approach_code = refactorings.get(prompt_approach_item)
 
-                    refact_versioning_init()
+                    initial_branch = repo.heads[INITIAL_BRANCH_NAME]
+                    repo.head.reference = initial_branch
+
                     branch_name = case_id + refactoring_type + prompt_approach_item + number_of_current_attempt
                     new_refactoring_branch = repo.create_head(branch_name)
                     repo.head.reference = new_refactoring_branch
@@ -72,16 +75,18 @@ def modifier_caller():
 
                     subprocess.run(['java', '-jar', JAR_FILE_PATH, repository_path, method_name, prompt_approach_code])
 
-                    repo.git.add(all=True)
+                    #repo.git.add(all=True)
 
-                    #repo.index.commit(branch_name)
+                    repo.index.commit(branch_name)
                     commit_reference = repo.active_branch.name, repo.head.commit.hexsha
                     commit_references.append(commit_reference)
 
+
                     with open('commit_references.txt', 'a') as file:
                         file.write(str(commit_reference) + "\n")
-
-
+    with open('commit_references.txt', 'a') as file:
+        initial_branch_commit = (initial_branch_name, initial_commit_hash)
+        file.write(str(initial_branch_commit) + "\n")
 
 if __name__ == "__main__":
     refact_versioning_init()
