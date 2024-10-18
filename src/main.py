@@ -11,10 +11,10 @@ INSTRUC_CODE= "InstrucCode"
 FEW_SHOT_CODE= "FewShotCode"
 
 ANTLR4_REPOSITORY = "https://github.com/antlr/antlr4"
-ANTLR4_LOCAL_REPOSITORY = "/Users/jeancarlorspaul/IdeaProjects/antlr4/"
+ANTLR4_LOCAL_REPOSITORY = "/Users/jeancarlorspaul/IdeaProjects/antlr4/" # to change regarding to your own local repository
 ANTLR4_BEFORE_COMMIT_VERSION = "ad9bac95199736c270940c4037b7ee7174bacca6"
 INITIAL_BRANCH_NAME = "Initial"
-JAR_FILE_PATH = "/Users/jeancarlorspaul/Documents/Doc_Carl/Poly/LLM_Refactoring_Project/Refactoring_AST/Refactoring_AST.main.jar"
+JAR_FILE_PATH = "./Refactoring_AST.main.jar" #to change 
 
 if os.path.exists(ANTLR4_LOCAL_REPOSITORY):
     repo = Repo(ANTLR4_LOCAL_REPOSITORY)
