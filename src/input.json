@@ -1,0 +1,22 @@
+{
+  "prompt_approach": ["ZeroShotCode", "InstrucCode", "FewShotCode"],
+  "target_projects": {
+    "antlr4": {
+      "remote_repository": "https://github.com/antlr/antlr4",
+      "local_repository": "/Users/jeancarlorspaul/IdeaProjects/antlr4/",
+      "initial_commit_version": "ad9bac95199736c270940c4037b7ee7174bacca6",
+      "commit_references_path": "antlr4_commit_references.txt"
+    },
+    "junit4": {
+      "remote_repository": "https://github.com/junit-team/junit4",
+      "local_repository": "/Users/jeancarlorspaul/IdeaProjects/junit4/",
+      "initial_commit_version": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+      "commit_references_path": "junit4_commit_references.txt"
+    }
+  },
+
+  "initial_branch_name": "Initial",
+  "jar_path": "../../Refactoring_AST.main.jar",
+  "llm_generated_code_path": "../llm_generated_code.json",
+  "data_collection_path": "../Data_Collection.json"
+}
