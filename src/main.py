@@ -5,66 +5,63 @@ import subprocess
 import json
 import datetime
 
+from sympy import pretty_print
 
-ZERO_SHOT_CODE= "ZeroShotCode"
-INSTRUC_CODE= "InstrucCode"
-FEW_SHOT_CODE= "FewShotCode"
+with open('../input.json', 'r') as file:
+    config_data = json.load(file)
 
-ANTLR4_REPOSITORY = "https://github.com/antlr/antlr4"
-ANTLR4_LOCAL_REPOSITORY = "/Users/jeancarlorspaul/IdeaProjects/antlr4/"
-ANTLR4_BEFORE_COMMIT_VERSION = "ad9bac95199736c270940c4037b7ee7174bacca6"
-INITIAL_BRANCH_NAME = "Initial"
-JAR_FILE_PATH = "../../Refactoring_AST.main.jar"
+prompt_approach = config_data["prompt_approach"]
+target_projects = config_data["target_projects"]
+initial_branch_name = config_data["initial_branch_name"]
+jar_path = config_data["jar_path"]
+llm_generated_code_path = config_data["llm_generated_code_path"]
+data_collection_path = config_data["data_collection_path"]
 
-if os.path.exists(ANTLR4_LOCAL_REPOSITORY):
-    repo = Repo(ANTLR4_LOCAL_REPOSITORY)
-    repo.git.checkout(ANTLR4_BEFORE_COMMIT_VERSION)
-else:
-    repo = Repo.clone_from(ANTLR4_REPOSITORY, ANTLR4_LOCAL_REPOSITORY)
-    repo.git.checkout(ANTLR4_BEFORE_COMMIT_VERSION)
 
-def refact_versioning_init():
-    # print(" ============= INITIAL COMMIT ==============")
-    if not INITIAL_BRANCH_NAME in repo.branches:
-       initial_branch = repo.create_head(INITIAL_BRANCH_NAME)
+def refact_versioning_init(repo):
+    if not initial_branch_name in repo.branches:
+       initial_branch = repo.create_head(initial_branch_name)
        repo.head.reference = initial_branch
        initial_branch.checkout()
-       repo.index.commit(INITIAL_BRANCH_NAME)
+       repo.index.commit(initial_branch_name)
     else:
-       initial_branch = repo.heads[INITIAL_BRANCH_NAME]
+       initial_branch = repo.heads[initial_branch_name]
        repo.head.reference = initial_branch
 
-    return repo.active_branch.name, repo.head.commit.hexsha
+    return repo.head.commit.hexsha
 
-def modifier_caller():
-    initial_branch_name, initial_commit_hash = refact_versioning_init()
+def modifier_caller(repo, project, local_repository, commit_references_path):
+    initial_commit_hash = refact_versioning_init(repo)
     commit_references = []
-    prompt_approach = [ZERO_SHOT_CODE, INSTRUC_CODE, FEW_SHOT_CODE]
-    with open('../llm_generated_code.json', 'r') as file:
-       generated_code_data = json.load(file)
 
-    with open('../Data_Collection.json', 'r') as file:
-        collected_data = json.load(file)
+    with open(llm_generated_code_path, 'r') as llm_generated_code_file:
+       generated_code_data = json.load(llm_generated_code_file)
+
+    with open(data_collection_path, 'r') as data_collection_file:
+        collected_data = json.load(data_collection_file)
 
     for refactoring_id, refactorings in generated_code_data.items():
         for item in collected_data:
             if item.get("\ufeffID") == refactoring_id:
-
                 case_id = refactoring_id
-                #project =  item.get('Project')
+                item_project = item.get("Project").split("/")[-1]
+
+                if item_project != project:
+                    continue
+
                 refactoring_type = item.get("Type")
                 number_of_current_attempt = str(datetime.datetime.now().timestamp())
                 relative_path = item.get('path_before').replace("\\", "/")
-                repository_path = ANTLR4_LOCAL_REPOSITORY + relative_path
+                repository_path = local_repository + relative_path
 
-                endIndex = item.get("name").index("(")
-                method_signature = item.get('name')[0:endIndex].split(" ")
+                end_index = item.get("name").index("(")
+                method_signature = item.get('name')[0:end_index].split(" ")
                 method_name = method_signature[-1]
 
                 for prompt_approach_item in prompt_approach:
                     prompt_approach_code = refactorings.get(prompt_approach_item)
 
-                    initial_branch = repo.heads[INITIAL_BRANCH_NAME]
+                    initial_branch = repo.heads[initial_branch_name]
                     repo.head.reference = initial_branch
 
                     branch_name = case_id + refactoring_type + prompt_approach_item + number_of_current_attempt
@@ -73,7 +70,7 @@ def modifier_caller():
                     new_refactoring_branch.checkout()
                     repo.index.commit(branch_name)
 
-                    subprocess.run(['java', '-jar', JAR_FILE_PATH, repository_path, method_name, prompt_approach_code])
+                    subprocess.run(['java', '-jar', jar_path, repository_path, method_name, prompt_approach_code])
 
                     #repo.git.add(all=True)
 
@@ -82,12 +79,32 @@ def modifier_caller():
                     commit_references.append(commit_reference)
 
 
-                    with open('commit_references.txt', 'a') as file:
-                        file.write(str(commit_reference) + "\n")
-    with open('commit_references.txt', 'a') as file:
+                    with open(commit_references_path, 'a') as commit_references_file:
+                        commit_references_file.write(str(commit_reference) + "\n")
+
+    with open(commit_references_path, 'a') as commit_references_file:
         initial_branch_commit = (initial_branch_name, initial_commit_hash)
-        file.write(str(initial_branch_commit) + "\n")
+        commit_references_file.write(str(initial_branch_commit) + "\n")
+
+
+
+def main():
+    for project, project_info in target_projects.items():
+        remote_repository = project_info['remote_repository']
+        local_repository = project_info['local_repository']
+        initial_commit_version = project_info['initial_commit_version']
+        commit_references_path = project_info['commit_references_path']
+
+        if os.path.exists(local_repository):
+            repo = Repo(local_repository)
+            repo.git.checkout(initial_commit_version)
+        else:
+            repo = Repo.clone_from(remote_repository, local_repository)
+            repo.git.checkout(initial_commit_version)
+
+        refact_versioning_init(repo)
+        modifier_caller(repo, project, local_repository, commit_references_path)
 
 if __name__ == "__main__":
-    refact_versioning_init()
-    modifier_caller()
+    main()
+
