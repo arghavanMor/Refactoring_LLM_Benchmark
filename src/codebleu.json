@@ -1,9 +1,9 @@
 {
     "L10937": {
         "RefactMethod": "EXTRACT VARIABLE",
-        "ZeroShotCodeBleu": 0.6644545687108466,
-        "InstrucCodeBleu": 0.8147280764689055,
-        "FewShotCodeBleu": 0.6648381423038796
+        "ZeroShotCodeBleu": 0.659019786102151,
+        "InstrucCodeBleu": 0.8092932938602099,
+        "FewShotCodeBleu": 0.6594033596951839
     },
     "L5343": {
         "RefactMethod": "EXTRACT VARIABLE",
@@ -31,15 +31,15 @@
     },
     "L10037": {
         "RefactMethod": "INTRODUCE ASSERTION",
-        "ZeroShotCodeBleu": 0.8299803802667816,
-        "InstrucCodeBleu": 0.8299803802667816,
-        "FewShotCodeBleu": 0.8258577527859969
+        "ZeroShotCodeBleu": 0.822404622691024,
+        "InstrucCodeBleu": 0.822404622691024,
+        "FewShotCodeBleu": 0.8182819952102394
     },
     "L1927": {
         "RefactMethod": "EXTRACT FUNCTION",
         "ZeroShotCodeBleu": 0.2930532088400392,
-        "InstrucCodeBleu": 0.5643866923023565,
-        "FewShotCodeBleu": 0.263951410734918
+        "InstrucCodeBleu": 0.5643866923023564,
+        "FewShotCodeBleu": 0.2616991584826658
     },
     "L540": {
         "RefactMethod": "INTRODUCE PARAMETER OBJECT",
@@ -57,7 +57,7 @@
         "RefactMethod": "REPLACE FUNCTION WITH COMMAND",
         "ZeroShotCodeBleu": 0.25212495853215244,
         "InstrucCodeBleu": 0.3245580459596445,
-        "FewShotCodeBleu": 0.25477157881336904
+        "FewShotCodeBleu": 0.27896512720046585
     },
     "L4884": {
         "RefactMethod": "INLINE VARIABLE",
@@ -80,7 +80,7 @@
     "L3844": {
         "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
         "ZeroShotCodeBleu": 0.39058515996446985,
-        "InstrucCodeBleu": 0.3894686080039593,
+        "InstrucCodeBleu": 0.40417449035690045,
         "FewShotCodeBleu": 0.568737366177657
     },
     "L3168": {
@@ -98,14 +98,14 @@
     "L102630": {
         "RefactMethod": "SLIDE STATEMENTS",
         "ZeroShotCodeBleu": 0.5617559957652061,
-        "InstrucCodeBleu": 0.4076834412065207,
+        "InstrucCodeBleu": 0.40321915549223497,
         "FewShotCodeBleu": 0.9814658752718773
     },
     "L15668": {
         "RefactMethod": "SLIDE STATEMENTS",
         "ZeroShotCodeBleu": 0.9099454963465754,
         "InstrucCodeBleu": 0.9880228484250114,
-        "FewShotCodeBleu": 0.7141634534826207
+        "FewShotCodeBleu": 0.7122837542345004
     },
     "L156680": {
         "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
@@ -139,13 +139,13 @@
     },
     "L9806": {
         "RefactMethod": "SLIDE STATEMENTS",
-        "ZeroShotCodeBleu": 0.5340275715676961,
-        "InstrucCodeBleu": 0.6382908819735491,
+        "ZeroShotCodeBleu": 0.5476639352040596,
+        "InstrucCodeBleu": 0.6610181547008218,
         "FewShotCodeBleu": 0.66433070006172
     },
     "L1506": {
         "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
-        "ZeroShotCodeBleu": 0.3937164574119857,
+        "ZeroShotCodeBleu": 0.3780914574119857,
         "InstrucCodeBleu": 0.36033944462760126,
         "FewShotCodeBleu": 0.36962843262995543
     },
@@ -163,9 +163,9 @@
     },
     "L2113": {
         "RefactMethod": "REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES",
-        "ZeroShotCodeBleu": 0.4910555593661604,
-        "InstrucCodeBleu": 0.5463604242393681,
-        "FewShotCodeBleu": 0.4736799028847276
+        "ZeroShotCodeBleu": 0.49364623294128995,
+        "InstrucCodeBleu": 0.5489510978144977,
+        "FewShotCodeBleu": 0.47627057645985715
     },
     "L2427": {
         "RefactMethod": "REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES",
@@ -175,14 +175,14 @@
     },
     "L9795": {
         "RefactMethod": "SLIDE STATEMENTS",
-        "ZeroShotCodeBleu": 0.8294417943275281,
-        "InstrucCodeBleu": 0.9382936189474107,
-        "FewShotCodeBleu": 0.6138444623482877
+        "ZeroShotCodeBleu": 0.8387875887200514,
+        "InstrucCodeBleu": 0.9476394133399341,
+        "FewShotCodeBleu": 0.6115080137501568
     },
     "L9861": {
         "RefactMethod": "SLIDE STATEMENTS",
         "ZeroShotCodeBleu": 0.7216119015233924,
         "InstrucCodeBleu": 0.8529511535187202,
-        "FewShotCodeBleu": 0.8609272087622464
+        "FewShotCodeBleu": 0.8584272087622463
     }
 }

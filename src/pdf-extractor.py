@@ -12,7 +12,7 @@ def clean_text(text):
     
 ### MAIN ###
 
-doc = pymupdf.open(constants.PDF_FILE_NAME)
+doc = pymupdf.open(constants.FOWLER_PDF_FILE)
 
 json_data = {}
 ignore_next_title = False
@@ -68,6 +68,6 @@ for page in doc.pages(constants.CHAP6_INDEX, constants.LAST_PAGE_INDEX, 1):
                     title_descr += text
 
 
-with open(constants.FOWLER_JSON_FILE_NAME, "w") as export:
+with open(constants.FOWLER_JSON_FILE, "w") as export:
     json.dump(json_data, export)
                 

@@ -68,7 +68,7 @@ API_KEY = open("./../OpenAI_key.txt", "r").read()
 MODEL_NAME = "gpt-3.5-turbo"
 
 
-with open(constants.FOWLER_JSON_FILE_NAME, "r+") as fowler_json_file:
+with open(constants.FOWLER_JSON_FILE, "r+") as fowler_json_file:
     json_data = json.load(fowler_json_file)
 
     data_list = extract_csv()
@@ -116,5 +116,5 @@ with open(constants.FOWLER_JSON_FILE_NAME, "r+") as fowler_json_file:
         json_llm_generated_code[csv_id]["InstrucCode"] = instruc_generated_code
         json_llm_generated_code[csv_id]["FewShotCode"] = few_shot_generated_code
 
-with open(constants.LLM_CODE_JSON_FILE_NAME, "w") as llm_json:
+with open(constants.LLM_CODE_JSON_FILE, "w") as llm_json:
     json.dump(json_llm_generated_code, llm_json)
