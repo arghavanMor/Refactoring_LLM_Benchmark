@@ -39,14 +39,14 @@ def generate_codebleu_json():
     # }
 
     with open(constants.CODEBLEU_JSON_FILE, "w") as llm_json:
-        json.dump(codebleu_json, llm_json)
+        json.dump(codebleu_json, llm_json, indent=4)
 
 
 def find_average_codebleu_scores():
 
     zeroshot_scores = collections.defaultdict(list)
     instruc_scores = collections.defaultdict(list)
-    fewshots_scores = collections.defaultdict(list)
+    fewshot_scores = collections.defaultdict(list)
 
     compiled_scores = {}
 
@@ -57,7 +57,7 @@ def find_average_codebleu_scores():
             current_id = json_data[id]
             zeroshot_scores[current_id["RefactMethod"]].append(current_id["ZeroShotCodeBleu"])
             instruc_scores[current_id["RefactMethod"]].append(current_id["InstrucCodeBleu"])
-            fewshots_scores[current_id["RefactMethod"]].append(current_id["FewShotCodeBleu"])
+            fewshot_scores[current_id["RefactMethod"]].append(current_id["FewShotCodeBleu"])
     
     for extract_method, zeroshot_score in zeroshot_scores.items():
         compiled_scores[extract_method] = {}
@@ -66,8 +66,8 @@ def find_average_codebleu_scores():
     for extract_method, instruc_score in instruc_scores.items():
         compiled_scores[extract_method]["InstrucAverageScore"] = sum(instruc_score)/len(instruc_score)
 
-    for extract_method, fewshots_score in fewshots_scores.items():
-        compiled_scores[extract_method]["FewShotsAverageScore"] = sum(fewshots_score)/len(fewshots_score)
+    for extract_method, fewshot_score in fewshot_scores.items():
+        compiled_scores[extract_method]["FewShotAverageScore"] = sum(fewshot_score)/len(fewshot_score)
     
     return compiled_scores
 
@@ -77,7 +77,7 @@ def generate_table(average_scores):
     table = PrettyTable(["Refactoring Method", "Average Zero-Shot CodeBLEU Score", "Average Instruction CodeBLEU Score", "Average Few-Shots CodeBLEU Score"])
 
     for refact_method in average_scores:
-        table.add_row([refact_method, average_scores[refact_method]["ZeroShotAverageScore"], average_scores[refact_method]["InstrucAverageScore"], average_scores[refact_method]["FewShotsAverageScore"]])
+        table.add_row([refact_method, average_scores[refact_method]["ZeroShotAverageScore"], average_scores[refact_method]["InstrucAverageScore"], average_scores[refact_method]["FewShotAverageScore"]])
 
     print(table)
 

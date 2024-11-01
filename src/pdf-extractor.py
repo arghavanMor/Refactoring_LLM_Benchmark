@@ -69,5 +69,5 @@ for page in doc.pages(constants.CHAP6_INDEX, constants.LAST_PAGE_INDEX, 1):
 
 
 with open(constants.FOWLER_JSON_FILE, "w") as export:
-    json.dump(json_data, export)
+    json.dump(json_data, export, indent=4)
                 
