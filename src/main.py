@@ -28,7 +28,7 @@ env["PATH"] = f"{jdk_path}/bin:" + env["PATH"]
 env["PATH"] = f"{mvn_path}/bin:" + env["PATH"]
 
 
-def modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository, commit_references_path):
+def modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository, commit_references_path, original_failed_test, original_test_error):
     commit_references = []
 
     with open(llm_generated_code_path, 'r') as llm_generated_code_file:
@@ -59,6 +59,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                 method_name = method_signature[-1]
 
                 for prompt_approach_item in prompt_approach:
+                    print("="*200)
                     prompt_approach_code = refactorings.get(prompt_approach_item)
 
                     repo.git.checkout(main_branch_name)
@@ -66,7 +67,6 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     #Checkout of the “before version” commit (git checkout hash)
                     branch_name = case_id + refactoring_type + prompt_approach_item + number_of_current_attempt
                     repo.git.checkout('-b', branch_name, initial_commit_version)
-                    #repo.git.checkout(branch_name)
                     result = subprocess.call(['java', '-jar', jar_path, repository_path, method_name, prompt_approach_code])
 
                     if result == 0:
@@ -76,13 +76,15 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                         commit_references.append(commit_reference)
 
                         compilation_return_code = compile(repo, local_repository, branch_name, repo.head.commit.hexsha)
-                        test(repo, local_repository, branch_name, repo.head.commit.hexsha)
+                        failed_test, test_error = test(repo, local_repository, branch_name, repo.head.commit.hexsha)
 
                         refactoring_quantity += 1
                         if not compilation_return_code:
                             compilation_success_quantity += 1
 
                         print(refactoring_quantity, " refactoring(s), ", compilation_success_quantity, " successfully compilation(s), ", (compilation_success_quantity/refactoring_quantity), "%")
+                        print("Failed test difference from the original version", original_failed_test - failed_test)
+                        print("Test error difference from the original version", original_test_error - test_error)
                         with open(commit_references_path, 'a') as commit_references_file:
                             commit_references_file.write(str(commit_reference) + "\n")
                     else:
@@ -114,9 +116,8 @@ def test(repo, local_repository_path, branch_name, commit_version):
         test_result_summary = test_result_stdout[test_result_summary_start:test_result_summary_end]
 
         print("*"*200)
-        print("*"*200)
         #print(test_result_stdout)
-        print("*"*100)
+        #print("*"*100)
         print(test_result_summary)
         print("*"*100)
         failed_test_temp = test_result_summary.split("Failed tests:")[1]
@@ -128,7 +129,6 @@ def test(repo, local_repository_path, branch_name, commit_version):
         test_error = test_error_temp.split("Tests run:")[0]
         test_error = set([item.strip() for item in test_error.split("\n") if 'test' in item])
         #print(test_error)
-        print("*"*200)
         print("*"*200)
     else:
         print("unfortunately, the test doesn't work!")
@@ -155,13 +155,14 @@ def main():
             initial_branch_commit = (main_branch_name, initial_commit_version)
             commit_references_file.write(str(initial_branch_commit) + "\n")
 
+
+        original_failed_test = None
+        original_test_error = None
         if project == 'antlr4':
             compile(repo, local_repository_path, main_branch_name, initial_commit_version)
-            failed_test, test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
-            print(failed_test)
-            print(test_error)
+            original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
 
-        modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository_path, commit_references_path)
+        modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository_path, commit_references_path, original_failed_test, original_test_error)
 
 if __name__ == "__main__":
     main()
