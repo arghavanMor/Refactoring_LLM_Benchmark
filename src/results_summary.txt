@@ -1,0 +1,800 @@
+===================== Here are the results: =====================
+
+commit_hash: 7b106abae1fef71daf07a86110648fd3c967db36
+refactoring_id: L3671
+refactoring_type: INTRODUCE_EXPLAINING_VARIABLE
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: b174dc5dcf339277c1f3934ee970949842b3c700
+refactoring_id: L3671
+refactoring_type: INTRODUCE_EXPLAINING_VARIABLE
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 8d862b0b3e9f2a9e2c5c582b917ed688aa212101
+refactoring_id: L3671
+refactoring_type: INTRODUCE_EXPLAINING_VARIABLE
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 6f398301b7d7d68371b10e59a1428964942986cd
+refactoring_id: L3692
+refactoring_type: INTRODUCE_EXPLAINING_VARIABLE
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: d846ba608ba8f730e574b921d55ef169c85f1250
+refactoring_id: L3692
+refactoring_type: INTRODUCE_EXPLAINING_VARIABLE
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 10dca0d21e2f5f424b54a2dd9a57ac4ac7456503
+refactoring_id: L3692
+refactoring_type: INTRODUCE_EXPLAINING_VARIABLE
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: ca6562b87fa1aba99b9c914daaccedd43f745b8c
+refactoring_id: L7413
+refactoring_type: INTRODUCE_ASSERTION
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: c05fad716f676c8989be97e5bdecec79d5951ed5
+refactoring_id: L7413
+refactoring_type: INTRODUCE_ASSERTION
+prompt_approach_item: InstrucCode
+failed_test_length: 25
+unreproduced_failed_test_length: 0
+new_failed_test_length: 1
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 651a35c588ba82fe2949d3b3cd5bcce5347dc675
+refactoring_id: L7413
+refactoring_type: INTRODUCE_ASSERTION
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 55893a912210340603afd60499eeecdd45866456
+refactoring_id: L561
+refactoring_type: ADD_PARAMETER
+prompt_approach_item: ZeroShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: b61fbe814ffc75d0bf6a7127277ffacd24b86a2b
+refactoring_id: L561
+refactoring_type: ADD_PARAMETER
+prompt_approach_item: InstrucCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: b18a76682a338f2ac3857b8127482a155eb9f678
+refactoring_id: L561
+refactoring_type: ADD_PARAMETER
+prompt_approach_item: FewShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 1832d83e555cbc6712698199f4016ac0abd2caf2
+refactoring_id: L5431
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: f8c13cb35a7a11de1e11c5dba0c2b1964cd833c3
+refactoring_id: L5431
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: fc7b0e4230e225cbf684d4d4b25c190456740329
+refactoring_id: L5431
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 6830557d114d5954bd7dcae38c3f685c74516b25
+refactoring_id: L3844
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: a6934430b67b5f086efcd8154c10b9f2c4bc43ca
+refactoring_id: L3844
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 4
+unreproduced_test_error_length: 0
+new_test_error_length: 2
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: aa789104041934a42d9fc022543bcc26107100e1
+refactoring_id: L3844
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: de83325c1903f97e0e0e938b82e03334e7da741c
+refactoring_id: L3168
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: ZeroShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 70207d7e3d6a6d6d965bc0082fdfa174a5c9f6de
+refactoring_id: L3168
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: InstrucCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: fc9e7acb044f27626980d16f319ad61a09644b21
+refactoring_id: L3168
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: FewShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 8c08f9425af1aa31119625b21beb3d98943f991a
+refactoring_id: L10263
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 908eeb068132ea16c4e4b92659c2f9e44386a539
+refactoring_id: L10263
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 046409dd4f7d8515ad54f7d5432fd85f07b24c73
+refactoring_id: L10263
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 2a839cc77751b7575a918ff662427a319a8e53dc
+refactoring_id: L102630
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 504d3ffd3c9d8b7d76fd7e16e7fe4a46f571d067
+refactoring_id: L102630
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: d3691f5a1fd3b98648a584681a6ee44a6110d449
+refactoring_id: L102630
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: FewShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 099f25e99d6d21a11ae5076c9e173ba13593e236
+refactoring_id: L15668
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: ZeroShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: e44313de9b1ba124a68998d4a352e61363bd7f63
+refactoring_id: L15668
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: InstrucCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 9bce93b346df6c10f422c86ba733da2d1eebca02
+refactoring_id: L15668
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: FewShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 91e6130973f9ef233c0393fc5a474f20d9173274
+refactoring_id: L156680
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: ZeroShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 4353999f36365c3316543af64ffb7a78d6e11f41
+refactoring_id: L156680
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: InstrucCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 705c053cc6261941a0f0ff2b4583bc3c13080854
+refactoring_id: L156680
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: FewShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: b8465a95e1fe5cac759d06381d29b7768756317a
+refactoring_id: L3347
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: ZeroShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 70883e3a74d79df6a432be6de19fe54b4a39a6fa
+refactoring_id: L3347
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: InstrucCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 22d1e3821d005de8c324af01f6898cb689157d16
+refactoring_id: L3347
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: FewShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: b4e0cf494ca663b3dbaa0ae8b36d151a97a6c796
+refactoring_id: L2755
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: ZeroShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 1c880950d88b28f49435b6a73719fb22a01876c2
+refactoring_id: L2755
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: InstrucCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: c2d0754c28a24c296fa93d1f724a0e53fe332b1e
+refactoring_id: L2755
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: FewShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 04d2225633c50c159c8897efa7e3cab914d48f6c
+refactoring_id: L13228
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 4cb53c5f97ee37623810b8804399ce775f16807b
+refactoring_id: L13228
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: InstrucCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: f0727c61d11aee779ea9fe22bf798a77651d6630
+refactoring_id: L13228
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 8e3be4b29c36ddbee295a1fa5f402768b44b7b2f
+refactoring_id: L9806
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: ZeroShotCode
+failed_test_length: 0
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_length: 0
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: ebd9268f94d62b980c903f85f4291dfbf11ceed1
+refactoring_id: L9806
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: f1bd433ed39ef56b7d8280b013e05ec26e2b3c68
+refactoring_id: L9806
+refactoring_type: CONSOLIDATE_DUPLICATE_COND_FRAGMENTS
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: e5b95905cea42af8609bcf89abb2a7abfbe569c7
+refactoring_id: L1506
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: ZeroShotCode
+failed_test_length: 79
+unreproduced_failed_test_length: 0
+new_failed_test_length: 55
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 4ec561a89471573d5b7f210265ea2306d9c2f709
+refactoring_id: L1506
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: InstrucCode
+failed_test_length: 180
+unreproduced_failed_test_length: 0
+new_failed_test_length: 156
+test_error_to_failed_test_length: 0
+test_error_length: 69
+unreproduced_test_error_length: 0
+new_test_error_length: 67
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 3a5ad2eff9bac3d9872933aaacd282868cecc1f9
+refactoring_id: L1506
+refactoring_type: CONSOLIDATE_COND_EXPRESSION
+prompt_approach_item: FewShotCode
+failed_test_length: 180
+unreproduced_failed_test_length: 0
+new_failed_test_length: 156
+test_error_to_failed_test_length: 0
+test_error_length: 69
+unreproduced_test_error_length: 0
+new_test_error_length: 67
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: dae1ecdca034571df528ece6ab508b10b48c155c
+refactoring_id: L1991
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: b1a893067b6a8ea223d5d5f6daf8fdca4464b2c9
+refactoring_id: L1991
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: ee16987d10ccabfa9899d0805ac85877e98c3028
+refactoring_id: L1991
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 73bfaca236938b2b7f686157796d4105e12c8819
+refactoring_id: L19910
+refactoring_type: INTRODUCE_NULL_OBJECT
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 0b1656905ae8c8fcd1f00616b2973a983567dbe6
+refactoring_id: L19910
+refactoring_type: INTRODUCE_NULL_OBJECT
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 3b5a518c88189e9a62878be9a7c628f3dab11e57
+refactoring_id: L19910
+refactoring_type: INTRODUCE_NULL_OBJECT
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: ad08784ed0a8f14e747f6d6709c8dc5c288e313c
+refactoring_id: L2113
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: f5d575a3ab11611adcb42f8e4ecbfebb315211de
+refactoring_id: L2113
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 1bd39102d8f6a753896e3fed7d58ac685397b736
+refactoring_id: L2113
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 918d49de74a4c0e2e3bc3b580df093acdc73f0c5
+refactoring_id: L2427
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: ZeroShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: 379376ebf1471731972aa33a51fefb5db221477e
+refactoring_id: L2427
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: InstrucCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
+commit_hash: e9e17349552e1d0f49f126cd39c69f3447a58c1c
+refactoring_id: L2427
+refactoring_type: REPLACE_NESTED_COND_WITH_GUARD_CLAUSES
+prompt_approach_item: FewShotCode
+failed_test_length: 24
+unreproduced_failed_test_length: 0
+new_failed_test_length: 0
+test_error_to_failed_test_length: 0
+test_error_length: 2
+unreproduced_test_error_length: 0
+new_test_error_length: 0
+failed_test_to_test_error_length: 0
+======================================================================================================================================================
+
