@@ -27,16 +27,13 @@ env["PATH"] = f"{jdk_path}/bin:" + env["PATH"]
 env["PATH"] = f"{mvn_path}/bin:" + env["PATH"]
 
 
-def modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository, commit_references_path, results_path, results_dictionary, original_failed_test, original_test_error):
+def modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository, results_dictionary, original_failed_test, original_test_error):
 
     with open(llm_generated_code_path, 'r') as llm_generated_code_file:
         generated_code_data = json.load(llm_generated_code_file)
 
     with open(data_collection_path, 'r') as data_collection_file:
         collected_data = json.load(data_collection_file)
-
-    refactoring_quantity = 0
-    compilation_success_quantity = 0
 
     for refactoring_id, refactorings in generated_code_data.items():
         for item in collected_data:
@@ -57,7 +54,11 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                 method_name = method_signature[-1]
 
                 for prompt_approach_item in prompt_approach:
-                    print("="*200)
+                    results_subdict = dict()
+                    results_subdict['refactoring_id'] = refactoring_id
+                    results_subdict['refactoring_type'] = refactoring_type
+                    results_subdict['prompt_approach_item'] = prompt_approach_item
+
                     prompt_approach_code = refactorings.get(prompt_approach_item)
 
                     repo.git.checkout(main_branch_name)
@@ -65,22 +66,25 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     #Checkout of the “before version” commit (git checkout hash)
                     branch_name = case_id + refactoring_type + prompt_approach_item + number_of_current_attempt
                     repo.git.checkout('-b', branch_name, initial_commit_version)
-                    result = subprocess.call(['java', '-jar', jar_path, repository_path, method_name, prompt_approach_code])
+                    is_refactored = subprocess.call(['java', '-jar', jar_path, repository_path, method_name, prompt_approach_code])
 
-                    if result == 0:
+                    if is_refactored == 0:
+                        results_subdict['refactored'] = 1
                         repo.git.add(all=True)
                         repo.index.commit(branch_name)
                         commit_hash = repo.head.commit.hexsha
-                        #commit_references.append(commit_reference)
+                        results_subdict['commit_hash'] = commit_hash
 
                         compilation_return_code = compile_call(repo, local_repository, repo.head.commit.hexsha)
-                        failed_test, test_error = test(repo, local_repository, branch_name, repo.head.commit.hexsha)
+                        failed_test = None
+                        test_error =  None
 
-                        refactoring_quantity += 1
                         if not compilation_return_code:
-                            compilation_success_quantity += 1
+                            results_subdict['compiled'] = 1
+                            failed_test, test_error = test(repo, local_repository, branch_name, repo.head.commit.hexsha)
+                        else:
+                            results_subdict['compiled'] = 0
 
-                        print(refactoring_quantity, " refactoring(s), ", compilation_success_quantity, " successfully compilation(s), ", (compilation_success_quantity/refactoring_quantity), "%")
                         unreproduced_failed_test = ""
                         new_failed_test = ""
                         unreproduced_test_error = ""
@@ -88,79 +92,40 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                         test_error_to_failed_test = ""
                         failed_test_to_test_error = ""
 
-                        results_subdict = dict()
-                        results_subdict['commit_hash'] = commit_hash
-                        results_subdict['refactoring_id'] = refactoring_id
-                        results_subdict['refactoring_type'] = refactoring_type
-                        results_subdict['prompt_approach_item'] = prompt_approach_item
-
                         if failed_test :
                             unreproduced_failed_test = original_failed_test - failed_test
                             new_failed_test = failed_test - original_failed_test
-
-
                             results_subdict['failed_test'] = list(failed_test)
-                            results_subdict['failed_test_length'] = len(failed_test)
-
                             results_subdict['unreproduced_failed_test'] = list(unreproduced_failed_test)
-                            results_subdict['unreproduced_failed_test_length'] = len(unreproduced_failed_test)
-
                             results_subdict['new_failed_test'] =  list(new_failed_test)
-                            results_subdict['new_failed_test_length'] =  len(new_failed_test)
-
                             if test_error :
                                 test_error_to_failed_test = failed_test.intersection(original_test_error)
                                 results_subdict['test_error_to_failed_test'] =  list(test_error_to_failed_test)
-                                results_subdict['test_error_to_failed_test_length'] =  len(test_error_to_failed_test)
                             else:
                                 results_subdict['test_error_to_failed_test'] = []
-                                results_subdict['test_error_to_failed_test_length'] = 0
-
                         else:
                             results_subdict['failed_test'] = []
-                            results_subdict['failed_test_length'] = 0
-
                             results_subdict['unreproduced_failed_test'] = []
-                            results_subdict['unreproduced_failed_test_length'] = 0
-
                             results_subdict['new_failed_test'] =  []
-                            results_subdict['new_failed_test_length'] =  0
-
-
                         if test_error :
                             unreproduced_test_error = original_test_error - test_error
                             new_test_error = test_error - original_test_error
-
                             results_subdict['test_error'] = list(test_error)
-                            results_subdict['test_error_length'] = len(test_error)
-
                             results_subdict['unreproduced_test_error'] = list(unreproduced_test_error)
-                            results_subdict['unreproduced_test_error_length'] = len(unreproduced_test_error)
-
                             results_subdict['new_test_error'] = list(new_test_error)
-                            results_subdict['new_test_error_length'] = len(new_test_error)
-
                             if failed_test :
                                 failed_test_to_test_error = test_error.intersection(original_failed_test)
                                 results_subdict['failed_test_to_test_error'] =  list(failed_test_to_test_error)
-                                results_subdict['failed_test_to_test_error_length'] =  len(failed_test_to_test_error)
                             else:
                                 results_subdict['failed_test_to_test_error'] = []
-                                results_subdict['failed_test_to_test_error_length'] = 0
                         else:
                             results_subdict['test_error'] = []
-                            results_subdict['test_error_length'] = 0
-
                             results_subdict['unreproduced_test_error'] = []
-                            results_subdict['unreproduced_test_error_length'] = 0
-
                             results_subdict['new_test_error'] = []
-                            results_subdict['new_test_error_length'] = 0
-
-                        results_dictionary[branch_name] = results_subdict
-
                     else:
+                        results_subdict['refactored'] = 0
                         print("Refactoring failed")
+                    results_dictionary[branch_name] = results_subdict
 
                     #checkout on the main branch
                     repo.git.checkout(main_branch_name)
@@ -174,17 +139,8 @@ def compile_call(repo, local_repository_path, commit_version):
 
 
 def test(repo, local_repository_path, branch_name, commit_version):
-    failed_test = None
-    test_error = None
-    compilation_return_code = compile_call(repo, local_repository_path, commit_version)
-
-    if not compilation_return_code:
-        print("Oh yes! The test is working!")
-        test_result = subprocess.run(['mvn', '-f', local_repository_path + '/pom.xml', 'test'], env=env, capture_output=True, text=True)
-        failed_test, test_error = result_str_processing(test_result.stdout)
-    else:
-        print("unfortunately, the test doesn't work!")
-
+    test_result = subprocess.run(['mvn', '-f', local_repository_path + '/pom.xml', 'test'], env=env, capture_output=True, text=True)
+    failed_test, test_error = result_str_processing(test_result.stdout)
     return failed_test, test_error
 
 def result_str_processing(test_result_stdout):
@@ -198,16 +154,11 @@ def result_str_processing(test_result_stdout):
     failed_test = failed_test_temp.split("Tests in error:")[0]
     failed_test_list = [item.strip().split(")")[0]+")" for item in failed_test.split("\n") if 'test' in item]
     failed_test = set(failed_test_list)
-    print("*"*100)
+
     test_error_temp = test_result_summary.split("Tests in error:")[1]
     test_error = test_error_temp.split("Tests run:")[0]
     test_error = set([item.strip().split(")")[0]+")" for item in test_error.split("\n") if 'test' in item])
-    print(test_error)
-    print("*"*200)
     return failed_test, test_error
-
-
-
 
 
 def main():
@@ -238,7 +189,7 @@ def main():
                 results_dictionary['original_failed_test'] = list(original_failed_test)
                 results_dictionary['original_test_error'] =  list(original_test_error)
 
-        modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository_path, commit_references_path, results_path, results_dictionary, original_failed_test, original_test_error)
+        modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository_path, results_dictionary, original_failed_test, original_test_error)
 
         # Serializing json
         json_object = json.dumps(results_dictionary, indent=4)
@@ -247,3 +198,4 @@ def main():
             results_file.write(json_object)
 if __name__ == "__main__":
     main()
+
