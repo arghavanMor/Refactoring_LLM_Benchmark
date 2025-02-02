@@ -1,8 +1,7 @@
-following are examples of the code snippets for <refactoring method> refactoring.
-    
-<refactoring example>
+Following is the rule to apply the <refactoring method> refactoring:
 
- 
+<rule>
+
 Now, for the following code snippet, apply <refactoring method>: <code>
 
 Clean the output to only show the final version of the code and do not include non-programming language.

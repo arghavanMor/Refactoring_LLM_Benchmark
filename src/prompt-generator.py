@@ -4,19 +4,41 @@ import csv
 from openai import OpenAI
 from tqdm import tqdm
 import re
+import os
 
 MODEL_NAME = "gpt-3.5-turbo"
 
-def extract_csv():
+dirname = os.path.dirname(__file__)
+
+def extract_data_csv():
     data_list = []
 
-    with open("../Data/Data_collection.csv", "r") as csv_file:
+    with open(dirname + "/../Data/Data_collection.csv", "r") as csv_file:
         reader = csv.DictReader(csv_file)
 
         for row in reader:
             data_list.append(row)
 
     return data_list
+
+def rules_cvs_to_json():
+
+    data = {}
+
+    with open(dirname + "/../Data/rules.csv", "r") as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+
+        for row in csv_reader:
+            refact_name = row["Name"].upper()
+            data[refact_name] = {}
+            data[refact_name]["Ref-Finder ID"] = row["ID"]
+            data[refact_name]["Rule"] = row["Logic Rule"]
+            data[refact_name]["Description"] = row["English Description"]
+
+        
+    with open(constants.RULES_JSON_FILE, "w") as rules_json_file:
+        json.dump(data, rules_json_file, indent=4)
+
 
 
 def fill_zero_shot_template(refact_method, code):
@@ -49,6 +71,24 @@ def fill_few_shot_template(refact_method, examples, code):
     
     return few_shot_template
 
+def fill_context_template(code):
+
+    with open(constants.CONTEXT_TEMPLATE_FILE, "r") as context_template_file:
+        context_template = context_template_file.read()
+        context_template = context_template.replace("<code>", code)
+
+    return context_template
+
+def fill_rule_template(refact_method, rule, code):
+
+    with open(constants.RULE_TEMPLATE_FILE, "r") as rule_template_file:
+        rule_template = rule_template_file.read()
+        rule_template = rule_template.replace("<refactoring method>", refact_method)
+        rule_template = rule_template.replace("<rule", rule)
+        rule_template = rule_template.replace("<code>", code)
+    
+    return rule_template
+            
 
 def get_openai_response(prompt, client):
 
@@ -68,13 +108,13 @@ def get_openai_response(prompt, client):
 
 def generate_llm_json():
 
-    API_KEY = open("./../OpenAI_key.txt", "r").read()
+    API_KEY = open(dirname + "/../OpenAI_key.txt", "r").read()
 
-
-    with open(constants.FOWLER_JSON_FILE, "r+") as fowler_json_file:
+    with open(constants.FOWLER_JSON_FILE, "r+") as fowler_json_file, open(constants.RULES_JSON_FILE, "r") as rules_json_file:
         json_data = json.load(fowler_json_file)
+        rules_data = json.load(rules_json_file)
 
-        data_list = extract_csv()
+        data_list = extract_data_csv()
 
         client = OpenAI(api_key=API_KEY)
 
@@ -104,20 +144,30 @@ def generate_llm_json():
 
             
             few_shot_prompt = fill_few_shot_template(fowler_type, examples=refact_examples, code=before_refact_code)
+            context_prompt = fill_context_template(code=before_refact_code)
+
+            if fowler_type not in rules_data or rules_data[fowler_type]["Ref-Finder ID"] in constants.RULES_EXCEPTION:
+                print(fowler_type + " has no rules")
+
+            rules_prompt = fill_rule_template(fowler_type, rule=rules_data[fowler_type]["Rule"], code=before_refact_code)
 
             zero_shot_generated_code = get_openai_response(zero_shot_prompt, client)
             instruc_generated_code = get_openai_response(instruc_prompt, client)
             few_shot_generated_code = get_openai_response(few_shot_prompt, client)
+            context_generated_code = get_openai_response(context_prompt, client)
+            rules_generated_code = get_openai_response(rules_prompt, client)
 
             # Write to JSON format
-            csv_id = example["ï»¿ID"]
+            csv_id = example["\ufeffID"]
             json_llm_generated_code[csv_id] = {}
             json_llm_generated_code[csv_id]["RefactMethod"] = fowler_type
             json_llm_generated_code[csv_id]["BeforeRefact"] = example["BeforeRefact"]
-            json_llm_generated_code[csv_id]["BeforeRefact"] = example["AfterRefact"]
+            json_llm_generated_code[csv_id]["AfterRefact"] = example["AfterRefact"]
             json_llm_generated_code[csv_id]["ZeroShotCode"] = zero_shot_generated_code
             json_llm_generated_code[csv_id]["InstrucCode"] = instruc_generated_code
             json_llm_generated_code[csv_id]["FewShotCode"] = few_shot_generated_code
+            json_llm_generated_code[csv_id]["ContextCode"] = context_generated_code
+            json_llm_generated_code[csv_id]["RulesCode"] = rules_generated_code
 
     with open(constants.LLM_CODE_JSON_FILE, "w") as llm_json:
         json.dump(json_llm_generated_code, llm_json, indent=4)
@@ -174,7 +224,7 @@ def clean_llm_output():
     with open(constants.LLM_CODE_JSON_FILE, "r+") as llm_json:
 
         json_data = json.load(llm_json)
-        all_prompt_types = ["ZeroShotCode", "InstrucCode", "FewShotCode"]
+        all_prompt_types = ["ZeroShotCode", "InstrucCode", "FewShotCode", "ContextCode", "RulesCode"]
 
         for test_case in json_data:
             for prompt in all_prompt_types:
@@ -217,3 +267,15 @@ def clean_llm_output():
                 llm_json.seek(0)
                 json.dump(json_data, llm_json, indent=4)
                 llm_json.truncate()
+
+rules_cvs_to_json()
+with open(constants.FOWLER_JSON_FILE, "r+") as fowler_json_file, open(constants.RULES_JSON_FILE, "r") as rules_json_file:
+    json_data = json.load(fowler_json_file)
+    rules_data = json.load(rules_json_file)
+    
+    # for test in json_data:
+    #     if test not in rules_data or rules_data[test]["Ref-Finder ID"] in constants.RULES_EXCEPTION:
+    #         print(test + " has no rules")
+    for test in rules_data:
+        if test not in json_data:
+            print(test)

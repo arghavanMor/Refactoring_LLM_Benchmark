@@ -4,7 +4,7 @@ from pyccmetrics import Metrics
 #Need tree-sitter==0.20.1
 
 
-CODE_DIR = os.path.join(os.getcwd(), "src/java_files/beforerefact.java")
+CODE_DIR = os.path.join(os.getcwd(), "src/java_files/test_single_line.java")
 
 
 metrics = Metrics(file_path=CODE_DIR)

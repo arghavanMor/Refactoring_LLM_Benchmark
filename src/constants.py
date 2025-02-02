@@ -1,3 +1,4 @@
+# Constants for Fowler Catalog PDF
 CHAP6_INDEX = 120
 LAST_PAGE_INDEX = 454
 TITLES_CONST = {
@@ -5,12 +6,22 @@ TITLES_CONST = {
     "font": "Source Sans Pro"
 }
 
-FOWLER_PDF_FILE = "./src/Fowler.pdf"
+# Refactoring methods that have no rules
+RULES_EXCEPTION = [9, 11, 29, 61, 68, 70, 71]
 
-FOWLER_JSON_FILE = "./src/refactoring_methods.json"
-LLM_CODE_JSON_FILE = "./src/llm_generated_code.json"
-CODEBLEU_JSON_FILE = "./src/codebleu.json"
 
-ZERO_SHOT_TEMPLATE_FILE = "./src/prompt_templates/zero_shot_template.txt"
+FOWLER_PDF_FILE = "./Data/Fowler.pdf"
+
+# JSON files
+RULES_JSON_FILE = "./src/json_files/rules.json"
+FOWLER_JSON_FILE = "./src/json_files/refactoring_methods.json"
+LLM_CODE_JSON_FILE = "./src/json_files/llm_generated_code.json"
+CODEBLEU_JSON_FILE = "./src/json_files/codebleu.json"
+RESULT_SUMMARY_JSON_FILE = "./src/json_files/results_summary.json"
+
+# Template files
+CONTEXT_TEMPLATE_FILE = "./src/prompt_templates/context_template.txt"
 INSTRUCTIONS_TEMPLATE_FILE = "./src/prompt_templates/instructions_template.txt"
+RULE_TEMPLATE_FILE = "./src/prompt_templates/rules_template.txt"
+ZERO_SHOT_TEMPLATE_FILE = "./src/prompt_templates/zero_shot_template.txt"
 FEW_SHOT_TEMPLATE_FILE = "./src/prompt_templates/few_shot_template.txt"

@@ -1,0 +1,3 @@
+Code refactoring is the process of changing source code for better readability, maintainability, and quality without changing its external behavior. Given the following code, output a refactored version of it: <code>
+
+Clean the output to only show the final version of the code and do not include non-programming language.
