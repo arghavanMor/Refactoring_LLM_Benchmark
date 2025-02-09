@@ -1,8 +1,20 @@
 {
-    "ADD PARAMETER": {
-        "Ref-Finder ID": "1",
-        "Rule": "added_parameter(mFullName, X, addedParam) \u2192 add_parameter(mFullname, addedParam)",
-        "Description": "A parameter is added to a method."
+    "CHANGE FUNCTION DECLARATION": {
+        "ADD PARAMETER": {
+            "Ref-Finder ID": "1",
+            "Rule": "added_parameter(mFullName, X, addedParam) \u2192 add_parameter(mFullname, addedParam)",
+            "Description": "A parameter is added to a method."
+        },
+        "REMOVE PARAMETER": {
+            "Ref-Finder ID": "45",
+            "Rule": "deleted_parameter(mFullName, X, deletedParam) \u2192 remove_parameter(mFullname, deletedParam)",
+            "Description": "A parameter is removed from a method."
+        },
+        "RENAME METHOD": {
+            "Ref-Finder ID": "47",
+            "Rule": "added_method(newmFullName, newmShortName, tFullName) \u2227 deleted_method(mFullName, mShortName, tFullName) \u2227 similarbody(newmFullName, newmBody, mFullname, mBody) \u2192 rename_method(mFullName, newmFullName, tFullName)",
+            "Description": "A method is renamed to give a better idea of its func-tion"
+        }
     },
     "CHANGE BIDIRECTIONAL ASSOCIATION TO UNIDIRECTIONAL": {
         "Ref-Finder ID": "2",
@@ -89,10 +101,10 @@
         "Rule": "added_method(newmFullName, newmShortName, tFullName) \u2227 similarbody(newmFullName, newmBody, mFullname, mBody) \u2227 after_method(mFullName, X, tFullName) \u2227 added_calls(mFullName, newmFullName) \u2192 extract_method(mFullName, newmFullName, newmBody, tFullName)",
         "Description": "You have a code fragment that can be grouped to-gether. Turn the fragment into a method whose name explains the purpose of the method."
     },
-    "EXTRACT SUBCLASS": {
-        "Ref-Finder ID": "19",
-        "Rule": "added_subtype(superTFullName, tFullName) \u2227 NOT(before_type(tFullName, X, X)) \u2227 (move_field(fShortName, superTFullName, tFullName) \u2228 move_method(mShortName, superTFullName, tFullName)) \u2192 extract_subclass(superTFullName, tFullName)",
-        "Description": "A class has features that are used only in some instances. Create a subclass for that subset of features."
+    "REPLACE TYPE CODE WITH SUBCLASSES": {
+        "Ref-Finder ID": "66",
+        "Rule": "before_field(fFullName1, fShortName1, tFullName) \u2227 before_field(fFullName2, fShortName2, tFullName) \u2227 NOT(equals(fFullName1, fFullName2) \u2227 before_fieldmodifier(fFullName1, static) \u2227 before_fieldmodifier(fFullName2, static) \u2227 before_fieldmodifier(fFullName1, final) \u2227 before_fieldmodifier(fFullName2, final) \u2227 deleted_field(tCodeFullName, X, tFullName) \u2227 added_type(tCodeFullName1, tCodeShortName1, X) \u2227 added_type(tCodeFullName2, tCodeShortName2, X) \u2227 NOT(equals(tCodeFullName1, tCodeFullName2)) \u2227 added_subtype(tFullName, tCodeFullName1) \u2227 added_subtype(tFullName, tCodeFullName2) \u2227 similar(fShortName1, tCodeShortName1) \u2227 similar(fShortName2, tCodeShortName2))",
+        "Description": "You have an immutable type code that affects the behavior of a class. Replace the type with subclasses."
     },
     "EXTRACT SUPERCLASS": {
         "Ref-Finder ID": "20",
@@ -204,10 +216,10 @@
         "Rule": "move_method(fShortName, tParentFullName, tChildFullName) \u2227 before_subtype(tParentFullName, tChildFullName) \u2192 push_down_method(fShortName, tParentFullName, tChildFullName)",
         "Description": "A method is moved to a subclass"
     },
-    "REMOVE ASSIGNMENT TO PARAMETERS": {
-        "Ref-Finder ID": "42",
-        "Rule": "before_parameter(mFullName, paramList, X) \u2227 after_parameter(mFullName, paramList, X) \u2227 deleted_methodbody(mFullName, oldmBody) \u2227 added_methodbody(mFullName, newmBody) \u2192 remove_assignment_to_parameter(mFullName, paramName)",
-        "Description": "The code assigns to a pa-rameter. Use a temporary variable instead."
+    "SPLIT VARIABLE": {
+        "Ref-Finder ID": "70",
+        "Rule": "Requires in-depth alias analysis.",
+        "Description": "You have a temporary variable assigned to more than once, but is not a loop variable nor a collecting temporary variable. Make a separate temporary variable for each assignment."
     },
     "REMOVE CONTROL FLAG": {
         "Ref-Finder ID": "43",
@@ -219,20 +231,10 @@
         "Rule": "after_method(clientmFullName, X, clienttFullName) \u2227 added_calls(clientmFullName, delegatemFullName) \u2227 deleted_calls(clientmFullName, servermFullName) \u2227 deleted_method(servermFullName, X, servertFullName) \u2227 deleted_calls(servermFullName, delegatemFullName) \u2227 before_field(delegatefFullName, X, servertFullName) \u2227 after_field(delegatefFullName, X, servertFull-Name) \u2227 before_fieldoftype(delegatefFullName, delegatetFullName) \u2227 after_fieldoftype(delegatefFullName, delegatet-FullName) \u2227 after_method(delegatemFullName, X, delegatetFullName) \u2192 remove_middle_man(delegatetFullName, servertFullName, clienttFullName)",
         "Description": "A class is doing too much simple delegation. Get the client to call the delegate directly."
     },
-    "REMOVE PARAMETER": {
-        "Ref-Finder ID": "45",
-        "Rule": "deleted_parameter(mFullName, X, deletedParam) \u2192 remove_parameter(mFullname, deletedParam)",
-        "Description": "A parameter is removed from a method."
-    },
     "REMOVE SETTING METHOD": {
         "Ref-Finder ID": "46",
         "Rule": "added_fieldmodifier(fFullName, final) \u2227 deleted_setter(mFullName, fFullName) \u2192 remove_setting method(mFullName, fFullName)",
         "Description": "A field should be set at creation time and never altered. Remove any setting method for that field."
-    },
-    "RENAME METHOD": {
-        "Ref-Finder ID": "47",
-        "Rule": "added_method(newmFullName, newmShortName, tFullName) \u2227 deleted_method(mFullName, mShortName, tFullName) \u2227 similarbody(newmFullName, newmBody, mFullname, mBody) \u2192 rename_method(mFullName, newmFullName, tFullName)",
-        "Description": "A method is renamed to give a better idea of its func-tion"
     },
     "REPLACE ARRAY WITH OBJECT": {
         "Ref-Finder ID": "48",
@@ -314,16 +316,6 @@
         "Rule": "extract_method(mFullName, newmFullName, X, X) \u2227 added_calls(mFullName, newmFullName) \u2227 deleted_accesses(fFullName, mFullName) \u2227 added_accesses(fFullName, newmFullName) \u2192 replace_temp_with_query(mFullName, newmFullName)",
         "Description": "You are using a temporary variable to hold the result of an expression. Extract the expression into a method. Replace all references to the temp with the new method. The new method can then be used in other methods."
     },
-    "REPLACE TYPE CODE WITH STATE/STRATEGY": {
-        "Ref-Finder ID": "65",
-        "Rule": "deleted_field(old_fFullName1, fShortName1, tFullName) \u2227 deleted_field(old fFullName2, fShortName2, tFullName) \u2227 NOT(equals(fShortName1, fShortName2)) \u2227 before_fieldmodifier(old_fFullName1, static) \u2227 before_fieldmodifier(old_fFullName1, final) \u2227 before_fieldmodifier(old_fFullName2, static) \u2227 before_fieldmodifier(old_fFullName2, final) \u2227 added_field(new fFullName1, fShortName1, tCodeFullName) \u2227 added_field(new_fFullName2, fShortName2, tCodeFullName) \u2227 added_type(tCodeFullName, X, X) \u2227 after_fieldmodifier(new_fFullName1, static) \u2227 after_fieldmodifier(new_fFullName1, final) \u2227 after_fieldmodifier(new_fFullName2, static) \u2227 after_fieldmodifier(new_fFullName2, final) \u2227 deleted_fieldoftype(tCodefieldFullName, X) \u2227 added_fieldoftype(tCodefieldFullName, tCodeFullName) \u2227 added_type(tCodeFullName, tCodeShortName, X) \u2227 added_type(tCodeFullName1, tCodeShortName1, X) \u2227 added_type(tCodeFullName2, tCodeShortName2, X) \u2227 added_subtype(tCodeFullName, tCodeFullName1) \u2227 added_subtype(tCodeFullName, tCodeFullName2) \u2227 NOT(equals(tCodeShortName1, tCodeShortName2)) \u2227 similar_ignoredCase(fShortName1, tCodeShortName1) \u2227 similar_ignoredCase(fShortName2, tCodeShortName2) \u2227 similar(tCodeShortName, tShortName))",
-        "Description": "You have a type code that affects the behavior of a class, but you cannot use subclassing. Replace the type code with a state object."
-    },
-    "REPLACE TYPE CODE WITH SUBCLASSES": {
-        "Ref-Finder ID": "66",
-        "Rule": "before_field(fFullName1, fShortName1, tFullName) \u2227 before_field(fFullName2, fShortName2, tFullName) \u2227 NOT(equals(fFullName1, fFullName2) \u2227 before_fieldmodifier(fFullName1, static) \u2227 before_fieldmodifier(fFullName2, static) \u2227 before_fieldmodifier(fFullName1, final) \u2227 before_fieldmodifier(fFullName2, final) \u2227 deleted_field(tCodeFullName, X, tFullName) \u2227 added_type(tCodeFullName1, tCodeShortName1, X) \u2227 added_type(tCodeFullName2, tCodeShortName2, X) \u2227 NOT(equals(tCodeFullName1, tCodeFullName2)) \u2227 added_subtype(tFullName, tCodeFullName1) \u2227 added_subtype(tFullName, tCodeFullName2) \u2227 similar(fShortName1, tCodeShortName1) \u2227 similar(fShortName2, tCodeShortName2))",
-        "Description": "You have an immutable type code that affects the behavior of a class. Replace the type with subclasses."
-    },
     "SEPARATE DOMAIN FROM PRESENTATION": {
         "Ref-Finder ID": "68",
         "Rule": "No way to verify business logic vs user interface.",
@@ -333,11 +325,6 @@
         "Ref-Finder ID": "69",
         "Rule": "before_field(f1FullName, X, tFullName) \u2227 after_field(f1FullName, X, tFullName) \u2227 before_field(f2FullName, X, tFullName) \u2227 after_field(f2FullName, X, tFullName) \u2227 deleted_method(oldmFullName, oldmShortName, tFullName) \u2227 deleted_accesses(f1FullName, oldmFullName) \u2227 deleted_accesses(f2FullName, oldmFullName) \u2227 added_method(m1FullName, m1ShortName, tFullName) \u2227 added_accesses(f1FullName, m1FullName) \u2227 added_method(m2FullName, m2ShortName, tFullName) \u2227 added_accesses(f2FullName, m2FullName) \u2227 not(equals(m1FullName, m2FullName))",
         "Description": "You have a method that returns a value but also changes the state of an object. Create two methods, one for the query and one for the modification."
-    },
-    "SPLIT TEMPORARY VARIABLE": {
-        "Ref-Finder ID": "70",
-        "Rule": "Requires in-depth alias analysis.",
-        "Description": "You have a temporary variable assigned to more than once, but is not a loop variable nor a collecting temporary variable. Make a separate temporary variable for each assignment."
     },
     "SUBSTITUTE ALGORITHM": {
         "Ref-Finder ID": "71",

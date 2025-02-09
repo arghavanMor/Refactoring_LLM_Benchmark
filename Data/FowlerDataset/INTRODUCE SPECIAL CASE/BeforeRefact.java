@@ -1,0 +1,1 @@
+if (aCustomer === “unknown”) customerName = “occupant”;

@@ -2,7 +2,7 @@
 CHAP6_INDEX = 120
 LAST_PAGE_INDEX = 454
 TITLES_CONST = {
-    "color": "8208477",
+    "color": "-8568482",
     "font": "Source Sans Pro"
 }
 
@@ -25,3 +25,7 @@ INSTRUCTIONS_TEMPLATE_FILE = "./src/prompt_templates/instructions_template.txt"
 RULE_TEMPLATE_FILE = "./src/prompt_templates/rules_template.txt"
 ZERO_SHOT_TEMPLATE_FILE = "./src/prompt_templates/zero_shot_template.txt"
 FEW_SHOT_TEMPLATE_FILE = "./src/prompt_templates/few_shot_template.txt"
+
+#Folder paths
+
+FOWLER_DATASET_PATH = "./Data/FowlerDataset"

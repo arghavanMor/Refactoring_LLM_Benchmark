@@ -1,0 +1,1 @@
+manager = aPerson.department.manager;
