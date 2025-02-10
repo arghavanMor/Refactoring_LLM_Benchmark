@@ -1,0 +1,7 @@
+Following is the rule to apply the <refactoring method> refactoring. It can be broken down into <number> sub-rules:
+
+<rules>
+
+Now, for the following code snippet, apply <refactoring method>: <code>
+
+Clean the output to only show the final version of the code and do not include non-programming language.
