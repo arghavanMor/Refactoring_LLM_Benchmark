@@ -17,6 +17,7 @@ RULES_EXCEPTION = [9, 11, 29, 61, 68, 70, 71]
 FOWLER_PDF_FILE = "./Data/Fowler.pdf"
 
 # JSON files
+JSON_FILES_PATH = "./src/json_files/"
 RULES_JSON_FILE = "./src/json_files/rules.json"
 REFACT_METHODS_JSON_FILE = "./src/json_files/refactoring_methods.json"
 LLM_CODE_JSON_FILE = "./src/json_files/llm_generated_code.json"
@@ -35,3 +36,4 @@ FEW_SHOT_TEMPLATE_FILE = "./src/prompt_templates/few_shot_template.txt"
 #Folder paths
 
 FOWLER_DATASET_PATH = "./Data/FowlerDataset"
+EXTERNAL_DATASET_PATH = "./Data/ExternalDataset"

@@ -106,7 +106,7 @@ def fill_few_shot_template(refact_method, examples, code):
     with open(constants.FEW_SHOT_TEMPLATE_FILE, "r") as few_shot_template_file:
         few_shot_template = few_shot_template_file.read()
         few_shot_template = few_shot_template.replace("<refactoring method>", refact_method)
-        few_shot_template = few_shot_template.replace("<refactoring example>", examples)
+        few_shot_template = few_shot_template.replace("<refactoring examples>", examples)
         few_shot_template = few_shot_template.replace("<code>", code)
     
     return few_shot_template
@@ -144,7 +144,10 @@ def fill_rule_template(refact_method, rules, code):
             rule_template = rule_template.replace("<code>", code)
     
     return rule_template
-            
+
+def write_example(ex_nb, before_refact, after_refact):
+    ex = "".join(("Example #", str(ex_nb), ": "))
+    return " ".join((ex, "Before Refactoring:", str(before_refact), "\nAfter Refactoring:", str(after_refact)))
 
 def get_openai_response(prompt, client):
 
@@ -162,12 +165,12 @@ def get_openai_response(prompt, client):
     return chatbot_response.strip()
 
 
-def generate_llm_json():
+def generate_llm_json(filename):
 
     API_KEY = open(dirname + "/../OpenAI_key.txt", "r").read()
 
-    with open(constants.REFACT_METHODS_JSON_FILE, "r+") as REFACT_METHODS_JSON_FILE, open(constants.RULES_JSON_FILE, "r") as rules_json_file, open(constants.FOWLER_EX_JSON_FILE, "r") as fowler_ex_json_file:
-        json_data = json.load(REFACT_METHODS_JSON_FILE)
+    with open(constants.REFACT_METHODS_JSON_FILE, "r+") as refact_methods_json_file, open(constants.RULES_JSON_FILE, "r") as rules_json_file, open(constants.FOWLER_EX_JSON_FILE, "r") as fowler_ex_json_file:
+        json_data = json.load(refact_methods_json_file)
         rules_data = json.load(rules_json_file)
         fowler_ex_data = json.load(fowler_ex_json_file)
 
@@ -175,7 +178,7 @@ def generate_llm_json():
 
         client = OpenAI(api_key=API_KEY)
 
-        json_llm_generated_code = {}
+        f_json_llm_generated_code = {}
 
         for f_fowler_type in tqdm(fowler_ex_data):
             f_before_refact_code = fowler_ex_data[f_fowler_type]["BeforeRefact"]
@@ -196,17 +199,26 @@ def generate_llm_json():
 
 
             fowler_ex_id = "FOWLER_EX_" + f_fowler_type
-            json_llm_generated_code[fowler_ex_id] = {}
-            json_llm_generated_code[fowler_ex_id]["RefactMethod"] = f_fowler_type
-            json_llm_generated_code[fowler_ex_id]["BeforeRefact"] = f_before_refact_code
-            json_llm_generated_code[fowler_ex_id]["AfterRefact"] = f_after_refact_code
-            json_llm_generated_code[fowler_ex_id]["ZeroShotCode"] = f_zero_shot_generated_code
-            json_llm_generated_code[fowler_ex_id]["InstrucCode"] = f_instruc_generated_code
-            json_llm_generated_code[fowler_ex_id]["ContextCode"] = f_context_generated_code
+            f_json_llm_generated_code[fowler_ex_id] = {}
+            f_json_llm_generated_code[fowler_ex_id]["RefactMethod"] = f_fowler_type
+            f_json_llm_generated_code[fowler_ex_id]["BeforeRefact"] = f_before_refact_code
+            f_json_llm_generated_code[fowler_ex_id]["AfterRefact"] = f_after_refact_code
+            f_json_llm_generated_code[fowler_ex_id]["ZeroShotCode"] = f_zero_shot_generated_code
+            f_json_llm_generated_code[fowler_ex_id]["InstrucCode"] = f_instruc_generated_code
+            f_json_llm_generated_code[fowler_ex_id]["ContextCode"] = f_context_generated_code
             if f_rule_prompt:
-                json_llm_generated_code[fowler_ex_id]["RulesCode"] = f_rule_generated_code
+                f_json_llm_generated_code[fowler_ex_id]["RulesCode"] = f_rule_generated_code
+
+        f_filename_output = os.path.join(constants.JSON_FILES_PATH, "fowler_"+filename)
+        with open(f_filename_output, "w") as llm_json:
+            json.dump(f_json_llm_generated_code, llm_json, indent=4)
+
+        
+        json_llm_generated_code = {}
 
         for example in tqdm(data_list):
+
+            nb_ex = 0
 
             fowler_type = example["Fowler_type"].upper()
 
@@ -220,19 +232,36 @@ def generate_llm_json():
                 print("ERROR: " + fowler_type)
                 continue
 
-            for subtitle in json_data[fowler_type]:
-                if subtitle == "Mechanics":
-                    instruc_prompt = fill_instructions_template(fowler_type, instruc=json_data[fowler_type]["Mechanics"], code=before_refact_code)
+            if "Mechanics" in json_data[fowler_type]:
+                instruc_prompt = fill_instructions_template(fowler_type, instruc=json_data[fowler_type]["Mechanics"], code=before_refact_code)
 
-                elif subtitle.startswith("Example"):
+            for subtitle in json_data[fowler_type]:
+                if subtitle.startswith("Example"):
+                    nb_ex += 1
+                    refact_examples += "Example " + str(nb_ex) + ": "
                     refact_examples += subtitle + ":\n"
                     refact_examples += json_data[fowler_type][subtitle] + "\n"
+                    break
 
+            if nb_ex == 0:
+                nb_ex +=1
+                before_refact_file = os.path.join(constants.EXTERNAL_DATASET_PATH, fowler_type, "BeforeRefact.java")
+                after_refact_file = os.path.join(constants.EXTERNAL_DATASET_PATH, fowler_type, "PostRefact.java")
+
+                with open(before_refact_file, "r") as bef_ref_file, open(after_refact_file, "r") as aft_ref_file:
+                    before_refact_ex = bef_ref_file.read()
+                    after_refact_ex = aft_ref_file
+
+                ex_before_refact = write_example(nb_ex, before_refact=before_refact_ex, after_refact=after_refact_ex)
             
+                refact_examples += ex_before_refact + "\n"
+
+            refact_examples += write_example(nb_ex + 1, before_refact=fowler_ex_data[fowler_type]["BeforeRefact"], after_refact=fowler_ex_data[fowler_type]["AfterRefact"])
+
             few_shot_prompt = fill_few_shot_template(fowler_type, examples=refact_examples, code=before_refact_code)
             context_prompt = fill_context_template(code=before_refact_code)
 
-            rules = find_rule(f_fowler_type, rules_data)
+            rules = find_rule(fowler_type, rules_data)
 
             rule_prompt = fill_rule_template(fowler_type, rules=rules, code=before_refact_code)
 
@@ -256,7 +285,8 @@ def generate_llm_json():
             if rule_prompt:
                 json_llm_generated_code[csv_id]["RulesCode"] = rule_generated_code
 
-    with open("./src/json_files/new_run.json", "w") as llm_json:
+    filename_output = os.path.join(constants.JSON_FILES_PATH, filename)
+    with open(filename_output, "w") as llm_json:
         json.dump(json_llm_generated_code, llm_json, indent=4)
 
 def all_class_occurences(string):

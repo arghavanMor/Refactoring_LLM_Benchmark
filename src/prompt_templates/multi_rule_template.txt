@@ -2,6 +2,6 @@ Following is the rule to apply the <refactoring method> refactoring. It can be b
 
 <rules>
 
-Now, for the following code snippet, apply <refactoring method>: <code>
+Now, given the following code, apply the <refactoring method> refactoring on it to generate Java code: <code>
 
 Clean the output to only show the final version of the code and do not include non-programming language.
