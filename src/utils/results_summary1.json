@@ -1,12 +1,12 @@
 {
     "original_failed_test": 24,
     "original_test_error": 2,
-    "L3671INTRODUCE_EXPLAINING_VARIABLEZeroShotCode1733970294.695227": {
+    "L3671INTRODUCE_EXPLAINING_VARIABLEZeroShotCode1738947260.067657": {
         "refactoring_id": "L3671",
         "refactoring_type": "INTRODUCE_EXPLAINING_VARIABLE",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "1baefb0dd98066126c926de7a8fbb64566ef1307",
+        "commit_hash": "b3acacd8b2ea4344ea399eaa162c044a24bef6a5",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -17,12 +17,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3671INTRODUCE_EXPLAINING_VARIABLEInstrucCode1733970294.695227": {
+    "L3671INTRODUCE_EXPLAINING_VARIABLEInstrucCode1738947260.067657": {
         "refactoring_id": "L3671",
         "refactoring_type": "INTRODUCE_EXPLAINING_VARIABLE",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "4fc60733f305366d124ca10dce1afe04cc5cf115",
+        "commit_hash": "7fe8bc4bd55e28ffa315d18655986776a41a8117",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -33,12 +33,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3671INTRODUCE_EXPLAINING_VARIABLEFewShotCode1733970294.695227": {
+    "L3671INTRODUCE_EXPLAINING_VARIABLEFewShotCode1738947260.067657": {
         "refactoring_id": "L3671",
         "refactoring_type": "INTRODUCE_EXPLAINING_VARIABLE",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "5c72d5c1732f23f2d8502bb02a48ce92960c0af1",
+        "commit_hash": "3f573437d34cd6520df1be0db163d42424360ca4",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -49,12 +49,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3692INTRODUCE_EXPLAINING_VARIABLEZeroShotCode1733970388.751787": {
+    "L3692INTRODUCE_EXPLAINING_VARIABLEZeroShotCode1738947348.99797": {
         "refactoring_id": "L3692",
         "refactoring_type": "INTRODUCE_EXPLAINING_VARIABLE",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "878241705f9425ef96ca1296206d7efb3f9cf47c",
+        "commit_hash": "ac292fb961505a2e4eaff49c5ed4e39dbf2dce44",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -65,12 +65,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3692INTRODUCE_EXPLAINING_VARIABLEInstrucCode1733970388.751787": {
+    "L3692INTRODUCE_EXPLAINING_VARIABLEInstrucCode1738947348.99797": {
         "refactoring_id": "L3692",
         "refactoring_type": "INTRODUCE_EXPLAINING_VARIABLE",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "db654a5ee2f7be674145946f3d479fd2869c96e6",
+        "commit_hash": "de26f16cc26d6f655717eaaad1e96c217b6f4ef8",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -81,12 +81,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3692INTRODUCE_EXPLAINING_VARIABLEFewShotCode1733970388.751787": {
+    "L3692INTRODUCE_EXPLAINING_VARIABLEFewShotCode1738947348.99797": {
         "refactoring_id": "L3692",
         "refactoring_type": "INTRODUCE_EXPLAINING_VARIABLE",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "dca0072dcca5712cd95e399a6a122a89478a14cb",
+        "commit_hash": "e4a9dd63ff25eeaedffe13882ce442e7ac895cf9",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -97,12 +97,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L7413INTRODUCE_ASSERTIONZeroShotCode1733970480.777633": {
+    "L7413INTRODUCE_ASSERTIONZeroShotCode1738947438.641462": {
         "refactoring_id": "L7413",
         "refactoring_type": "INTRODUCE_ASSERTION",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "d2cf561242a276e88285b3aabdee3d45efe759ce",
+        "commit_hash": "9b0d40ed104111729dd92553ea59ffc4c04de811",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -113,12 +113,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L7413INTRODUCE_ASSERTIONInstrucCode1733970480.777633": {
+    "L7413INTRODUCE_ASSERTIONInstrucCode1738947438.641462": {
         "refactoring_id": "L7413",
         "refactoring_type": "INTRODUCE_ASSERTION",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "69a56fdfcb3c30902e45fb1c31143e77cd0cfc75",
+        "commit_hash": "721d9bc197426e732e7cd0bf4805c036c8307b3a",
         "compiled": 1,
         "failed_test": 25,
         "unreproduced_failed_test": 0,
@@ -129,12 +129,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L7413INTRODUCE_ASSERTIONFewShotCode1733970480.777633": {
+    "L7413INTRODUCE_ASSERTIONFewShotCode1738947438.641462": {
         "refactoring_id": "L7413",
         "refactoring_type": "INTRODUCE_ASSERTION",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "762087a3ab1f158bf591919e48c47586bec87b61",
+        "commit_hash": "dbf84851fa2b7b67c7285753ddb0ae7d6ce1c2a3",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -145,12 +145,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L561ADD_PARAMETERZeroShotCode1733970572.234485": {
+    "L561ADD_PARAMETERZeroShotCode1738947527.28955": {
         "refactoring_id": "L561",
         "refactoring_type": "ADD_PARAMETER",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "d3eb63607d48602bfc8b570a94db300af4d08c9b",
+        "commit_hash": "12d0cc6425c7c761fb6f9a1e931c0c8deb4683b4",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -159,12 +159,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L561ADD_PARAMETERInstrucCode1733970572.234485": {
+    "L561ADD_PARAMETERInstrucCode1738947527.28955": {
         "refactoring_id": "L561",
         "refactoring_type": "ADD_PARAMETER",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "8c38fb22faebdeb1b8a0b18a3b561cb22dd1feee",
+        "commit_hash": "38b11f9b315cc0418d8d44b9a88069c8c8da1748",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -173,12 +173,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L561ADD_PARAMETERFewShotCode1733970572.234485": {
+    "L561ADD_PARAMETERFewShotCode1738947527.28955": {
         "refactoring_id": "L561",
         "refactoring_type": "ADD_PARAMETER",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "cdbfbb4fec0abf85e0cc4386990b6356fd8a7729",
+        "commit_hash": "f376ead94150174c846d9084314a7b8e5d010ee3",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -187,12 +187,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L5431CONSOLIDATE_COND_EXPRESSIONZeroShotCode1733970578.333593": {
+    "L5431CONSOLIDATE_COND_EXPRESSIONZeroShotCode1738947533.340996": {
         "refactoring_id": "L5431",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "694dc183bc72db1ce2da3558cc1f8c292f92db44",
+        "commit_hash": "18899d3cdb2241c3d6aaef40437d7fb10f4497fc",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -203,12 +203,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L5431CONSOLIDATE_COND_EXPRESSIONInstrucCode1733970578.333593": {
+    "L5431CONSOLIDATE_COND_EXPRESSIONInstrucCode1738947533.340996": {
         "refactoring_id": "L5431",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "768cf347f236bf549228502a1b1a70a2747a9050",
+        "commit_hash": "fed317ae0def12b05124cfb28c5338f5981c415a",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -219,12 +219,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L5431CONSOLIDATE_COND_EXPRESSIONFewShotCode1733970578.333593": {
+    "L5431CONSOLIDATE_COND_EXPRESSIONFewShotCode1738947533.340996": {
         "refactoring_id": "L5431",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "7241ab805e7d8d8b92de93b988f4395ae287b2b7",
+        "commit_hash": "30820e1ed198f2aab978e1898325bf607568b017",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -235,12 +235,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3844CONSOLIDATE_COND_EXPRESSIONZeroShotCode1733970671.49904": {
+    "L3844CONSOLIDATE_COND_EXPRESSIONZeroShotCode1738947636.912115": {
         "refactoring_id": "L3844",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "ea66dedf58a233211d648a5cb4c6cb9f7822091f",
+        "commit_hash": "254a016640931922f15f6d7f678467b568098660",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -251,12 +251,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3844CONSOLIDATE_COND_EXPRESSIONInstrucCode1733970671.49904": {
+    "L3844CONSOLIDATE_COND_EXPRESSIONInstrucCode1738947636.912115": {
         "refactoring_id": "L3844",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "c5e757d1d3c122e5d3c595447ed5660e24623f3f",
+        "commit_hash": "bc899301bf9a00fe01a02b958cc2bdb607fc6008",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -267,12 +267,12 @@
         "new_test_error": 2,
         "failed_test_to_test_error": 0
     },
-    "L3844CONSOLIDATE_COND_EXPRESSIONFewShotCode1733970671.49904": {
+    "L3844CONSOLIDATE_COND_EXPRESSIONFewShotCode1738947636.912115": {
         "refactoring_id": "L3844",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "14791fd5e13428e5ac070672dab9feea844ad944",
+        "commit_hash": "cd2608267b6457e1a8e3d3ba55957266d78ae949",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -283,12 +283,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L3168CONSOLIDATE_COND_EXPRESSIONZeroShotCode1733970763.950567": {
+    "L3168CONSOLIDATE_COND_EXPRESSIONZeroShotCode1738947726.416982": {
         "refactoring_id": "L3168",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "af76c21535ed569ba12df8cc0ed7204f22586f3c",
+        "commit_hash": "fc602ac3b4eeea43ae9707ecbfb2b84920da485e",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -297,12 +297,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L3168CONSOLIDATE_COND_EXPRESSIONInstrucCode1733970763.950567": {
+    "L3168CONSOLIDATE_COND_EXPRESSIONInstrucCode1738947726.416982": {
         "refactoring_id": "L3168",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "f9ad6509da5e4c93f628b4c472cbbb9c8b952e35",
+        "commit_hash": "c6648f87530b4b0374b1d56575274a189db8735c",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -311,12 +311,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L3168CONSOLIDATE_COND_EXPRESSIONFewShotCode1733970763.950567": {
+    "L3168CONSOLIDATE_COND_EXPRESSIONFewShotCode1738947726.416982": {
         "refactoring_id": "L3168",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "3f8e2c5997e3c75b3b2dd4018e0835d4c5f7edc0",
+        "commit_hash": "95f06f2b94440007b0a3356f6be6333013e82cb3",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -325,12 +325,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L10263CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1733970770.454969": {
+    "L10263CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1738947732.946246": {
         "refactoring_id": "L10263",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "e24b396379143c29886fc4cdfdf1cefdda0d6394",
+        "commit_hash": "810eb23000bdc32052650f8dc5e650075c4c95d9",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -341,12 +341,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L10263CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1733970770.454969": {
+    "L10263CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1738947732.946246": {
         "refactoring_id": "L10263",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "4933ac644d29b01bad58c78a9313b53b1fef85e4",
+        "commit_hash": "cfb2d4e88160be3c235b44ff10ed9b230e5dca8b",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -357,12 +357,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L10263CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1733970770.454969": {
+    "L10263CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1738947732.946246": {
         "refactoring_id": "L10263",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "d908bd8a44cfcf36b5aac9a4f3500700e706c96c",
+        "commit_hash": "9719a3ed521b41debd3a6bab1ed997277a6d859d",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -373,12 +373,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L102630CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1733970865.667886": {
+    "L102630CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1738947822.399027": {
         "refactoring_id": "L102630",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "fb04e629b3ce9fc7e5e7b1f31ae7ae941689df11",
+        "commit_hash": "40a69e52515fdbb43c440fd567c61c05b4ff9d63",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -389,12 +389,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L102630CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1733970865.667886": {
+    "L102630CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1738947822.399027": {
         "refactoring_id": "L102630",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "d4e2fd4d29add247862386f47f361a6bd8478fa3",
+        "commit_hash": "ea6d0dfd07891c937ea9409f35ea2410a3f2c741",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -405,12 +405,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L102630CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1733970865.667886": {
+    "L102630CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1738947822.399027": {
         "refactoring_id": "L102630",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "7f7d078a0cb5f158d0e49e430f79b651e0907d1c",
+        "commit_hash": "6c0f3fde813fba456dcd99f0636637d72748ffdc",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -419,12 +419,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L15668CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1733970931.562103": {
+    "L15668CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1738947890.265571": {
         "refactoring_id": "L15668",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "97c5bbec01edad06a1acdea94342a29ddaa60fb2",
+        "commit_hash": "551d720ecd88f44e88c16ccc11f2695f9e9c5cc4",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -433,12 +433,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L15668CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1733970931.562103": {
+    "L15668CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1738947890.265571": {
         "refactoring_id": "L15668",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "8237d8597d3034c160a0a8b1961eacfda45f72f2",
+        "commit_hash": "39370a06b878499284cb4cf88ede392b1aba7e23",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -447,12 +447,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L15668CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1733970931.562103": {
+    "L15668CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1738947890.265571": {
         "refactoring_id": "L15668",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "8636f19b678f074a873bf3d828d8e30b55cc5950",
+        "commit_hash": "05331da3938ddddc33fe4ea521c4dbf6b0784133",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -461,12 +461,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L156680CONSOLIDATE_COND_EXPRESSIONZeroShotCode1733970940.974687": {
+    "L156680CONSOLIDATE_COND_EXPRESSIONZeroShotCode1738947899.974224": {
         "refactoring_id": "L156680",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "68993f9185e23e651dea88cdd3860d9a92eb90f6",
+        "commit_hash": "f688c21f50a92871b732bbcea99f9cb6e982c067",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -475,12 +475,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L156680CONSOLIDATE_COND_EXPRESSIONInstrucCode1733970940.974687": {
+    "L156680CONSOLIDATE_COND_EXPRESSIONInstrucCode1738947899.974224": {
         "refactoring_id": "L156680",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "0c062e5954450614135b35e7e548f456a1d1620d",
+        "commit_hash": "329966de256f6f3eaa7ae8f37bfc9c7e363e4853",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -489,12 +489,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L156680CONSOLIDATE_COND_EXPRESSIONFewShotCode1733970940.974687": {
+    "L156680CONSOLIDATE_COND_EXPRESSIONFewShotCode1738947899.974224": {
         "refactoring_id": "L156680",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "eed9d18a5ed5a5a4edb1b09229d86f8da371e027",
+        "commit_hash": "e57a760862b92ef7434ceccf577afa22a90f7632",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -503,12 +503,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L3347CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1733970950.471623": {
+    "L3347CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1738947909.686607": {
         "refactoring_id": "L3347",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "a60015bfb178615ae2f143317199b882ace3a78f",
+        "commit_hash": "5f6436ad225baa18f44833b0c630bedd3ea1bf74",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -517,12 +517,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L3347CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1733970950.471623": {
+    "L3347CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1738947909.686607": {
         "refactoring_id": "L3347",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "6aa06827f918f7284b7668a21d8c7f0c6b6f7042",
+        "commit_hash": "8af21640205eeb14766b5d52f467538ccb6a8606",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -531,12 +531,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L3347CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1733970950.471623": {
+    "L3347CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1738947909.686607": {
         "refactoring_id": "L3347",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "51960b1b66bbae05d6593b0316fe5e3a94a0e13f",
+        "commit_hash": "81a5f0b6851c1938cd64cc7370409bcd86b9f002",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -545,12 +545,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L2755CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1733970957.06825": {
+    "L2755CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1738947916.285363": {
         "refactoring_id": "L2755",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "d48fc3b55dab789116439e2a2959361ca6268a70",
+        "commit_hash": "60c450980b93cfb2f2f69b3d4af6dca37537a204",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -559,12 +559,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L2755CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1733970957.06825": {
+    "L2755CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1738947916.285363": {
         "refactoring_id": "L2755",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "55031efdc31dda9065b80dda72584c7bdb619de2",
+        "commit_hash": "46f385f4f17ce7859a10b800af1d84d42d9556ff",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -573,12 +573,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L2755CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1733970957.06825": {
+    "L2755CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1738947916.285363": {
         "refactoring_id": "L2755",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "90e7f23af28957d8c5eaaaa05de7a357b4798770",
+        "commit_hash": "1f12d81992addfe9e621f614a660a2a09a92188a",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -587,12 +587,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L13228CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1733970963.268234": {
+    "L13228CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1738947922.535953": {
         "refactoring_id": "L13228",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "b30b35c0eccdd5cdc72402c9a7465fb0071b7d66",
+        "commit_hash": "5cc14f3e828bf7a362d0a56775721e551df516a3",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -603,12 +603,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L13228CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1733970963.268234": {
+    "L13228CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1738947922.535953": {
         "refactoring_id": "L13228",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "7f1475714995457296a856bfc3b1a92717f67e8c",
+        "commit_hash": "5868083a20e2d1f494da4dc4fe86c8f3636a3ed4",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -617,12 +617,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L13228CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1733970963.268234": {
+    "L13228CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1738947922.535953": {
         "refactoring_id": "L13228",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "9acaa0e771d987c629bf89aa6dd226a3ca87378a",
+        "commit_hash": "fef3397234d39cf92b633a8c7d9d951de1024d76",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -633,12 +633,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L9806CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1733971028.814989": {
+    "L9806CONSOLIDATE_DUPLICATE_COND_FRAGMENTSZeroShotCode1738948398.065291": {
         "refactoring_id": "L9806",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "2874e93713a75cc05580d94b0b80d6cc38512080",
+        "commit_hash": "701189b663a32c37fe5957328d927592b573fcf2",
         "compiled": 0,
         "failed_test": 0,
         "unreproduced_failed_test": 0,
@@ -647,12 +647,12 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0
     },
-    "L9806CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1733971028.814989": {
+    "L9806CONSOLIDATE_DUPLICATE_COND_FRAGMENTSInstrucCode1738948398.065291": {
         "refactoring_id": "L9806",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "ed078187572932697cacc574f38748cc44ae670b",
+        "commit_hash": "e93ee2d816fe57dbf968fd9c09d5362f7c8de031",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -663,12 +663,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L9806CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1733971028.814989": {
+    "L9806CONSOLIDATE_DUPLICATE_COND_FRAGMENTSFewShotCode1738948398.065291": {
         "refactoring_id": "L9806",
         "refactoring_type": "CONSOLIDATE_DUPLICATE_COND_FRAGMENTS",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "f2fc6dbe0e7dd9f28c02a81805c3caa57403ff45",
+        "commit_hash": "b1c1a4cc5b197e24087e2e2b0e67811b4b0370cf",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -679,12 +679,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L1506CONSOLIDATE_COND_EXPRESSIONZeroShotCode1733971094.334335": {
+    "L1506CONSOLIDATE_COND_EXPRESSIONZeroShotCode1738948461.210174": {
         "refactoring_id": "L1506",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "ca47d55500c99bfbdfef3abd98d55cd0019ea504",
+        "commit_hash": "62f54e48df580fca112bd2a8506fc470efb8f064",
         "compiled": 1,
         "failed_test": 79,
         "unreproduced_failed_test": 0,
@@ -695,12 +695,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L1506CONSOLIDATE_COND_EXPRESSIONInstrucCode1733971094.334335": {
+    "L1506CONSOLIDATE_COND_EXPRESSIONInstrucCode1738948461.210174": {
         "refactoring_id": "L1506",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "0fde5f1859cc9b621aeb14dd2cde2412f78ed701",
+        "commit_hash": "ee5815fd5fc1cb65459c2ee87aff4199f6b2c484",
         "compiled": 1,
         "failed_test": 180,
         "unreproduced_failed_test": 0,
@@ -711,12 +711,12 @@
         "new_test_error": 67,
         "failed_test_to_test_error": 0
     },
-    "L1506CONSOLIDATE_COND_EXPRESSIONFewShotCode1733971094.334335": {
+    "L1506CONSOLIDATE_COND_EXPRESSIONFewShotCode1738948461.210174": {
         "refactoring_id": "L1506",
         "refactoring_type": "CONSOLIDATE_COND_EXPRESSION",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "6cb50af4af9dd1dcb37d8f18a6306a7d4a3ddd90",
+        "commit_hash": "a2d915684895659c6c4492659483bd9fbfd74f31",
         "compiled": 1,
         "failed_test": 180,
         "unreproduced_failed_test": 0,
@@ -727,12 +727,12 @@
         "new_test_error": 67,
         "failed_test_to_test_error": 0
     },
-    "L1991REPLACE_NESTED_COND_WITH_GUARD_CLAUSESZeroShotCode1733971184.594813": {
+    "L1991REPLACE_NESTED_COND_WITH_GUARD_CLAUSESZeroShotCode1738948545.932733": {
         "refactoring_id": "L1991",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "c80bff92ff7e0ad703a4c9f8179f119b92efd74f",
+        "commit_hash": "90dd05971145d2971dbdf342485ead85d6e93286",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -743,12 +743,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L1991REPLACE_NESTED_COND_WITH_GUARD_CLAUSESInstrucCode1733971184.594813": {
+    "L1991REPLACE_NESTED_COND_WITH_GUARD_CLAUSESInstrucCode1738948545.932733": {
         "refactoring_id": "L1991",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "37628c254f40913fb3c002b69b6d990322fdf81c",
+        "commit_hash": "9eeb767953f252ba9b32da2aee5ee4c6d71bc8ee",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -759,12 +759,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L1991REPLACE_NESTED_COND_WITH_GUARD_CLAUSESFewShotCode1733971184.594813": {
+    "L1991REPLACE_NESTED_COND_WITH_GUARD_CLAUSESFewShotCode1738948545.932733": {
         "refactoring_id": "L1991",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "a3a6394eb42f1767252f53478b24a421afee595f",
+        "commit_hash": "d0a59f1392da3e4c73645d59226274123b98ec98",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -775,12 +775,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L19910INTRODUCE_NULL_OBJECTZeroShotCode1733971278.580342": {
+    "L19910INTRODUCE_NULL_OBJECTZeroShotCode1738948635.849628": {
         "refactoring_id": "L19910",
         "refactoring_type": "INTRODUCE_NULL_OBJECT",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "4839525f4a21a825b98da256649c725dfd39f933",
+        "commit_hash": "31fe50f24f9bf4f210274f788a73167f2b8f3d1f",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -791,12 +791,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L19910INTRODUCE_NULL_OBJECTInstrucCode1733971278.580342": {
+    "L19910INTRODUCE_NULL_OBJECTInstrucCode1738948635.849628": {
         "refactoring_id": "L19910",
         "refactoring_type": "INTRODUCE_NULL_OBJECT",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "3afdf11fded00c863408407369ac73fafb32fc5e",
+        "commit_hash": "fa053f125ffc576170c966764e9530aa9a07aef4",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -807,12 +807,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L19910INTRODUCE_NULL_OBJECTFewShotCode1733971278.580342": {
+    "L19910INTRODUCE_NULL_OBJECTFewShotCode1738948635.849628": {
         "refactoring_id": "L19910",
         "refactoring_type": "INTRODUCE_NULL_OBJECT",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "1885a0cb381afc15eeb48393cff0cf5ed4652f5f",
+        "commit_hash": "3656456247e488298a72bf3168e63f3a8936df5a",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -823,12 +823,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L2113REPLACE_NESTED_COND_WITH_GUARD_CLAUSESZeroShotCode1733971371.787222": {
+    "L2113REPLACE_NESTED_COND_WITH_GUARD_CLAUSESZeroShotCode1738948725.640397": {
         "refactoring_id": "L2113",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "be5ac8039a7df4099323d07ef36640ee4a786cd6",
+        "commit_hash": "81a8b02d6ec5d4007a9fe7b6d3520898d406a1ae",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -839,12 +839,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L2113REPLACE_NESTED_COND_WITH_GUARD_CLAUSESInstrucCode1733971371.787222": {
+    "L2113REPLACE_NESTED_COND_WITH_GUARD_CLAUSESInstrucCode1738948725.640397": {
         "refactoring_id": "L2113",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "91ea91b9b9d329f32b0a5e4ed98c1ba8264b7455",
+        "commit_hash": "f6ad60ae7c71851607dca058d9fb533452595e3c",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -855,12 +855,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L2113REPLACE_NESTED_COND_WITH_GUARD_CLAUSESFewShotCode1733971371.787222": {
+    "L2113REPLACE_NESTED_COND_WITH_GUARD_CLAUSESFewShotCode1738948725.640397": {
         "refactoring_id": "L2113",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "076bb61529fe766917642ebb8658f8666d38c06c",
+        "commit_hash": "6254ef9f37446b41c31620f2517d7ba4e0a901e4",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -871,12 +871,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L2427REPLACE_NESTED_COND_WITH_GUARD_CLAUSESZeroShotCode1733971464.396012": {
+    "L2427REPLACE_NESTED_COND_WITH_GUARD_CLAUSESZeroShotCode1738948815.484985": {
         "refactoring_id": "L2427",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "ZeroShotCode",
         "refactored": 1,
-        "commit_hash": "c04679899feedbb5224f0b063b10318cd491b583",
+        "commit_hash": "5707acb61026bdd0e8ef1d8f9d6e11ca33d73e15",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -887,12 +887,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L2427REPLACE_NESTED_COND_WITH_GUARD_CLAUSESInstrucCode1733971464.396012": {
+    "L2427REPLACE_NESTED_COND_WITH_GUARD_CLAUSESInstrucCode1738948815.484985": {
         "refactoring_id": "L2427",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "InstrucCode",
         "refactored": 1,
-        "commit_hash": "1a7be6b7975cc34ecb9253a8c2397a735248c68d",
+        "commit_hash": "4b2b2d1469e84c47986beb008173b7d43cac946b",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -903,12 +903,12 @@
         "new_test_error": 0,
         "failed_test_to_test_error": 0
     },
-    "L2427REPLACE_NESTED_COND_WITH_GUARD_CLAUSESFewShotCode1733971464.396012": {
+    "L2427REPLACE_NESTED_COND_WITH_GUARD_CLAUSESFewShotCode1738948815.484985": {
         "refactoring_id": "L2427",
         "refactoring_type": "REPLACE_NESTED_COND_WITH_GUARD_CLAUSES",
         "prompt_approach_item": "FewShotCode",
         "refactored": 1,
-        "commit_hash": "82db309df0e4583f5a35c68eab7690d4f9056539",
+        "commit_hash": "7b6f2208239db7f05efd57d27524d4cb6f0bf287",
         "compiled": 1,
         "failed_test": 24,
         "unreproduced_failed_test": 0,
@@ -918,5 +918,11 @@
         "unreproduced_test_error": 0,
         "new_test_error": 0,
         "failed_test_to_test_error": 0
-    }
+    },
+    "refactoring_status_list": 60,
+    "refactoring_status_list_length": 60,
+    "refactoring_ratio": 1.0,
+    "compilation_status_list": 39,
+    "compilation_status_list_length": 60,
+    "compilation_ratio": 0.65
 }

@@ -1,0 +1,59 @@
+"L10937": {
+        "RefactMethod": "EXTRACT VARIABLE",
+        "BeforeRefact": "\n\tpublic List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n\t\tMatchSet matchOp;\n\t\tif ( invert ) matchOp = new MatchNotSet(this, setAST);\n\t\telse matchOp = new MatchSet(this, setAST);\n\t\tif ( labelAST!=null ) {\n\t\t\tString label = labelAST.getText();\n\t\t\tDecl d = getTokenLabelDecl(label);\n\t\t\tmatchOp.labels.add(d);\n\t\t\tgetCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);\n\t\t\tif ( labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN ) {\n\t\t\t\tTokenListDecl l = getTokenListLabelDecl(label);\n\t\t\t\tgetCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);\n\t\t\t}\n\t\t}\n\t\tif ( controller.needsImplicitLabel(setAST, matchOp) ) defineImplicitLabel(setAST, matchOp);\n\t\tAddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n\t\treturn list(matchOp, listLabelOp);\n\t}",
+        "AfterRefact": "public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n\t\tMatchSet matchOp;\n\t\tif ( invert ) matchOp = new MatchNotSet(this, setAST);\n\t\telse matchOp = new MatchSet(this, setAST);\n\t\tif ( labelAST!=null ) {\n\t\t\tString label = labelAST.getText();\n\t\t\tRuleFunction rf = getCurrentRuleFunction();\n\t\t\tif ( labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN ) {\n\t\t\t\tdefineImplicitLabel(setAST, matchOp);\n\t\t\t\tTokenListDecl l = getTokenListLabelDecl(label);\n\t\t\t\trf.addContextDecl(setAST.getAltLabel(), l);\n\t\t\t}\n\t\t\telse {\n\t\t\t\tDecl d = getTokenLabelDecl(label);\n\t\t\t\tmatchOp.labels.add(d);\n\t\t\t\trf.addContextDecl(setAST.getAltLabel(), d);\n\t\t\t}\n\t\t}\n\t\tif ( controller.needsImplicitLabel(setAST, matchOp) ) defineImplicitLabel(setAST, matchOp);\n\t\tAddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n\t\treturn list(matchOp, listLabelOp);\n\t}",
+        "ZeroShotCode": {
+            "methods": [
+                "public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n    MatchSet matchOp = createMatchSet(setAST, invert);\n    if (labelAST != null) {\n        handleLabelAST(labelAST, matchOp, setAST);\n    }\n    if (controller.needsImplicitLabel(setAST, matchOp)) {\n        defineImplicitLabel(setAST, matchOp);\n    }\n    AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n    return list(matchOp, listLabelOp);\n}",
+                "private MatchSet createMatchSet(GrammarAST setAST, boolean invert) {\n    return invert ? new MatchNotSet(this, setAST) : new MatchSet(this, setAST);\n}",
+                "private void handleLabelAST(GrammarAST labelAST, MatchSet matchOp, GrammarAST setAST) {\n    String label = labelAST.getText();\n    Decl d = getTokenLabelDecl(label);\n    matchOp.labels.add(d);\n    getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);\n    if (labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN) {\n        TokenListDecl l = getTokenListLabelDecl(label);\n        getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);\n    }\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n\n",
+                "\n\n",
+                "\n```"
+            ]
+        },
+        "InstrucCode": {
+            "methods": [
+                "public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n    MatchSet matchOp;\n    if (invert) matchOp = new MatchNotSet(this, setAST);\n    else matchOp = new MatchSet(this, setAST);\n    \n    if (labelAST != null) {\n        String label = labelAST.getText();\n        Decl d = getTokenLabelDecl(label);\n        matchOp.labels.add(d);\n        getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);\n        \n        boolean isPlusAssign = labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN;\n        if (isPlusAssign) {\n            TokenListDecl l = getTokenListLabelDecl(label);\n            getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);\n        }\n    }\n    \n    if (controller.needsImplicitLabel(setAST, matchOp)) defineImplicitLabel(setAST, matchOp);\n    \n    AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n    return list(matchOp, listLabelOp);\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n```"
+            ]
+        },
+        "FewShotCode": {
+            "methods": [
+                "public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n    MatchSet matchOp = invert ? new MatchNotSet(this, setAST) : new MatchSet(this, setAST);\n    \n    if (labelAST != null) {\n        String label = labelAST.getText();\n        Decl d = getTokenLabelDecl(label);\n        matchOp.labels.add(d);\n        getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);\n        \n        if (labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN) {\n            TokenListDecl l = getTokenListLabelDecl(label);\n            getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);\n        }\n    }\n    \n    if (controller.needsImplicitLabel(setAST, matchOp)) {\n        defineImplicitLabel(setAST, matchOp);\n    }\n    \n    AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n    return list(matchOp, listLabelOp);\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n```"
+            ]
+        },
+        "ContextCode": {
+            "methods": [
+                "public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n    MatchSet matchOp = invert ? new MatchNotSet(this, setAST) : new MatchSet(this, setAST);\n    \n    if (labelAST != null) {\n        String label = labelAST.getText();\n        Decl decl = getTokenLabelDecl(label);\n        matchOp.labels.add(decl);\n        getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), decl);\n        \n        if (labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN) {\n            TokenListDecl listDecl = getTokenListLabelDecl(label);\n            getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), listDecl);\n        }\n    }\n    \n    if (controller.needsImplicitLabel(setAST, matchOp)) {\n        defineImplicitLabel(setAST, matchOp);\n    }\n    \n    AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n    return list(matchOp, listLabelOp);\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n```"
+            ]
+        },
+        "RulesCode": {
+            "methods": [
+                "public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n    MatchSet matchOp;\n    if (invert) {\n        matchOp = new MatchNotSet(this, setAST);\n    } else {\n        matchOp = new MatchSet(this, setAST);\n    }\n    \n    if (labelAST != null) {\n        String label = labelAST.getText();\n        Decl d = getTokenLabelDecl(label);\n        matchOp.labels.add(d);\n        getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);\n        \n        if (labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN) {\n            TokenListDecl l = getTokenListLabelDecl(label);\n            getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);\n        }\n    }\n    \n    if (controller.needsImplicitLabel(setAST, matchOp)) {\n        defineImplicitLabel(setAST, matchOp);\n    }\n    \n    AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n    return list(matchOp, listLabelOp);\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n```"
+            ]
+        }
+    },

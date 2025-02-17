@@ -1,3 +1,0 @@
-old method;new method;introduced variable;replaced expression
-org.mapdb.HTreeMap.expirePurge()@/mapdb_base1/src/main/java/org/mapdb/HTreeMap.java:1546:4;org.mapdb.HTreeMap.expirePurge()@/mapdb_base2/src/main/java/org/mapdb/HTreeMap.java:1554:4;storeSize;store.getCurrSize()-store.getFreeSize()
-org.mapdb.StoreDirect.get()@/mapdb_base1/src/main/java/org/mapdb/StoreDirect.java:421:4;org.mapdb.StoreDirect.get()@/mapdb_base2/src/main/java/org/mapdb/StoreDirect.java:468:4;ret;get2(ioRecid,serializer)

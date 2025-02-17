@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CodeModifier">
+    <output-path>$PROJECT_DIR$/out/artifacts/CodeModifier</output-path>
+    <root id="archive" name="CodeModifier.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/manifest.txt" output-file-name="MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

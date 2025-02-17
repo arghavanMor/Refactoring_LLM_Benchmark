@@ -1,2 +1,0 @@
-old method;new method;eliminated variable;inlined expression
-com.cloudera.oryx.common.servcomp.StoreUtils.listGenerationsForInstance()@/oryx_base1/common-servcomp/src/main/java/com/cloudera/oryx/common/servcomp/StoreUtils.java:40:2;com.cloudera.oryx.common.servcomp.StoreUtils.listGenerationsForInstance()@/oryx_base2/common-servcomp/src/main/java/com/cloudera/oryx/common/servcomp/StoreUtils.java:40:2;prefix;Namespaces.getInstancePrefix(instanceDir)

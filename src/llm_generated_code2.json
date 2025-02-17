@@ -1,0 +1,11 @@
+{
+    "L1506": {
+        "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
+        "BeforeRefact": "public void addTransition(Transition e) {\n\t\tif (transitions.isEmpty()) {\n\t\t\tepsilonOnlyTransitions = e.isEpsilon();\n\t\t}\n\t\telse if (epsilonOnlyTransitions != e.isEpsilon()) {\n\t\t\tSystem.err.format(\"ATN state %d has both epsilon and non-epsilon transitions.\\n\", stateNumber);\n\t\t\tepsilonOnlyTransitions = false;\n\t\t}\n\n\t\ttransitions.add(e);\n\t}",
+        "ZeroShotCode": "public void addTransition(Transition e) {\n\tepsilonOnlyTransitions = transitions.isEmpty() ? e.isEpsilon() : epsilonOnlyTransitions && e.isEpsilon();\n\tif (!epsilonOnlyTransitions) {\n\t\tSystem.err.format(\"ATN state %d has both epsilon and non-epsilon transitions.\\n\", stateNumber);\n\t}\n\ttransitions.add(e);\n}",
+        "InstrucCode": "public void addTransition(Transition e) {\n\tif (transitions.isEmpty() || (epsilonOnlyTransitions != e.isEpsilon())) {\n\t\tSystem.err.format(\"ATN state %d has both epsilon and non-epsilon transitions.\\n\", stateNumber);\n\t\tepsilonOnlyTransitions = false;\n\t}\n\n\ttransitions.add(e);\n}\n",
+        "FewShotCode": "public void addTransition(Transition e) {\n    if (transitions.isEmpty() || epsilonOnlyTransitions != e.isEpsilon()) {\n        System.err.format(\"ATN state %d has both epsilon and non-epsilon transitions.\\n\", stateNumber);\n        epsilonOnlyTransitions = false;\n    }\n    \n    transitions.add(e);\n}",
+        "AfterRefact": "public void addTransition(Transition e) {\n\t\taddTransition(transitions.size(), e);\n\t}\n\n\tpublic void addTransition(int index, Transition e) {\n\t\tif (transitions.isEmpty()) {\n\t\t\tepsilonOnlyTransitions = e.isEpsilon();\n\t\t}\n\t\telse if (epsilonOnlyTransitions != e.isEpsilon()) {\n\t\t\tSystem.err.format(Locale.getDefault(), \"ATN state %d has both epsilon and non-epsilon transitions.\\n\", stateNumber);\n\t\t\tepsilonOnlyTransitions = false;\n\t\t}\n\n\t\ttransitions.add(index, e);\n\t}"
+    }
+}
+

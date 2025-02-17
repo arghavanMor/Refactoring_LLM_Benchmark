@@ -1,0 +1,30 @@
+{
+  "zero_shot_code": {
+    "methods": [
+      "methods1",
+      "methods2"
+    ],
+    "classes": [
+      "class1",
+      "class2",
+      "class3"
+    ]
+  },
+  "instruc_code": {
+    "methods": [
+      "methods1",
+      "methods2"
+    ],
+    "classes": [
+      "class1"
+    ]
+  },
+  "few_shot_code": {
+    "methods": [
+      "methods1"
+    ],
+    "classes": [
+      "class1"
+    ]
+  }
+}

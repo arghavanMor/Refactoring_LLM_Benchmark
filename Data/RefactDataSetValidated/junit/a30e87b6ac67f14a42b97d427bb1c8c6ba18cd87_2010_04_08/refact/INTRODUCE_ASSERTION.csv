@@ -1,2 +1,0 @@
-old method;new method
-org.junit.tests.experimental.categories.CategoryTest.testCountWithExplicitFilter()@/junit_base2/src/test/java/org/junit/tests/experimental/categories/CategoryTest.java:127:1;org.junit.tests.experimental.categories.CategoryTest.testCountWithExplicitFilter()@/junit_base1/src/test/java/org/junit/tests/experimental/categories/CategoryTest.java:128:1
