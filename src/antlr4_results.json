@@ -1,1 +1,36 @@
-{}
+{
+    "original_failed_test": [
+        "testSimple(org.antlr.v4.test.TestLeftRecursion)",
+        "testSemPred(org.antlr.v4.test.TestLeftRecursion)",
+        "testConjuringUpToken(org.antlr.v4.test.TestParseErrors)",
+        "testConjuringUpTokenFromSet(org.antlr.v4.test.TestParseErrors)",
+        "testReturnValueAndActions(org.antlr.v4.test.TestLeftRecursion)",
+        "testAmbigLR(org.antlr.v4.test.TestLeftRecursion)",
+        "testInvalidATNStateRemoval(org.antlr.v4.test.TestParseErrors)",
+        "testExpressions(org.antlr.v4.test.TestLeftRecursion)",
+        "testMultiTokenDeletionBeforeLoop2(org.antlr.v4.test.TestParseErrors)",
+        "testLRWithLabels(org.antlr.v4.test.TestListeners)",
+        "testSingleTokenDeletionDuringLoop2(org.antlr.v4.test.TestParseErrors)",
+        "testReturnValueAndActionsAndLabels(org.antlr.v4.test.TestLeftRecursion)",
+        "testPrefixOpWithActionAndLabel(org.antlr.v4.test.TestLeftRecursion)",
+        "testParserLexerCombo(org.antlr.v4.test.TestTopologicalSort)",
+        "testDuplicatedLeftRecursiveCall(org.antlr.v4.test.TestParseErrors)",
+        "testMultiTokenDeletionDuringLoop2(org.antlr.v4.test.TestParseErrors)",
+        "testLabelsOnOpSubrule(org.antlr.v4.test.TestLeftRecursion)",
+        "compileJdk(org.antlr.v4.test.TestPerformance)",
+        "testJavaExpressions(org.antlr.v4.test.TestLeftRecursion)",
+        "testFairlyLargeGraph(org.antlr.v4.test.TestTopologicalSort)",
+        "testTernaryExpr(org.antlr.v4.test.TestLeftRecursion)",
+        "testDeclarations(org.antlr.v4.test.TestLeftRecursion)",
+        "testLR(org.antlr.v4.test.TestListeners)",
+        "testSimpleTokenDependence(org.antlr.v4.test.TestTopologicalSort)"
+    ],
+    "original_test_error": [
+        "testCheckForNonLeftRecursiveRule(org.antlr.v4.test.TestLeftRecursion)",
+        "testCheckForLeftRecursiveEmptyFollow(org.antlr.v4.test.TestLeftRecursion)"
+    ],
+    "refactoring_status_list": 0,
+    "refactoring_status_list_length": 0,
+    "compilation_status_list": 0,
+    "compilation_status_list_length": 0
+}

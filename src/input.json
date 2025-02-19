@@ -6,19 +6,19 @@
       "local_repository_path": "/Users/jeancarlorspaul/IdeaProjects/antlr4/",
       "initial_commit_version": "ad9bac95199736c270940c4037b7ee7174bacca6",
       "commit_references_path": "antlr4_commit_references.txt",
-      "results_path": "antlr4_results.json"
+      "results_path": "../antlr4_results.json"
     },
     "junit4": {
       "remote_repository_url": "https://github.com/jeanCarlors/junit4",
       "local_repository_path": "/Users/jeancarlorspaul/IdeaProjects/junit4/",
       "initial_commit_version": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
       "commit_references_path": "junit4_commit_references.txt",
-      "results_path": "junit4_results.json"
+      "results_path": "../junit4_results.json"
     }
   },
 
   "initial_branch_name": "Initial",
-  "jar_path": "../../Refactoring_AST.main.jar",
+  "jar_path": "../../out/artifacts/Refactoring_LLM_Benchmark_main_jar/Refactoring_LLM_Benchmark.main.jar",
   "llm_generated_code_path": "../run#1_processed.json",
   "data_collection_path": "../Data_Collection.json"
 }
