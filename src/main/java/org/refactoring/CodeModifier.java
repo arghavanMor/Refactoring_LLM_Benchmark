@@ -14,7 +14,7 @@ public class CodeModifier {
 
     public static Boolean codeModifier(String pathClass, String mainMethodName, String mainMethodCode, ArrayList<String> otherMethodsCode, ArrayList<String> classesCode, ArrayList<String> otherCode) throws FileNotFoundException {
         File projectDir = new File(pathClass);
-
+        /*
         System.out.println("----------------------------------------");
         System.out.println(pathClass);
         System.out.println("----------------------------------------");
@@ -28,7 +28,7 @@ public class CodeModifier {
         System.out.println("----------------------------------------");
         System.out.println(otherCode.toString());
         System.out.println("----------------------------------------");
-
+        */
 
         CompilationUnit compilationUnitNode = StaticJavaParser.parse(projectDir);
         MethodDeclaration mainMethod = StaticJavaParser.parseMethodDeclaration(mainMethodCode);
