@@ -15,7 +15,6 @@ public class CodeModifier {
     public static Boolean codeModifier(String pathClass, String mainMethodName, String mainMethodCode, ArrayList<String> otherMethodsCode, ArrayList<String> classesCode, ArrayList<String> otherCode) throws FileNotFoundException {
         File projectDir = new File(pathClass);
 
-        /*
         System.out.println("----------------------------------------");
         System.out.println(pathClass);
         System.out.println("----------------------------------------");
@@ -29,7 +28,7 @@ public class CodeModifier {
         System.out.println("----------------------------------------");
         System.out.println(otherCode.toString());
         System.out.println("----------------------------------------");
-        */
+
 
         CompilationUnit compilationUnitNode = StaticJavaParser.parse(projectDir);
         MethodDeclaration mainMethod = StaticJavaParser.parseMethodDeclaration(mainMethodCode);
@@ -76,11 +75,11 @@ public class CodeModifier {
         String classesCodeArg = args[4];
         ArrayList<String> otherCode = new ArrayList<>();
 
-        ArrayList<String> otherMethodsCode = new ArrayList<>(Arrays.asList(otherMethodsCodeArg.split("/* */")));
-        otherMethodsCode.removeIf(str -> str.equals("* *"));
+        ArrayList<String> otherMethodsCode = new ArrayList<>(Arrays.asList(otherMethodsCodeArg.split("√")));
+        otherMethodsCode.removeIf(str -> str.equals("√"));
 
-        ArrayList<String> classesCode = new ArrayList<>(Arrays.asList(classesCodeArg.split("/* */")));
-        classesCode.removeIf(str -> str.equals("* *"));
+        ArrayList<String> classesCode = new ArrayList<>(Arrays.asList(classesCodeArg.split("√")));
+        classesCode.removeIf(str -> str.equals("√"));
 
         codeModifier(pathClass, mainMethodName, mainMethodCode, otherMethodsCode, classesCode, otherCode);
     }

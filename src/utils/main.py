@@ -100,20 +100,18 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
 
                     main_method_code = method_codes[0]
                     other_methods_code = method_codes[1:]
-                    other_methods_code = "/* */".join(other_methods_code)
-                    classes_code = "/* */".join(classes_code)
+                    other_methods_code = "√".join(other_methods_code)
+                    classes_code = "√".join(classes_code)
 
                     results_subdict = dict()
                     results_subdict['refactoring_id'] = refactoring_id
                     results_subdict['refactoring_type'] = refactoring_type
                     results_subdict['prompt_approach_item'] = prompt_approach_item
 
-                    counter += 1
-
-                    #repo.git.checkout(main_branch_name)
+                    repo.git.checkout(main_branch_name)
                     #Checkout of the “before version” commit (git checkout hash)
-                    branch_name = case_id + refactoring_type + prompt_approach_item + number_of_current_attempt + str(counter)
-                    #repo.git.checkout('-b', branch_name, initial_commit_version)
+                    branch_name = case_id + refactoring_type + prompt_approach_item + number_of_current_attempt
+                    repo.git.checkout('-b', branch_name, initial_commit_version)
                     is_refactored = subprocess.call(['java', '-jar', jar_path, repository_path, method_name,
                                                          main_method_code, other_methods_code, classes_code])
                     print("=================== is_refactored =================== ", is_refactored)
@@ -138,13 +136,16 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                             test_error_to_failed_test = ""
                             failed_test_to_test_error = ""
 
-                            if not failed_test :
+                            print("failed_test: ", failed_test)
+                            print("test_error: ", test_error)
+
+                            if not (failed_test == set()) :
                                 unreproduced_failed_test = original_failed_test - failed_test
                                 new_failed_test = failed_test - original_failed_test
                                 results_subdict['failed_test'] = list(failed_test)
                                 results_subdict['unreproduced_failed_test'] = list(unreproduced_failed_test)
                                 results_subdict['new_failed_test'] =  list(new_failed_test)
-                                if test_error :
+                                if test_error == set() :
                                     test_error_to_failed_test = failed_test.intersection(original_test_error)
                                     results_subdict['test_error_to_failed_test'] =  list(test_error_to_failed_test)
                                 else:
@@ -153,13 +154,13 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                                 results_subdict['failed_test'] = []
                                 results_subdict['unreproduced_failed_test'] = []
                                 results_subdict['new_failed_test'] =  []
-                            if not test_error :
+                            if not test_error == set() :
                                 unreproduced_test_error = original_test_error - test_error
                                 new_test_error = test_error - original_test_error
                                 results_subdict['test_error'] = list(test_error)
                                 results_subdict['unreproduced_test_error'] = list(unreproduced_test_error)
                                 results_subdict['new_test_error'] = list(new_test_error)
-                                if failed_test :
+                                if failed_test == set() :
                                     failed_test_to_test_error = test_error.intersection(original_failed_test)
                                     results_subdict['failed_test_to_test_error'] =  list(failed_test_to_test_error)
                                 else:
