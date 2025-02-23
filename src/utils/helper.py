@@ -4,7 +4,7 @@ import subprocess
 
 def llm_generated_code_enhancer():
     data_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/llm_generated_code1.json"
-    results_path = "/src/run#9_processed.json"
+    results_path = "/src/run#19_processed.json"
     with open(data_path, 'r') as llm_generated_code_file:
         generated_code_data = json.load(llm_generated_code_file)
 
