@@ -29,7 +29,7 @@ env["PATH"] = f"{jdk_path}/bin:" + env["PATH"]
 env["PATH"] = f"{mvn_path}/bin:" + env["PATH"]
 
 
-def result_str_processing(test_result_stdout):
+def antlr4_result_str_processing(test_result_stdout):
     failed_test = None
     test_error = None
     test_result_summary_start = test_result_stdout.find("Results :")
@@ -50,6 +50,19 @@ def result_str_processing(test_result_stdout):
     test_error = set([item.strip().split(")")[0]+")" for item in test_error.split("\n") if 'test' in item])
     return failed_test, test_error
 
+def junit4_result_str_processing(test_result_stdout):
+    test_result_summary_start = test_result_stdout.find("Results :\n")
+    #test_result_summary_end = test_result_summary_start[test_result_summary_start]
+    test_result_summary = test_result_stdout[test_result_summary_start:]
+
+    total_test = test_result_summary[test_result_summary.find('run: ') + 5:test_result_summary.find(', Failures')]
+    failed_test = test_result_summary[test_result_summary.find('Failures: ') + 10:test_result_summary.find(', Errors')]
+    error_test = test_result_summary[test_result_summary.find('Errors: ') + 8:test_result_summary.find(', Skipped')]
+    print(test_result_summary)
+    total_test = int(total_test)
+    total_failed_test = int(failed_test)
+    total_error_test = int(error_test)
+    return total_test, total_failed_test, total_error_test
 
 def compile_call(repo, local_repository_path, commit_version):
     subprocess.run(['git', '-C', local_repository_path, 'reset', '--hard', commit_version], env=env)
@@ -60,8 +73,13 @@ def compile_call(repo, local_repository_path, commit_version):
 
 def test(repo, local_repository_path, branch_name, commit_version):
     test_result = subprocess.run(['mvn', '-f', local_repository_path + '/pom.xml', 'test'], env=env, capture_output=True, text=True)
-    failed_test, test_error = result_str_processing(test_result.stdout)
-    return failed_test, test_error
+    if 'antlr4' in local_repository_path:
+        failed_test, test_error = antlr4_result_str_processing(test_result.stdout)
+        return failed_test, test_error
+    else:
+        total_test, total_failed_test, total_error_test = junit4_result_str_processing(test_result.stdout)
+        return total_test, total_failed_test, total_error_test
+
 
 
 def modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository, results_dictionary, original_failed_test, original_test_error):
@@ -113,10 +131,12 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     repo.git.checkout(main_branch_name)
                     #Checkout of the “before version” commit (git checkout hash)
                     branch_name = case_id + "&" + refactoring_type + "&" + prompt_approach_item + "&" + number_of_current_attempt
-                    before_and_after_path = "../results/" + project + "/" + branch_name
+                    before_and_after_path = "../results/run#1/" + project + "/" + branch_name
                     before_path =  before_and_after_path + "/" + "before"
                     os.makedirs(before_path, exist_ok=True)
-                    shutil.copy(repository_path, before_path)
+
+                    if os.path.exists(repository_path):
+                        shutil.copy(repository_path, before_path)
 
 
                     repo.git.checkout('-b', branch_name, initial_commit_version)
@@ -128,7 +148,8 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     if is_refactored == 0:
                         after_path = before_and_after_path + "/" + "after"
                         os.makedirs(after_path, exist_ok=True)
-                        shutil.copy(repository_path, after_path)
+                        if os.path.exists(repository_path):
+                            shutil.copy(repository_path, after_path)
 
                         results_subdict['refactored'] = 1
                         repo.git.add(all=True)
@@ -137,54 +158,58 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                         results_subdict['commit_hash'] = commit_hash
 
                         compilation_return_code = compile_call(repo, local_repository, repo.head.commit.hexsha)
-
                         if not compilation_return_code:
                             results_subdict['compiled'] = 1
-                            failed_test, test_error = test(repo, local_repository, branch_name, repo.head.commit.hexsha)
-                            unreproduced_failed_test = ""
-                            new_failed_test = ""
-                            unreproduced_test_error = ""
-                            new_test_error = ""
-                            test_error_to_failed_test = ""
-                            failed_test_to_test_error = ""
+                            if 'antlr4' in local_repository:
+                                failed_test, test_error = test(repo, local_repository, branch_name, repo.head.commit.hexsha)
+                                unreproduced_failed_test = ""
+                                new_failed_test = ""
+                                unreproduced_test_error = ""
+                                new_test_error = ""
+                                test_error_to_failed_test = ""
+                                failed_test_to_test_error = ""
 
-                            print("failed_test: ", failed_test)
-                            print("test_error: ", test_error)
 
-                            if not (failed_test == set()) :
-                                unreproduced_failed_test = original_failed_test - failed_test
-                                new_failed_test = failed_test - original_failed_test
-                                results_subdict['failed_test'] = list(failed_test)
-                                results_subdict['unreproduced_failed_test'] = list(unreproduced_failed_test)
-                                results_subdict['new_failed_test'] =  list(new_failed_test)
-                                if test_error == set() :
-                                    test_error_to_failed_test = failed_test.intersection(original_test_error)
-                                    results_subdict['test_error_to_failed_test'] =  list(test_error_to_failed_test)
+                                if not (failed_test == set()) :
+                                    unreproduced_failed_test = original_failed_test - failed_test
+                                    new_failed_test = failed_test - original_failed_test
+                                    results_subdict['failed_test'] = list(failed_test)
+                                    results_subdict['unreproduced_failed_test'] = list(unreproduced_failed_test)
+                                    results_subdict['new_failed_test'] =  list(new_failed_test)
+                                    if test_error == set() :
+                                        test_error_to_failed_test = failed_test.intersection(original_test_error)
+                                        results_subdict['test_error_to_failed_test'] =  list(test_error_to_failed_test)
+                                    else:
+                                        results_subdict['test_error_to_failed_test'] = []
                                 else:
-                                    results_subdict['test_error_to_failed_test'] = []
-                            else:
-                                results_subdict['failed_test'] = []
-                                results_subdict['unreproduced_failed_test'] = []
-                                results_subdict['new_failed_test'] =  []
-                            if not test_error == set() :
-                                unreproduced_test_error = original_test_error - test_error
-                                new_test_error = test_error - original_test_error
-                                results_subdict['test_error'] = list(test_error)
-                                results_subdict['unreproduced_test_error'] = list(unreproduced_test_error)
-                                results_subdict['new_test_error'] = list(new_test_error)
-                                if failed_test == set() :
-                                    failed_test_to_test_error = test_error.intersection(original_failed_test)
-                                    results_subdict['failed_test_to_test_error'] =  list(failed_test_to_test_error)
+                                    results_subdict['failed_test'] = []
+                                    results_subdict['unreproduced_failed_test'] = []
+                                    results_subdict['new_failed_test'] =  []
+                                if not test_error == set() :
+                                    unreproduced_test_error = original_test_error - test_error
+                                    new_test_error = test_error - original_test_error
+                                    results_subdict['test_error'] = list(test_error)
+                                    results_subdict['unreproduced_test_error'] = list(unreproduced_test_error)
+                                    results_subdict['new_test_error'] = list(new_test_error)
+                                    if failed_test == set() :
+                                        failed_test_to_test_error = test_error.intersection(original_failed_test)
+                                        results_subdict['failed_test_to_test_error'] =  list(failed_test_to_test_error)
+                                    else:
+                                        results_subdict['failed_test_to_test_error'] = []
                                 else:
-                                    results_subdict['failed_test_to_test_error'] = []
+                                    results_subdict['test_error'] = []
+                                    results_subdict['unreproduced_test_error'] = []
+                                    results_subdict['new_test_error'] = []
                             else:
-                                results_subdict['test_error'] = []
-                                results_subdict['unreproduced_test_error'] = []
-                                results_subdict['new_test_error'] = []
+                                total_test, total_failed_test, total_error_test = test(repo, local_repository, branch_name, repo.head.commit.hexsha)
+                                results_subdict['total_test'] = total_test
+                                results_subdict['total_failed_test'] = total_failed_test
+                                results_subdict['total_error_test'] = total_error_test
                         else:
                             results_subdict['compiled'] = 0
                     else:
-                        shutil.rmtree(before_and_after_path)
+                        if os.path.exists(before_and_after_path):
+                            shutil.rmtree(before_and_after_path)
                         results_subdict['refactored'] = 0
                         print("Refactoring failed")
                     results_dictionary[branch_name] = results_subdict
@@ -192,6 +217,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     #checkout on the main branch
                     repo.git.checkout(main_branch_name)
                     repo.git.reset(initial_commit_version, hard=True)
+
 
 
 
@@ -222,10 +248,17 @@ def main():
 
         compile_call(repo, local_repository_path, initial_commit_version)
 
-        original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
-        if(original_failed_test and  original_test_error):
-            results_dictionary['original_failed_test'] = list(original_failed_test)
-            results_dictionary['original_test_error'] =  list(original_test_error)
+        if 'antlr4' in local_repository_path:
+            original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
+            if(original_failed_test and  original_test_error):
+                results_dictionary['original_failed_test'] = list(original_failed_test)
+                results_dictionary['original_test_error'] =  list(original_test_error)
+        else:
+            original_total_test, original_total_failed_test, original_total_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
+            results_dictionary['original_total_test'] = original_total_test
+            results_dictionary['original_total_failed_test'] =  original_total_failed_test
+            results_dictionary['original_total_test_error'] = original_total_test_error
+
 
         modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository_path, results_dictionary, original_failed_test, original_test_error)
 
@@ -244,10 +277,10 @@ def main():
 
 
         # Serializing json
-    json_object = json.dumps(results_dictionary, indent=4)
+        json_object = json.dumps(results_dictionary, indent=4)
 
-    with open(results_path, 'w') as results_file:
-        results_file.write(json_object)
+        with open(results_path, 'w') as results_file:
+            results_file.write(json_object)
 
 
 
