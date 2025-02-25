@@ -73,13 +73,17 @@ public class CodeModifier {
         String mainMethodCode = args[2];
         String otherMethodsCodeArg = args[3];
         String classesCodeArg = args[4];
-        ArrayList<String> otherCode = new ArrayList<>();
+        String otherCodeArg = args[5];
+
 
         ArrayList<String> otherMethodsCode = new ArrayList<>(Arrays.asList(otherMethodsCodeArg.split("√")));
         otherMethodsCode.removeIf(str -> str.equals("√"));
 
         ArrayList<String> classesCode = new ArrayList<>(Arrays.asList(classesCodeArg.split("√")));
         classesCode.removeIf(str -> str.equals("√"));
+
+        ArrayList<String> otherCode = new ArrayList<>(Arrays.asList(otherCodeArg.split("√")));
+        otherCode.removeIf(str -> str.equals("√"));
 
         codeModifier(pathClass, mainMethodName, mainMethodCode, otherMethodsCode, classesCode, otherCode);
     }

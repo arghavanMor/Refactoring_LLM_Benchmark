@@ -4,6 +4,7 @@ import os
 import subprocess
 import json
 import datetime
+import shutil
 
 env = os.environ.copy()
 
@@ -102,6 +103,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     other_methods_code = method_codes[1:]
                     other_methods_code = "√".join(other_methods_code)
                     classes_code = "√".join(classes_code)
+                    other_code = "√".join(other_code)
 
                     results_subdict = dict()
                     results_subdict['refactoring_id'] = refactoring_id
@@ -110,14 +112,24 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
 
                     repo.git.checkout(main_branch_name)
                     #Checkout of the “before version” commit (git checkout hash)
-                    branch_name = case_id + refactoring_type + prompt_approach_item + number_of_current_attempt
+                    branch_name = case_id + "&" + refactoring_type + "&" + prompt_approach_item + "&" + number_of_current_attempt
+                    before_and_after_path = "../results/" + project + "/" + branch_name
+                    before_path =  before_and_after_path + "/" + "before"
+                    os.makedirs(before_path, exist_ok=True)
+                    shutil.copy(repository_path, before_path)
+
+
                     repo.git.checkout('-b', branch_name, initial_commit_version)
                     is_refactored = subprocess.call(['java', '-jar', jar_path, repository_path, method_name,
-                                                         main_method_code, other_methods_code, classes_code])
+                                                         main_method_code, other_methods_code, classes_code, other_code])
                     print("=================== is_refactored =================== ", is_refactored)
 
 
                     if is_refactored == 0:
+                        after_path = before_and_after_path + "/" + "after"
+                        os.makedirs(after_path, exist_ok=True)
+                        shutil.copy(repository_path, after_path)
+
                         results_subdict['refactored'] = 1
                         repo.git.add(all=True)
                         repo.index.commit(branch_name)
@@ -172,6 +184,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                         else:
                             results_subdict['compiled'] = 0
                     else:
+                        shutil.rmtree(before_and_after_path)
                         results_subdict['refactored'] = 0
                         print("Refactoring failed")
                     results_dictionary[branch_name] = results_subdict
@@ -179,6 +192,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     #checkout on the main branch
                     repo.git.checkout(main_branch_name)
                     repo.git.reset(initial_commit_version, hard=True)
+
 
 
 
@@ -192,10 +206,12 @@ def main():
         results_dictionary = dict()
 
 
+        print(project)
         if os.path.exists(local_repository_path):
             repo = Repo(local_repository_path)
         else:
             repo = Repo.clone_from(remote_repository_url, local_repository_path)
+
 
         main_branch_name = repo.git.symbolic_ref(head_path).split('/')[-1]
         repo.git.checkout(main_branch_name)
@@ -203,35 +219,37 @@ def main():
 
         original_failed_test = None
         original_test_error = None
-        if project == 'antlr4':
-            compile_call(repo, local_repository_path, initial_commit_version)
 
-            original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
-            if(original_failed_test and  original_test_error):
-                results_dictionary['original_failed_test'] = list(original_failed_test)
-                results_dictionary['original_test_error'] =  list(original_test_error)
+        compile_call(repo, local_repository_path, initial_commit_version)
 
-            modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository_path, results_dictionary, original_failed_test, original_test_error)
+        original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
+        if(original_failed_test and  original_test_error):
+            results_dictionary['original_failed_test'] = list(original_failed_test)
+            results_dictionary['original_test_error'] =  list(original_test_error)
+
+        modifier_caller(repo, main_branch_name, initial_commit_version, project, local_repository_path, results_dictionary, original_failed_test, original_test_error)
 
 
-            refactoring_status = [results_dictionary[item]['refactored'] for item in results_dictionary.keys() if isinstance(results_dictionary[item], dict)]
-            results_dictionary['refactoring_status_list'] = sum(refactoring_status)
-            results_dictionary['refactoring_status_list_length'] = len(refactoring_status)
-            if int(results_dictionary['refactoring_status_list_length']) != 0:
-                results_dictionary['refactoring_ratio'] = int(results_dictionary['refactoring_status_list'])/int(results_dictionary['refactoring_status_list_length'])
+        refactoring_status = [results_dictionary[item]['refactored'] for item in results_dictionary.keys() if isinstance(results_dictionary[item], dict)]
+        results_dictionary['refactoring_status_list'] = sum(refactoring_status)
+        results_dictionary['refactoring_status_list_length'] = len(refactoring_status)
+        if int(results_dictionary['refactoring_status_list_length']) != 0:
+            results_dictionary['refactoring_ratio'] = int(results_dictionary['refactoring_status_list'])/int(results_dictionary['refactoring_status_list_length'])
 
-            compilation_status = [results_dictionary[item]['compiled'] for item in results_dictionary.keys() if (isinstance(results_dictionary[item], dict) and 'compiled' in results_dictionary[item].keys())]
-            results_dictionary['compilation_status_list'] = sum(compilation_status)
-            results_dictionary['compilation_status_list_length'] = len(compilation_status)
-            if int(results_dictionary['compilation_status_list_length']) != 0:
-                results_dictionary['compilation_ratio'] = int(results_dictionary['compilation_status_list'])/int(results_dictionary['compilation_status_list_length'])
+        compilation_status = [results_dictionary[item]['compiled'] for item in results_dictionary.keys() if (isinstance(results_dictionary[item], dict) and 'compiled' in results_dictionary[item].keys())]
+        results_dictionary['compilation_status_list'] = sum(compilation_status)
+        results_dictionary['compilation_status_list_length'] = len(compilation_status)
+        if int(results_dictionary['compilation_status_list_length']) != 0:
+            results_dictionary['compilation_ratio'] = int(results_dictionary['compilation_status_list'])/int(results_dictionary['compilation_status_list_length'])
 
 
         # Serializing json
-        json_object = json.dumps(results_dictionary, indent=4)
+    json_object = json.dumps(results_dictionary, indent=4)
 
-        with open(results_path, 'w') as results_file:
-            results_file.write(json_object)
+    with open(results_path, 'w') as results_file:
+        results_file.write(json_object)
+
+
 
 
 if __name__ == "__main__":

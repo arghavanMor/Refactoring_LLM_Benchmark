@@ -19,38 +19,30 @@ def llm_generated_code_enhancer():
     with open(results_path, 'w') as results_file:
         results_file.write(json_object)
 
-def results_comparator(result1_path, result2_path):
-    with open(result1_path, 'r') as result1_file:
-        result1_path_dict = json.load(result1_file)
+def data_collector():
+    other_results_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results_summary_run#5.json"
+    enhanced_results_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/enhanced_results_summary_run#5.json"
+    with open(other_results_path, 'r') as result_collection_file:
+        other_results_collection = json.load(result_collection_file)
 
-    with open(result2_path, 'r') as result2_file:
-        result2_path_dict = json.load(result2_file)
+    data_path = "/src/utils/Data_collection.json"
+    results_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/Data_collection_results.json"
+    with open(data_path, 'r') as Data_collection_file:
+        data_collection = json.load(Data_collection_file)
 
-    diff = DeepDiff(result1_path_dict, result2_path_dict)
-    print(diff)
+    for datum in data_collection:
+        print(datum["\ufeffID"])
+        for key, value in other_results_collection.items():
+            if datum["\ufeffID"] in key :
+                value["path_before"] = datum["path_before"].replace("\\", "/")
+                print(value.keys())
+        print("="*150)
+
+    json_object = json.dumps(other_results_collection, indent=4)
+
+    with open(enhanced_results_path, 'w') as enhanced_results_file:
+        enhanced_results_file.write(json_object)
+
 
 if __name__ == "__main__":
-    #result1_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results_summary.json"
-    #result2_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results_summary_run#1.json"
-    #results_comparator(result1_path, result2_path)
-    #llm_generated_code_enhancer()
-
-    #print("public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n    MatchSet matchOp = createMatchSet(setAST, invert);\n    if (labelAST != null) {\n        handleLabelAST(labelAST, matchOp, setAST);\n    }\n    if (controller.needsImplicitLabel(setAST, matchOp)) {\n        defineImplicitLabel(setAST, matchOp);\n    }\n    AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n return list(matchOp, listLabelOp);\n}")
-    #print("private MatchSet createMatchSet(GrammarAST setAST, boolean invert) {\n    return invert ? new MatchNotSet(this, setAST) : new MatchSet(this, setAST);\n}")
-    #print("private void handleLabelAST(GrammarAST labelAST, MatchSet matchOp, GrammarAST setAST) {\n    String label = labelAST.getText();\n    Decl d = getTokenLabelDecl(label);\n    matchOp.labels.add(d);\n    getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);\n    if (labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN) {\n        TokenListDecl l = getTokenListLabelDecl(label);\n getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);\n    }\n}")
-
-
-    mainMethodCode = "mainMethodCode"
-    otherMethodsCode = ["otherMethodCode", "otherMethodCode", "otherMethodCode", "otherMethodCode"]
-    classesCode = ["classes", "classes", "classes", "classes"]
-    otherCode = ["otherCode", "otherCode", "otherCode", "otherCode"]
-
-    otherMethodsCode = "/* */".join(otherMethodsCode)
-    classesCode = "/* */".join(classesCode)
-    otherCode = "/* */".join(otherCode)
-
-    subprocess.call(['java', '-jar', "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/out/artifacts/Refactoring_LLM_Benchmark_main_jar/Refactoring_LLM_Benchmark.main.jar", "repository_path", "mainMethodName", mainMethodCode, otherMethodsCode, classesCode, otherCode])
-
-
-
-
+    data_collector()
