@@ -1,5 +1,4 @@
 # Misc
-
 SEPARATOR = ": "
 
 # Constants for Fowler Catalog PDF
@@ -24,6 +23,7 @@ LLM_CODE_JSON_FILE = "./src/json_files/llm_generated_code.json"
 CODEBLEU_JSON_FILE = "./src/json_files/codebleu.json"
 RESULT_SUMMARY_JSON_FILE = "./src/json_files/results_summary.json"
 FOWLER_EX_JSON_FILE = "./src/json_files/fowler_examples.json"
+FINAL_RESULTS_JSON_FILE = "./src/json_files/final_results.json"
 
 # Template files
 CONTEXT_TEMPLATE_FILE = "./src/prompt_templates/context_template.txt"
@@ -33,7 +33,13 @@ MULTI_RULE_TEMPLATE_FILE = "./src/prompt_templates/multi_rule_template.txt"
 ZERO_SHOT_TEMPLATE_FILE = "./src/prompt_templates/zero_shot_template.txt"
 FEW_SHOT_TEMPLATE_FILE = "./src/prompt_templates/few_shot_template.txt"
 
-#Folder paths
+LLM_AGREEMENT_TEMPLATE_FILE = "./src/prompt_templates/llm_agreement_template.txt"
 
+# Folder paths
 FOWLER_DATASET_PATH = "./Data/FowlerDataset"
 EXTERNAL_DATASET_PATH = "./Data/ExternalDataset"
+RESULTS_PATH = "./src/results/"
+
+# Prompt Types
+FOWLER_PROMPT_TYPES = ["ZeroShotCode", "InstrucCode", "ContextCode", "RulesCode"]
+FOWLER_PROMPT_TYPES = ["ZeroShotCode", "FewShotCode", "InstrucCode", "ContextCode", "RulesCode"]
