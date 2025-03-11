@@ -1,4 +1,0 @@
-method;from;to
-getTargetStringLiteralFromANTLRStringLiteral();org.antlr.v4.codegen.Target@/antlr4_base1/tool/src/org/antlr/v4/codegen/Target.java:248:1;org.antlr.v4.codegen.JavaTarget@/antlr4_base2/tool/src/org/antlr/v4/codegen/JavaTarget.java:80:1
-addBadWords();org.antlr.v4.codegen.Target@/antlr4_base1/tool/src/org/antlr/v4/codegen/Target.java:91:1;org.antlr.v4.codegen.JavaTarget@/antlr4_base2/tool/src/org/antlr/v4/codegen/JavaTarget.java:74:1
-encodeIntAsCharEscape();org.antlr.v4.codegen.Target@/antlr4_base1/tool/src/org/antlr/v4/codegen/Target.java:321:1;org.antlr.v4.codegen.JavaTarget@/antlr4_base2/tool/src/org/antlr/v4/codegen/JavaTarget.java:155:1

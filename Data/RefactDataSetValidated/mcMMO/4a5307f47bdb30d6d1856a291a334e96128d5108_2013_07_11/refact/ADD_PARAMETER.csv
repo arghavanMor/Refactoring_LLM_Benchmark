@@ -1,2 +1,0 @@
-old method;new method;added parameter
-com.gmail.nossr50.locale.LocaleLoader.getString()@/mcMMO_base1/src/main/java/com/gmail/nossr50/locale/LocaleLoader.java:20:4;com.gmail.nossr50.locale.LocaleLoader.getString()@/mcMMO_base2/src/main/java/com/gmail/nossr50/locale/LocaleLoader.java:48:4;ResourceBundle:bundle
