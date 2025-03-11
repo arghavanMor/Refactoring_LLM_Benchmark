@@ -132,7 +132,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     repo.git.checkout(main_branch_name)
                     #Checkout of the “before version” commit (git checkout hash)
                     branch_name = case_id + "&" + refactoring_type + "&" + prompt_approach_item + "&" + number_of_current_attempt
-                    before_and_after_path = "./results/deep_seek/run#9/" + project + "/" + branch_name
+                    before_and_after_path = "./results/deep_seek/run#2/" + project + "/" + branch_name
                     before_path =  before_and_after_path + "/" + "before"
                     os.makedirs(before_path, exist_ok=True)
 
