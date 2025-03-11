@@ -6,7 +6,12 @@ from tqdm import tqdm
 import re
 import os
 
-MODEL_NAME = "gpt-4o-mini"
+# GPT-4.0 Mini
+# MODEL_NAME = "gpt-4o-mini"
+
+# DeepSeek
+MODEL_NAME = "deepseek-chat"
+BASE_URL = "https://api.deepseek.com"
 
 dirname = os.path.dirname(__file__)
 
@@ -165,9 +170,11 @@ def get_openai_response(prompt, client):
     return chatbot_response.strip()
 
 
+# Example filename: "run#1.json"
 def generate_llm_json(filename):
 
-    API_KEY = open(dirname + "/../OpenAI_key.txt", "r").read()
+    API_KEY = open(dirname + "/../DeepSeek_key.txt", "r").read()
+    # API_KEY = open(dirname + "/../OpenAI_key.txt", "r").read()
 
     with open(constants.REFACT_METHODS_JSON_FILE, "r+") as refact_methods_json_file, open(constants.RULES_JSON_FILE, "r") as rules_json_file, open(constants.FOWLER_EX_JSON_FILE, "r") as fowler_ex_json_file:
         json_data = json.load(refact_methods_json_file)
@@ -176,7 +183,8 @@ def generate_llm_json(filename):
 
         data_list = extract_data_csv()
 
-        client = OpenAI(api_key=API_KEY)
+        # Add URL if Deepseek
+        client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
         f_json_llm_generated_code = {}
 
@@ -332,13 +340,13 @@ def filter_remaining_code(string, ranges):
 
     return segments
 
-def clean_llm_output():
+def clean_llm_output(filename):
 
     # Access modifier is left mandatory on purpose
     method_regex = r"(public|protected|private|static) +[\w\<\>\[\]]+\s+(\w+) *\([^\)]*\) *(\{?|[^;])"
     regex = re.compile(method_regex)
 
-    with open(constants.LLM_CODE_JSON_FILE, "r+") as llm_json:
+    with open(constants.JSON_FILES_PATH + filename, "r+") as llm_json:
 
         json_data = json.load(llm_json)
         all_prompt_types = ["ZeroShotCode", "InstrucCode", "FewShotCode", "ContextCode", "RulesCode"]
@@ -384,3 +392,23 @@ def clean_llm_output():
                 llm_json.seek(0)
                 json.dump(json_data, llm_json, indent=4)
                 llm_json.truncate()
+
+def clean_deepseek_fowler_run():
+    with open(constants.JSON_FILES_PATH + "/" +"fowler_ds_run#5.json", "r+") as json_file:
+        data = json.load(json_file)
+        for ex in data:
+            for prompt_type in constants.FOWLER_PROMPT_TYPES:
+                if prompt_type not in data[ex]:
+                    continue
+                prompt_output = data[ex][prompt_type]
+                match = re.search(r'```java(.*?)```', prompt_output, re.DOTALL)
+                if match:
+                    data[ex][prompt_type] = match.group(0)
+            
+        json_file.seek(0)
+        json.dump(data, json_file, indent=4)
+        json_file.truncate()
+
+
+clean_llm_output("ds_run#5_processed.json")
+# generate_llm_json(filename="ds_run#5.json")
