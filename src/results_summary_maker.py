@@ -1,9 +1,9 @@
 import json
 
 def results_summary_maker():
-    results_summary_path = "antlr4_results_summary_run#5.json"
+    results_summary_path = "results/chat_gpt_4o_mini/antlr4_results/antlr4_results_summary_run#2_1.json"
 
-    with open('antlr4_results_run#5.json', 'r') as file:
+    with open('results/chat_gpt_4o_mini/antlr4_results/antlr4_results_run#3_1.json', 'r') as file:
         results = json.load(file)
 
     for item in results.keys():

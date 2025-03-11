@@ -5,20 +5,18 @@
       "remote_repository_url": "https://github.com/jeanCarlors/antlr4",
       "local_repository_path": "/Users/jeancarlorspaul/IdeaProjects/antlr4/",
       "initial_commit_version": "ad9bac95199736c270940c4037b7ee7174bacca6",
-      "commit_references_path": "antlr4_commit_references.txt",
-      "results_path": "../antlr4_results.json"
+      "results_path": "./results/deep_seek/antlr4_results/antlr4_results.json"
     },
     "junit4": {
       "remote_repository_url": "https://github.com/jeanCarlors/junit4",
       "local_repository_path": "/Users/jeancarlorspaul/IdeaProjects/junit4/",
       "initial_commit_version": "ed47b7f487bafa48cff47f051af81a004cd36049",
-      "commit_references_path": "junit4_commit_references.txt",
-      "results_path": "../junit4_results.json"
+      "results_path": "./results/deep_seek/junit4_results/junit4_results.json"
     }
   },
 
   "initial_branch_name": "Initial",
-  "jar_path": "../../out/artifacts/Refactoring_LLM_Benchmark_main_jar/Refactoring_LLM_Benchmark.main.jar",
-  "llm_generated_code_path": "../run#5_processed.json",
-  "data_collection_path": "../Data_Collection.json"
+  "jar_path": "../out/artifacts/Refactoring_LLM_Benchmark_main_jar/Refactoring_LLM_Benchmark.main.jar",
+  "llm_generated_code_path": "./llm_generated_code/deep_seek/ds_run#1_processed.json",
+  "data_collection_path": "./Data/Data_Collection.json"
 }

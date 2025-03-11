@@ -8,7 +8,8 @@ import shutil
 
 env = os.environ.copy()
 
-with open('../input.json', 'r') as file:
+
+with open('input.json', 'r') as file:
     config_data = json.load(file)
 
 prompt_approach = config_data["prompt_approach"]
@@ -101,7 +102,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                 if item_project != project:
                     continue
 
-                refactoring_type = item.get("Type")
+                refactoring_type = item.get("Fowler_type").replace(" ", "_")
                 number_of_current_attempt = str(datetime.datetime.now().timestamp())
                 relative_path = item.get('path_before').replace("\\", "/")
                 repository_path = local_repository + relative_path
@@ -131,7 +132,7 @@ def modifier_caller(repo, main_branch_name, initial_commit_version, project, loc
                     repo.git.checkout(main_branch_name)
                     #Checkout of the “before version” commit (git checkout hash)
                     branch_name = case_id + "&" + refactoring_type + "&" + prompt_approach_item + "&" + number_of_current_attempt
-                    before_and_after_path = "../results/run#5/" + project + "/" + branch_name
+                    before_and_after_path = "./results/deep_seek/run#9/" + project + "/" + branch_name
                     before_path =  before_and_after_path + "/" + "before"
                     os.makedirs(before_path, exist_ok=True)
 
@@ -227,7 +228,6 @@ def main():
         remote_repository_url = project_info['remote_repository_url']
         local_repository_path = project_info['local_repository_path']
         initial_commit_version = project_info['initial_commit_version']
-        commit_references_path = project_info['commit_references_path']
         results_path =  project_info['results_path']
         results_dictionary = dict()
 
@@ -288,3 +288,4 @@ def main():
 if __name__ == "__main__":
     main()
     #, "ContextCode", "RulesCode"]
+    #"L2093" "L19910"

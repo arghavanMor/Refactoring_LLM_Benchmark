@@ -1,9 +1,9 @@
 import json
 
 def results_summary_maker():
-    results_summary_path = "../antlr4_results_summary_run#1.json"
+    results_summary_path = "./results/deep_seek/antlr4_results/antlr4_results_summary_run#1.json"
 
-    with open('../antlr4_results_run#1.json', 'r') as file:
+    with open('./results/deep_seek/antlr4_results/antlr4_results.json', 'r') as file:
         results = json.load(file)
 
     for item in results.keys():

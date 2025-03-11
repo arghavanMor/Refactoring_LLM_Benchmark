@@ -23,7 +23,7 @@ def llm_generated_code_enhancer():
         results_file.write(json_object)
 
 def data_collector():
-    data_collection_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/Data_collection.json"
+    data_collection_path = "/src/Data/Data_collection.json"
     results_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results"
     junit4_repo = Repo("/Users/jeancarlorspaul/IdeaProjects/junit4/")
 
@@ -96,5 +96,6 @@ def data_collector():
 
 
 if __name__ == "__main__":
-    data_collector()
+    #data_collector()
+
 
