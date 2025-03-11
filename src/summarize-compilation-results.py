@@ -6,14 +6,15 @@ from prettytable import PrettyTable
 import pandas as pd
 
 
+# Use this function to compile compilation files (antlr4_results_summary_run#) into a CSV
 def compile_data_into_csv(nb_runs):
 
     data_collection = {}
 
     for x in tqdm(range(nb_runs)):
         run_nb = x + 1
-        antlr_run_path = "./src/antlr4_results_summary_run#" + str(run_nb ) + ".json"
-        junit_run_path = "./src/junit4_results_run#" + str(run_nb ) + ".json"
+        antlr_run_path = "./src/results/deep_seek/antlr4_results/antlr4_results_run#" + str(run_nb ) + ".json"
+        junit_run_path = "./src/results/deep_seek/junit4_results/junit4_results_run#" + str(run_nb ) + ".json"
 
         with open(antlr_run_path, "r+") as antlr_json_file, open(junit_run_path, "r+") as junit_json_file:
             antlr_data = json.load(antlr_json_file)
@@ -98,31 +99,7 @@ def compile_data_into_csv(nb_runs):
                 })
         
         df = pd.DataFrame(compiled_data)
-        df.to_csv("./compilation_results.csv", index=False)
+        df.to_csv("./src/analysis/ds_compilation_results.csv", index=False)
 
 
-def generate_table(data):
-    table_fields = ["Refactoring Type", "New Failed Tests", "New Test Errors"]
-    table = PrettyTable(table_fields)
-
-    for refact_type in data:
-        table.add_row([refact_type, "", ""])
-        for prompt_type in data[refact_type]:
-            new_failed_test = data[refact_type][prompt_type]["new_failed_test"]
-            new_test_error = data[refact_type][prompt_type]["new_test_error"]
-            table.add_row([prompt_type, new_failed_test, new_test_error])
-
-    print(table)
-
-# compile_data_into_csv(5)
-
-with open(constants.REFACT_METHODS_JSON_FILE) as test:
-    data = json.load(test)
-
-    count = 0
-
-    for ex in data:
-        count+=1
-        print(ex)
-
-    print(count)
+compile_data_into_csv(nb_runs=5)

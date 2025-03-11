@@ -2,6 +2,7 @@ import json
 import csv
 import constants
 
+# Use this function to turn Fowler runs (ex. fowler_run#1.json) into a CSV file, so we can ask LLM to evaluate the refactorings
 def json_to_csv(filename, reviewers_array=[]):
     with open(constants.JSON_FILES_PATH + "/" + filename, 'r') as json_file:
         data = json.load(json_file)

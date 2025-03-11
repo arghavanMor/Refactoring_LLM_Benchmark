@@ -24,6 +24,9 @@ CODEBLEU_JSON_FILE = "./src/json_files/codebleu.json"
 RESULT_SUMMARY_JSON_FILE = "./src/json_files/results_summary.json"
 FOWLER_EX_JSON_FILE = "./src/json_files/fowler_examples.json"
 FINAL_RESULTS_JSON_FILE = "./src/json_files/final_results.json"
+FINAL_RESULTS_FOWLER_JSON_FILE = "./src/json_files/final_results_fowler.json"
+FINAL_RESULTS_DS_JSON_FILE = "./src/json_files/final_ds_results.json"
+FINAL_RESULTS_DS_FOWLER_JSON_FILE = "./src/json_files/final_ds_results_fowler.json"
 
 # Template files
 CONTEXT_TEMPLATE_FILE = "./src/prompt_templates/context_template.txt"
@@ -42,4 +45,7 @@ RESULTS_PATH = "./src/results/"
 
 # Prompt Types
 FOWLER_PROMPT_TYPES = ["ZeroShotCode", "InstrucCode", "ContextCode", "RulesCode"]
-FOWLER_PROMPT_TYPES = ["ZeroShotCode", "FewShotCode", "InstrucCode", "ContextCode", "RulesCode"]
+PROMPT_TYPES = ["ZeroShotCode", "FewShotCode", "InstrucCode", "ContextCode", "RulesCode"]
+
+#Exceptions
+FILE_LEVEL_EXCEPTIONS = ["INTRODUCE SPECIAL CASE", "REPLACE FUNCTION WITH COMMAND"]
