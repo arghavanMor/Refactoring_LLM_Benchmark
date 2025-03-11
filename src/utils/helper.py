@@ -23,12 +23,14 @@ def llm_generated_code_enhancer():
         results_file.write(json_object)
 
 def data_collector():
-    data_collection_path = "/src/Data/Data_collection.json"
-    results_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results"
+    data_collection_path = "./Data/Data_collection.json"
+    results_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results/deep_seek"
     junit4_repo = Repo("/Users/jeancarlorspaul/IdeaProjects/junit4/")
+    junit4_repo.git.checkout("ed47b7f487bafa48cff47f051af81a004cd36049")
 
     antlr4_repo = Repo("/Users/jeancarlorspaul/IdeaProjects/antlr4/")
-    antlr4_repo.git.checkout("5e05b71e8b1cd52cf0e77559786cc4c18dc85c37")
+    antlr4_repo.git.checkout("ad9bac95199736c270940c4037b7ee7174bacca6")
+
     with open(data_collection_path, 'r') as data_collection_file:
         data_collection = json.load(data_collection_file)
 
@@ -41,7 +43,9 @@ def data_collector():
         id = datum["\ufeffID"]
         print(id)
         for runs_path in os.listdir(results_path):
-            print(runs_path)
+            if "run" not in runs_path:
+                continue
+            print("runs_path: ", runs_path)
             for project in project_list:
                 if project == 'antlr4':
                     print(project)
@@ -96,6 +100,6 @@ def data_collector():
 
 
 if __name__ == "__main__":
-    #data_collector()
+    data_collector()
 
 
