@@ -2,6 +2,7 @@ from codebleu import calc_codebleu
 import constants
 import json
 from tqdm import tqdm
+import csv
 #Need tree-sitter==0.23.1
 
 import collections
@@ -151,8 +152,59 @@ def generate_results_into_csv():
     df = pd.DataFrame(grouped_results)
     df.to_csv("./src/analysis/final_ds_results_fowler.csv", index=False)
 
+def add_codebleu_to_raw_data(nb_runs, is_fowler_ex):
+    with open("./src/analysis/raw_data_ds.csv", "a") as raw_data_csv:
+        writer = csv.writer(raw_data_csv)
+        raw_data_csv.seek(0, 2)
+        for x in tqdm(range(nb_runs)):
+            run_nb = x + 1
+            filename = "deepseek_results/fowler_ds_run#" + str(run_nb) +".json" if is_fowler_ex else "deepseek_results/ds_run#" + str(run_nb) +".json"
+            # current_run_name = "Run #" + str(run_nb)
+
+            with open(constants.JSON_FILES_PATH + filename, "r") as json_file:
+
+                current_run_data = json.load(json_file)
+
+                for test_case in tqdm(current_run_data):
+
+                    reference = current_run_data[test_case]["AfterRefact"]
+
+                    zero_shot_code = current_run_data[test_case]["ZeroShotCode"]
+                    instruc_code = current_run_data[test_case]["InstrucCode"]
+                    context_code = current_run_data[test_case]["ContextCode"]
+
+                    zero_shot_score = calc_codebleu([reference], [zero_shot_code], lang="java", weights=(0.25, 0.25, 0.25, 0.25), tokenizer=None)
+                    instruc_score = calc_codebleu([reference], [instruc_code], lang="java", weights=(0.25, 0.25, 0.25, 0.25), tokenizer=None)
+                    context_score = calc_codebleu([reference], [context_code], lang="java", weights=(0.25, 0.25, 0.25, 0.25), tokenizer=None)
+                    refact_method = current_run_data[test_case]["RefactMethod"].upper()
+
+
+
+                    if "RulesCode" in current_run_data[test_case]:
+                        rules_code = current_run_data[test_case]["RulesCode"]
+                        rules_score = calc_codebleu([reference], [rules_code], lang="java", weights=(0.25, 0.25, 0.25, 0.25), tokenizer=None)
+                        rules = [refact_method, "RulesCode", "CodeBleu",rules_score["codebleu"]]
+                        writer.writerow(rules)
+
+                    if "FewShotCode" in current_run_data[test_case]:
+                        few_shot_code = current_run_data[test_case]["FewShotCode"]
+                        few_shot_score = calc_codebleu([reference], [few_shot_code], lang="java", weights=(0.25, 0.25, 0.25, 0.25), tokenizer=None)
+                        few_shot = [refact_method, "FewShotCode", "CodeBleu",few_shot_score["codebleu"]]
+                        writer.writerow(few_shot)
+
+                    zero_shot = [refact_method, "ZeroShotCode", "CodeBleu",zero_shot_score["codebleu"]]
+                    instruc = [refact_method, "InstrucCode", "CodeBleu",instruc_score["codebleu"]]
+                    context = [refact_method, "ContextCode", "CodeBleu",context_score["codebleu"]]
+                    
+                    writer.writerow(zero_shot)
+                    writer.writerow(instruc)
+                    writer.writerow(context)
+
+
 # Add CodeBLEU to final_results.json files
 # generate_codebleu_to_final_results(nb_runs=5, is_fowler_ex=False)
 
 # Average value across all runs in final_results.json and generates a csv
-generate_results_into_csv()
+# generate_results_into_csv()
+
+add_codebleu_to_raw_data(nb_runs=5, is_fowler_ex=False)

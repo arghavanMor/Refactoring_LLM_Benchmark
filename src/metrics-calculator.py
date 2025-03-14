@@ -5,6 +5,7 @@ import json
 import tempfile
 from tqdm import tqdm
 from pyccmetrics import Metrics
+import csv
 #Need tree-sitter==0.20.1
 
 def calculate_metrics_from_json(filename, json_keys_array, is_fowler_ex=True):
@@ -155,5 +156,38 @@ def combine_runs_into_json(nb_runs, is_fowler_ex=True):
     with open(filename, "w") as export:
         json.dump(result, export, indent=4)
 
+def get_raw_data(is_fowler):
+    raw_data = []
+    ground_truth = calculate_metrics_from_json(filename="deepseek_results/ds_run#1.json", json_keys_array=["BeforeRefact", "AfterRefact"], is_fowler_ex=False)
+    # result = calculate_metrics_from_json(filename="deepseek_results/fowler_ds_run#1.json", json_keys_array=constants.FOWLER_PROMPT_TYPES, is_fowler_ex=True)
+    for refact_method in ground_truth:
+        for prompt in ground_truth[refact_method]:
+            for metric in ground_truth[refact_method][prompt]:
+                value = ground_truth[refact_method][prompt][metric]
+                new_refact_method = refact_method
+                if "-" in refact_method:
+                    new_refact_method = refact_method.split("-")[0]
+                raw_data.append({"Refactoring method": new_refact_method, "Prompt": prompt, "Metric": metric, "Value": value})
+    for i in range(1,6):
+        filename = "deepseek_results/ds_run#" + str(i) +".json"
+        results = calculate_metrics_from_json(filename=filename, json_keys_array=constants.PROMPT_TYPES, is_fowler_ex=is_fowler)
+        for refact_method in results:
+            for prompt in results[refact_method]:
+                for metric in results[refact_method][prompt]:
+                    value = results[refact_method][prompt][metric]
+                    new_refact_method = refact_method
+                    if "-" in refact_method:
+                        new_refact_method = refact_method.split("-")[0]
+                    raw_data.append({"Refactoring method": new_refact_method, "Prompt": prompt, "Metric": metric, "Value": value})
+    
+    with open('./src/analysis/raw_data_ds.csv', "w") as file:
+        fieldnames = ["Refactoring method", "Prompt", "Metric", "Value"]
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(raw_data)
+
 # Run combine_runs_into_json() to generate metrics file
-combine_runs_into_json(nb_runs=5, is_fowler_ex=False)
+# combine_runs_into_json(nb_runs=5, is_fowler_ex=False)
+
+get_raw_data(False)
+

@@ -2,6 +2,8 @@ import constants
 import csv
 from tqdm import tqdm
 from openai import OpenAI
+from sklearn.metrics import cohen_kappa_score
+
 
 MODEL_NAME = "deepseek-chat"
 BASE_URL = "https://api.deepseek.com"
@@ -55,4 +57,45 @@ def add_llm_agreement(filepath):
             writer.writeheader()
             writer.writerows(rows)
 
-add_llm_agreement(filepath="./Data/fowler_run#5.csv")
+def calculate_cohen_kappa_score():
+
+    # Score given by human raters
+    human_rater1 = []
+    human_rater2 = []
+    
+    human_agreement_deepseek = []
+    deepseek_rater = []
+
+    human_agreement_gpt = []
+    gpt_rater = []
+
+    with open("./Data/fowler_run#3_agreement.csv", "r") as gpt_csv:
+        reader = csv.DictReader(gpt_csv)
+        rows = list(reader)
+
+
+        for row in rows:
+            deepseek_rater.append(row["LlmReview"])
+            human_agreement_deepseek.append(row["Agreement"])
+            human_rater1.append(row["Reviewer#1"])
+            human_rater2.append(row["Reviewer#2"])
+
+    with open("./Data/fowler_ds_run#1_agreement.csv", "r") as ds_csv:
+        reader = csv.DictReader(ds_csv)
+        rows = list(reader)
+
+        for row in rows:
+            gpt_rater.append(row["LlmReview"])
+            human_agreement_gpt.append(row["Agreement"])
+            human_rater1.append(row["Reviewer#1"])
+            human_rater2.append(row["Reviewer#2"])
+
+    print("Human-Human Kappa Score: " + str(cohen_kappa_score(human_rater1, human_rater2)))
+    print("DeepSeek-Human Kappa Score: " + str(cohen_kappa_score(human_agreement_deepseek, deepseek_rater)))
+    print("GPT-Human Kappa Score: " + str(cohen_kappa_score(human_agreement_gpt, gpt_rater)))
+    
+
+    
+
+calculate_cohen_kappa_score()
+#add_llm_agreement(filepath="./Data/fowler_run#5.csv")
