@@ -1,2 +1,0 @@
-class in old;class in new;interface
-gov.nasa.arc.mct.fastplot.bridge.PlotLocalControlsManager@/mct_base2/fastPlotViews/src/main/java/gov/nasa/arc/mct/fastplot/bridge/PlotLocalControlsManager.java:48:0;gov.nasa.arc.mct.fastplot.bridge.PlotLocalControlsManager@/mct_base1/fastPlotViews/src/main/java/gov/nasa/arc/mct/fastplot/bridge/PlotLocalControlsManager.java:50:0;gov.nasa.arc.mct.fastplot.bridge.controls.AbstractPlotLocalControlsManager@/mct_base1/fastPlotViews/src/main/java/gov/nasa/arc/mct/fastplot/bridge/controls/AbstractPlotLocalControlsManager.java:3:0

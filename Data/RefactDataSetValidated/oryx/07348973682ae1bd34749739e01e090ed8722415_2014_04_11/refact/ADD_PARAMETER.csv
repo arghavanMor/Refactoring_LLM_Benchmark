@@ -1,2 +1,0 @@
-old method;new method;added parameter
-com.cloudera.oryx.rdf.common.tree.DecisionForest.<init>()@/oryx_base1/rdf-common/src/main/java/com/cloudera/oryx/rdf/common/tree/DecisionForest.java:149:2;com.cloudera.oryx.rdf.common.tree.DecisionForest.<init>()@/oryx_base2/rdf-common/src/main/java/com/cloudera/oryx/rdf/common/tree/DecisionForest.java:172:2;double[]:featureImportances

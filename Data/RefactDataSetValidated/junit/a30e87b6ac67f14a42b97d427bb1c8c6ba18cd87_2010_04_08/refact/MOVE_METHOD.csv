@@ -1,3 +1,0 @@
-method;from;to
-testA();org.junit.tests.experimental.rules.NameRulesTest@/junit_base2/src/test/java/org/junit/tests/experimental/rules/NameRulesTest.java:11:1;org.junit.tests.experimental.rules.NameRulesTest.TestNames@/junit_base1/src/test/java/org/junit/tests/experimental/rules/NameRulesTest.java:18:2
-testB();org.junit.tests.experimental.rules.NameRulesTest@/junit_base2/src/test/java/org/junit/tests/experimental/rules/NameRulesTest.java:15:1;org.junit.tests.experimental.rules.NameRulesTest.TestNames@/junit_base1/src/test/java/org/junit/tests/experimental/rules/NameRulesTest.java:23:2

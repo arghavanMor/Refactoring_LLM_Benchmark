@@ -1,2 +1,0 @@
-old method;new method;eliminated variable;inlined expression
-org.junit.internal.runners.model.EachTestNotifier.addFailure()@/junit_base2/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:22:1;org.junit.internal.runners.model.EachTestNotifier.addFailure()@/junit_base1/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:21:1;mfe;(MultipleFailureException)targetException

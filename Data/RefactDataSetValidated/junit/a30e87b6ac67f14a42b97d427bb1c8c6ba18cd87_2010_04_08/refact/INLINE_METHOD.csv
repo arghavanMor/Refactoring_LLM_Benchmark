@@ -1,2 +1,0 @@
-caller method in old;caller method in new;inlined method;body
-org.junit.runners.BlockJUnit4ClassRunner.validateFields()@/junit_base2/src/main/java/org/junit/runners/BlockJUnit4ClassRunner.java:174:1;org.junit.runners.BlockJUnit4ClassRunner.validateFields()@/junit_base1/src/main/java/org/junit/runners/BlockJUnit4ClassRunner.java:180:1;org.junit.runners.BlockJUnit4ClassRunner.ruleFields()@/junit_base2/src/main/java/org/junit/runners/BlockJUnit4ClassRunner.java:359:1;getTestClass().getAnnotatedFields(Rule.class)
