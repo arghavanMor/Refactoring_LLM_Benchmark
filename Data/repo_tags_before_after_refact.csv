@@ -1,0 +1,8 @@
+﻿repo,before,after,repo_url
+junit,5a3a326096cf65a58272ee89a5ef1c164cfd9d33,a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87,https://github.com/junit-team/junit4
+antlr4,ad9bac95199736c270940c4037b7ee7174bacca6,3468a5fbd868ce63c4cb61782e9baddac2ed24ae,https://github.com/antlr/antlr4
+mapdb,807ae8d6e4f9384446b960babd0c934fb1a766ef,967d502ba59a1550d6f810c6ba63772c4eeeabec,https://github.com/jankotek/MapDB
+mcMMO,09eabe98c4e65f98189ef6af6fa1dd11e40b486d,4a5307f47bdb30d6d1856a291a334e96128d5108,https://github.com/mcMMO-Dev/mcMMO
+mct,1affd169c029a2a475eb8731984436f4e04ebdb0,f2cdf004b6a2afaffdfbe813b0e62d92ed45460d,cannot find the repo
+oryx,291ba7686b1bd7ef1c2bc1e08a68254fa952105c,07348973682ae1bd34749739e01e090ed8722415,cannot find the repo
+titan,495402f9a8d764aa03c66ae0dd58b18413d3558e,fb742092ea05a9b099445abfe68d816507180654,https://github.com/thinkaurelius/titan

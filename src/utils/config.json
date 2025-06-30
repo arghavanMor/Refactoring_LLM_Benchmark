@@ -1,0 +1,30 @@
+{
+  "prompt_approach": ["ZeroShotCode", "InstrucCode", "FewShotCode", "ContextCode", "RulesCode"],
+  "target_projects": {
+    "antlr4": {
+      "remote_repository_url": "https://github.com/jeanCarlors/antlr4",
+      "local_repository_path": "/Users/jeancarlorspaul/IdeaProjects/antlr4/",
+      "initial_commit_version": "ad9bac95199736c270940c4037b7ee7174bacca6",
+      "results_path": "./results/chat_gpt_4o_mini/antlr4_results/antlr4_results.json"
+    },
+    "junit4": {
+      "remote_repository_url": "https://github.com/jeanCarlors/junit4",
+      "local_repository_path": "/Users/jeancarlorspaul/IdeaProjects/junit4/",
+      "initial_commit_version": "ed47b7f487bafa48cff47f051af81a004cd36049",
+      "results_path": "./results/chat_gpt_4o_mini/junit4_results/junit4_results.json"
+    }
+  },
+
+  "initial_branch_name": "Initial",
+  "jar_path": "out/artifacts/RefactoringApplier_jar/RefactoringApplier.jar",
+  "llm_generated_code_path": "./llm_generated_code/chat_gpt_4o_mini/run#1_processed.json",
+  "data_collection_path": "./Data/Data_Collection.json",
+  "head_path": "refs/remotes/origin/HEAD",
+  "args_dict": {
+    "methods": "",
+    "classes": "",
+    "others": ""
+  },
+  "jdk_path": "/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home",
+  "mvn_path": "/usr/local/opt/maven@3.6"
+}

@@ -1,0 +1,108 @@
+{
+    "original_failed_test": [
+        "testSingleTokenDeletionDuringLoop2(org.antlr.v4.test.TestParseErrors)",
+        "testLabelsOnOpSubrule(org.antlr.v4.test.TestLeftRecursion)",
+        "testSimpleTokenDependence(org.antlr.v4.test.TestTopologicalSort)",
+        "testSemPred(org.antlr.v4.test.TestLeftRecursion)",
+        "testMultiTokenDeletionDuringLoop2(org.antlr.v4.test.TestParseErrors)",
+        "testAmbigLR(org.antlr.v4.test.TestLeftRecursion)",
+        "compileJdk(org.antlr.v4.test.TestPerformance)",
+        "testDuplicatedLeftRecursiveCall(org.antlr.v4.test.TestParseErrors)",
+        "testInvalidATNStateRemoval(org.antlr.v4.test.TestParseErrors)",
+        "testFairlyLargeGraph(org.antlr.v4.test.TestTopologicalSort)",
+        "testTernaryExpr(org.antlr.v4.test.TestLeftRecursion)",
+        "testParserLexerCombo(org.antlr.v4.test.TestTopologicalSort)",
+        "testDeclarations(org.antlr.v4.test.TestLeftRecursion)",
+        "testSimple(org.antlr.v4.test.TestLeftRecursion)",
+        "testExpressions(org.antlr.v4.test.TestLeftRecursion)",
+        "testLRWithLabels(org.antlr.v4.test.TestListeners)",
+        "testJavaExpressions(org.antlr.v4.test.TestLeftRecursion)",
+        "testReturnValueAndActionsAndLabels(org.antlr.v4.test.TestLeftRecursion)",
+        "testLR(org.antlr.v4.test.TestListeners)",
+        "testPrefixOpWithActionAndLabel(org.antlr.v4.test.TestLeftRecursion)",
+        "testMultiTokenDeletionBeforeLoop2(org.antlr.v4.test.TestParseErrors)",
+        "testConjuringUpTokenFromSet(org.antlr.v4.test.TestParseErrors)",
+        "testConjuringUpToken(org.antlr.v4.test.TestParseErrors)",
+        "testReturnValueAndActions(org.antlr.v4.test.TestLeftRecursion)"
+    ],
+    "original_test_error": [
+        "testCheckForNonLeftRecursiveRule(org.antlr.v4.test.TestLeftRecursion)",
+        "testCheckForLeftRecursiveEmptyFollow(org.antlr.v4.test.TestLeftRecursion)"
+    ],
+    "L2093&Replace_Function_with_Command&ZeroShotCode&1741033426.077538": {
+        "refactoring_id": "L2093",
+        "refactoring_type": "Replace_Function_with_Command",
+        "prompt_approach_item": "ZeroShotCode",
+        "refactored": 1,
+        "commit_hash": "114bab449e7220bb027b994ea717e94e21da0f98",
+        "compiled": 0
+    },
+    "L2093&Replace_Function_with_Command&InstrucCode&1741033426.077538": {
+        "refactoring_id": "L2093",
+        "refactoring_type": "Replace_Function_with_Command",
+        "prompt_approach_item": "InstrucCode",
+        "refactored": 1,
+        "commit_hash": "083e7e31b019d1117746cdea92c1deab66d9a145",
+        "compiled": 0
+    },
+    "L2093&Replace_Function_with_Command&FewShotCode&1741033426.077538": {
+        "refactoring_id": "L2093",
+        "refactoring_type": "Replace_Function_with_Command",
+        "prompt_approach_item": "FewShotCode",
+        "refactored": 1,
+        "commit_hash": "f850421792664f0c8830f2012b23cbfba20cb34e",
+        "compiled": 0
+    },
+    "L2093&Replace_Function_with_Command&ContextCode&1741033426.077538": {
+        "refactoring_id": "L2093",
+        "refactoring_type": "Replace_Function_with_Command",
+        "prompt_approach_item": "ContextCode",
+        "refactored": 1,
+        "commit_hash": "f4995ddc1274df8d5a70ad998a1b9e469617d63b",
+        "compiled": 0
+    },
+    "L2093&Replace_Function_with_Command&RulesCode&1741033426.077538": {
+        "refactoring_id": "L2093",
+        "refactoring_type": "Replace_Function_with_Command",
+        "prompt_approach_item": "RulesCode",
+        "refactored": 1,
+        "commit_hash": "a9417783c887da95894152228645446e6b836810",
+        "compiled": 0
+    },
+    "L19910&Introduce_Special_Case&ZeroShotCode&1741033460.359158": {
+        "refactoring_id": "L19910",
+        "refactoring_type": "Introduce_Special_Case",
+        "prompt_approach_item": "ZeroShotCode",
+        "refactored": 0
+    },
+    "L19910&Introduce_Special_Case&InstrucCode&1741033460.359158": {
+        "refactoring_id": "L19910",
+        "refactoring_type": "Introduce_Special_Case",
+        "prompt_approach_item": "InstrucCode",
+        "refactored": 0
+    },
+    "L19910&Introduce_Special_Case&FewShotCode&1741033460.359158": {
+        "refactoring_id": "L19910",
+        "refactoring_type": "Introduce_Special_Case",
+        "prompt_approach_item": "FewShotCode",
+        "refactored": 0
+    },
+    "L19910&Introduce_Special_Case&ContextCode&1741033460.359158": {
+        "refactoring_id": "L19910",
+        "refactoring_type": "Introduce_Special_Case",
+        "prompt_approach_item": "ContextCode",
+        "refactored": 0
+    },
+    "L19910&Introduce_Special_Case&RulesCode&1741033460.359158": {
+        "refactoring_id": "L19910",
+        "refactoring_type": "Introduce_Special_Case",
+        "prompt_approach_item": "RulesCode",
+        "refactored": 0
+    },
+    "refactoring_status_list": 5,
+    "refactoring_status_list_length": 10,
+    "refactoring_ratio": 0.5,
+    "compilation_status_list": 0,
+    "compilation_status_list_length": 5,
+    "compilation_ratio": 0.0
+}
