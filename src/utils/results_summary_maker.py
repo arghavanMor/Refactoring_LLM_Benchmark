@@ -1,9 +1,11 @@
 import json
+from config import antlr4_project
 
 def results_summary_maker():
-    results_summary_path = "./results/deep_seek/antlr4_results/antlr4_results_run#5.json"
+    antlr4_results_path = antlr4_project["results_path"]
+    antlr4_results_summary_path = antlr4_project["results_summary_path"]
 
-    with open('./results/deep_seek/antlr4_results/antlr4_results.json', 'r') as file:
+    with open(antlr4_results_path, 'r') as file:
         results = json.load(file)
 
     for item in results.keys():
@@ -15,8 +17,8 @@ def results_summary_maker():
             results[item] = len(results[item])
 
     json_object = json.dumps(results, indent=4)
-    with open(results_summary_path, 'w') as results_file:
+    with open(antlr4_results_summary_path, 'w') as results_file:
         results_file.write(json_object)
 
-
-results_summary_maker()
+if __name__ == '__main__':
+    pass

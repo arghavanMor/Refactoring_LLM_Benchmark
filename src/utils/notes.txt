@@ -1,2 +1,0 @@
-23 refactoring types on class-level, and 19 on method-level
-

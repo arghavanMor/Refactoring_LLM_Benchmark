@@ -2,7 +2,7 @@ import subprocess
 import os
 from src.projects.antlr4 import antlr4_result_str_processing
 from src.projects.junit4 import junit4_result_str_processing
-from utils import config
+import config
 
 
 env = config.env
@@ -27,6 +27,12 @@ def test(repo, local_repository_path, branch_name, commit_version):
         return failed_test, test_error
     elif 'junit4' in local_repository_path:
         stdout_file_path = stdout_directory + "junit4/" + branch_name + "_" + commit_version + ".txt"
+
+
+        print("==**"*100)
+        print(stdout_file_path)
+        print("**=="*100)
+
         with open(stdout_file_path, 'w') as file:
            file.write(test_result.stdout)
         total_test, total_failed_test, total_error_test = junit4_result_str_processing(test_result.stdout)
