@@ -59,7 +59,7 @@ def main():
 
         if 'antlr4' in local_repository_path:
             original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
-            if(original_failed_test and  original_test_error):
+            if(original_failed_test and original_test_error):
                 results_dictionary[original_failed_test_key] = list(original_failed_test)
                 results_dictionary[original_test_error_key] =  list(original_test_error)
         elif 'junit4' in local_repository_path:
@@ -86,6 +86,7 @@ def main():
             results_dictionary[compilation_ratio_key] = int(results_dictionary[compilation_status_list_key])/int(results_dictionary[compilation_status_list_length_key])
 
 
+        print("="*80, "\n", results_dictionary, "\n", "="*80)
         # Serializing json
         json_object = json.dumps(results_dictionary, indent=4)
 

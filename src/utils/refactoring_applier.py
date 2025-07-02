@@ -13,6 +13,8 @@ from config import (target_projects, initial_branch_name, jar_path, head_path,
 llm_generated_code_path = config.llm_generated_code_path
 data_collection_path = config.data_collection_path
 prompt_approach = config.prompt_approach
+stderr_directory = os.getcwd() + "/projects/stderr/"
+failed_test_error_directory = os.getcwd() + "/projects/failed_test_error/"
 
 
 def modifier_result_processing(is_refactored, before_and_after_path, repository_path, results_subdict, repo,
@@ -48,11 +50,20 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
         results_subdict[commit_hash_key] = commit_hash
 
         compilation_return_code = compile_call(repo, local_repository_path, repo.head.commit.hexsha)
-        print("compilation_return_code"*5, compilation_return_code)
         if not compilation_return_code:
             results_subdict[compiled_key] = 1
             if 'antlr4' in local_repository_path:
                 failed_test, test_error = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha)
+
+                failed_test_error_file_path = failed_test_error_directory + "antlr4/" + branch_name + "_" + repo.head.commit.hexsha + ".txt"
+                formatted_failed_test = "\n".join(failed_test)
+                formatted_test_error = "\n".join(test_error)
+                failed_test_error_content = ("Failed test: " + "\n" + formatted_failed_test + "\n\n" +  "Test error: "
+                                             + "\n" + formatted_test_error)
+                os.makedirs(os.path.dirname(failed_test_error_file_path), exist_ok=True)
+                with open(failed_test_error_file_path, 'w') as file:
+                    file.write(failed_test_error_content)
+
 
                 if not (failed_test == set()) :
                     unreproduced_failed_test = original_failed_test - failed_test
@@ -63,6 +74,7 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
                     if test_error == set() :
                         test_error_to_failed_test = failed_test.intersection(original_test_error)
                         results_subdict[test_error_to_failed_test_key] =  list(test_error_to_failed_test)
+                        results_subdict[unreproduced_test_error_key] = list(original_test_error)
                     else:
                         results_subdict[test_error_to_failed_test_key] = []
                 else:
@@ -82,7 +94,7 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
                         results_subdict[failed_test_to_test_error_key] = []
                 else:
                     results_subdict[test_error_key] = []
-                    results_subdict[unreproduced_test_error_key] = []
+                    results_subdict[unreproduced_test_error_key] = list(original_test_error)
                     results_subdict[new_test_error_key] = []
             elif 'junit4' in local_repository_path:
                 total_test, total_failed_test, total_error_test = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha)
@@ -150,9 +162,30 @@ def modifier_processing(prompt_approach, refactorings,  main_branch_name, refact
 
 
         repo.git.checkout('-b', branch_name, initial_commit_version)
-        is_refactored = subprocess.call(['java', '-jar', jar_path, repository_path, method_name,
-                                         main_method_code, other_methods_code, classes_code, other_code])
-        print("=================== is_refactored =================== ", is_refactored)
+        result = subprocess.run(['java', '-jar', jar_path, repository_path, method_name,
+                                         main_method_code, other_methods_code, classes_code, other_code], capture_output=True, text=True)
+
+        is_refactored = result.returncode
+        stdout = result.stdout
+        stderr = result.stderr
+
+        if not is_refactored:
+            print("="*80, " Class refactored ", "="*80)
+            print(stdout)
+        else:
+            print("="*80, " Class not refactored ", "="*80)
+            print("ERROR: \n", stderr)
+
+            if 'antlr4' in local_repository_path:
+                stderr_file_path = stderr_directory + "antlr4/" + branch_name + "_" + repo.head.commit.hexsha + ".txt"
+                os.makedirs(os.path.dirname(stderr_file_path), exist_ok=True)
+                with open(stderr_file_path, 'w') as file:
+                    file.write(stderr)
+            elif 'junit4' in local_repository_path:
+                stderr_file_path = stderr_directory + "junit4/" + branch_name + "_" + repo.head.commit.hexsha + ".txt"
+                os.makedirs(os.path.dirname(stderr_file_path), exist_ok=True)
+                with open(stderr_file_path, 'w') as file:
+                    file.write(stderr)
 
         modifier_result_processing(is_refactored, before_and_after_path, repository_path, results_subdict, repo, branch_name,
                                    local_repository_path, original_failed_test, original_test_error, results_dictionary)

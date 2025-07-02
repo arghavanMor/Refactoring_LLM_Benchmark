@@ -27,7 +27,7 @@ def config_preparation(llm_generated_code_path, before_and_after_path_prefix, an
 def config_preparation_caller():
 
     for llm in ("chat_gpt_4o_mini", "deep_seek"):
-        for item in range(1,6):
+        for item in range(1,2):
             llm_generated_code_path = "./llm_generated_code/" + llm + "/run#" + str(item) + "_processed.json"
             before_and_after_path_prefix =  "./results/" + llm + "/run#" + str(item) + "/"
             antlr4_results_path = "./results/" + llm + "/antlr4_results/antlr4_results_run#" + str(item) + ".json"

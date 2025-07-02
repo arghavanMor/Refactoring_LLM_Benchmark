@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: org.refactoring.CodeModifier
+Class-Path: /Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/main/java/org/refactoring/CodeModifier.java
+
