@@ -5,11 +5,12 @@ import subprocess
 import json
 import datetime
 import shutil
-from config import target_projects, initial_branch_name, jar_path, head_path, args_dict, env
+import config
+from config import initial_branch_name, jar_path, head_path, args_dict
 from runner import compile_call, test
 from refactoring_applier import modifier_caller
 
-def main():
+def main(llm_id):
 
     remote_repository_url_key = "remote_repository_url"
     local_repository_path_key = "local_repository_path"
@@ -29,6 +30,13 @@ def main():
     compilation_status_list_length_key = "compilation_status_list_length"
     compilation_ratio_key = "compilation_ratio"
 
+    current_dir = os.path.dirname(__file__)
+    file_path = os.path.join(current_dir, 'utils/config.json')
+
+    with open(file_path, 'r') as file:
+        config_data = json.load(file)
+
+    target_projects = config_data["target_projects"]
 
     for project, project_info in target_projects.items():
 
@@ -49,27 +57,33 @@ def main():
 
         main_branch_name = repo.git.symbolic_ref(head_path).split('/')[-1]
 
+
+
         repo.git.checkout(main_branch_name)
         repo.git.reset(initial_commit_version, hard=True)
+
+        print("main_branch_name: ", main_branch_name)
+        print("initial_commit_version: ", initial_commit_version)
+        print("initial_commit_version: ", repo.head.commit.hexsha)
 
         original_failed_test = None
         original_test_error = None
 
-        compile_call(repo, local_repository_path, initial_commit_version)
+        compile_call(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id)
 
         if 'antlr4' in local_repository_path:
-            original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
+            original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id)
             if(original_failed_test and original_test_error):
                 results_dictionary[original_failed_test_key] = list(original_failed_test)
                 results_dictionary[original_test_error_key] =  list(original_test_error)
         elif 'junit4' in local_repository_path:
-            original_total_test, original_total_failed_test, original_total_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version)
+            original_total_test, original_total_failed_test, original_total_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id)
             results_dictionary[original_total_test_key] = original_total_test
             results_dictionary[original_total_failed_test_key] =  original_total_failed_test
             results_dictionary[original_total_test_error_key] = original_total_test_error
 
         modifier_caller(repo, main_branch_name, project, local_repository_path,
-                        results_dictionary, original_failed_test, original_test_error)
+                        results_dictionary, original_failed_test, original_test_error, llm_id)
 
 
         refactoring_status = [results_dictionary[item][refactored_key] for item in results_dictionary.keys() if isinstance(results_dictionary[item], dict)]
@@ -85,8 +99,6 @@ def main():
         if int(results_dictionary[compilation_status_list_length_key]) != 0:
             results_dictionary[compilation_ratio_key] = int(results_dictionary[compilation_status_list_key])/int(results_dictionary[compilation_status_list_length_key])
 
-
-        print("="*80, "\n", results_dictionary, "\n", "="*80)
         # Serializing json
         json_object = json.dumps(results_dictionary, indent=4)
 

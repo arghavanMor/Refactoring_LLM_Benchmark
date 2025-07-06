@@ -7,19 +7,18 @@ import datetime
 import shutil
 import config
 from runner import compile_call, test
-from config import (target_projects, initial_branch_name, jar_path, head_path,
-                          args_dict, env, before_and_after_path_prefix)
+from config import jar_path
 
 llm_generated_code_path = config.llm_generated_code_path
 data_collection_path = config.data_collection_path
 prompt_approach = config.prompt_approach
-stderr_directory = os.getcwd() + "/projects/stderr/"
-failed_test_error_directory = os.getcwd() + "/projects/failed_test_error/"
+results_directory = os.getcwd() + "/results/"
+initial_commit_version_key = "initial_commit_version"
 
 
 def modifier_result_processing(is_refactored, before_and_after_path, repository_path, results_subdict, repo,
                                branch_name, local_repository_path, original_failed_test, original_test_error,
-                               results_dictionary):
+                               results_dictionary, llm_id):
 
     after = "after"
     refactored_key = "refactored"
@@ -49,22 +48,11 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
         commit_hash = repo.head.commit.hexsha
         results_subdict[commit_hash_key] = commit_hash
 
-        compilation_return_code = compile_call(repo, local_repository_path, repo.head.commit.hexsha)
+        compilation_return_code = compile_call(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id)
         if not compilation_return_code:
             results_subdict[compiled_key] = 1
             if 'antlr4' in local_repository_path:
-                failed_test, test_error = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha)
-
-                failed_test_error_file_path = failed_test_error_directory + "antlr4/" + branch_name + "_" + repo.head.commit.hexsha + ".txt"
-                formatted_failed_test = "\n".join(failed_test)
-                formatted_test_error = "\n".join(test_error)
-                failed_test_error_content = ("Failed test: " + "\n" + formatted_failed_test + "\n\n" +  "Test error: "
-                                             + "\n" + formatted_test_error)
-                os.makedirs(os.path.dirname(failed_test_error_file_path), exist_ok=True)
-                with open(failed_test_error_file_path, 'w') as file:
-                    file.write(failed_test_error_content)
-
-
+                failed_test, test_error = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id)
                 if not (failed_test == set()) :
                     unreproduced_failed_test = original_failed_test - failed_test
                     new_failed_test = failed_test - original_failed_test
@@ -97,7 +85,7 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
                     results_subdict[unreproduced_test_error_key] = list(original_test_error)
                     results_subdict[new_test_error_key] = []
             elif 'junit4' in local_repository_path:
-                total_test, total_failed_test, total_error_test = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha)
+                total_test, total_failed_test, total_error_test = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id)
                 results_subdict[total_test_key] = total_test
                 results_subdict[total_failed_test_key] = total_failed_test
                 results_subdict[total_error_test_key] = total_error_test
@@ -114,7 +102,7 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
 
 def modifier_processing(prompt_approach, refactorings,  main_branch_name, refactoring_id, refactoring_type,
                         initial_commit_version, repository_path, project, repo, timestamp_current_attempt, method_name,
-                        local_repository_path, original_failed_test, original_test_error, results_dictionary):
+                        local_repository_path, original_failed_test, original_test_error, results_dictionary, llm_id):
     methods_key = "methods"
     classes_key = "classes"
     others_key = "others"
@@ -125,11 +113,22 @@ def modifier_processing(prompt_approach, refactorings,  main_branch_name, refact
     branch_name_separator = "&"
     before_key = "before"
 
+    current_dir = os.path.dirname(__file__)
+    file_path = os.path.join(current_dir, 'config.json')
+
+    with open(file_path, 'r') as file:
+        config_data = json.load(file)
+
+    before_and_after_path_prefix = config_data["before_and_after_path_prefix"]
+
     for prompt_approach_item in prompt_approach:
 
         #checkout on the main branch
         repo.git.checkout(main_branch_name)
         repo.git.reset(initial_commit_version, hard=True)
+        print("main_branch_name: ", main_branch_name)
+        print("initial_commit_version: ", initial_commit_version)
+        print("initial_commit_version: ", repo.head.commit.hexsha)
 
         prompt_approach_codes = refactorings.get(prompt_approach_item)
         method_codes, classes_code, other_code = (prompt_approach_codes[methods_key], prompt_approach_codes[classes_key],
@@ -177,23 +176,25 @@ def modifier_processing(prompt_approach, refactorings,  main_branch_name, refact
             print("ERROR: \n", stderr)
 
             if 'antlr4' in local_repository_path:
-                stderr_file_path = stderr_directory + "antlr4/" + branch_name + "_" + repo.head.commit.hexsha + ".txt"
-                os.makedirs(os.path.dirname(stderr_file_path), exist_ok=True)
-                with open(stderr_file_path, 'w') as file:
+                refactoring_parsing_stderr_path_dir = results_directory + llm_id + "/antlr4/refactoring_parsing/stderr/"
+                os.makedirs(refactoring_parsing_stderr_path_dir, exist_ok=True)
+                refactoring_parsing_stderr_path =  refactoring_parsing_stderr_path_dir + branch_name + "_" + repo.head.commit.hexsha + ".txt"
+                with open(refactoring_parsing_stderr_path, 'w') as file:
                     file.write(stderr)
             elif 'junit4' in local_repository_path:
-                stderr_file_path = stderr_directory + "junit4/" + branch_name + "_" + repo.head.commit.hexsha + ".txt"
-                os.makedirs(os.path.dirname(stderr_file_path), exist_ok=True)
-                with open(stderr_file_path, 'w') as file:
+                refactoring_parsing_stderr_path_dir = results_directory + llm_id + "/junit4/refactoring_parsing/stderr/"
+                os.makedirs(refactoring_parsing_stderr_path_dir, exist_ok=True)
+                refactoring_parsing_stderr_path =  refactoring_parsing_stderr_path_dir + branch_name + "_" + repo.head.commit.hexsha + ".txt"
+                with open(refactoring_parsing_stderr_path, 'w') as file:
                     file.write(stderr)
 
         modifier_result_processing(is_refactored, before_and_after_path, repository_path, results_subdict, repo, branch_name,
-                                   local_repository_path, original_failed_test, original_test_error, results_dictionary)
+                                   local_repository_path, original_failed_test, original_test_error, results_dictionary, llm_id)
 
 
 
 def modifier_caller(repo, main_branch_name, project, local_repository_path,
-                    results_dictionary, original_failed_test, original_test_error):
+                    results_dictionary, original_failed_test, original_test_error, llm_id):
     id_key = "\ufeffID"
     project_key = "Project"
     refact_method_key = "RefactMethod"
@@ -229,11 +230,10 @@ def modifier_caller(repo, main_branch_name, project, local_repository_path,
                 method_name = method_signature[-1]
 
                 initial_commit_version = item.get(commit_id_before_key)
-
                 modifier_processing(prompt_approach, refactorings, main_branch_name, refactoring_id,
                                     refactoring_type, initial_commit_version, repository_path, project, repo,
                                     timestamp_current_attempt, method_name, local_repository_path, original_failed_test,
-                                    original_test_error, results_dictionary)
+                                    original_test_error, results_dictionary, llm_id)
 
 if __name__ == '__main__':
     pass

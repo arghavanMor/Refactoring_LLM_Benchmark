@@ -26,18 +26,17 @@ def config_preparation(llm_generated_code_path, before_and_after_path_prefix, an
 
 def config_preparation_caller():
 
-    for llm in ("chat_gpt_4o_mini", "deep_seek"):
+    for llm_id in ("chat_gpt_4o_mini", "deep_seek"):
         for item in range(1,2):
-            llm_generated_code_path = "./llm_generated_code/" + llm + "/run#" + str(item) + "_processed.json"
-            before_and_after_path_prefix =  "./results/" + llm + "/run#" + str(item) + "/"
-            antlr4_results_path = "./results/" + llm + "/antlr4_results/antlr4_results_run#" + str(item) + ".json"
-            antlr4_results_summary_path ="./results/" + llm + "/antlr4_results/antlr4_results_summary_run#" + str(item) + ".json"
-            junit4_results_path = "./results/" + llm + "/junit4_results/junit4_results_run#" + str(item) + ".json"
+            llm_generated_code_path = "./llm_generated_code/" + llm_id + "/run#" + str(item) + "_processed.json"
+            before_and_after_path_prefix =  "./results/" + llm_id + "/run#" + str(item) + "/"
+            antlr4_results_path = "./results/" + llm_id + "/antlr4/antlr4_results_run#" + str(item) + ".json"
+            antlr4_results_summary_path ="./results/" + llm_id + "/antlr4/antlr4_results_summary_run#" + str(item) + ".json"
+            junit4_results_path = "./results/" + llm_id + "/junit4/junit4_results_run#" + str(item) + ".json"
 
             config_preparation(llm_generated_code_path, before_and_after_path_prefix, antlr4_results_path, antlr4_results_summary_path,
                 junit4_results_path)
-
-            main.main()
+            main.main(llm_id)
             results_summary_maker.results_summary_maker()
 
 config_preparation_caller()

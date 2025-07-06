@@ -1,9 +1,17 @@
 import json
-from config import antlr4_project
+import os
 
 def results_summary_maker():
-    antlr4_results_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results/chat_gpt_4o_mini/antlr4_results/antlr4_results_run#1.json" #antlr4_project["results_path"]
-    antlr4_results_summary_path = "/Users/jeancarlorspaul/IdeaProjects/Refactoring_LLM_Benchmark/src/results/chat_gpt_4o_mini/antlr4_results/antlr4_results_summary_run#1.json" #antlr4_project["results_summary_path"]
+
+    current_dir = os.path.dirname(__file__)
+    file_path = os.path.join(current_dir, 'config.json')
+    with open(file_path, 'r') as file:
+        config_data = json.load(file)
+
+    target_projects = config_data["target_projects"]
+    antlr4_project = target_projects["antlr4"]
+    antlr4_results_path = antlr4_project["results_path"]
+    antlr4_results_summary_path = antlr4_project["results_summary_path"]
 
     with open(antlr4_results_path, 'r') as file:
         results = json.load(file)

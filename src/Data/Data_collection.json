@@ -1106,7 +1106,7 @@
     {
         "\ufeffID": "L3949",
         "Parent": "L103",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "ADD_PARAMETER",
@@ -1130,7 +1130,7 @@
     {
         "\ufeffID": "L8052",
         "Parent": "L103",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "ADD_PARAMETER",
@@ -1154,7 +1154,7 @@
     {
         "\ufeffID": "L4884",
         "Parent": "L4876",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "INLINE_TEMP",
@@ -1178,7 +1178,7 @@
     {
         "\ufeffID": "L5882",
         "Parent": "L103",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "EXTRACT_METHOD",
@@ -1202,7 +1202,7 @@
     {
         "\ufeffID": "L5880",
         "Parent": "L103",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "EXTRACT_METHOD",
@@ -1226,7 +1226,7 @@
     {
         "\ufeffID": "L4889",
         "Parent": "L103",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "EXTRACT_METHOD",
@@ -1250,7 +1250,7 @@
     {
         "\ufeffID": "L7126",
         "Parent": "L6751",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "INTRODUCE_ASSERTION",
@@ -1274,7 +1274,7 @@
     {
         "\ufeffID": "L126",
         "Parent": "L118",
-        "commitID_before": "5a3a326096cf65a58272ee89a5ef1c164cfd9d33",
+        "commitID_before": "ed47b7f487bafa48cff47f051af81a004cd36049",
         "commitID_after": "a30e87b6ac67f14a42b97d427bb1c8c6ba18cd87",
         "Project": "https://github.com/junit-team/junit4",
         "Type": "EXTRACT_METHOD",
