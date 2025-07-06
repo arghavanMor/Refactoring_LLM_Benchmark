@@ -23,7 +23,6 @@ def config_preparation(llm_generated_code_path, before_and_after_path_prefix, an
     with open(file_path, 'w') as results_file:
          results_file.write(json_object)
 
-
 def config_preparation_caller():
 
     for llm_id in ("chat_gpt_4o_mini", "deep_seek"):

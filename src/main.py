@@ -62,10 +62,6 @@ def main(llm_id):
         repo.git.checkout(main_branch_name)
         repo.git.reset(initial_commit_version, hard=True)
 
-        print("main_branch_name: ", main_branch_name)
-        print("initial_commit_version: ", initial_commit_version)
-        print("initial_commit_version: ", repo.head.commit.hexsha)
-
         original_failed_test = None
         original_test_error = None
 

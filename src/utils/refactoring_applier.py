@@ -126,9 +126,6 @@ def modifier_processing(prompt_approach, refactorings,  main_branch_name, refact
         #checkout on the main branch
         repo.git.checkout(main_branch_name)
         repo.git.reset(initial_commit_version, hard=True)
-        print("main_branch_name: ", main_branch_name)
-        print("initial_commit_version: ", initial_commit_version)
-        print("initial_commit_version: ", repo.head.commit.hexsha)
 
         prompt_approach_codes = refactorings.get(prompt_approach_item)
         method_codes, classes_code, other_code = (prompt_approach_codes[methods_key], prompt_approach_codes[classes_key],
@@ -165,16 +162,12 @@ def modifier_processing(prompt_approach, refactorings,  main_branch_name, refact
                                          main_method_code, other_methods_code, classes_code, other_code], capture_output=True, text=True)
 
         is_refactored = result.returncode
-        stdout = result.stdout
         stderr = result.stderr
 
         if not is_refactored:
             print("="*80, " Class refactored ", "="*80)
-            print(stdout)
         else:
             print("="*80, " Class not refactored ", "="*80)
-            print("ERROR: \n", stderr)
-
             if 'antlr4' in local_repository_path:
                 refactoring_parsing_stderr_path_dir = results_directory + llm_id + "/antlr4/refactoring_parsing/stderr/"
                 os.makedirs(refactoring_parsing_stderr_path_dir, exist_ok=True)
