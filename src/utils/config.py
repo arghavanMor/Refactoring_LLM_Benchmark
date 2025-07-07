@@ -27,8 +27,6 @@ mvn_path = config_data["mvn_path"]
 env["JAVA_HOME"] = jdk_path
 env["PATH"] = f"{jdk_path}/bin:" + env["PATH"]
 env["PATH"] = f"{mvn_path}/bin:" + env["PATH"]
-env["PATH"] = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:" + env["PATH"]
-env["PATH"] = "/opt/homebrew/bin:/opt/homebrew/sbin:" + env["PATH"]
 
 if __name__ == "__main__":
     pass

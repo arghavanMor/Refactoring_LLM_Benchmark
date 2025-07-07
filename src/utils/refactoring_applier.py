@@ -18,7 +18,7 @@ initial_commit_version_key = "initial_commit_version"
 
 def modifier_result_processing(is_refactored, before_and_after_path, repository_path, results_subdict, repo,
                                branch_name, local_repository_path, original_failed_test, original_test_error,
-                               results_dictionary, llm_id):
+                               results_dictionary, llm_id, which_run):
 
     after = "after"
     refactored_key = "refactored"
@@ -48,11 +48,11 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
         commit_hash = repo.head.commit.hexsha
         results_subdict[commit_hash_key] = commit_hash
 
-        compilation_return_code = compile_call(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id)
+        compilation_return_code = compile_call(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id, which_run)
         if not compilation_return_code:
             results_subdict[compiled_key] = 1
             if 'antlr4' in local_repository_path:
-                failed_test, test_error = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id)
+                failed_test, test_error = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id, which_run)
                 if not (failed_test == set()) :
                     unreproduced_failed_test = original_failed_test - failed_test
                     new_failed_test = failed_test - original_failed_test
@@ -85,7 +85,7 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
                     results_subdict[unreproduced_test_error_key] = list(original_test_error)
                     results_subdict[new_test_error_key] = []
             elif 'junit4' in local_repository_path:
-                total_test, total_failed_test, total_error_test = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id)
+                total_test, total_failed_test, total_error_test = test(repo, local_repository_path, branch_name, repo.head.commit.hexsha, llm_id, which_run)
                 results_subdict[total_test_key] = total_test
                 results_subdict[total_failed_test_key] = total_failed_test
                 results_subdict[total_error_test_key] = total_error_test
@@ -102,7 +102,7 @@ def modifier_result_processing(is_refactored, before_and_after_path, repository_
 
 def modifier_processing(prompt_approach, refactorings,  main_branch_name, refactoring_id, refactoring_type,
                         initial_commit_version, repository_path, project, repo, timestamp_current_attempt, method_name,
-                        local_repository_path, original_failed_test, original_test_error, results_dictionary, llm_id):
+                        local_repository_path, original_failed_test, original_test_error, results_dictionary, llm_id, which_run):
     methods_key = "methods"
     classes_key = "classes"
     others_key = "others"
@@ -169,25 +169,25 @@ def modifier_processing(prompt_approach, refactorings,  main_branch_name, refact
         else:
             print("="*80, " Class not refactored ", "="*80)
             if 'antlr4' in local_repository_path:
-                refactoring_parsing_stderr_path_dir = results_directory + llm_id + "/antlr4/refactoring_parsing/stderr/"
+                refactoring_parsing_stderr_path_dir = results_directory + llm_id + which_run + "/antlr4/refactoring_parsing/stderr/"
                 os.makedirs(refactoring_parsing_stderr_path_dir, exist_ok=True)
                 refactoring_parsing_stderr_path =  refactoring_parsing_stderr_path_dir + branch_name + "_" + repo.head.commit.hexsha + ".txt"
                 with open(refactoring_parsing_stderr_path, 'w') as file:
                     file.write(stderr)
             elif 'junit4' in local_repository_path:
-                refactoring_parsing_stderr_path_dir = results_directory + llm_id + "/junit4/refactoring_parsing/stderr/"
+                refactoring_parsing_stderr_path_dir = results_directory + llm_id + which_run + "/junit4/refactoring_parsing/stderr/"
                 os.makedirs(refactoring_parsing_stderr_path_dir, exist_ok=True)
                 refactoring_parsing_stderr_path =  refactoring_parsing_stderr_path_dir + branch_name + "_" + repo.head.commit.hexsha + ".txt"
                 with open(refactoring_parsing_stderr_path, 'w') as file:
                     file.write(stderr)
 
         modifier_result_processing(is_refactored, before_and_after_path, repository_path, results_subdict, repo, branch_name,
-                                   local_repository_path, original_failed_test, original_test_error, results_dictionary, llm_id)
+                                   local_repository_path, original_failed_test, original_test_error, results_dictionary, llm_id, which_run)
 
 
 
 def modifier_caller(repo, main_branch_name, project, local_repository_path,
-                    results_dictionary, original_failed_test, original_test_error, llm_id):
+                    results_dictionary, original_failed_test, original_test_error, llm_id, which_run):
     id_key = "\ufeffID"
     project_key = "Project"
     refact_method_key = "RefactMethod"
@@ -226,7 +226,7 @@ def modifier_caller(repo, main_branch_name, project, local_repository_path,
                 modifier_processing(prompt_approach, refactorings, main_branch_name, refactoring_id,
                                     refactoring_type, initial_commit_version, repository_path, project, repo,
                                     timestamp_current_attempt, method_name, local_repository_path, original_failed_test,
-                                    original_test_error, results_dictionary, llm_id)
+                                    original_test_error, results_dictionary, llm_id, which_run)
 
 if __name__ == '__main__':
     pass

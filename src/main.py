@@ -10,7 +10,7 @@ from config import initial_branch_name, jar_path, head_path, args_dict
 from runner import compile_call, test
 from refactoring_applier import modifier_caller
 
-def main(llm_id):
+def main(llm_id, which_run):
 
     remote_repository_url_key = "remote_repository_url"
     local_repository_path_key = "local_repository_path"
@@ -65,21 +65,21 @@ def main(llm_id):
         original_failed_test = None
         original_test_error = None
 
-        compile_call(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id)
+        compile_call(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id, which_run)
 
         if 'antlr4' in local_repository_path:
-            original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id)
+            original_failed_test, original_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id, which_run)
             if(original_failed_test and original_test_error):
                 results_dictionary[original_failed_test_key] = list(original_failed_test)
                 results_dictionary[original_test_error_key] =  list(original_test_error)
         elif 'junit4' in local_repository_path:
-            original_total_test, original_total_failed_test, original_total_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id)
+            original_total_test, original_total_failed_test, original_total_test_error = test(repo, local_repository_path, main_branch_name, initial_commit_version, llm_id, which_run)
             results_dictionary[original_total_test_key] = original_total_test
             results_dictionary[original_total_failed_test_key] =  original_total_failed_test
             results_dictionary[original_total_test_error_key] = original_total_test_error
 
         modifier_caller(repo, main_branch_name, project, local_repository_path,
-                        results_dictionary, original_failed_test, original_test_error, llm_id)
+                        results_dictionary, original_failed_test, original_test_error, llm_id, which_run)
 
 
         refactoring_status = [results_dictionary[item][refactored_key] for item in results_dictionary.keys() if isinstance(results_dictionary[item], dict)]
