@@ -1,0 +1,38 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] The project junit:junit:jar:4.13.3-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------------< [0;36mjunit:junit[0;1m >-----------------------------[m
+[[1;34mINFO[m] [1mBuilding JUnit 4.13.3-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4:enforce[m [1m(enforce-versions)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mreplacer:1.5.3:replace[m [1m(default)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Replacement run on 1 file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:resources[m [1m(default-resources)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Using 'ISO-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:compile[m [1m(default-compile)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 219 source files to /Users/jeancarlorspaul/IdeaProjects/junit4/target/classes
+[[1;33mWARNING[m] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/junit/extensions/TestDecorator.java:[3,22] [deprecation] Assert in junit.framework has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/validator/AnnotationValidatorFactory.java:[31,59] [deprecation] newInstance() in Class has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in class Class
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/theories/internal/Assignments.java:[122,18] [deprecation] newInstance() in Class has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in class Class
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runners/Parameterized.java:[406,35] [deprecation] newInstance() in Class has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in class Class
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParameters.java:[69,64] [deprecation] newInstance() in Class has been deprecated
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.239 s
+[[1;34mINFO[m] Finished at: 2025-07-06T15:07:23-04:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

@@ -1,0 +1,111 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] ANTLR 4                                                            [pom]
+[[1;34mINFO[m] ANTLR 4 Runtime                                                    [jar]
+[[1;34mINFO[m] ANTLR 4 Tool                                                       [jar]
+[[1;34mINFO[m] ANTLR 4 Maven plugin                                      [maven-plugin]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.antlr:antlr4-master[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding ANTLR 4 4.1-SNAPSHOT                                      [1/4][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.0:enforce[m [1m(enforce-maven)[m @ [36mantlr4-master[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36morg.antlr:antlr4-runtime[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding ANTLR 4 Runtime 4.1-SNAPSHOT                              [2/4][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.0:enforce[m [1m(enforce-maven)[m @ [36mantlr4-runtime[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mantlr4-runtime[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mantlr4-runtime[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 125 source files to /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/target/classes
+[[1;33mWARNING[m] bootstrap class path not set in conjunction with -source 6
+[[1;33mWARNING[m] source value 6 is obsolete and will be removed in a future release
+[[1;33mWARNING[m] target value 1.6 is obsolete and will be removed in a future release
+[[1;33mWARNING[m] To suppress warnings about obsolete options, use -Xlint:-options.
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/misc/Interval.java:[33,8] Class org.antlr.v4.runtime.misc.Interval overrides equals, but neither it nor any superclass overrides hashCode method
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------------< [0;36morg.antlr:antlr4[0;1m >--------------------------[m
+[[1;34mINFO[m] [1mBuilding ANTLR 4 Tool 4.1-SNAPSHOT                                 [3/4][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.0:enforce[m [1m(enforce-maven)[m @ [36mantlr4[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mantlr3-maven-plugin:3.5:antlr[m [1m(default)[m @ [36mantlr4[0;1m ---[m
+[[1;34mINFO[m] ANTLR: Processing source directory /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/parse/ANTLRLexer.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/parse/ANTLRLexer.g
+org/antlr/v4/parse/ANTLRLexer.g
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/parse/ANTLRParser.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/parse/ANTLRParser.g
+org/antlr/v4/parse/ANTLRParser.g
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/parse/GrammarTreeVisitor.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/parse/GrammarTreeVisitor.g
+org/antlr/v4/parse/GrammarTreeVisitor.g
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/codegen/SourceGenTriggers.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/codegen/SourceGenTriggers.g
+org/antlr/v4/codegen/SourceGenTriggers.g
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/parse/ActionSplitter.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/parse/ActionSplitter.g
+org/antlr/v4/parse/ActionSplitter.g
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/parse/BlockSetTransformer.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/parse/BlockSetTransformer.g
+org/antlr/v4/parse/BlockSetTransformer.g
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/parse/LeftRecursiveRuleWalker.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/parse/LeftRecursiveRuleWalker.g
+org/antlr/v4/parse/LeftRecursiveRuleWalker.g
+Output file /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/generated-sources/antlr3/org/antlr/v4/parse/ATNBuilder.java does not exist: must build /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/src/org/antlr/v4/parse/ATNBuilder.g
+org/antlr/v4/parse/ATNBuilder.g
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mantlr4[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 7 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mantlr4[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 211 source files to /Users/jeancarlorspaul/IdeaProjects/antlr4/tool/target/classes
+[[1;33mWARNING[m] bootstrap class path not set in conjunction with -source 6
+[[1;33mWARNING[m] source value 6 is obsolete and will be removed in a future release
+[[1;33mWARNING[m] target value 1.6 is obsolete and will be removed in a future release
+[[1;33mWARNING[m] To suppress warnings about obsolete options, use -Xlint:-options.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36morg.antlr:antlr4-maven-plugin[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding ANTLR 4 Maven plugin 4.1-SNAPSHOT                         [4/4][m
+[[1;34mINFO[m] [1m----------------------------[ maven-plugin ]----------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.0:enforce[m [1m(enforce-maven)[m @ [36mantlr4-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-plugin-plugin:3.2:helpmojo[m [1m(help-goal)[m @ [36mantlr4-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to read mojo metadata.
+[[1;34mINFO[m] Applying mojo extractor for language: java
+[[1;34mINFO[m] Mojo extractor for language: java found 0 mojo descriptors.
+[[1;34mINFO[m] Applying mojo extractor for language: bsh
+[[1;34mINFO[m] Mojo extractor for language: bsh found 0 mojo descriptors.
+[[1;34mINFO[m] Applying mojo extractor for language: java-annotations
+[[1;34mINFO[m] Mojo extractor for language: java-annotations found 0 mojo descriptors.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mantlr4-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /Users/jeancarlorspaul/IdeaProjects/antlr4/antlr4-maven-plugin/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mantlr4-maven-plugin[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 3 source files to /Users/jeancarlorspaul/IdeaProjects/antlr4/antlr4-maven-plugin/target/classes
+[[1;33mWARNING[m] bootstrap class path not set in conjunction with -source 6
+[[1;33mWARNING[m] source value 6 is obsolete and will be removed in a future release
+[[1;33mWARNING[m] target value 1.6 is obsolete and will be removed in a future release
+[[1;33mWARNING[m] To suppress warnings about obsolete options, use -Xlint:-options.
+[[1;33mWARNING[m] No processor claimed any of these annotations: org.antlr.v4.runtime.misc.NotNull,org.apache.maven.plugins.annotations.Mojo,org.apache.maven.plugins.annotations.Parameter
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for ANTLR 4 4.1-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] ANTLR 4 ............................................ [1;32mSUCCESS[m [  0.090 s]
+[[1;34mINFO[m] ANTLR 4 Runtime .................................... [1;32mSUCCESS[m [  0.757 s]
+[[1;34mINFO[m] ANTLR 4 Tool ....................................... [1;32mSUCCESS[m [  1.127 s]
+[[1;34mINFO[m] ANTLR 4 Maven plugin ............................... [1;32mSUCCESS[m [  0.348 s]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.364 s
+[[1;34mINFO[m] Finished at: 2025-07-06T12:26:59-04:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

@@ -1,0 +1,540 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] The project junit:junit:jar:4.13.3-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------------< [0;36mjunit:junit[0;1m >-----------------------------[m
+[[1;34mINFO[m] [1mBuilding JUnit 4.13.3-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4:enforce[m [1m(enforce-versions)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mreplacer:1.5.3:replace[m [1m(default)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Replacement run on 1 file.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:resources[m [1m(default-resources)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Using 'ISO-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 2 resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:compile[m [1m(default-compile)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 219 source files to /Users/jeancarlorspaul/IdeaProjects/junit4/target/classes
+[[1;33mWARNING[m] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/junit/extensions/TestDecorator.java:[3,22] [deprecation] Assert in junit.framework has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/validator/AnnotationValidatorFactory.java:[31,59] [deprecation] newInstance() in Class has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in class Class
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/theories/internal/Assignments.java:[122,18] [deprecation] newInstance() in Class has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in class Class
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runners/Parameterized.java:[406,35] [deprecation] newInstance() in Class has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in class Class
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParameters.java:[69,64] [deprecation] newInstance() in Class has been deprecated
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:testResources[m [1m(default-testResources)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Using 'ISO-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 9 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:testCompile[m [1m(default-testCompile)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 252 source files to /Users/jeancarlorspaul/IdeaProjects/junit4/target/test-classes
+[[1;33mWARNING[m] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/validation/BadlyFormedClassesTest.java:[9,33] [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/TestWatchmanTest.java:[3,29] [deprecation] Assert in junit.framework has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/deprecated/JUnit4ClassRunnerTest.java:[8,33] [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExternalResourceRuleTest.java:[140,64] [deprecation] AssumptionViolatedException(String) in AssumptionViolatedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/TestWatcherTest.java:[359,52] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/JavadocTest.java:[65,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/JavadocTest.java:[66,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/JavadocTest.java:[73,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/JavadocTest.java:[74,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/experimental/theories/runner/WithParameterSupplier.java:[26,57] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/runner/JUnitCommandLineParseResultTest.java:[18,66] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/running/methods/ExpectedTest.java:[75,18] [deprecation] AssumptionViolatedException(String) in AssumptionViolatedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/validator/AnnotationValidatorFactoryTest.java:[13,58] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/experimental/theories/internal/AllMembersSupplierTest.java:[25,57] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/LoggingTestWatcher.java:[29,19] [deprecation] skipped(AssumptionViolatedException,Description) in TestWatcher has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/runners/model/FrameworkFieldTest.java:[19,44] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ErrorCollectorTest.java:[136,31] [deprecation] AssumptionViolatedException(String) in AssumptionViolatedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ErrorCollectorTest.java:[232,26] [deprecation] AssumptionViolatedException(String) in AssumptionViolatedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/runners/model/FrameworkMethodTest.java:[19,44] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/runner/FilterFactoriesTest.java:[19,66] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/CategoryFilterFactoryTest.java:[20,66] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/TemporaryFolderUsageTest.java:[27,61] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/assertion/MultipleFailureExceptionTest.java:[91,66] [deprecation] AssumptionViolatedException(String) in AssumptionViolatedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/internal/runners/statements/ExpectExceptionTest.java:[20,38] [deprecation] AssumptionViolatedException(String) in AssumptionViolatedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/internal/runners/statements/ExpectExceptionTest.java:[85,12] [deprecation] AssumptionViolatedException(String) in AssumptionViolatedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParametersTest.java:[27,44] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/CategoryTest.java:[200,33] [deprecation] CategoryFilter(Class<?>,Class<?>) in CategoryFilter has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/CategoryTest.java:[219,32] [deprecation] CategoryFilter(Class<?>,Class<?>) in CategoryFilter has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/runners/model/TestClassTest.java:[23,58] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[117,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[126,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[137,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[149,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[160,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[171,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[181,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[191,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[203,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[214,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[225,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[236,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[247,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[260,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[270,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[281,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[292,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[308,42] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[323,59] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[338,58] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[349,59] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[362,58] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/rules/ExpectedExceptionTest.java:[377,59] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[34,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[35,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[36,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[70,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[71,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[72,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[78,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[79,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[80,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[86,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[87,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[88,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[94,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[95,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/experimental/categories/MultiCategoryTest.java:[96,8] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/runners/parameterized/TestWithParametersTest.java:[26,44] [deprecation] none() in ExpectedException has been deprecated
+[[1;33mWARNING[m] /Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/assertion/AssertionTest.java:[697,12] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/assertion/AssertionTest.java:[710,12] [deprecation] <T>assertThat(String,T,Matcher<? super T>) in Assert has been deprecated
+[[1;33mWARNING[m]   where T is a type-variable:
+    T extends Object declared in method <T>assertThat(String,T,Matcher<? super T>)
+/Users/jeancarlorspaul/IdeaProjects/junit4/src/test/java/org/junit/tests/assertion/AssertionTest.java:[726,12] [deprecation] <T>assertThat(T,Matcher<? super T>) in Assert has been deprecated
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.19.1:test[m [1m(default-test)[m @ [36mjunit[0;1m ---[m
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.junit.tests.assertion.AssertionTest
+Tests run: 98, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.assertion.AssertionTest
+Running org.junit.tests.assertion.ComparisonFailureTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.assertion.ComparisonFailureTest
+Running org.junit.tests.assertion.MultipleFailureExceptionTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.assertion.MultipleFailureExceptionTest
+Running org.junit.tests.deprecated.JUnit4ClassRunnerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.deprecated.JUnit4ClassRunnerTest
+Running org.junit.tests.description.AnnotatedDescriptionTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.description.AnnotatedDescriptionTest
+Running org.junit.tests.description.SuiteDescriptionTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.description.SuiteDescriptionTest
+Running org.junit.tests.description.TestDescriptionMethodNameTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.description.TestDescriptionMethodNameTest
+Running org.junit.tests.description.TestDescriptionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.description.TestDescriptionTest
+Running org.junit.experimental.categories.CategoriesAndParameterizedTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.experimental.categories.CategoriesAndParameterizedTest
+Running org.junit.experimental.categories.CategoryFilterFactoryTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.experimental.categories.CategoryFilterFactoryTest
+Running org.junit.experimental.categories.CategoryTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec - in org.junit.experimental.categories.CategoryTest
+Running org.junit.experimental.categories.CategoryValidatorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.experimental.categories.CategoryValidatorTest
+Running org.junit.experimental.categories.JavadocTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.experimental.categories.JavadocTest
+Running org.junit.experimental.categories.MultiCategoryTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.junit.experimental.categories.MultiCategoryTest
+Running org.junit.tests.experimental.max.DescriptionTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.experimental.max.DescriptionTest
+Running org.junit.tests.experimental.max.JUnit38SortingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in org.junit.tests.experimental.max.JUnit38SortingTest
+Running org.junit.tests.experimental.max.MaxStarterTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.369 sec - in org.junit.tests.experimental.max.MaxStarterTest
+Running org.junit.tests.experimental.parallel.ParallelClassTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.experimental.parallel.ParallelClassTest
+Running org.junit.tests.experimental.parallel.ParallelMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.experimental.parallel.ParallelMethodTest
+Running org.junit.tests.experimental.results.PrintableResultTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.junit.tests.experimental.results.PrintableResultTest
+Running org.junit.tests.experimental.results.ResultMatchersTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.results.ResultMatchersTest
+Running org.junit.tests.experimental.theories.internal.AllMembersSupplierTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.experimental.theories.internal.AllMembersSupplierTest
+Running org.junit.tests.experimental.theories.internal.ParameterizedAssertionErrorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.experimental.theories.internal.ParameterizedAssertionErrorTest
+Running org.junit.tests.experimental.theories.internal.SpecificDataPointsSupplierTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.experimental.theories.internal.SpecificDataPointsSupplierTest
+Running org.junit.tests.experimental.theories.runner.FailingDataPointMethods
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.experimental.theories.runner.FailingDataPointMethods
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$StaticPublicNonDataPoints
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$StaticPublicNonDataPoints
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$OneTestTwoAnnotations
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$OneTestTwoAnnotations
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$BeforeAndAfterEachTime
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$BeforeAndAfterEachTime
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$DifferentTypesInConstructor
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$DifferentTypesInConstructor
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$PositiveIntsWithMethodParams
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$PositiveIntsWithMethodParams
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$PositiveIntsWithNegativeField
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$PositiveIntsWithNegativeField
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$PositiveInts
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$PositiveInts
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$NewObjectEachTime
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$NewObjectEachTime
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$BeforeAndAfterOnSameInstance
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$BeforeAndAfterOnSameInstance
+Running org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$HasATwoParameterTheory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.SuccessfulWithDataPointFields$HasATwoParameterTheory
+Running org.junit.tests.experimental.theories.runner.TheoriesPerformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.TheoriesPerformanceTest
+Running org.junit.tests.experimental.theories.runner.TypeMatchingBetweenMultiDataPointsMethod
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.TypeMatchingBetweenMultiDataPointsMethod
+Running org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec - in org.junit.tests.experimental.theories.runner.UnsuccessfulWithDataPointFields
+Running org.junit.tests.experimental.theories.runner.WhenNoParametersMatch
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.experimental.theories.runner.WhenNoParametersMatch
+Running org.junit.tests.experimental.theories.runner.WithAutoGeneratedDataPoints
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.experimental.theories.runner.WithAutoGeneratedDataPoints
+Running org.junit.tests.experimental.theories.runner.WithDataPointMethod
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.WithDataPointMethod
+Running org.junit.tests.experimental.theories.runner.WithExtendedParameterSources
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.experimental.theories.runner.WithExtendedParameterSources
+Running org.junit.tests.experimental.theories.runner.WithNamedDataPoints
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.WithNamedDataPoints
+Running org.junit.tests.experimental.theories.runner.WithOnlyTestAnnotations
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in org.junit.tests.experimental.theories.runner.WithOnlyTestAnnotations
+Running org.junit.tests.experimental.theories.runner.WithParameterSupplier
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.runner.WithParameterSupplier
+Running org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.junit.tests.experimental.theories.runner.WithUnresolvedGenericTypeVariablesOnTheoryParms
+Running org.junit.tests.experimental.theories.ParameterSignatureTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.ParameterSignatureTest
+Running org.junit.tests.experimental.theories.TestedOnSupplierTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.TestedOnSupplierTest
+Running org.junit.tests.experimental.theories.AssumingInTheoriesTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.AssumingInTheoriesTest
+Running org.junit.tests.experimental.theories.PotentialAssignmentTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.theories.PotentialAssignmentTest
+Running org.junit.tests.experimental.AssumptionTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.experimental.AssumptionTest
+Running org.junit.tests.experimental.MatcherTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.experimental.MatcherTest
+Running org.junit.tests.experimental.theories.extendingwithstubs.StubbedTheoriesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.experimental.theories.extendingwithstubs.StubbedTheoriesTest
+Running org.junit.internal.builders.AnnotatedBuilderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.internal.builders.AnnotatedBuilderTest
+Running org.junit.internal.ChecksTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.internal.ChecksTest
+Running org.junit.internal.runners.ErrorReportingRunnerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.internal.runners.ErrorReportingRunnerTest
+Running org.junit.internal.runners.statements.ExpectExceptionTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.internal.runners.statements.ExpectExceptionTest
+Running org.junit.internal.runners.statements.FailOnTimeoutTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.671 sec - in org.junit.internal.runners.statements.FailOnTimeoutTest
+Running org.junit.internal.MethodSorterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.internal.MethodSorterTest
+Running org.junit.internal.matchers.StacktracePrintingMatcherTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.internal.matchers.StacktracePrintingMatcherTest
+Running org.junit.internal.StackTracesTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in org.junit.internal.StackTracesTest
+Running org.junit.internal.matchers.ThrowableCauseMatcherTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.internal.matchers.ThrowableCauseMatcherTest
+Running org.junit.internal.ArrayComparisonFailureTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.junit.internal.ArrayComparisonFailureTest
+Running org.junit.tests.junit3compatibility.AllTestsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.junit3compatibility.AllTestsTest
+Running org.junit.tests.junit3compatibility.ClassRequestTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.junit3compatibility.ClassRequestTest
+Running org.junit.tests.junit3compatibility.ForwardCompatibilityPrintingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.junit3compatibility.ForwardCompatibilityPrintingTest
+Running org.junit.tests.junit3compatibility.ForwardCompatibilityTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.junit3compatibility.ForwardCompatibilityTest
+Running org.junit.tests.junit3compatibility.InitializationErrorForwardCompatibilityTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.junit3compatibility.InitializationErrorForwardCompatibilityTest
+Running org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.junit3compatibility.JUnit38ClassRunnerTest
+Running org.junit.tests.junit3compatibility.JUnit4TestAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.junit3compatibility.JUnit4TestAdapterTest
+Running org.junit.tests.junit3compatibility.OldTestClassAdaptingListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.junit3compatibility.OldTestClassAdaptingListenerTest
+Running junit.tests.framework.TestCaseTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.TestCaseTest
+Running junit.tests.framework.SuiteTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in junit.tests.framework.SuiteTest
+Running junit.tests.framework.TestListenerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.TestListenerTest
+Running junit.tests.framework.AssertionFailedErrorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.AssertionFailedErrorTest
+Running junit.tests.framework.AssertTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.AssertTest
+Running junit.tests.framework.TestImplementorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.TestImplementorTest
+Running junit.tests.framework.NoArgTestCaseTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.NoArgTestCaseTest
+Running junit.tests.framework.ComparisonCompactorTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in junit.tests.framework.ComparisonCompactorTest
+Running junit.tests.framework.ComparisonFailureTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.ComparisonFailureTest
+Running junit.tests.framework.DoublePrecisionAssertTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.DoublePrecisionAssertTest
+Running junit.tests.framework.FloatAssertTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.framework.FloatAssertTest
+Running junit.tests.runner.StackFilterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.runner.StackFilterTest
+Running junit.tests.runner.ResultTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec - in junit.tests.runner.ResultTest
+Running junit.tests.runner.BaseTestRunnerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.runner.BaseTestRunnerTest
+Running junit.tests.runner.TextFeedbackTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.runner.TextFeedbackTest
+Running junit.tests.runner.TextRunnerSingleMethodTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.runner.TextRunnerSingleMethodTest
+Running junit.tests.runner.TextRunnerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.175 sec - in junit.tests.runner.TextRunnerTest
+Running junit.tests.extensions.ExtensionTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.extensions.ExtensionTest
+Running junit.tests.extensions.ActiveTestTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec - in junit.tests.extensions.ActiveTestTest
+Running junit.tests.extensions.RepeatedTestTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in junit.tests.extensions.RepeatedTestTest
+Running org.junit.tests.junit3compatibility.SuiteMethodTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.junit3compatibility.SuiteMethodTest
+Running org.junit.tests.listening.ListenerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.listening.ListenerTest
+Running org.junit.tests.listening.RunnerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.listening.RunnerTest
+Running org.junit.tests.listening.TestListenerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.listening.TestListenerTest
+Running org.junit.tests.listening.TextListenerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.listening.TextListenerTest
+Running org.junit.tests.listening.UserStopTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.listening.UserStopTest
+Running org.junit.tests.manipulation.FilterableTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.manipulation.FilterableTest
+Running org.junit.tests.manipulation.FilterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.FilterTest
+Running org.junit.tests.manipulation.OrderableTest$UnOrderableRunnersAreHandledWithoutCrashing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.OrderableTest$UnOrderableRunnersAreHandledWithoutCrashing
+Running org.junit.tests.manipulation.OrderableTest$TestClassRunnerIsOrderableWithSuiteMethod
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.OrderableTest$TestClassRunnerIsOrderableWithSuiteMethod
+Running org.junit.tests.manipulation.OrderableTest$TestOrderableClassRunnerIsSortable
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.OrderableTest$TestOrderableClassRunnerIsSortable
+Running org.junit.tests.manipulation.OrderableTest$TestClassRunnerIsOrderable
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.OrderableTest$TestClassRunnerIsOrderable
+Running org.junit.tests.manipulation.OrderWithTest$UnOrderableRunnersAreHandledWithoutCrashing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.OrderWithTest$UnOrderableRunnersAreHandledWithoutCrashing
+Running org.junit.tests.manipulation.OrderWithTest$TestClassRunnerIsOrderableWithSuiteMethod
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.manipulation.OrderWithTest$TestClassRunnerIsOrderableWithSuiteMethod
+Running org.junit.tests.manipulation.OrderWithTest$TestClassRunnerIsSortableViaOrderWith
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.OrderWithTest$TestClassRunnerIsSortableViaOrderWith
+Running org.junit.tests.manipulation.OrderWithTest$TestClassRunnerIsOrderableViaOrderWith
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.manipulation.OrderWithTest$TestClassRunnerIsOrderableViaOrderWith
+Running org.junit.tests.manipulation.SingleMethodTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.SingleMethodTest
+Running org.junit.tests.manipulation.SortableTest$TestOnlySortableClassRunnerIsSortable
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.SortableTest$TestOnlySortableClassRunnerIsSortable
+Running org.junit.tests.manipulation.SortableTest$UnsortableRunnersAreHandledWithoutCrashing
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.SortableTest$UnsortableRunnersAreHandledWithoutCrashing
+Running org.junit.tests.manipulation.SortableTest$TestClassRunnerIsSortableWithSuiteMethod
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.SortableTest$TestClassRunnerIsSortableWithSuiteMethod
+Running org.junit.tests.manipulation.SortableTest$TestClassRunnerIsSortable
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.manipulation.SortableTest$TestClassRunnerIsSortable
+Running org.junit.rules.BlockJUnit4ClassRunnerOverrideTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.rules.BlockJUnit4ClassRunnerOverrideTest
+Running org.junit.rules.ClassRulesTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.rules.ClassRulesTest
+Running org.junit.rules.DisableOnDebugTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.rules.DisableOnDebugTest
+Running org.junit.rules.ErrorCollectorTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.rules.ErrorCollectorTest
+Running org.junit.rules.ExpectedExceptionTest
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.junit.rules.ExpectedExceptionTest
+Running org.junit.rules.ExternalResourceRuleTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.ExternalResourceRuleTest
+Running org.junit.rules.MethodRulesTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in org.junit.rules.MethodRulesTest
+Running org.junit.rules.NameRulesTest$BeforeAndAfterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.NameRulesTest$BeforeAndAfterTest
+Running org.junit.rules.NameRulesTest$TestNames
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.NameRulesTest$TestNames
+Running org.junit.rules.RuleChainTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.RuleChainTest
+Running org.junit.rules.RuleMemberValidatorTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.rules.RuleMemberValidatorTest
+Running org.junit.rules.StopwatchTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.StopwatchTest
+Running org.junit.rules.TempFolderRuleTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec - in org.junit.rules.TempFolderRuleTest
+Running org.junit.rules.TemporaryFolderRuleAssuredDeletionTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.TemporaryFolderRuleAssuredDeletionTest
+Running org.junit.rules.TemporaryFolderUsageTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec - in org.junit.rules.TemporaryFolderUsageTest
+Running org.junit.rules.TestRuleTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in org.junit.rules.TestRuleTest
+Running org.junit.rules.TestWatcherTest$InterplayWithOtherRules
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.TestWatcherTest$InterplayWithOtherRules
+Running org.junit.rules.TestWatcherTest$CallbackArguments
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.rules.TestWatcherTest$CallbackArguments
+Running org.junit.rules.TestWatcherTest$Callbacks
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec - in org.junit.rules.TestWatcherTest$Callbacks
+Running org.junit.rules.TestWatchmanTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.TestWatchmanTest
+Running org.junit.rules.TimeoutRuleTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.077 sec - in org.junit.rules.TimeoutRuleTest
+Running org.junit.rules.VerifierRuleTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.rules.VerifierRuleTest
+Running org.junit.runners.model.FrameworkFieldTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runners.model.FrameworkFieldTest
+Running org.junit.runners.model.FrameworkMethodTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runners.model.FrameworkMethodTest
+Running org.junit.runners.model.InvalidTestClassErrorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runners.model.InvalidTestClassErrorTest
+Running org.junit.runners.model.TestClassTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.runners.model.TestClassTest
+Running org.junit.runners.parameterized.BlockJUnit4ClassRunnerWithParametersTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.runners.parameterized.BlockJUnit4ClassRunnerWithParametersTest
+Running org.junit.runners.parameterized.ParameterizedNamesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runners.parameterized.ParameterizedNamesTest
+Running org.junit.runners.parameterized.TestWithParametersTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.runners.parameterized.TestWithParametersTest
+Running org.junit.runners.RuleContainerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runners.RuleContainerTest
+Running org.junit.runners.CustomBlockJUnit4ClassRunnerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runners.CustomBlockJUnit4ClassRunnerTest
+Running org.junit.runner.notification.ConcurrentRunNotifierTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in org.junit.runner.notification.ConcurrentRunNotifierTest
+Running org.junit.runner.notification.RunNotifierTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runner.notification.RunNotifierTest
+Running org.junit.runner.notification.SynchronizedRunListenerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runner.notification.SynchronizedRunListenerTest
+Running org.junit.runner.FilterFactoriesTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runner.FilterFactoriesTest
+Running org.junit.runner.FilterOptionIntegrationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.runner.FilterOptionIntegrationTest
+Running org.junit.runner.OrderWithValidatorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runner.OrderWithValidatorTest
+Running org.junit.runner.JUnitCommandLineParseResultTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runner.JUnitCommandLineParseResultTest
+Running org.junit.runner.JUnitCoreTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runner.JUnitCoreTest
+Running org.junit.runner.RequestTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.runner.RequestTest
+Running org.junit.tests.running.classes.BlockJUnit4ClassRunnerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.classes.BlockJUnit4ClassRunnerTest
+Running org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.running.classes.ClassLevelMethodsWithIgnoredTestsTest
+Running org.junit.tests.running.classes.EnclosedTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.classes.EnclosedTest
+Running org.junit.tests.running.classes.IgnoreClassTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.classes.IgnoreClassTest
+Running org.junit.tests.running.classes.ParameterizedTestTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in org.junit.tests.running.classes.ParameterizedTestTest
+Running org.junit.tests.running.classes.ParentRunnerFilteringTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.classes.ParentRunnerFilteringTest
+Running org.junit.tests.running.classes.ParentRunnerTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.junit.tests.running.classes.ParentRunnerTest
+Running org.junit.tests.running.classes.parent.ParentRunnerClassLoaderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.running.classes.parent.ParentRunnerClassLoaderTest
+Running org.junit.tests.running.classes.RunWithTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.classes.RunWithTest
+Running org.junit.tests.running.classes.SuiteTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.running.classes.SuiteTest
+Running org.junit.tests.running.classes.UseSuiteAsASuperclassTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.classes.UseSuiteAsASuperclassTest
+Running org.junit.tests.running.classes.ThreadsTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.classes.ThreadsTest
+Running org.junit.tests.running.core.CommandLineTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.core.CommandLineTest
+Running org.junit.tests.running.core.JUnitCoreReturnsCorrectExitCodeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.running.core.JUnitCoreReturnsCorrectExitCodeTest
+Running org.junit.tests.running.core.SystemExitTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec - in org.junit.tests.running.core.SystemExitTest
+Running org.junit.tests.running.methods.AnnotationTest
+Tests run: 30, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec - in org.junit.tests.running.methods.AnnotationTest
+Running org.junit.tests.running.methods.ExpectedTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.methods.ExpectedTest
+Running org.junit.tests.running.methods.InheritedTestTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.methods.InheritedTestTest
+Running org.junit.tests.running.methods.ParameterizedTestMethodTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.running.methods.ParameterizedTestMethodTest
+Running org.junit.tests.running.methods.TestMethodTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.tests.running.methods.TestMethodTest
+Running org.junit.tests.running.methods.TimeoutTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.741 sec - in org.junit.tests.running.methods.TimeoutTest
+Running org.junit.samples.ListTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.samples.ListTest
+Running org.junit.samples.money.MoneyTest
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.samples.money.MoneyTest
+Running org.junit.tests.validation.BadlyFormedClassesTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.validation.BadlyFormedClassesTest
+Running org.junit.tests.validation.FailedConstructionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.validation.FailedConstructionTest
+Running org.junit.tests.validation.ValidationTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.validation.ValidationTest
+Running org.junit.validator.AnnotationsValidatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.junit.validator.AnnotationsValidatorTest
+Running org.junit.validator.AnnotationValidatorFactoryTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.validator.AnnotationValidatorFactoryTest
+Running org.junit.validator.PublicClassValidatorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.validator.PublicClassValidatorTest
+Running org.junit.AssumptionViolatedExceptionTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec - in org.junit.AssumptionViolatedExceptionTest
+Running org.junit.tests.ObjectContractTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.junit.tests.ObjectContractTest
+
+Results :
+
+Tests run: 1108, Failures: 0, Errors: 0, Skipped: 5
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32manimal-sniffer-maven-plugin:1.14:check[m [1m(signature-check)[m @ [36mjunit[0;1m ---[m
+[[1;34mINFO[m] Checking unresolved references to org.codehaus.mojo.signature:java15:1.0
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.761 s
+[[1;34mINFO[m] Finished at: 2025-07-06T15:06:04-04:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
