@@ -1,0 +1,159 @@
+{
+    "L1991&REPLACE_NESTED_CONDITIONAL_WITH_GUARD_CLAUSES&ContextCode&1751830321.174711_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 55.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L10263&SLIDE_STATEMENTS&FewShotCode&1751829843.754788_5e05b71e8b1cd52cf0e77559786cc4c18dc85c37.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 23, column 75.  Encountered: \"\\'\" (39), after : \"\\\\\"\n"
+    ],
+    "L24470&CHANGE_FUNCTION_DECLARATION&InstrucCode&1751830744.444872_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 4, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L1276&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1751830594.402134_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Encountered unexpected token: \"the\" <IDENTIFIER>\n    at line 1, column 20.\n\nWas expecting one of:\n\n    \"<\"\n    \"extends\"\n    \"implements\"\n    \"{\"\n\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&InstrucCode&1751829420.801264_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 4, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L10263&SLIDE_STATEMENTS&ContextCode&1751829843.754788_5e05b71e8b1cd52cf0e77559786cc4c18dc85c37.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 2, column 72.  Encountered: \"\\'\" (39), after : \"\\\\\"\n"
+    ],
+    "L19910&INTRODUCE_SPECIAL_CASE&InstrucCode&1751830322.438095_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 9, column 63.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L1991&REPLACE_NESTED_CONDITIONAL_WITH_GUARD_CLAUSES&FewShotCode&1751830321.174711_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 28, column 59.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L1927&EXTRACT_FUNCTION&ZeroShotCode&1751829423.342532_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 2, column 47.  Encountered: \"\\n\" (10), after : \"\\\"start state closure=%s\\\\\"\n"
+    ],
+    "L19910&INTRODUCE_SPECIAL_CASE&RulesCode&1751830322.438095_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 9, column 63.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L19910&INTRODUCE_SPECIAL_CASE&ZeroShotCode&1751830322.438095_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 4, column 59.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L2093&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1751830479.067625_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Encountered unexpected token: \"encapsulate\" <IDENTIFIER>\n    at line 1, column 10.\n\nWas expecting one of:\n\n    \"<\"\n    \"extends\"\n    \"implements\"\n    \"{\"\n\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&ZeroShotCode&1751829420.801264_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 11, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L24470&CHANGE_FUNCTION_DECLARATION&RulesCode&1751830744.444872_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L1927&EXTRACT_FUNCTION&FewShotCode&1751829423.342532_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 2, column 47.  Encountered: \"\\n\" (10), after : \"\\\"start state closure=%s\\\\\"\n"
+    ],
+    "L8024&SLIDE_STATEMENTS&FewShotCode&1751830185.158153_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 18, column 54.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&ContextCode&1751829421.985655_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L1506&CONSOLIDATE_CONDITIONAL_EXPRESSION&FewShotCode&1751830320.091485_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 87.  Encountered: \"\\n\" (10), after : \"\\\"ATN state %d has both epsilon and non-epsilon transitions.\\\\\"\n"
+    ],
+    "L1927&EXTRACT_FUNCTION&ContextCode&1751829423.342532_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 51.  Encountered: \"\\n\" (10), after : \"\\\"start state closure=%s\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&RulesCode&1751829421.985655_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 11, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L8024&SLIDE_STATEMENTS&ContextCode&1751830185.158153_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 13, column 57.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L2447&CHANGE_FUNCTION_DECLARATION&FewShotCode&1751830715.903285_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L24470&CHANGE_FUNCTION_DECLARATION&ZeroShotCode&1751830744.444872_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L2447&CHANGE_FUNCTION_DECLARATION&ZeroShotCode&1751830715.903285_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L1506&CONSOLIDATE_CONDITIONAL_EXPRESSION&ContextCode&1751830320.091485_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 7, column 87.  Encountered: \"\\n\" (10), after : \"\\\"ATN state %d has both epsilon and non-epsilon transitions.\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&FewShotCode&1751829421.985655_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 12, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L1927&EXTRACT_FUNCTION&InstrucCode&1751829423.342532_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 51.  Encountered: \"\\n\" (10), after : \"\\\"start state closure=%s\\\\\"\n"
+    ],
+    "L2447&CHANGE_FUNCTION_DECLARATION&RulesCode&1751830715.903285_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L10263&SLIDE_STATEMENTS&ZeroShotCode&1751829843.754788_5e05b71e8b1cd52cf0e77559786cc4c18dc85c37.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 31, column 75.  Encountered: \"\\'\" (39), after : \"\\\\\"\n"
+    ],
+    "L8024&SLIDE_STATEMENTS&InstrucCode&1751830185.158153_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 18, column 54.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L1506&CONSOLIDATE_CONDITIONAL_EXPRESSION&InstrucCode&1751830320.091485_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 91.  Encountered: \"\\n\" (10), after : \"\\\"ATN state %d has both epsilon and non-epsilon transitions.\\\\\"\n"
+    ],
+    "L8024&SLIDE_STATEMENTS&RulesCode&1751830185.158153_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 18, column 54.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L1991&REPLACE_NESTED_CONDITIONAL_WITH_GUARD_CLAUSES&ZeroShotCode&1751830321.174711_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 29, column 59.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L2447&CHANGE_FUNCTION_DECLARATION&InstrucCode&1751830715.903285_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&InstrucCode&1751829421.985655_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 4, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&RulesCode&1751829420.801264_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 11, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L1506&CONSOLIDATE_CONDITIONAL_EXPRESSION&ZeroShotCode&1751830320.091485_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 6, column 87.  Encountered: \"\\n\" (10), after : \"\\\"ATN state %d has both epsilon and non-epsilon transitions.\\\\\"\n"
+    ],
+    "L1991&REPLACE_NESTED_CONDITIONAL_WITH_GUARD_CLAUSES&RulesCode&1751830321.174711_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 29, column 59.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L19910&INTRODUCE_SPECIAL_CASE&ContextCode&1751830322.438095_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 55.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L10263&SLIDE_STATEMENTS&InstrucCode&1751829843.754788_5e05b71e8b1cd52cf0e77559786cc4c18dc85c37.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 22, column 75.  Encountered: \"\\'\" (39), after : \"\\\\\"\n"
+    ],
+    "L24470&CHANGE_FUNCTION_DECLARATION&FewShotCode&1751830744.444872_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 62.  Encountered: \"\\n\" (10), after : \"\\\"ACTION %s:%d\\\\\"\n"
+    ],
+    "L1927&EXTRACT_FUNCTION&RulesCode&1751829423.342532_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 51.  Encountered: \"\\n\" (10), after : \"\\\"start state closure=%s\\\\\"\n"
+    ],
+    "L8024&SLIDE_STATEMENTS&ZeroShotCode&1751830185.158153_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 18, column 54.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&FewShotCode&1751829420.801264_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 12, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L10263&SLIDE_STATEMENTS&RulesCode&1751829843.754788_5e05b71e8b1cd52cf0e77559786cc4c18dc85c37.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 3, column 67.  Encountered: \"\\'\" (39), after : \"\\\\\"\n"
+    ],
+    "L19910&INTRODUCE_SPECIAL_CASE&FewShotCode&1751830322.438095_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 9, column 63.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L1991&REPLACE_NESTED_CONDITIONAL_WITH_GUARD_CLAUSES&InstrucCode&1751830321.174711_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 30, column 59.  Encountered: \"\\n\" (10), after : \"\\\"closure at %s rule stop %s\\\\\"\n"
+    ],
+    "L1506&CONSOLIDATE_CONDITIONAL_EXPRESSION&RulesCode&1751830320.091485_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 91.  Encountered: \"\\n\" (10), after : \"\\\"ATN state %d has both epsilon and non-epsilon transitions.\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&ZeroShotCode&1751829421.985655_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 11, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L7413&INTRODUCE_ASSERTION&ContextCode&1751829420.801264_ad9bac95199736c270940c4037b7ee7174bacca6.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Lexical error at line 5, column 29.  Encountered: \"\\n\" (10), after : \"\\\"\\\\\"\n"
+    ],
+    "L2093&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1751830479.067625_3468a5fbd868ce63c4cb61782e9baddac2ed24ae.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Encountered unexpected token: \"the\" <IDENTIFIER>\n    at line 1, column 20.\n\nWas expecting one of:\n\n    \"<\"\n    \"extends\"\n    \"implements\"\n    \"{\"\n\n"
+    ],
+    "total": {
+        "Lexical error": 48,
+        "Encountered unexpected token": 3
+    }
+}

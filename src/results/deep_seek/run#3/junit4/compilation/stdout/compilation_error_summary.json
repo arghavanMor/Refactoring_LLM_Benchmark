@@ -1,0 +1,52 @@
+{
+    "L4889&EXTRACT_FUNCTION&FewShotCode&1751825556.959802_4b8974eb7be511d80be20264c9ba442b3b1f127f.txt": [
+        " To suppress warnings about obsolete options, use -Xlint:-options.\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[28,16] error: method addFailure(Throwable) is already defined in class EachTestNotifier\n",
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[22,12] error: cannot find symbol\n",
+        "   symbol:   method addMultipleFailureException(MultipleFailureException)\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[82,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[82,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4889&EXTRACT_FUNCTION&RulesCode&1751825556.959802_fcadde7645408e7cf2a76076f9628e1e4737d090.txt": [
+        " To suppress warnings about obsolete options, use -Xlint:-options.\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[28,16] error: method addFailure(Throwable) is already defined in class EachTestNotifier\n",
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[22,12] error: cannot find symbol\n",
+        "   symbol:   method addMultipleFailureException(MultipleFailureException)\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[33,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[33,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4889&EXTRACT_FUNCTION&ZeroShotCode&1751825556.959802_8de96b644f19a3bfefaf79ed18843a4e18ddefd4.txt": [
+        " To suppress warnings about obsolete options, use -Xlint:-options.\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[28,16] error: method addFailure(Throwable) is already defined in class EachTestNotifier\n",
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[22,12] error: cannot find symbol\n",
+        "   symbol:   method addMultipleFailureException(MultipleFailureException)\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[82,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[82,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4889&EXTRACT_FUNCTION&InstrucCode&1751825556.959802_f1a85178619dd9288fcb29689469cbb8b069bed9.txt": [
+        " To suppress warnings about obsolete options, use -Xlint:-options.\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[28,16] error: method addFailure(Throwable) is already defined in class EachTestNotifier\n",
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[22,12] error: cannot find symbol\n",
+        "   symbol:   method addMultipleFailureException(MultipleFailureException)\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[33,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[33,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4884&INLINE_VARIABLE&ZeroShotCode&1751825433.256517_f01ba41811a679fbd3e92e217922cac504eab853.txt": [
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4884&INLINE_VARIABLE&ContextCode&1751825433.256517_22e6bdc39e02abd0358991c20011d395dccfa7f0.txt": [
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[26,50] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[26,12] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4884&INLINE_VARIABLE&RulesCode&1751825433.256517_bf360fc956341ed47643c4fe765949571957ce4a.txt": [
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4884&INLINE_VARIABLE&InstrucCode&1751825433.256517_52986bf6ad54a5e363735f314abfedcba63a836b.txt": [
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4884&INLINE_VARIABLE&FewShotCode&1751825433.256517_589197757cf717b1e5cea48b2eada7a6d08beb35.txt": [
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,46] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[25,8] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ],
+    "L4889&EXTRACT_FUNCTION&ContextCode&1751825556.959802_0eededa48e82b290b88dfb89264f21ccc9c4d966.txt": [
+        " To suppress warnings about obsolete options, use -Xlint:-options.\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[28,16] error: method addFailure(Throwable) is already defined in class EachTestNotifier\n",
+        "   where T is a type-variable:\n    T extends Object declared in class Class\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[22,12] error: cannot find symbol\n",
+        "   symbol:   method addMultipleFailureException(MultipleFailureException)\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[34,50] error: cannot find symbol\n",
+        "   symbol:   variable fDescription\n  location: class EachTestNotifier\n/Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/runners/model/EachTestNotifier.java:[34,12] error: cannot find symbol\n[\u001b[1;34mINFO\u001b[m]"
+    ]
+}
