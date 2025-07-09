@@ -1,0 +1,17 @@
+{
+    "L126&EXTRACT_FUNCTION&RulesCode&1752084007.567122_7a70005ea3339dd801927802c5abe5356055c861.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Encountered unexpected token: \"or\" <IDENTIFIER>\n    at line 1, column 42.\n\nWas expecting one of:\n\n    \";\"\n    \"@\"\n    \"[\"\n    \"throws\"\n    \"{\"\n\n"
+    ],
+    "L126&EXTRACT_FUNCTION&FewShotCode&1752084007.567122_7a70005ea3339dd801927802c5abe5356055c861.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Encountered unexpected token: \"or\" <IDENTIFIER>\n    at line 1, column 42.\n\nWas expecting one of:\n\n    \";\"\n    \"@\"\n    \"[\"\n    \"throws\"\n    \"{\"\n\n"
+    ],
+    "L126&EXTRACT_FUNCTION&InstrucCode&1752084007.567122_7a70005ea3339dd801927802c5abe5356055c861.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Encountered unexpected token: \"or\" <IDENTIFIER>\n    at line 1, column 42.\n\nWas expecting one of:\n\n    \";\"\n    \"@\"\n    \"[\"\n    \"throws\"\n    \"{\"\n\n"
+    ],
+    "L126&EXTRACT_FUNCTION&ZeroShotCode&1752084007.567122_7a70005ea3339dd801927802c5abe5356055c861.txt": [
+        "Exception in thread \"main\" com.github.javaparser.ParseProblemException: Encountered unexpected token: \"or\" <IDENTIFIER>\n    at line 1, column 42.\n\nWas expecting one of:\n\n    \";\"\n    \"@\"\n    \"[\"\n    \"throws\"\n    \"{\"\n\n"
+    ],
+    "total": {
+        "Encountered unexpected token": 4
+    }
+}

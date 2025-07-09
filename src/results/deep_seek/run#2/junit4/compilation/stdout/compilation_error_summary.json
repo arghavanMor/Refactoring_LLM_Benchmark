@@ -1,0 +1,21 @@
+{
+    "L7126&INTRODUCE_ASSERTION&RulesCode&1752086426.954278_a05a544f92b92817463d1d0a263ae43b84b16513.txt": "cannot find symbol",
+    "L7126&INTRODUCE_ASSERTION&ZeroShotCode&1752086426.954278_4720e9b4bc0d6a559c3f820069ccbf966b0580f0.txt": "cannot find symbol",
+    "Error_summary": {
+        "cannot find symbol symbol: variable": 0,
+        "is already defined in class": 0,
+        "cannot be applied to given types": 0,
+        "incompatible types": 0,
+        "cannot find symbol symbol: method": 0,
+        "cannot be referenced from a static context": 0,
+        "is not abstract and does not override abstract method": 0,
+        "Illegal static declaration in inner class": 0,
+        "illegal parenthesized expression": 0,
+        "cannot be accessed from outside package": 0,
+        "diamond operator is not supported in -source 6": 0,
+        "cannot assign a value to final variable": 0,
+        "missing return statement": 0,
+        "cannot find symbol": 2,
+        "error_quantity": 2
+    }
+}

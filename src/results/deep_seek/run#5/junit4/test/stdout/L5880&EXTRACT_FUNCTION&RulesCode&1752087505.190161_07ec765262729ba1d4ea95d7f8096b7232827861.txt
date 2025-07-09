@@ -1,0 +1,561 @@
+Buildfile: /Users/jeancarlorspaul/IdeaProjects/junit4/build.xml
+
+clean:
+   [delete] Deleting directory /Users/jeancarlorspaul/IdeaProjects/junit4/target
+
+init:
+
+versiontag:
+     [copy] Copying 1 file to /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/junit/runner
+
+build:
+    [mkdir] Created dir: /Users/jeancarlorspaul/IdeaProjects/junit4/target/main
+    [javac] Compiling 154 source files to /Users/jeancarlorspaul/IdeaProjects/junit4/target/main
+    [javac] 
+    [javac]           WARNING
+    [javac] 
+    [javac] The -source switch defaults to 9 in JDK 9.
+    [javac] If you specify -target 1.8 you now must also specify -source 1.8.
+    [javac] Ant will implicitly add -source 1.8 for you.  Please change your build file.
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/matchers/IsCollectionContaining.java:48: warning: [unchecked] Possible heap pollution from parameterized vararg type Matcher<? extends T>
+    [javac]     public static <T> Matcher<Iterable<T>> hasItems(Matcher<? extends T>... elementMatchers) {
+    [javac]                                                                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(Matcher<? extends T>...)
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/matchers/IsCollectionContaining.java:58: warning: [unchecked] Possible heap pollution from parameterized vararg type T
+    [javac]     public static <T> Matcher<Iterable<T>> hasItems(T... elements) {
+    [javac]                                                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(T...)
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/matchers/JUnitMatchers.java:34: warning: [unchecked] Possible heap pollution from parameterized vararg type T
+    [javac] 	public static <T> org.hamcrest.Matcher<java.lang.Iterable<T>> hasItems(T... elements) {
+    [javac] 	                                                                            ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(T...)
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/matchers/JUnitMatchers.java:44: warning: [unchecked] Possible heap pollution from parameterized vararg type Matcher<? extends T>
+    [javac] 	public static <T> org.hamcrest.Matcher<java.lang.Iterable<T>> hasItems(org.hamcrest.Matcher<? extends T>... elementMatchers) {
+    [javac] 	                                                                                                            ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(Matcher<? extends T>...)
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 5 warnings
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/internal/requests/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/internal/runners/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runner/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/framework/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runner/notification/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/textui/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/extensions/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runner/manipulation/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runners/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/runner/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/matchers/package-info.class
+    [unjar] Expanding: /Users/jeancarlorspaul/IdeaProjects/junit4/lib/hamcrest-core-1.1.jar into /Users/jeancarlorspaul/IdeaProjects/junit4/target/main
+    [mkdir] Created dir: /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java
+    [javac] Compiling 139 source files to /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java
+    [javac] 
+    [javac]           WARNING
+    [javac] 
+    [javac] The -source switch defaults to 9 in JDK 9.
+    [javac] If you specify -target 1.8 you now must also specify -source 1.8.
+    [javac] Ant will implicitly add -source 1.8 for you.  Please change your build file.
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 warning
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/framework/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/runner/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/extensions/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/org/junit/samples/money/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/samples/money/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/samples/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/org/junit/samples/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/org/junit/tests/package-info.class
+
+jars:
+    [mkdir] Created dir: /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8
+      [jar] Building jar: /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/junit-4.8-src.jar
+      [jar] Building jar: /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/junit-4.8.jar
+      [jar] Building jar: /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/junit-dep-4.8.jar
+
+samples-and-tests:
+     [copy] Copying 635 files to /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8
+
+unjar.hamcrest:
+    [unjar] Expanding: /Users/jeancarlorspaul/IdeaProjects/junit4/lib/hamcrest-core-1.1.jar into /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source
+
+javadoc:
+  [javadoc] Generating Javadoc
+  [javadoc] Javadoc execution
+  [javadoc] Loading source files for package org.junit...
+  [javadoc] Loading source files for package org.junit.experimental...
+  [javadoc] Loading source files for package org.junit.experimental.categories...
+  [javadoc] Loading source files for package org.junit.experimental.max...
+  [javadoc] Loading source files for package org.junit.experimental.results...
+  [javadoc] Loading source files for package org.junit.experimental.runners...
+  [javadoc] Loading source files for package org.junit.experimental.theories...
+  [javadoc] Loading source files for package org.junit.experimental.theories.suppliers...
+  [javadoc] Loading source files for package org.junit.matchers...
+  [javadoc] Loading source files for package org.junit.rules...
+  [javadoc] Loading source files for package org.junit.runner...
+  [javadoc] Loading source files for package org.junit.runner.manipulation...
+  [javadoc] Loading source files for package org.junit.runner.notification...
+  [javadoc] Loading source files for package org.junit.runners...
+  [javadoc] Loading source files for package org.junit.runners.model...
+  [javadoc] Loading source files for package org.hamcrest...
+  [javadoc] Loading source files for package org.hamcrest.core...
+  [javadoc] Loading source files for package org.hamcrest.internal...
+  [javadoc] Constructing Javadoc information...
+  [javadoc] Creating destination directory: "/Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/javadoc/"
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/Ignore.java:19: error: self-closing element not allowed
+  [javadoc]  * &#064;Ignore takes an optional default parameter if you want to record why a test is being ignored:<br/>
+  [javadoc]                                                                                                       ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/Ignore.java:23: error: self-closing element not allowed
+  [javadoc]  * &#064;Ignore can also be applied to the test class:<br/>
+  [javadoc]                                                       ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/Assert.java:14: error: self-closing element not allowed
+  [javadoc]  * are referenced through static import:<br/>
+  [javadoc]                                         ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/Test.java:25: error: unexpected end tag: </p>
+  [javadoc]  * </p>
+  [javadoc]    ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/Test.java:35: error: unexpected end tag: </p>
+  [javadoc]  * </pre></p>
+  [javadoc]          ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/Test.java:43: error: unexpected end tag: </p>
+  [javadoc]  * </pre></p>
+  [javadoc]          ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/Assume.java:26: error: self-closing element not allowed
+  [javadoc]  * read better if they are referenced through static import:<br/>
+  [javadoc]                                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/categories/Category.java:8: error: reference not found
+  [javadoc]  * The value is an array of interface classes that extend the {@link CategoryType}
+  [javadoc]                                                                      ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/categories/Category.java:19: error: unknown tag: Test
+  [javadoc] 		@Test
+  [javadoc] 		^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/categories/Category.java:24: error: unknown tag: Category
+  [javadoc] 		@Category(SlowTests.class)
+  [javadoc] 		^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/categories/Category.java:25: error: unknown tag: Test
+  [javadoc] 		@Test
+  [javadoc] 		^
+  [javadoc] Standard Doclet version 11.0.24
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/categories/Category.java:30: error: unknown tag: Category
+  [javadoc] Building tree for all the packages and classes...
+  [javadoc] 	@Category({SlowTests.class, FastTests.class})
+  [javadoc] 	^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/experimental/categories/Category.java:32: error: unknown tag: Test
+  [javadoc] 		@Test
+  [javadoc] 		^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runner/Runner.java:12: error: self-closing element not allowed
+  [javadoc]  * <p/>
+  [javadoc]    ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runner/Request.java:20: error: bad use of '>'
+  [javadoc]  * <p>The flow when JUnit runs tests is that a <code>Request</code> specifies some tests to be run ->
+  [javadoc]                                                                                                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runner/Request.java:21: error: bad use of '>'
+  [javadoc]  * a {@link org.junit.runner.Runner} is created for each class implied by the <code>Request</code> -> 
+  [javadoc]                                                                                                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runner/notification/RunListener.java:21: error: unexpected end tag: </p>
+  [javadoc]  * </p>
+  [javadoc]    ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runner/notification/RunListener.java:31: error: unexpected end tag: </p>
+  [javadoc]  * </p>
+  [javadoc]    ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Matcher.java:8: error: self-closing element not allowed
+  [javadoc]  * <p/>
+  [javadoc]    ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Matcher.java:13: error: self-closing element not allowed
+  [javadoc]  * <p/>
+  [javadoc]    ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:14: warning: no @param for text
+  [javadoc]     Description appendText(String text);
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:14: warning: no @return
+  [javadoc]     Description appendText(String text);
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:19: warning: no @param for value
+  [javadoc]     Description appendDescriptionOf(SelfDescribing value);
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:19: warning: no @return
+  [javadoc]     Description appendDescriptionOf(SelfDescribing value);
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:24: warning: no @param for value
+  [javadoc]     Description appendValue(Object value);
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:24: warning: no @return
+  [javadoc]     Description appendValue(Object value);
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:29: warning: no @param for <T>
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:29: warning: no @param for start
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:29: warning: no @param for separator
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:29: warning: no @param for end
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:29: warning: no @param for values
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:29: warning: no @return
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:35: warning: no @param for <T>
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:35: warning: no @param for start
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:35: warning: no @param for separator
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:35: warning: no @param for end
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:35: warning: no @param for values
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:35: warning: no @return
+  [javadoc]     <T> Description appendValueList(String start, String separator, String end,
+  [javadoc]                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:42: warning: no @param for start
+  [javadoc]     Description appendList(String start, String separator, String end, 
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:42: warning: no @param for separator
+  [javadoc]     Description appendList(String start, String separator, String end, 
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:42: warning: no @param for end
+  [javadoc]     Description appendList(String start, String separator, String end, 
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:42: warning: no @param for values
+  [javadoc]     Description appendList(String start, String separator, String end, 
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Description.java:42: warning: no @return
+  [javadoc]     Description appendList(String start, String separator, String end, 
+  [javadoc]                 ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/BaseDescription.java:91: warning: no @param for str
+  [javadoc]     protected void append(String str) {
+  [javadoc]                    ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/BaseDescription.java:99: warning: no @param for c
+  [javadoc]     protected abstract void append(char c);
+  [javadoc]                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/Matcher.java:25: error: self-closing element not allowed
+  [javadoc]      * <p/>
+  [javadoc]        ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:13: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> is(org.hamcrest.Matcher<T> matcher) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:13: warning: no @param for matcher
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> is(org.hamcrest.Matcher<T> matcher) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:13: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> is(org.hamcrest.Matcher<T> matcher) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:23: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> is(T value) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:23: warning: no @param for value
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> is(T value) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:23: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> is(T value) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:33: warning: no @param for type
+  [javadoc]   public static org.hamcrest.Matcher<java.lang.Object> is(java.lang.Class<?> type) {
+  [javadoc]                                                        ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:33: warning: no @return
+  [javadoc]   public static org.hamcrest.Matcher<java.lang.Object> is(java.lang.Class<?> type) {
+  [javadoc]                                                        ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:40: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> not(org.hamcrest.Matcher<T> matcher) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:40: warning: no @param for matcher
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> not(org.hamcrest.Matcher<T> matcher) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:40: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> not(org.hamcrest.Matcher<T> matcher) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:50: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> not(T value) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:50: warning: no @param for value
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> not(T value) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:50: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> not(T value) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:58: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> equalTo(T operand) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:58: warning: no @param for operand
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> equalTo(T operand) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:58: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> equalTo(T operand) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:65: warning: no @param for type
+  [javadoc]   public static org.hamcrest.Matcher<java.lang.Object> instanceOf(java.lang.Class<?> type) {
+  [javadoc]                                                        ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:65: warning: no @return
+  [javadoc]   public static org.hamcrest.Matcher<java.lang.Object> instanceOf(java.lang.Class<?> type) {
+  [javadoc]                                                        ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:72: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> allOf(org.hamcrest.Matcher<? extends T>... matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:72: warning: no @param for matchers
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> allOf(org.hamcrest.Matcher<? extends T>... matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:72: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> allOf(org.hamcrest.Matcher<? extends T>... matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:79: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> allOf(java.lang.Iterable<org.hamcrest.Matcher<? extends T>> matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:79: warning: no @param for matchers
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> allOf(java.lang.Iterable<org.hamcrest.Matcher<? extends T>> matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:79: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> allOf(java.lang.Iterable<org.hamcrest.Matcher<? extends T>> matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:86: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anyOf(org.hamcrest.Matcher<? extends T>... matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:86: warning: no @param for matchers
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anyOf(org.hamcrest.Matcher<? extends T>... matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:86: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anyOf(org.hamcrest.Matcher<? extends T>... matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:93: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anyOf(java.lang.Iterable<org.hamcrest.Matcher<? extends T>> matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:93: warning: no @param for matchers
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anyOf(java.lang.Iterable<org.hamcrest.Matcher<? extends T>> matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:93: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anyOf(java.lang.Iterable<org.hamcrest.Matcher<? extends T>> matchers) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:103: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> sameInstance(T object) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:103: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> sameInstance(T object) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:110: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anything() {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:110: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anything() {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:119: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anything(java.lang.String description) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:119: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> anything(java.lang.String description) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:126: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> any(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:126: warning: no @param for type
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> any(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:126: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> any(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:133: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> nullValue() {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:133: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> nullValue() {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:140: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> nullValue(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:140: warning: no @param for type
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> nullValue(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:140: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> nullValue(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:147: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> notNullValue() {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:147: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> notNullValue() {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:154: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> notNullValue(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:154: warning: no @param for type
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> notNullValue(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:154: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> notNullValue(java.lang.Class<T> type) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:161: warning: no @param for <T>
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> describedAs(java.lang.String description, org.hamcrest.Matcher<T> matcher, java.lang.Object... values) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:161: warning: no @param for description
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> describedAs(java.lang.String description, org.hamcrest.Matcher<T> matcher, java.lang.Object... values) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:161: warning: no @param for matcher
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> describedAs(java.lang.String description, org.hamcrest.Matcher<T> matcher, java.lang.Object... values) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:161: warning: no @param for values
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> describedAs(java.lang.String description, org.hamcrest.Matcher<T> matcher, java.lang.Object... values) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/CoreMatchers.java:161: warning: no @return
+  [javadoc]   public static <T> org.hamcrest.Matcher<T> describedAs(java.lang.String description, org.hamcrest.Matcher<T> matcher, java.lang.Object... values) {
+  [javadoc]                                             ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/StringDescription.java:22: error: @param name not found
+  [javadoc]      * @param selfDescribing
+  [javadoc]               ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/StringDescription.java:27: warning: no @param for value
+  [javadoc]     public static String toString(SelfDescribing value) {
+  [javadoc]                          ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/StringDescription.java:34: warning: no @param for selfDescribing
+  [javadoc]     public static String asString(SelfDescribing selfDescribing) {
+  [javadoc]                          ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/StringDescription.java:34: warning: no @return
+  [javadoc]     public static String asString(SelfDescribing selfDescribing) {
+  [javadoc]                          ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AllOf.java:39: warning: no @param for <T>
+  [javadoc]     public static <T> Matcher<T> allOf(Matcher<? extends T>... matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AllOf.java:39: warning: no @param for matchers
+  [javadoc]     public static <T> Matcher<T> allOf(Matcher<? extends T>... matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AllOf.java:39: warning: no @return
+  [javadoc]     public static <T> Matcher<T> allOf(Matcher<? extends T>... matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AllOf.java:47: warning: no @param for <T>
+  [javadoc]     public static <T> Matcher<T> allOf(Iterable<Matcher<? extends T>> matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AllOf.java:47: warning: no @param for matchers
+  [javadoc]     public static <T> Matcher<T> allOf(Iterable<Matcher<? extends T>> matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AllOf.java:47: warning: no @return
+  [javadoc]     public static <T> Matcher<T> allOf(Iterable<Matcher<? extends T>> matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AnyOf.java:40: warning: no @param for <T>
+  [javadoc]     public static <T> Matcher<T> anyOf(Matcher<? extends T>... matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AnyOf.java:40: warning: no @param for matchers
+  [javadoc]     public static <T> Matcher<T> anyOf(Matcher<? extends T>... matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AnyOf.java:40: warning: no @return
+  [javadoc]     public static <T> Matcher<T> anyOf(Matcher<? extends T>... matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AnyOf.java:48: warning: no @param for <T>
+  [javadoc]     public static <T> Matcher<T> anyOf(Iterable<Matcher<? extends T>> matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AnyOf.java:48: warning: no @param for matchers
+  [javadoc]     public static <T> Matcher<T> anyOf(Iterable<Matcher<? extends T>> matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/AnyOf.java:48: warning: no @return
+  [javadoc]     public static <T> Matcher<T> anyOf(Iterable<Matcher<? extends T>> matchers) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/DescribedAs.java:52: warning: no @param for <T>
+  [javadoc]     public static <T> Matcher<T> describedAs(String description, Matcher<T> matcher, Object... values) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/DescribedAs.java:52: warning: no @param for description
+  [javadoc]     public static <T> Matcher<T> describedAs(String description, Matcher<T> matcher, Object... values) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/DescribedAs.java:52: warning: no @param for matcher
+  [javadoc]     public static <T> Matcher<T> describedAs(String description, Matcher<T> matcher, Object... values) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/DescribedAs.java:52: warning: no @param for values
+  [javadoc]     public static <T> Matcher<T> describedAs(String description, Matcher<T> matcher, Object... values) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/temp.hamcrest.source/org/hamcrest/core/DescribedAs.java:52: warning: no @return
+  [javadoc]     public static <T> Matcher<T> describedAs(String description, Matcher<T> matcher, Object... values) {
+  [javadoc]                                  ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runners/ParentRunner.java:110: error: element not closed: ul
+  [javadoc] 	 * <ul>
+  [javadoc] 	   ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/rules/ExternalResource.java:53: error: unexpected text
+  [javadoc] 	 * @throws if setup fails (which will disable {@code after}
+  [javadoc] 	   ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/rules/ExternalResource.java:61: error: unexpected text
+  [javadoc] 	 * @throws if setup fails (which will disable {@code after}
+  [javadoc] 	   ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runner/Request.java:142: error: unknown tag: Description
+  [javadoc] 	private static Comparator<Description> forward() {
+  [javadoc] 	                         ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runner/Request.java:143: error: unknown tag: Description
+  [javadoc] 		return new Comparator<Description>() {
+  [javadoc] 		                     ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runners/model/FrameworkMethod.java:58: error: element not closed: ul
+  [javadoc] 	 * <ul>
+  [javadoc] 	   ^
+  [javadoc] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/runners/model/FrameworkMethod.java:74: error: element not closed: ul
+  [javadoc] 	 * <ul>
+  [javadoc] 	   ^
+  [javadoc] Generating /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/javadoc/serialized-form.html...
+  [javadoc] Copying file StandardDocFile[file:/Users/jeancarlorspaul/IdeaProjects/junit4/stylesheet.css] to file stylesheet.css...
+  [javadoc] Building index for all the packages and classes...
+  [javadoc] Building index for all classes...
+  [javadoc] Building index for all classes...
+  [javadoc] Generating /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/javadoc/help-doc.html...
+  [javadoc] 29 errors
+  [javadoc] 100 warnings
+
+release-notes:
+
+populate-dist:
+     [copy] Copying 29 files to /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8/doc
+     [copy] Copying 1 file to /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8
+     [copy] Copying 1 file to /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8
+     [copy] Copying 1 file to /Users/jeancarlorspaul/IdeaProjects/junit4/junit4.8
+
+dist:
+     [java] JUnit version 4.8
+     [java] ...............................................................................................................................................................................................................................................................................................I.I.....................................E.................................................................................................................I.......................................
+     [java] Time: 11.528
+     [java] There was 1 failure:
+     [java] 1) inaccessibleBaseClassIsCaughtAtValidation(org.junit.tests.validation.InaccessibleBaseClassTest)
+     [java] java.lang.AssertionError: Expected exception: org.junit.runners.model.InitializationError
+     [java] 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:33)
+     [java] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:73)
+     [java] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+     [java] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+     [java] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+     [java] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+     [java] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+     [java] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+     [java] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+     [java] 	at org.junit.runners.Suite.runChild(Suite.java:128)
+     [java] 	at org.junit.runners.Suite.runChild(Suite.java:24)
+     [java] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+     [java] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+     [java] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+     [java] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+     [java] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+     [java] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+     [java] 	at org.junit.runners.Suite.runChild(Suite.java:128)
+     [java] 	at org.junit.runners.Suite.runChild(Suite.java:24)
+     [java] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+     [java] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+     [java] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+     [java] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+     [java] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+     [java] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+     [java] 	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+     [java] 	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+     [java] 	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+     [java] 	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:98)
+     [java] 	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:53)
+     [java] 	at org.junit.runner.JUnitCore.main(JUnitCore.java:45)
+     [java] 
+     [java] FAILURES!!!
+     [java] Tests run: 477,  Failures: 1
+     [java] 

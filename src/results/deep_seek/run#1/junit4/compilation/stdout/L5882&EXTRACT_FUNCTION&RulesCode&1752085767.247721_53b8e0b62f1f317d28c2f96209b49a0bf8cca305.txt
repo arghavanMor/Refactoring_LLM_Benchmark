@@ -1,0 +1,77 @@
+Buildfile: /Users/jeancarlorspaul/IdeaProjects/junit4/build.xml
+
+init:
+
+versiontag:
+     [copy] Copying 1 file to /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/junit/runner
+
+build:
+    [mkdir] Created dir: /Users/jeancarlorspaul/IdeaProjects/junit4/target/main
+    [javac] Compiling 154 source files to /Users/jeancarlorspaul/IdeaProjects/junit4/target/main
+    [javac] 
+    [javac]           WARNING
+    [javac] 
+    [javac] The -source switch defaults to 9 in JDK 9.
+    [javac] If you specify -target 1.8 you now must also specify -source 1.8.
+    [javac] Ant will implicitly add -source 1.8 for you.  Please change your build file.
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/matchers/IsCollectionContaining.java:48: warning: [unchecked] Possible heap pollution from parameterized vararg type Matcher<? extends T>
+    [javac]     public static <T> Matcher<Iterable<T>> hasItems(Matcher<? extends T>... elementMatchers) {
+    [javac]                                                                             ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(Matcher<? extends T>...)
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/internal/matchers/IsCollectionContaining.java:58: warning: [unchecked] Possible heap pollution from parameterized vararg type T
+    [javac]     public static <T> Matcher<Iterable<T>> hasItems(T... elements) {
+    [javac]                                                          ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(T...)
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/matchers/JUnitMatchers.java:34: warning: [unchecked] Possible heap pollution from parameterized vararg type T
+    [javac] 	public static <T> org.hamcrest.Matcher<java.lang.Iterable<T>> hasItems(T... elements) {
+    [javac] 	                                                                            ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(T...)
+    [javac] /Users/jeancarlorspaul/IdeaProjects/junit4/src/main/java/org/junit/matchers/JUnitMatchers.java:44: warning: [unchecked] Possible heap pollution from parameterized vararg type Matcher<? extends T>
+    [javac] 	public static <T> org.hamcrest.Matcher<java.lang.Iterable<T>> hasItems(org.hamcrest.Matcher<? extends T>... elementMatchers) {
+    [javac] 	                                                                                                            ^
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>hasItems(Matcher<? extends T>...)
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 5 warnings
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/internal/requests/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/internal/runners/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runner/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/framework/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runner/notification/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/textui/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/extensions/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runner/manipulation/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/runners/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/junit/runner/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/main/org/junit/matchers/package-info.class
+    [unjar] Expanding: /Users/jeancarlorspaul/IdeaProjects/junit4/lib/hamcrest-core-1.1.jar into /Users/jeancarlorspaul/IdeaProjects/junit4/target/main
+    [mkdir] Created dir: /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java
+    [javac] Compiling 139 source files to /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java
+    [javac] 
+    [javac]           WARNING
+    [javac] 
+    [javac] The -source switch defaults to 9 in JDK 9.
+    [javac] If you specify -target 1.8 you now must also specify -source 1.8.
+    [javac] Ant will implicitly add -source 1.8 for you.  Please change your build file.
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 warning
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/framework/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/runner/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/extensions/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/org/junit/samples/money/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/samples/money/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/samples/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/junit/tests/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/org/junit/samples/package-info.class
+    [javac] Creating empty /Users/jeancarlorspaul/IdeaProjects/junit4/target/test/java/org/junit/tests/package-info.class
+
+BUILD SUCCESSFUL
+Total time: 1 second
