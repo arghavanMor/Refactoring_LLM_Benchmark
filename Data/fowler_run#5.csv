@@ -1,0 +1,5555 @@
+RefactMethod,BeforeRefact,AfterRefact,PromptType,LlmCode,LlmReview
+PULL UP FIELD,"class Employee {...} // Java
+
+class Salesman extends Employee {
+  private String name;
+}
+
+class Engineer extends Employee {
+  private String name;
+}","class Employee {
+  protected String name;
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",ZeroShot,"```java
+class Employee {
+  private String name;
+  
+  public Employee(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
+}
+
+class Salesman extends Employee {
+  public Salesman(String name) {
+    super(name);
+  }
+}
+
+class Engineer extends Employee {
+  public Engineer(String name) {
+    super(name);
+  }
+}
+```",1
+PULL UP FIELD,"class Employee {...} // Java
+
+class Salesman extends Employee {
+  private String name;
+}
+
+class Engineer extends Employee {
+  private String name;
+}","class Employee {
+  protected String name;
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",Instruc,"```java
+class Employee {
+    protected String name;
+}
+
+class Salesman extends Employee {
+}
+
+class Engineer extends Employee {
+}
+```",1
+PULL UP FIELD,"class Employee {...} // Java
+
+class Salesman extends Employee {
+  private String name;
+}
+
+class Engineer extends Employee {
+  private String name;
+}","class Employee {
+  protected String name;
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",Context,"```java
+abstract class Employee {
+    private String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Salesman extends Employee {
+    public Salesman(String name) {
+        super(name);
+    }
+}
+
+class Engineer extends Employee {
+    public Engineer(String name) {
+        super(name);
+    }
+}
+```",1
+PULL UP FIELD,"class Employee {...} // Java
+
+class Salesman extends Employee {
+  private String name;
+}
+
+class Engineer extends Employee {
+  private String name;
+}","class Employee {
+  protected String name;
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",Rules,"```java
+class Employee {
+    private String name;
+}
+
+class Salesman extends Employee {
+}
+
+class Engineer extends Employee {
+}
+```",1
+PRESERVE WHOLE OBJECT,"const low = aRoom.daysTempRange.low;
+const high = aRoom.daysTempRange.high;
+if (aPlan.withinRange(low, high))",if (aPlan.withinRange(aRoom.daysTempRange)),ZeroShot,"```java
+Range temperatureRange = aRoom.getDaysTempRange();
+if (aPlan.withinRange(temperatureRange.getLow(), temperatureRange.getHigh())) {
+    // Your code logic here
+}
+```",1
+PRESERVE WHOLE OBJECT,"const low = aRoom.daysTempRange.low;
+const high = aRoom.daysTempRange.high;
+if (aPlan.withinRange(low, high))",if (aPlan.withinRange(aRoom.daysTempRange)),Instruc,"```java
+public boolean isWithinRange(Plan aPlan, Room aRoom) {
+    double low = aRoom.getDaysTempRange().getLow();
+    double high = aRoom.getDaysTempRange().getHigh();
+    return aPlan.withinRange(low, high);
+}
+
+// Call the new function
+if (isWithinRange(aPlan, aRoom)) {
+    // Do something
+}
+```",1
+PRESERVE WHOLE OBJECT,"const low = aRoom.daysTempRange.low;
+const high = aRoom.daysTempRange.high;
+if (aPlan.withinRange(low, high))",if (aPlan.withinRange(aRoom.daysTempRange)),Context,"```java
+int low = aRoom.getDaysTempRange().getLow();
+int high = aRoom.getDaysTempRange().getHigh();
+if (aPlan.withinRange(low, high)) {
+    // Additional logic can be placed here if needed
+}
+```",1
+PRESERVE WHOLE OBJECT,"const low = aRoom.daysTempRange.low;
+const high = aRoom.daysTempRange.high;
+if (aPlan.withinRange(low, high))",if (aPlan.withinRange(aRoom.daysTempRange)),Rules,"```java
+Range temperatureRange = aRoom.daysTempRange;
+if (aPlan.withinRange(temperatureRange.low, temperatureRange.high)) {
+    // Additional logic here
+}
+```",1
+SPLIT PHASE,"const orderData = orderString.split(/\s+/);
+const productPrice = priceList[orderData[0].split(“-”)[1]];
+const orderPrice = parseInt(orderData[1]) * productPrice;","const orderRecord = parseOrder(order);
+const orderPrice = price(orderRecord, priceList);
+
+function parseOrder(aString) {
+  const values =  aString.split(/\s+/);
+  return ({
+    productID: values[0].split(“-”)[1],
+    quantity: parseInt(values[1]),
+  });
+}
+function price(order, priceList) {
+  return order.quantity * priceList[order.productID];
+}",ZeroShot,"```java
+String[] orderData = orderString.split(""\\s+"");
+String[] productInfo = orderData[0].split(""–"");
+String productId = productInfo[1];
+int productPrice = priceList.get(productId);
+int quantity = Integer.parseInt(orderData[1]);
+int orderPrice = quantity * productPrice;
+```",1
+SPLIT PHASE,"const orderData = orderString.split(/\s+/);
+const productPrice = priceList[orderData[0].split(“-”)[1]];
+const orderPrice = parseInt(orderData[1]) * productPrice;","const orderRecord = parseOrder(order);
+const orderPrice = price(orderRecord, priceList);
+
+function parseOrder(aString) {
+  const values =  aString.split(/\s+/);
+  return ({
+    productID: values[0].split(“-”)[1],
+    quantity: parseInt(values[1]),
+  });
+}
+function price(order, priceList) {
+  return order.quantity * priceList[order.productID];
+}",Instruc,"```java
+public class OrderProcessor {
+
+    public static void main(String[] args) {
+        String orderString = ""some-order-string""; // Example input
+        Map<String, Integer> priceList = new HashMap<>(); // Populate with actual data
+        // priceList.put(""product-key"", product-price);
+
+        OrderData orderData = parseOrder(orderString);
+        int orderPrice = calculateOrderPrice(orderData, priceList);
+    }
+
+    private static OrderData parseOrder(String orderString) {
+        String[] orderParts = orderString.split(""\\s+"");
+        String productKey = orderParts[0].split(""–"")[1];
+        int quantity = Integer.parseInt(orderParts[1]);
+        return new OrderData(productKey, quantity);
+    }
+
+    private static int calculateOrderPrice(OrderData orderData, Map<String, Integer> priceList) {
+        Integer productPrice = priceList.get(orderData.getProductKey());
+        return orderData.getQuantity() * productPrice;
+    }
+
+    private static class OrderData {
+        private final String productKey;
+        private final int quantity;
+
+        public OrderData(String productKey, int quantity) {
+            this.productKey = productKey;
+            this.quantity = quantity;
+        }
+
+        public String getProductKey() {
+            return productKey;
+        }
+
+        public int getQuantity() {
+            return quantity;
+        }
+    }
+}
+```",1
+SPLIT PHASE,"const orderData = orderString.split(/\s+/);
+const productPrice = priceList[orderData[0].split(“-”)[1]];
+const orderPrice = parseInt(orderData[1]) * productPrice;","const orderRecord = parseOrder(order);
+const orderPrice = price(orderRecord, priceList);
+
+function parseOrder(aString) {
+  const values =  aString.split(/\s+/);
+  return ({
+    productID: values[0].split(“-”)[1],
+    quantity: parseInt(values[1]),
+  });
+}
+function price(order, priceList) {
+  return order.quantity * priceList[order.productID];
+}",Context,"```java
+String[] orderData = orderString.split(""\\s+"");
+String productKey = orderData[0].split(""–"")[1];
+double productPrice = priceList.get(productKey);
+int orderQuantity = Integer.parseInt(orderData[1]);
+double orderPrice = orderQuantity * productPrice;
+```",1
+COLLAPSE HIERARCHY,"class Employee {...}
+class Salesman extends Employee {...}",class Employee {...},ZeroShot,"```java
+class Employee {
+    // properties and methods
+}
+
+// Salesman class is removed as part of COLLAPSE HIERARCHY refactoring
+```",1
+COLLAPSE HIERARCHY,"class Employee {...}
+class Salesman extends Employee {...}",class Employee {...},Instruc,"```java
+class Employee {
+    // Attributes and methods common to all employees
+}
+
+class Salesman extends Employee {
+    // Attributes and methods specific to salesmen
+}
+```",0
+COLLAPSE HIERARCHY,"class Employee {...}
+class Salesman extends Employee {...}",class Employee {...},Context,"```java
+class Employee {
+    private String name;
+    private String id;
+
+    public Employee(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return ""Employee{"" +
+                ""name='"" + name + '\'' +
+                "", id='"" + id + '\'' +
+                '}';
+    }
+}
+
+class Salesman extends Employee {
+    private double salesCommission;
+
+    public Salesman(String name, String id, double salesCommission) {
+        super(name, id);
+        this.salesCommission = salesCommission;
+    }
+
+    public double getSalesCommission() {
+        return salesCommission;
+    }
+
+    @Override
+    public String toString() {
+        return ""Salesman{"" +
+                ""name='"" + getName() + '\'' +
+                "", id='"" + getId() + '\'' +
+                "", salesCommission="" + salesCommission +
+                '}';
+    }
+}
+```",0
+COLLAPSE HIERARCHY,"class Employee {...}
+class Salesman extends Employee {...}",class Employee {...},Rules,"```java
+class Employee {
+    // Fields and methods that were previously in Salesman
+}
+```",1
+REPLACE SUBCLASS WITH DELEGATE,"class Order {
+  get daysToShip() {
+    return this._warehouse.daysToShip;
+  }
+}
+
+class PriorityOrder extends Order {
+  get daysToShip() {
+    return this._priorityPlan.daysToShip;
+  }
+}","class Order {
+  get daysToShip() {
+    return (this._priorityDelegate)
+      ? this._priorityDelegate.daysToShip
+      : this._warehouse.daysToShip;
+  }
+}
+
+class PriorityOrderDelegate {
+  get daysToShip() {
+    return this._priorityPlan.daysToShip
+  }
+}",ZeroShot,"```java
+class Order {
+    protected Warehouse _warehouse;
+
+    public int getDaysToShip() {
+        return _warehouse.getDaysToShip();
+    }
+}
+
+class PriorityOrder {
+    private Order order;
+    private PriorityPlan _priorityPlan;
+
+    public PriorityOrder(Order order) {
+        this.order = order;
+    }
+
+    public int getDaysToShip() {
+        return _priorityPlan.getDaysToShip();
+    }
+}
+```",0
+REPLACE SUBCLASS WITH DELEGATE,"class Order {
+  get daysToShip() {
+    return this._warehouse.daysToShip;
+  }
+}
+
+class PriorityOrder extends Order {
+  get daysToShip() {
+    return this._priorityPlan.daysToShip;
+  }
+}","class Order {
+  get daysToShip() {
+    return (this._priorityDelegate)
+      ? this._priorityDelegate.daysToShip
+      : this._warehouse.daysToShip;
+  }
+}
+
+class PriorityOrderDelegate {
+  get daysToShip() {
+    return this._priorityPlan.daysToShip
+  }
+}",Instruc,"```java
+class Order {
+    protected Warehouse _warehouse;
+    private PriorityDelegate _delegate;
+
+    public Order(Warehouse warehouse) {
+        this._warehouse = warehouse;
+        this._delegate = null;
+    }
+
+    public int getDaysToShip() {
+        if (_delegate != null) {
+            return _delegate.getDaysToShip();
+        }
+        return this._warehouse.getDaysToShip();
+    }
+
+    public void setDelegate(PriorityDelegate delegate) {
+        this._delegate = delegate;
+    }
+}
+
+class PriorityDelegate {
+    private PriorityPlan _priorityPlan;
+    private Order _order;
+
+    public PriorityDelegate(PriorityPlan priorityPlan, Order order) {
+        this._priorityPlan = priorityPlan;
+        this._order = order;
+    }
+
+    public int getDaysToShip() {
+        return this._priorityPlan.getDaysToShip();
+    }
+}
+
+// Usage
+Order order = new Order(warehouse);
+PriorityDelegate priorityDelegate = new PriorityDelegate(priorityPlan, order);
+order.setDelegate(priorityDelegate);
+```",1
+REPLACE SUBCLASS WITH DELEGATE,"class Order {
+  get daysToShip() {
+    return this._warehouse.daysToShip;
+  }
+}
+
+class PriorityOrder extends Order {
+  get daysToShip() {
+    return this._priorityPlan.daysToShip;
+  }
+}","class Order {
+  get daysToShip() {
+    return (this._priorityDelegate)
+      ? this._priorityDelegate.daysToShip
+      : this._warehouse.daysToShip;
+  }
+}
+
+class PriorityOrderDelegate {
+  get daysToShip() {
+    return this._priorityPlan.daysToShip
+  }
+}",Context,"```java
+class Order {
+    protected Warehouse warehouse;
+
+    public Order(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }
+
+    public int getDaysToShip() {
+        return warehouse.getDaysToShip();
+    }
+}
+
+class PriorityOrder extends Order {
+    private PriorityPlan priorityPlan;
+
+    public PriorityOrder(Warehouse warehouse, PriorityPlan priorityPlan) {
+        super(warehouse);
+        this.priorityPlan = priorityPlan;
+    }
+
+    @Override
+    public int getDaysToShip() {
+        return priorityPlan.getDaysToShip();
+    }
+}
+```",0
+CHANGE REFERENCE TO VALUE,"class Product {
+  applyDiscount(arg) {this._price.amount -= arg;}","class Product {
+  applyDiscount(arg) {
+    this._price = new Money(this._price.amount - arg, this._price.currency);
+  }",ZeroShot,"```java
+class Product {
+    private double price;
+
+    public Product(double price) {
+        this.price = price;
+    }
+
+    public void applyDiscount(double amount) {
+        this.price -= amount;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+```",1
+CHANGE REFERENCE TO VALUE,"class Product {
+  applyDiscount(arg) {this._price.amount -= arg;}","class Product {
+  applyDiscount(arg) {
+    this._price = new Money(this._price.amount - arg, this._price.currency);
+  }",Instruc,"```java
+class Product {
+    private final Money price;
+
+    public Product(Money price) {
+        this.price = price;
+    }
+
+    public Money getPrice() {
+        return price;
+    }
+
+    public Product applyDiscount(double amount) {
+        return new Product(price.subtract(amount));
+    }
+}
+
+class Money {
+    private final double amount;
+
+    public Money(double amount) {
+        this.amount = amount;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public Money subtract(double amount) {
+        return new Money(this.amount - amount);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Money)) return false;
+        Money other = (Money) obj;
+        return Double.compare(other.amount, amount) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Double.hashCode(amount);
+    }
+}
+```",1
+CHANGE REFERENCE TO VALUE,"class Product {
+  applyDiscount(arg) {this._price.amount -= arg;}","class Product {
+  applyDiscount(arg) {
+    this._price = new Money(this._price.amount - arg, this._price.currency);
+  }",Context,"```java
+class Product {
+    private Price _price;
+
+    // Constructor and other methods...
+
+    public void applyDiscount(double discountAmount) {
+        _price.setAmount(_price.getAmount() - discountAmount);
+    }
+}
+
+class Price {
+    private double amount;
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+}
+```",0
+CHANGE REFERENCE TO VALUE,"class Product {
+  applyDiscount(arg) {this._price.amount -= arg;}","class Product {
+  applyDiscount(arg) {
+    this._price = new Money(this._price.amount - arg, this._price.currency);
+  }",Rules,"```java
+class Product {
+    private Price _price;
+
+    public void applyDiscount(double arg) {
+        _price.setAmount(_price.getAmount() - arg);
+    }
+}
+
+class Price {
+    private double amount;
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+}
+```",0
+ENCAPSULATE RECORD,"organization = {name: “Acme Gooseberries”, country: “GB”};","class Organization {
+  constructor(data) {
+    this._name = data.name;
+    this._country = data.country;
+  }
+  get name()    {return this._name;}
+  set name(arg) {this._name = arg;}
+  get country()    {return this._country;}
+  set country(arg) {this._country = arg;}
+}",ZeroShot,"```java
+public class Organization {
+    private String name;
+    private String country;
+
+    public Organization(String name, String country) {
+        this.name = name;
+        this.country = country;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+}
+
+// Usage
+Organization organization = new Organization(""Acme Gooseberries"", ""GB"");
+```",1
+ENCAPSULATE RECORD,"organization = {name: “Acme Gooseberries”, country: “GB”};","class Organization {
+  constructor(data) {
+    this._name = data.name;
+    this._country = data.country;
+  }
+  get name()    {return this._name;}
+  set name(arg) {this._name = arg;}
+  get country()    {return this._country;}
+  set country(arg) {this._country = arg;}
+}",Instruc,"```java
+public class Organization {
+    private final OrganizationRecord record;
+
+    public Organization(String name, String country) {
+        this.record = new OrganizationRecord(name, country);
+    }
+
+    public OrganizationRecord getRecord() {
+        return new OrganizationRecord(record.getName(), record.getCountry());
+    }
+
+    public String getName() {
+        return record.getName();
+    }
+
+    public String getCountry() {
+        return record.getCountry();
+    }
+
+    private static class OrganizationRecord {
+        private final String name;
+        private final String country;
+
+        public OrganizationRecord(String name, String country) {
+            this.name = name;
+            this.country = country;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getCountry() {
+            return country;
+        }
+    }
+}
+
+// Usage
+Organization organization = new Organization(""Acme Gooseberries"", ""GB"");
+String orgName = organization.getName(); // Access the name
+String orgCountry = organization.getCountry(); // Access the country
+```",1
+ENCAPSULATE RECORD,"organization = {name: “Acme Gooseberries”, country: “GB”};","class Organization {
+  constructor(data) {
+    this._name = data.name;
+    this._country = data.country;
+  }
+  get name()    {return this._name;}
+  set name(arg) {this._name = arg;}
+  get country()    {return this._country;}
+  set country(arg) {this._country = arg;}
+}",Context,"```java
+public class Organization {
+    private String name;
+    private String country;
+
+    public Organization(String name, String country) {
+        this.name = name;
+        this.country = country;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    @Override
+    public String toString() {
+        return ""Organization{"" +
+                ""name='"" + name + '\'' +
+                "", country='"" + country + '\'' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        Organization organization = new Organization(""Acme Gooseberries"", ""GB"");
+        System.out.println(organization);
+    }
+}
+```",1
+ENCAPSULATE RECORD,"organization = {name: “Acme Gooseberries”, country: “GB”};","class Organization {
+  constructor(data) {
+    this._name = data.name;
+    this._country = data.country;
+  }
+  get name()    {return this._name;}
+  set name(arg) {this._name = arg;}
+  get country()    {return this._country;}
+  set country(arg) {this._country = arg;}
+}",Rules,"```java
+public class Organization {
+    private String name;
+    private String country;
+
+    public Organization(String name, String country) {
+        this.name = name;
+        this.country = country;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+}
+
+// Example usage
+Organization organization = new Organization(""Acme Gooseberries"", ""GB"");
+```",1
+PUSH DOWN METHOD,"class Employee {
+  get quota {...}
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+class Salesman extends Employee {
+  get quota {...}  
+}",ZeroShot,"```java
+abstract class Employee {
+    abstract int getQuota();
+}
+
+class Engineer extends Employee {
+    @Override
+    int getQuota() {
+        // Engineer-specific quota logic
+        return /* engineer quota */;
+    }
+}
+
+class Salesman extends Employee {
+    @Override
+    int getQuota() {
+        // Salesman-specific quota logic
+        return /* salesman quota */;
+    }
+}
+```",1
+PUSH DOWN METHOD,"class Employee {
+  get quota {...}
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+class Salesman extends Employee {
+  get quota {...}  
+}",Instruc,"```java
+class Engineer {
+    public int getQuota() {
+        // Implementation specific to Engineer
+    }
+}
+
+class Salesman {
+    public int getQuota() {
+        // Implementation specific to Salesman
+    }
+}
+```",1
+PUSH DOWN METHOD,"class Employee {
+  get quota {...}
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+class Salesman extends Employee {
+  get quota {...}  
+}",Context,"```java
+abstract class Employee {
+    public abstract int getQuota();
+}
+
+class Engineer extends Employee {
+    @Override
+    public int getQuota() {
+        // Implementation for Engineer's quota
+        return 0; // Placeholder value
+    }
+}
+
+class Salesman extends Employee {
+    @Override
+    public int getQuota() {
+        // Implementation for Salesman's quota
+        return 0; // Placeholder value
+    }
+}
+```",1
+PUSH DOWN METHOD,"class Employee {
+  get quota {...}
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+class Salesman extends Employee {
+  get quota {...}  
+}",Rules,"```java
+class Employee {
+    public void getQuota() {
+        // ...
+    }
+}
+
+class Engineer extends Employee {
+    // Engineer-specific methods
+}
+
+class Salesman extends Employee {
+    // Salesman-specific methods
+}
+```",0
+EXTRACT FUNCTION,"function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+
+  //print details
+  console.log(`name: ${invoice.customer}`);
+  console.log(`amount: ${outstanding}`);  
+}","function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+  printDetails(outstanding);
+
+  function printDetails(outstanding) {
+    console.log(`name: ${invoice.customer}`);
+    console.log(`amount: ${outstanding}`);
+  }
+}",ZeroShot,"```java
+public void printOwing(Invoice invoice) {
+    printBanner();
+    double outstanding = calculateOutstanding(invoice);
+
+    // print details
+    System.out.println(""name: "" + invoice.getCustomer());
+    System.out.println(""amount: "" + outstanding);
+}
+
+private double calculateOutstanding(Invoice invoice) {
+    double outstanding = 0.0;
+    // logic to calculate outstanding amount
+    return outstanding;
+}
+
+private void printBanner() {
+    System.out.println(""**** Customer Owes ****"");
+}
+```",1
+EXTRACT FUNCTION,"function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+
+  //print details
+  console.log(`name: ${invoice.customer}`);
+  console.log(`amount: ${outstanding}`);  
+}","function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+  printDetails(outstanding);
+
+  function printDetails(outstanding) {
+    console.log(`name: ${invoice.customer}`);
+    console.log(`amount: ${outstanding}`);
+  }
+}",Instruc,"```javascript
+function printOwing(invoice) {
+  printBanner();
+  let outstanding = calculateOutstanding();
+
+  printDetails(invoice, outstanding);
+}
+
+function printDetails(invoice, outstanding) {
+  console.log(`name: ${invoice.customer}`);
+  console.log(`amount: ${outstanding}`);
+}
+```",1
+EXTRACT FUNCTION,"function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+
+  //print details
+  console.log(`name: ${invoice.customer}`);
+  console.log(`amount: ${outstanding}`);  
+}","function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+  printDetails(outstanding);
+
+  function printDetails(outstanding) {
+    console.log(`name: ${invoice.customer}`);
+    console.log(`amount: ${outstanding}`);
+  }
+}",Context,"```java
+public class InvoicePrinter {
+    public void printOwing(Invoice invoice) {
+        printBanner();
+        double outstanding = calculateOutstanding(invoice);
+
+        printDetails(invoice.getCustomer(), outstanding);
+    }
+
+    private void printBanner() {
+        System.out.println(""**********"");
+        System.out.println(""Customer Owes"");
+        System.out.println(""**********"");
+    }
+
+    private double calculateOutstanding(Invoice invoice) {
+        // Calculate the outstanding amount logic here
+        return invoice.getOutstandingAmount();
+    }
+
+    private void printDetails(String customerName, double outstandingAmount) {
+        System.out.println(""Name: "" + customerName);
+        System.out.println(""Amount: "" + outstandingAmount);
+    }
+}
+```",1
+EXTRACT FUNCTION,"function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+
+  //print details
+  console.log(`name: ${invoice.customer}`);
+  console.log(`amount: ${outstanding}`);  
+}","function printOwing(invoice) {
+  printBanner();
+  let outstanding  = calculateOutstanding();
+  printDetails(outstanding);
+
+  function printDetails(outstanding) {
+    console.log(`name: ${invoice.customer}`);
+    console.log(`amount: ${outstanding}`);
+  }
+}",Rules,"```javascript
+function printOwing(invoice) {
+  printBanner();
+  let outstanding = calculateOutstanding();
+  
+  printDetails(invoice, outstanding);
+}
+
+function printDetails(invoice, outstanding) {
+  // print details
+  console.log(`name: ${invoice.customer}`);
+  console.log(`amount: ${outstanding}`);
+}
+```",1
+INTRODUCE ASSERTION,"if (this.discountRate)
+  base = base - (this.discountRate * base);","assert(this.discountRate >= 0);
+if (this.discountRate)
+  base = base - (this.discountRate * base);",ZeroShot,"```java
+assert this.discountRate >= 0 : ""Discount rate must be non-negative"";
+base = base - (this.discountRate * base);
+```",1
+INTRODUCE ASSERTION,"if (this.discountRate)
+  base = base - (this.discountRate * base);","assert(this.discountRate >= 0);
+if (this.discountRate)
+  base = base - (this.discountRate * base);",Instruc,"```java
+assert this.discountRate >= 0 : ""Discount rate should not be negative"";
+if (this.discountRate > 0) {
+    base = base - (this.discountRate * base);
+}
+```",1
+INTRODUCE ASSERTION,"if (this.discountRate)
+  base = base - (this.discountRate * base);","assert(this.discountRate >= 0);
+if (this.discountRate)
+  base = base - (this.discountRate * base);",Context,"```java
+if (discountRate > 0) {
+    base -= discountRate * base;
+}
+```",1
+INTRODUCE ASSERTION,"if (this.discountRate)
+  base = base - (this.discountRate * base);","assert(this.discountRate >= 0);
+if (this.discountRate)
+  base = base - (this.discountRate * base);",Rules,"```java
+if (this.discountRate > 0) {
+    base = base - (this.discountRate * base);
+}
+```",1
+EXTRACT VARIABLE,"return order.quantity * order.itemPrice -
+    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +
+    Math.min(order.quantity * order.itemPrice * 0.1, 100);","const basePrice = order.quantity * order.itemPrice;
+const quantityDiscount = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;
+const shipping = Math.min(basePrice * 0.1, 100);
+return basePrice - quantityDiscount + shipping;",ZeroShot,"```java
+double quantity = order.quantity;
+double itemPrice = order.itemPrice;
+double basePrice = quantity * itemPrice;
+double discount = Math.max(0, quantity - 500) * itemPrice * 0.05;
+double rebate = Math.min(basePrice * 0.1, 100);
+
+return basePrice - discount + rebate;
+```",1
+EXTRACT VARIABLE,"return order.quantity * order.itemPrice -
+    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +
+    Math.min(order.quantity * order.itemPrice * 0.1, 100);","const basePrice = order.quantity * order.itemPrice;
+const quantityDiscount = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;
+const shipping = Math.min(basePrice * 0.1, 100);
+return basePrice - quantityDiscount + shipping;",Instruc,"```java
+double totalPrice = order.quantity * order.itemPrice;
+double discountThreshold = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;
+double maxDiscount = Math.min(totalPrice * 0.1, 100);
+
+return totalPrice - discountThreshold + maxDiscount;
+```",1
+EXTRACT VARIABLE,"return order.quantity * order.itemPrice -
+    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +
+    Math.min(order.quantity * order.itemPrice * 0.1, 100);","const basePrice = order.quantity * order.itemPrice;
+const quantityDiscount = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;
+const shipping = Math.min(basePrice * 0.1, 100);
+return basePrice - quantityDiscount + shipping;",Context,"```java
+public double calculateOrderTotal(Order order) {
+    double basePrice = order.quantity * order.itemPrice;
+    double discount = calculateDiscount(order.quantity, order.itemPrice);
+    double additionalCharges = Math.min(basePrice * 0.1, 100);
+    
+    return basePrice - discount + additionalCharges;
+}
+
+private double calculateDiscount(int quantity, double itemPrice) {
+    if (quantity <= 500) {
+        return 0;
+    }
+    return (quantity - 500) * itemPrice * 0.05;
+}
+```",1
+EXTRACT VARIABLE,"return order.quantity * order.itemPrice -
+    Math.max(0, order.quantity - 500) * order.itemPrice * 0.05 +
+    Math.min(order.quantity * order.itemPrice * 0.1, 100);","const basePrice = order.quantity * order.itemPrice;
+const quantityDiscount = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;
+const shipping = Math.min(basePrice * 0.1, 100);
+return basePrice - quantityDiscount + shipping;",Rules,"```java
+double itemTotal = order.quantity * order.itemPrice;
+double discount = Math.max(0, order.quantity - 500) * order.itemPrice * 0.05;
+double cappedDiscount = Math.min(itemTotal * 0.1, 100);
+
+return itemTotal - discount + cappedDiscount;
+```",1
+INLINE VARIABLE,"let basePrice = anOrder.basePrice;
+return (basePrice > 1000);",return anOrder.basePrice > 1000;,ZeroShot,"```java
+return (anOrder.basePrice > 1000);
+```",1
+INLINE VARIABLE,"let basePrice = anOrder.basePrice;
+return (basePrice > 1000);",return anOrder.basePrice > 1000;,Instruc,"```java
+return (anOrder.basePrice > 1000);
+```",1
+INLINE VARIABLE,"let basePrice = anOrder.basePrice;
+return (basePrice > 1000);",return anOrder.basePrice > 1000;,Context,"```java
+boolean isLargeOrder(Order anOrder) {
+    return anOrder.getBasePrice() > 1000;
+}
+```",1
+INLINE VARIABLE,"let basePrice = anOrder.basePrice;
+return (basePrice > 1000);",return anOrder.basePrice > 1000;,Rules,"```java
+return (anOrder.basePrice > 1000);
+```",1
+ENCAPSULATE COLLECTION,"class Person {              
+  get courses() {return this._courses;}
+  set courses(aList) {this._courses = aList;}","class Person {
+  get courses() {return this._courses.slice();}
+  addCourse(aCourse)    { ... }
+  removeCourse(aCourse) { ... }",ZeroShot,"```java
+import java.util.ArrayList;
+import java.util.List;
+
+class Person {
+    private List<String> courses;
+
+    public List<String> getCourses() {
+        return new ArrayList<>(courses);
+    }
+
+    public void setCourses(List<String> courses) {
+        this.courses = new ArrayList<>(courses);
+    }
+}
+```",1
+ENCAPSULATE COLLECTION,"class Person {              
+  get courses() {return this._courses;}
+  set courses(aList) {this._courses = aList;}","class Person {
+  get courses() {return this._courses.slice();}
+  addCourse(aCourse)    { ... }
+  removeCourse(aCourse) { ... }",Instruc,"```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class Person {
+    private List<Course> courses;
+
+    public Person() {
+        this.courses = new ArrayList<>();
+    }
+
+    public List<Course> getCourses() {
+        return Collections.unmodifiableList(courses);
+    }
+
+    public void addCourse(Course course) {
+        courses.add(course);
+    }
+
+    public void removeCourse(Course course) {
+        courses.remove(course);
+    }
+}
+```",1
+ENCAPSULATE COLLECTION,"class Person {              
+  get courses() {return this._courses;}
+  set courses(aList) {this._courses = aList;}","class Person {
+  get courses() {return this._courses.slice();}
+  addCourse(aCourse)    { ... }
+  removeCourse(aCourse) { ... }",Context,"```java
+class Person {
+    private List<Course> courses;
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+}
+```",0
+ENCAPSULATE COLLECTION,"class Person {              
+  get courses() {return this._courses;}
+  set courses(aList) {this._courses = aList;}","class Person {
+  get courses() {return this._courses.slice();}
+  addCourse(aCourse)    { ... }
+  removeCourse(aCourse) { ... }",Rules,"```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class Person {
+    private List<String> _courses = new ArrayList<>();
+
+    public List<String> getCourses() {
+        return Collections.unmodifiableList(_courses);
+    }
+
+    public void addCourse(String course) {
+        _courses.add(course);
+    }
+
+    public void removeCourse(String course) {
+        _courses.remove(course);
+    }
+}
+```",1
+ENCAPSULATE VARIABLE,"let defaultOwner = {firstName: “Martin”, lastName: “Fowler”};","let defaultOwnerData = {firstName: “Martin”, lastName: “Fowler”};
+export function defaultOwner()       {return defaultOwnerData;}
+export function setDefaultOwner(arg) {defaultOwnerData = arg;}",ZeroShot,"```java
+public class Owner {
+    private String firstName;
+    private String lastName;
+
+    public Owner() {
+        this.firstName = ""Martin"";
+        this.lastName = ""Fowler"";
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+}
+```",1
+ENCAPSULATE VARIABLE,"let defaultOwner = {firstName: “Martin”, lastName: “Fowler”};","let defaultOwnerData = {firstName: “Martin”, lastName: “Fowler”};
+export function defaultOwner()       {return defaultOwnerData;}
+export function setDefaultOwner(arg) {defaultOwnerData = arg;}",Instruc,"```java
+public class Owner {
+    private String firstName;
+    private String lastName;
+
+    public Owner(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+}
+
+// Usage
+Owner defaultOwner = new Owner(""Martin"", ""Fowler"");
+```",1
+ENCAPSULATE VARIABLE,"let defaultOwner = {firstName: “Martin”, lastName: “Fowler”};","let defaultOwnerData = {firstName: “Martin”, lastName: “Fowler”};
+export function defaultOwner()       {return defaultOwnerData;}
+export function setDefaultOwner(arg) {defaultOwnerData = arg;}",Context,"```java
+public class Owner {
+    private String firstName;
+    private String lastName;
+
+    public Owner(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Owner defaultOwner = new Owner(""Martin"", ""Fowler"");
+    }
+}
+```",1
+ENCAPSULATE VARIABLE,"let defaultOwner = {firstName: “Martin”, lastName: “Fowler”};","let defaultOwnerData = {firstName: “Martin”, lastName: “Fowler”};
+export function defaultOwner()       {return defaultOwnerData;}
+export function setDefaultOwner(arg) {defaultOwnerData = arg;}",Rules,"```java
+public class Owner {
+    private String firstName;
+    private String lastName;
+
+    public Owner(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+}
+
+// Usage
+Owner defaultOwner = new Owner(""Martin"", ""Fowler"");
+```",1
+PUSH DOWN FIELD,"class Employee {        // Java
+  private String quota;
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+
+class Salesman extends Employee {
+  protected String quota;
+}",ZeroShot,"```java
+class Employee {
+    // Java
+}
+
+class Engineer extends Employee {
+    private String quota;
+}
+
+class Salesman extends Employee {
+    private String quota;
+}
+```",1
+PUSH DOWN FIELD,"class Employee {        // Java
+  private String quota;
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+
+class Salesman extends Employee {
+  protected String quota;
+}",Instruc,"```java
+class Employee {
+}
+
+class Engineer extends Employee {
+    private String quota;
+}
+
+class Salesman extends Employee {
+    private String quota;
+}
+```",1
+PUSH DOWN FIELD,"class Employee {        // Java
+  private String quota;
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+
+class Salesman extends Employee {
+  protected String quota;
+}",Context,"```java
+class Employee {
+    private String quota;
+
+    public String getQuota() {
+        return quota;
+    }
+
+    public void setQuota(String quota) {
+        this.quota = quota;
+    }
+}
+
+class Engineer extends Employee {
+    // Additional properties and methods for Engineer
+}
+
+class Salesman extends Employee {
+    // Additional properties and methods for Salesman
+}
+```",0
+PUSH DOWN FIELD,"class Employee {        // Java
+  private String quota;
+}
+
+class Engineer extends Employee {...}
+class Salesman extends Employee {...}","class Employee {...}
+class Engineer extends Employee {...}
+
+class Salesman extends Employee {
+  protected String quota;
+}",Rules,"```java
+class Employee {
+    // Java
+}
+
+class Engineer extends Employee {
+    private String quota;
+}
+
+class Salesman extends Employee {
+    private String quota;
+}
+```",0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,"function getPayAmount() {
+    let result;
+    if (isDead)
+        result = deadAmount();
+    else {
+        if (isSeparated)
+            result = separatedAmount();
+        else {
+            if (isRetired)
+                result = retiredAmount();
+            else
+                result = normalPayAmount();
+        }
+    }
+    return result;
+}","function getPayAmount() {
+    if (isDead) return deadAmount();
+    if (isSeparated) return separatedAmount();
+    if (isRetired) return retiredAmount();
+    return normalPayAmount();
+}",ZeroShot,"```java
+public double getPayAmount() {
+    if (isDead) {
+        return deadAmount();
+    }
+    if (isSeparated) {
+        return separatedAmount();
+    }
+    if (isRetired) {
+        return retiredAmount();
+    }
+    return normalPayAmount();
+}
+```",1
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,"function getPayAmount() {
+    let result;
+    if (isDead)
+        result = deadAmount();
+    else {
+        if (isSeparated)
+            result = separatedAmount();
+        else {
+            if (isRetired)
+                result = retiredAmount();
+            else
+                result = normalPayAmount();
+        }
+    }
+    return result;
+}","function getPayAmount() {
+    if (isDead) return deadAmount();
+    if (isSeparated) return separatedAmount();
+    if (isRetired) return retiredAmount();
+    return normalPayAmount();
+}",Instruc,"```java
+function getPayAmount() {
+    if (isDead) {
+        return deadAmount();
+    }
+    if (isSeparated) {
+        return separatedAmount();
+    }
+    if (isRetired) {
+        return retiredAmount();
+    }
+    return normalPayAmount();
+}
+```",1
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,"function getPayAmount() {
+    let result;
+    if (isDead)
+        result = deadAmount();
+    else {
+        if (isSeparated)
+            result = separatedAmount();
+        else {
+            if (isRetired)
+                result = retiredAmount();
+            else
+                result = normalPayAmount();
+        }
+    }
+    return result;
+}","function getPayAmount() {
+    if (isDead) return deadAmount();
+    if (isSeparated) return separatedAmount();
+    if (isRetired) return retiredAmount();
+    return normalPayAmount();
+}",Context,"```java
+public double getPayAmount() {
+    if (isDead) {
+        return deadAmount();
+    } 
+    if (isSeparated) {
+        return separatedAmount();
+    } 
+    if (isRetired) {
+        return retiredAmount();
+    } 
+    return normalPayAmount();
+}
+```",1
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,"function getPayAmount() {
+    let result;
+    if (isDead)
+        result = deadAmount();
+    else {
+        if (isSeparated)
+            result = separatedAmount();
+        else {
+            if (isRetired)
+                result = retiredAmount();
+            else
+                result = normalPayAmount();
+        }
+    }
+    return result;
+}","function getPayAmount() {
+    if (isDead) return deadAmount();
+    if (isSeparated) return separatedAmount();
+    if (isRetired) return retiredAmount();
+    return normalPayAmount();
+}",Rules,"```java
+public double getPayAmount() {
+    if (isDead) {
+        return deadAmount();
+    }
+    if (isSeparated) {
+        return separatedAmount();
+    }
+    if (isRetired) {
+        return retiredAmount();
+    }
+    return normalPayAmount();
+}
+```",1
+REMOVE SETTING METHOD,"class Person {
+  get name() {...}
+  set name(aString) {...}","class Person {
+  get name() {...}",ZeroShot,"```java
+class Person {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String aString) {
+        this.name = aString;
+    }
+}
+```",0
+REMOVE SETTING METHOD,"class Person {
+  get name() {...}
+  set name(aString) {...}","class Person {
+  get name() {...}",Instruc,"```java
+class Person {
+    private final String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+```",1
+REMOVE SETTING METHOD,"class Person {
+  get name() {...}
+  set name(aString) {...}","class Person {
+  get name() {...}",Context,"```java
+public class Person {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```",0
+REMOVE SETTING METHOD,"class Person {
+  get name() {...}
+  set name(aString) {...}","class Person {
+  get name() {...}",Rules,"```java
+class Person {
+    private final String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+```",1
+REPLACE DERIVED VARIABLE WITH QUERY,"get discountedTotal() {return this._discountedTotal;}
+set discount(aNumber) {
+    const old = this._discount;
+    this._discount = aNumber;
+    this._discountedTotal += old - aNumber; 
+}","get discountedTotal() {return this._baseTotal - this._discount;}
+set discount(aNumber) {this._discount = aNumber;}",ZeroShot,"```java
+private double discount;
+private double discountedTotal;
+
+public double getDiscountedTotal() {
+    return discountedTotal;
+}
+
+public void setDiscount(double aNumber) {
+    double old = this.discount;
+    this.discount = aNumber;
+    this.discountedTotal += old - aNumber; 
+}
+```",0
+REPLACE DERIVED VARIABLE WITH QUERY,"get discountedTotal() {return this._discountedTotal;}
+set discount(aNumber) {
+    const old = this._discount;
+    this._discount = aNumber;
+    this._discountedTotal += old - aNumber; 
+}","get discountedTotal() {return this._baseTotal - this._discount;}
+set discount(aNumber) {this._discount = aNumber;}",Instruc,"```java
+public double getDiscountedTotal() {
+    return calculateDiscountedTotal();
+}
+
+public void setDiscount(double aNumber) {
+    this._discount = aNumber;
+}
+
+private double calculateDiscountedTotal() {
+    // Calculate discounted total based on current discount
+    return originalTotal - (originalTotal * this._discount / 100);
+}
+```",1
+REPLACE DERIVED VARIABLE WITH QUERY,"get discountedTotal() {return this._discountedTotal;}
+set discount(aNumber) {
+    const old = this._discount;
+    this._discount = aNumber;
+    this._discountedTotal += old - aNumber; 
+}","get discountedTotal() {return this._baseTotal - this._discount;}
+set discount(aNumber) {this._discount = aNumber;}",Context,"```java
+public class ShoppingCart {
+    private double discountedTotal;
+    private double discount;
+
+    public double getDiscountedTotal() {
+        return this.discountedTotal;
+    }
+
+    public void setDiscount(double aNumber) {
+        double oldDiscount = this.discount;
+        this.discount = aNumber;
+        this.discountedTotal += oldDiscount - aNumber; 
+    }
+}
+```",0
+SUBSTITUTE ALGORITHM,"function foundPerson(people) {
+  for(let i = 0; i < people.length; i++) {
+    if (people[i] === “Don”) {
+      return “Don”;
+    }
+    if (people[i] === “John”) {
+      return “John”;
+    }
+    if (people[i] === “Kent”) {
+      return “Kent”;
+    }
+  }
+  return “”;
+}","function foundPerson(people) {
+  const candidates = [”Don”, “John”, “Kent”];
+  return people.find(p => candidates.includes(p)) || '';
+}",ZeroShot,"```java
+public String foundPerson(List<String> people) {
+    for (String person : people) {
+        if (person.equals(""Don"") || person.equals(""John"") || person.equals(""Kent"")) {
+            return person;
+        }
+    }
+    return """";
+}
+```",1
+SUBSTITUTE ALGORITHM,"function foundPerson(people) {
+  for(let i = 0; i < people.length; i++) {
+    if (people[i] === “Don”) {
+      return “Don”;
+    }
+    if (people[i] === “John”) {
+      return “John”;
+    }
+    if (people[i] === “Kent”) {
+      return “Kent”;
+    }
+  }
+  return “”;
+}","function foundPerson(people) {
+  const candidates = [”Don”, “John”, “Kent”];
+  return people.find(p => candidates.includes(p)) || '';
+}",Instruc,"```java
+import java.util.List;
+
+public class PersonFinder {
+    public String foundPerson(List<String> people) {
+        for (String person : people) {
+            if (isTargetPerson(person)) {
+                return person;
+            }
+        }
+        return """";
+    }
+
+    private boolean isTargetPerson(String person) {
+        return ""Don"".equals(person) || ""John"".equals(person) || ""Kent"".equals(person);
+    }
+}
+```",1
+SUBSTITUTE ALGORITHM,"function foundPerson(people) {
+  for(let i = 0; i < people.length; i++) {
+    if (people[i] === “Don”) {
+      return “Don”;
+    }
+    if (people[i] === “John”) {
+      return “John”;
+    }
+    if (people[i] === “Kent”) {
+      return “Kent”;
+    }
+  }
+  return “”;
+}","function foundPerson(people) {
+  const candidates = [”Don”, “John”, “Kent”];
+  return people.find(p => candidates.includes(p)) || '';
+}",Context,"```java
+public String foundPerson(List<String> people) {
+    Set<String> targetNames = new HashSet<>(Arrays.asList(""Don"", ""John"", ""Kent""));
+    
+    for (String person : people) {
+        if (targetNames.contains(person)) {
+            return person;
+        }
+    }
+    
+    return """";
+}
+```",1
+SUBSTITUTE ALGORITHM,"function foundPerson(people) {
+  for(let i = 0; i < people.length; i++) {
+    if (people[i] === “Don”) {
+      return “Don”;
+    }
+    if (people[i] === “John”) {
+      return “John”;
+    }
+    if (people[i] === “Kent”) {
+      return “Kent”;
+    }
+  }
+  return “”;
+}","function foundPerson(people) {
+  const candidates = [”Don”, “John”, “Kent”];
+  return people.find(p => candidates.includes(p)) || '';
+}",Rules,"```java
+public String foundPerson(String[] people) {
+    for (String person : people) {
+        if (person.equals(""Don"") || person.equals(""John"") || person.equals(""Kent"")) {
+            return person;
+        }
+    }
+    return """";
+}
+```",1
+REPLACE CONDITIONAL WITH POLYMORPHISM,"switch (bird.type) {
+  case 'EuropeanSwallow':
+    return “average”;
+  case 'AfricanSwallow':
+    return (bird.numberOfCoconuts > 2) ? “tired” : “average”;
+  case 'NorwegianBlueParrot':
+    return (bird.voltage > 100) ? “scorched” : “beautiful”;
+  default:
+    return “unknown”;","class EuropeanSwallow {
+  get plumage() {
+    return “average”;
+  }
+class AfricanSwallow {
+  get plumage() {
+     return (this.numberOfCoconuts > 2) ? “tired” : “average”;
+  }
+class NorwegianBlueParrot {
+  get plumage() {
+     return (this.voltage > 100) ? “scorched” : “beautiful”;
+  }",ZeroShot,"```java
+abstract class Bird {
+    public abstract String getStatus();
+}
+
+class EuropeanSwallow extends Bird {
+    @Override
+    public String getStatus() {
+        return ""average"";
+    }
+}
+
+class AfricanSwallow extends Bird {
+    private int numberOfCoconuts;
+
+    public AfricanSwallow(int numberOfCoconuts) {
+        this.numberOfCoconuts = numberOfCoconuts;
+    }
+
+    @Override
+    public String getStatus() {
+        return (numberOfCoconuts > 2) ? ""tired"" : ""average"";
+    }
+}
+
+class NorwegianBlueParrot extends Bird {
+    private int voltage;
+
+    public NorwegianBlueParrot(int voltage) {
+        this.voltage = voltage;
+    }
+
+    @Override
+    public String getStatus() {
+        return (voltage > 100) ? ""scorched"" : ""beautiful"";
+    }
+}
+
+class UnknownBird extends Bird {
+    @Override
+    public String getStatus() {
+        return ""unknown"";
+    }
+}
+
+// Example usage
+Bird bird = // create an instance of a specific bird type
+String status = bird.getStatus();
+```",1
+REPLACE CONDITIONAL WITH POLYMORPHISM,"switch (bird.type) {
+  case 'EuropeanSwallow':
+    return “average”;
+  case 'AfricanSwallow':
+    return (bird.numberOfCoconuts > 2) ? “tired” : “average”;
+  case 'NorwegianBlueParrot':
+    return (bird.voltage > 100) ? “scorched” : “beautiful”;
+  default:
+    return “unknown”;","class EuropeanSwallow {
+  get plumage() {
+    return “average”;
+  }
+class AfricanSwallow {
+  get plumage() {
+     return (this.numberOfCoconuts > 2) ? “tired” : “average”;
+  }
+class NorwegianBlueParrot {
+  get plumage() {
+     return (this.voltage > 100) ? “scorched” : “beautiful”;
+  }",Instruc,"```java
+// Bird.java
+abstract class Bird {
+    protected String type;
+
+    public Bird(String type) {
+        this.type = type;
+    }
+
+    public abstract String getDescription();
+}
+
+// EuropeanSwallow.java
+class EuropeanSwallow extends Bird {
+    public EuropeanSwallow() {
+        super(""EuropeanSwallow"");
+    }
+
+    @Override
+    public String getDescription() {
+        return ""average"";
+    }
+}
+
+// AfricanSwallow.java
+class AfricanSwallow extends Bird {
+    private int numberOfCoconuts;
+
+    public AfricanSwallow(int numberOfCoconuts) {
+        super(""AfricanSwallow"");
+        this.numberOfCoconuts = numberOfCoconuts;
+    }
+
+    @Override
+    public String getDescription() {
+        return (numberOfCoconuts > 2) ? ""tired"" : ""average"";
+    }
+}
+
+// NorwegianBlueParrot.java
+class NorwegianBlueParrot extends Bird {
+    private int voltage;
+
+    public NorwegianBlueParrot(int voltage) {
+        super(""NorwegianBlueParrot"");
+        this.voltage = voltage;
+    }
+
+    @Override
+    public String getDescription() {
+        return (voltage > 100) ? ""scorched"" : ""beautiful"";
+    }
+}
+
+// BirdFactory.java
+class BirdFactory {
+    public static Bird createBird(String type, int... params) {
+        switch (type) {
+            case ""EuropeanSwallow"":
+                return new EuropeanSwallow();
+            case ""AfricanSwallow"":
+                return new AfricanSwallow(params[0]);
+            case ""NorwegianBlueParrot"":
+                return new NorwegianBlueParrot(params[0]);
+            default:
+                throw new IllegalArgumentException(""Unknown bird type"");
+        }
+    }
+}
+
+// Usage example
+public class BirdWatcher {
+    public static void main(String[] args) {
+        Bird bird = BirdFactory.createBird(""AfricanSwallow"", 3);
+        System.out.println(bird.getDescription()); // Output: tired
+    }
+}
+```",1
+REPLACE CONDITIONAL WITH POLYMORPHISM,"switch (bird.type) {
+  case 'EuropeanSwallow':
+    return “average”;
+  case 'AfricanSwallow':
+    return (bird.numberOfCoconuts > 2) ? “tired” : “average”;
+  case 'NorwegianBlueParrot':
+    return (bird.voltage > 100) ? “scorched” : “beautiful”;
+  default:
+    return “unknown”;","class EuropeanSwallow {
+  get plumage() {
+    return “average”;
+  }
+class AfricanSwallow {
+  get plumage() {
+     return (this.numberOfCoconuts > 2) ? “tired” : “average”;
+  }
+class NorwegianBlueParrot {
+  get plumage() {
+     return (this.voltage > 100) ? “scorched” : “beautiful”;
+  }",Context,"```java
+public String getBirdStatus(Bird bird) {
+    switch (bird.getType()) {
+        case EUROPEAN_SWALLOW:
+            return ""average"";
+        case AFRICAN_SWALLOW:
+            return bird.getNumberOfCoconuts() > 2 ? ""tired"" : ""average"";
+        case NORWEGIAN_BLUE_PARROT:
+            return bird.getVoltage() > 100 ? ""scorched"" : ""beautiful"";
+        default:
+            return ""unknown"";
+    }
+}
+```",0
+REPLACE CONDITIONAL WITH POLYMORPHISM,"switch (bird.type) {
+  case 'EuropeanSwallow':
+    return “average”;
+  case 'AfricanSwallow':
+    return (bird.numberOfCoconuts > 2) ? “tired” : “average”;
+  case 'NorwegianBlueParrot':
+    return (bird.voltage > 100) ? “scorched” : “beautiful”;
+  default:
+    return “unknown”;","class EuropeanSwallow {
+  get plumage() {
+    return “average”;
+  }
+class AfricanSwallow {
+  get plumage() {
+     return (this.numberOfCoconuts > 2) ? “tired” : “average”;
+  }
+class NorwegianBlueParrot {
+  get plumage() {
+     return (this.voltage > 100) ? “scorched” : “beautiful”;
+  }",Rules,"```java
+abstract class Bird {
+    abstract String getStatus();
+}
+
+class EuropeanSwallow extends Bird {
+    @Override
+    String getStatus() {
+        return ""average"";
+    }
+}
+
+class AfricanSwallow extends Bird {
+    private int numberOfCoconuts;
+
+    AfricanSwallow(int numberOfCoconuts) {
+        this.numberOfCoconuts = numberOfCoconuts;
+    }
+
+    @Override
+    String getStatus() {
+        return (numberOfCoconuts > 2) ? ""tired"" : ""average"";
+    }
+}
+
+class NorwegianBlueParrot extends Bird {
+    private int voltage;
+
+    NorwegianBlueParrot(int voltage) {
+        this.voltage = voltage;
+    }
+
+    @Override
+    String getStatus() {
+        return (voltage > 100) ? ""scorched"" : ""beautiful"";
+    }
+}
+
+class BirdFactory {
+    public static Bird createBird(String type, int attribute) {
+        switch (type) {
+            case ""EuropeanSwallow"":
+                return new EuropeanSwallow();
+            case ""AfricanSwallow"":
+                return new AfricanSwallow(attribute);
+            case ""NorwegianBlueParrot"":
+                return new NorwegianBlueParrot(attribute);
+            default:
+                throw new IllegalArgumentException(""Unknown bird type"");
+        }
+    }
+}
+```",1
+DECOMPOSE CONDITIONAL,"if (!aDate.isBefore(plan.summerStart) && !aDate.isAfter(plan.summerEnd))
+  charge = quantity * plan.summerRate;
+else
+  charge = quantity * plan.regularRate + plan.regularServiceCharge;","if (summer())
+  charge = summerCharge();
+else
+  charge = regularCharge();",ZeroShot,"```java
+double charge;
+
+if (isSummer(aDate, plan)) {
+    charge = quantity * plan.summerRate;
+} else {
+    charge = quantity * plan.regularRate + plan.regularServiceCharge;
+}
+
+private boolean isSummer(LocalDate aDate, Plan plan) {
+    return !aDate.isBefore(plan.summerStart) && !aDate.isAfter(plan.summerEnd);
+}
+```",1
+DECOMPOSE CONDITIONAL,"if (!aDate.isBefore(plan.summerStart) && !aDate.isAfter(plan.summerEnd))
+  charge = quantity * plan.summerRate;
+else
+  charge = quantity * plan.regularRate + plan.regularServiceCharge;","if (summer())
+  charge = summerCharge();
+else
+  charge = regularCharge();",Instruc,"```java
+double charge;
+if (isInSummer(aDate, plan)) {
+    charge = calculateSummerCharge(quantity, plan);
+} else {
+    charge = calculateRegularCharge(quantity, plan);
+}
+
+private boolean isInSummer(LocalDate aDate, Plan plan) {
+    return !aDate.isBefore(plan.summerStart) && !aDate.isAfter(plan.summerEnd);
+}
+
+private double calculateSummerCharge(int quantity, Plan plan) {
+    return quantity * plan.summerRate;
+}
+
+private double calculateRegularCharge(int quantity, Plan plan) {
+    return quantity * plan.regularRate + plan.regularServiceCharge;
+}
+```",1
+DECOMPOSE CONDITIONAL,"if (!aDate.isBefore(plan.summerStart) && !aDate.isAfter(plan.summerEnd))
+  charge = quantity * plan.summerRate;
+else
+  charge = quantity * plan.regularRate + plan.regularServiceCharge;","if (summer())
+  charge = summerCharge();
+else
+  charge = regularCharge();",Context,"```java
+charge = (aDate.isAfter(plan.summerStart) && aDate.isBefore(plan.summerEnd))
+    ? quantity * plan.summerRate
+    : quantity * plan.regularRate + plan.regularServiceCharge;
+```",1
+DECOMPOSE CONDITIONAL,"if (!aDate.isBefore(plan.summerStart) && !aDate.isAfter(plan.summerEnd))
+  charge = quantity * plan.summerRate;
+else
+  charge = quantity * plan.regularRate + plan.regularServiceCharge;","if (summer())
+  charge = summerCharge();
+else
+  charge = regularCharge();",Rules,"```java
+if (isSummerCharge(aDate, plan)) {
+    charge = calculateSummerCharge(quantity, plan);
+} else {
+    charge = calculateRegularCharge(quantity, plan);
+}
+
+private boolean isSummerCharge(LocalDate aDate, Plan plan) {
+    return !aDate.isBefore(plan.summerStart) && !aDate.isAfter(plan.summerEnd);
+}
+
+private double calculateSummerCharge(int quantity, Plan plan) {
+    return quantity * plan.summerRate;
+}
+
+private double calculateRegularCharge(int quantity, Plan plan) {
+    return quantity * plan.regularRate + plan.regularServiceCharge;
+}
+```",1
+EXTRACT SUPERCLASS,"class Department {
+  get totalAnnualCost() {...}
+  get name() {...}
+  get headCount() {...}
+}
+
+class Employee {
+  get annualCost() {...}
+  get name() {...}
+  get id() {...}
+}","class Party {
+  get name() {...}
+  get annualCost() {...}
+}
+
+class Department extends Party {
+  get annualCost() {...}
+  get headCount() {...}
+}
+
+class Employee extends Party {
+  get annualCost() {...}
+  get id() {...}
+}",ZeroShot,"```java
+class Entity {
+    protected String name;
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Department extends Entity {
+    public double getTotalAnnualCost() {
+        // Implementation
+    }
+
+    public int getHeadCount() {
+        // Implementation
+    }
+}
+
+class Employee extends Entity {
+    private String id;
+    
+    public double getAnnualCost() {
+        // Implementation
+    }
+
+    public String getId() {
+        return id;
+    }
+}
+```",1
+EXTRACT SUPERCLASS,"class Department {
+  get totalAnnualCost() {...}
+  get name() {...}
+  get headCount() {...}
+}
+
+class Employee {
+  get annualCost() {...}
+  get name() {...}
+  get id() {...}
+}","class Party {
+  get name() {...}
+  get annualCost() {...}
+}
+
+class Department extends Party {
+  get annualCost() {...}
+  get headCount() {...}
+}
+
+class Employee extends Party {
+  get annualCost() {...}
+  get id() {...}
+}",Instruc,"```java
+class Organization {
+    protected String name;
+
+    public String getName() {
+        return name;
+    }
+}
+
+class Department extends Organization {
+    public double getTotalAnnualCost() {
+        // Implementation here...
+    }
+
+    public int getHeadCount() {
+        // Implementation here...
+    }
+}
+
+class Employee extends Organization {
+    private String id;
+
+    public double getAnnualCost() {
+        // Implementation here...
+    }
+
+    public String getId() {
+        return id;
+    }
+}
+```",1
+EXTRACT SUPERCLASS,"class Department {
+  get totalAnnualCost() {...}
+  get name() {...}
+  get headCount() {...}
+}
+
+class Employee {
+  get annualCost() {...}
+  get name() {...}
+  get id() {...}
+}","class Party {
+  get name() {...}
+  get annualCost() {...}
+}
+
+class Department extends Party {
+  get annualCost() {...}
+  get headCount() {...}
+}
+
+class Employee extends Party {
+  get annualCost() {...}
+  get id() {...}
+}",Context,"```java
+class Department {
+    private double totalAnnualCost;
+    private String name;
+    private int headCount;
+
+    public double getTotalAnnualCost() {
+        return totalAnnualCost;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHeadCount() {
+        return headCount;
+    }
+}
+
+class Employee {
+    private double annualCost;
+    private String name;
+    private int id;
+
+    public double getAnnualCost() {
+        return annualCost;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+}
+```",0
+EXTRACT SUPERCLASS,"class Department {
+  get totalAnnualCost() {...}
+  get name() {...}
+  get headCount() {...}
+}
+
+class Employee {
+  get annualCost() {...}
+  get name() {...}
+  get id() {...}
+}","class Party {
+  get name() {...}
+  get annualCost() {...}
+}
+
+class Department extends Party {
+  get annualCost() {...}
+  get headCount() {...}
+}
+
+class Employee extends Party {
+  get annualCost() {...}
+  get id() {...}
+}",Rules,"```java
+class Person {
+    get name() {...}
+}
+
+class Department extends Person {
+    get totalAnnualCost() {...}
+    get headCount() {...}
+}
+
+class Employee extends Person {
+    get annualCost() {...}
+    get id() {...}
+}
+```",1
+REPLACE LOOP WITH PIPELINE,"const names = [];
+for (const i of input) {
+    if (i.job === “programmer”)
+        names.push(i.name);
+}","const names = input
+    .filter(i => i.job === “programmer”)
+    .map(i => i.name)
+;",ZeroShot,"```java
+List<String> names = input.stream()
+                          .filter(i -> ""programmer"".equals(i.getJob()))
+                          .map(i -> i.getName())
+                          .collect(Collectors.toList());
+```",1
+REPLACE LOOP WITH PIPELINE,"const names = [];
+for (const i of input) {
+    if (i.job === “programmer”)
+        names.push(i.name);
+}","const names = input
+    .filter(i => i.job === “programmer”)
+    .map(i => i.name)
+;",Instruc,"```javascript
+const names = input.filter(i => i.job === ""programmer"").map(i => i.name);
+```",1
+REPLACE LOOP WITH PIPELINE,"const names = [];
+for (const i of input) {
+    if (i.job === “programmer”)
+        names.push(i.name);
+}","const names = input
+    .filter(i => i.job === “programmer”)
+    .map(i => i.name)
+;",Context,"```java
+List<String> names = new ArrayList<>();
+for (InputType i : input) {
+    if (""programmer"".equals(i.getJob())) {
+        names.add(i.getName());
+    }
+}
+```",0
+REPLACE SUPERCLASS WITH DELEGATE,"class List {...}
+class Stack extends List {...}","class Stack {
+  constructor() {
+    this._storage = new List();
+  }
+}
+class List {...}",ZeroShot,"```java
+class List {
+    // List functionality here
+}
+
+class Stack {
+    private List list = new List();
+
+    // Stack functionality that delegates to list
+}
+```",1
+REPLACE SUPERCLASS WITH DELEGATE,"class List {...}
+class Stack extends List {...}","class Stack {
+  constructor() {
+    this._storage = new List();
+  }
+}
+class List {...}",Instruc,"```java
+class List {
+    // Superclass methods and properties
+}
+
+class Stack {
+    private List delegate;
+
+    public Stack() {
+        this.delegate = new List();
+    }
+
+    // Forwarding methods to delegate
+    // Example methods below will depend on actual List implementation
+
+    public void someListMethod() {
+        delegate.someListMethod();
+    }
+
+    public void anotherListMethod() {
+        delegate.anotherListMethod();
+    }
+
+    // Add additional forwarding methods as needed
+}
+```",1
+REPLACE SUPERCLASS WITH DELEGATE,"class List {...}
+class Stack extends List {...}","class Stack {
+  constructor() {
+    this._storage = new List();
+  }
+}
+class List {...}",Context,"```java
+class List {
+    // List related methods and fields
+}
+
+class Stack extends List {
+    // Stack related methods and fields
+}
+```",0
+REPLACE SUPERCLASS WITH DELEGATE,"class List {...}
+class Stack extends List {...}","class Stack {
+  constructor() {
+    this._storage = new List();
+  }
+}
+class List {...}",Rules,"```java
+class List {
+    // List implementation
+}
+
+class Stack {
+    private List delegate;
+
+    public Stack(List delegate) {
+        this.delegate = delegate;
+    }
+
+    // Additional Stack methods and delegation to List methods
+}
+```",1
+COMBINE FUNCTIONS INTO TRANSFORM,"function base(aReading) {...}
+function taxableCharge(aReading) {...}","function enrichReading(argReading) {
+  const aReading = _.cloneDeep(argReading);
+  aReading.baseCharge = base(aReading);
+  aReading.taxableCharge = taxableCharge(aReading);
+  return aReading;
+}
+",ZeroShot,"```java
+public class ChargeCalculator {
+    public double calculateCharge(Reading aReading) {
+        return base(aReading) + taxableCharge(aReading);
+    }
+
+    private double base(Reading aReading) {
+        // original base implementation
+    }
+
+    private double taxableCharge(Reading aReading) {
+        // original taxableCharge implementation
+    }
+}
+```",0
+COMBINE FUNCTIONS INTO TRANSFORM,"function base(aReading) {...}
+function taxableCharge(aReading) {...}","function enrichReading(argReading) {
+  const aReading = _.cloneDeep(argReading);
+  aReading.baseCharge = base(aReading);
+  aReading.taxableCharge = taxableCharge(aReading);
+  return aReading;
+}
+",Instruc,"```java
+class Reading {
+    private double value;
+    private boolean taxable;
+
+    // Constructor and getters
+    public Reading(double value) {
+        this.value = value;
+        this.taxable = false; // Default is non-taxable
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public boolean isTaxable() {
+        return taxable;
+    }
+
+    public void setTaxable(boolean taxable) {
+        this.taxable = taxable;
+    }
+
+    // Transformation function to add taxable field
+    public Reading transform() {
+        Reading newReading = new Reading(this.value);
+        newReading.setTaxable(this.value > 50); // Example logic for taxability
+        return newReading;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Reading aReading = new Reading(60);
+        
+        // Create a transformed reading
+        Reading transformedReading = aReading.transform();
+
+        // Access the new fields
+        System.out.println(""Value: "" + transformedReading.getValue());
+        System.out.println(""Taxable: "" + transformedReading.isTaxable());
+    }
+}
+```",1
+COMBINE FUNCTIONS INTO TRANSFORM,"function base(aReading) {...}
+function taxableCharge(aReading) {...}","function enrichReading(argReading) {
+  const aReading = _.cloneDeep(argReading);
+  aReading.baseCharge = base(aReading);
+  aReading.taxableCharge = taxableCharge(aReading);
+  return aReading;
+}
+",Context,"```java
+public class ElectricityBill {
+    private final Reading reading;
+
+    public ElectricityBill(Reading reading) {
+        this.reading = reading;
+    }
+
+    public double base() {
+        // Logic for base calculation based on reading
+    }
+
+    public double taxableCharge() {
+        // Logic for taxable charge calculation based on reading
+    }
+}
+
+class Reading {
+    // Properties and methods to represent and work with readings
+}
+```",1
+PARAMETERIZE FUNCTION,"function tenPercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.1);
+}
+function fivePercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.05);
+}","function raise(aPerson, factor) {
+  aPerson.salary = aPerson.salary.multiply(1 + factor);
+}",ZeroShot,"```java
+public void applyRaise(Person aPerson, double raiseFactor) {
+    aPerson.salary = aPerson.salary.multiply(raiseFactor);
+}
+
+public void tenPercentRaise(Person aPerson) {
+    applyRaise(aPerson, 1.1);
+}
+
+public void fivePercentRaise(Person aPerson) {
+    applyRaise(aPerson, 1.05);
+}
+```",1
+PARAMETERIZE FUNCTION,"function tenPercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.1);
+}
+function fivePercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.05);
+}","function raise(aPerson, factor) {
+  aPerson.salary = aPerson.salary.multiply(1 + factor);
+}",Instruc,"```javascript
+function applyRaise(aPerson, raiseFactor) {
+  aPerson.salary = aPerson.salary.multiply(raiseFactor);
+}
+
+function tenPercentRaise(aPerson) {
+  applyRaise(aPerson, 1.1);
+}
+
+function fivePercentRaise(aPerson) {
+  applyRaise(aPerson, 1.05);
+}
+```",1
+PARAMETERIZE FUNCTION,"function tenPercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.1);
+}
+function fivePercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.05);
+}","function raise(aPerson, factor) {
+  aPerson.salary = aPerson.salary.multiply(1 + factor);
+}",Context,"```java
+public class SalaryAdjuster {
+    private static final double TEN_PERCENT_RAISE = 1.1;
+    private static final double FIVE_PERCENT_RAISE = 1.05;
+
+    public static void applyRaise(Person person, double percentage) {
+        person.setSalary(person.getSalary().multiply(percentage));
+    }
+
+    public static void applyTenPercentRaise(Person person) {
+        applyRaise(person, TEN_PERCENT_RAISE);
+    }
+
+    public static void applyFivePercentRaise(Person person) {
+        applyRaise(person, FIVE_PERCENT_RAISE);
+    }
+}
+```",1
+PARAMETERIZE FUNCTION,"function tenPercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.1);
+}
+function fivePercentRaise(aPerson) {
+  aPerson.salary = aPerson.salary.multiply(1.05);
+}","function raise(aPerson, factor) {
+  aPerson.salary = aPerson.salary.multiply(1 + factor);
+}",Rules,"```java
+public void applyRaise(Person aPerson, double percentage) {
+    aPerson.salary = aPerson.salary.multiply(1 + percentage);
+}
+
+public void tenPercentRaise(Person aPerson) {
+    applyRaise(aPerson, 0.1);
+}
+
+public void fivePercentRaise(Person aPerson) {
+    applyRaise(aPerson, 0.05);
+}
+```",1
+REMOVE FLAG ARGUMENT,"function setDimension(name, value) {
+  if (name === “height”) {
+    this._height = value;
+    return;
+  }
+  if (name === “width”) {
+    this._width = value;
+    return;
+  }
+}","function setHeight(value) {this._height = value;}
+function setWidth (value) {this._width = value;}",ZeroShot,"```java
+public void setHeight(int height) {
+    this._height = height;
+}
+
+public void setWidth(int width) {
+    this._width = width;
+}
+```",1
+REMOVE FLAG ARGUMENT,"function setDimension(name, value) {
+  if (name === “height”) {
+    this._height = value;
+    return;
+  }
+  if (name === “width”) {
+    this._width = value;
+    return;
+  }
+}","function setHeight(value) {this._height = value;}
+function setWidth (value) {this._width = value;}",Instruc,"```java
+public void setHeight(int height) {
+    this._height = height;
+}
+
+public void setWidth(int width) {
+    this._width = width;
+}
+```",1
+REMOVE FLAG ARGUMENT,"function setDimension(name, value) {
+  if (name === “height”) {
+    this._height = value;
+    return;
+  }
+  if (name === “width”) {
+    this._width = value;
+    return;
+  }
+}","function setHeight(value) {this._height = value;}
+function setWidth (value) {this._width = value;}",Context,"```java
+public void setDimension(String name, int value) {
+    switch (name) {
+        case ""height"":
+            this._height = value;
+            break;
+        case ""width"":
+            this._width = value;
+            break;
+        default:
+            throw new IllegalArgumentException(""Invalid dimension name: "" + name);
+    }
+}
+```",1
+REMOVE FLAG ARGUMENT,"function setDimension(name, value) {
+  if (name === “height”) {
+    this._height = value;
+    return;
+  }
+  if (name === “width”) {
+    this._width = value;
+    return;
+  }
+}","function setHeight(value) {this._height = value;}
+function setWidth (value) {this._width = value;}",Rules,"```javascript
+function setHeight(value) {
+  this._height = value;
+}
+
+function setWidth(value) {
+  this._width = value;
+}
+```",1
+REPLACE PARAMETER WITH QUERY,"availableVacation(anEmployee, anEmployee.grade);
+
+function availableVacation(anEmployee, grade) {
+  // calculate vacation...","availableVacation(anEmployee)
+
+function availableVacation(anEmployee) {
+  const grade = anEmployee.grade;
+  // calculate vacation...",ZeroShot,"```java
+availableVacation(anEmployee);
+
+function availableVacation(anEmployee) {
+  int grade = anEmployee.grade;
+  // calculate vacation...
+}
+```",1
+REPLACE PARAMETER WITH QUERY,"availableVacation(anEmployee, anEmployee.grade);
+
+function availableVacation(anEmployee, grade) {
+  // calculate vacation...","availableVacation(anEmployee)
+
+function availableVacation(anEmployee) {
+  const grade = anEmployee.grade;
+  // calculate vacation...",Instruc,"```java
+function availableVacation(anEmployee) {
+  int grade = anEmployee.getGrade();
+  // calculate vacation...
+}
+```",1
+REPLACE PARAMETER WITH QUERY,"availableVacation(anEmployee, anEmployee.grade);
+
+function availableVacation(anEmployee, grade) {
+  // calculate vacation...","availableVacation(anEmployee)
+
+function availableVacation(anEmployee) {
+  const grade = anEmployee.grade;
+  // calculate vacation...",Context,"```java
+public class Employee {
+    private String name;
+    private int grade;
+
+    public Employee(String name, int grade) {
+        this.name = name;
+        this.grade = grade;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class VacationCalculator {
+    public int availableVacation(Employee employee) {
+        return calculateVacation(employee.getGrade());
+    }
+
+    private int calculateVacation(int grade) {
+        // Implementation of vacation calculation based on grade
+        switch (grade) {
+            case 1:
+                return 10; // Example for grade 1
+            case 2:
+                return 15; // Example for grade 2
+            case 3:
+                return 20; // Example for grade 3
+            default:
+                return 0;  // Default case for unspecified grades
+        }
+    }
+}
+```",1
+REPLACE PARAMETER WITH QUERY,"availableVacation(anEmployee, anEmployee.grade);
+
+function availableVacation(anEmployee, grade) {
+  // calculate vacation...","availableVacation(anEmployee)
+
+function availableVacation(anEmployee) {
+  const grade = anEmployee.grade;
+  // calculate vacation...",Rules,"```java
+availableVacation(anEmployee);
+
+function availableVacation(anEmployee) {
+    // calculate vacation using anEmployee.grade
+}
+```",1
+REPLACE COMMAND WITH FUNCTION,"class ChargeCalculator {
+  constructor (customer, usage){
+    this._customer = customer;
+    this._usage = usage;
+  }
+  execute() {
+    return this._customer.rate * this._usage;
+  }
+}","function charge(customer, usage) {
+  return customer.rate * usage;
+}",ZeroShot,"```java
+public class ChargeCalculator {
+    private Customer customer;
+    private double usage;
+
+    public ChargeCalculator(Customer customer, double usage) {
+        this.customer = customer;
+        this.usage = usage;
+    }
+
+    public double execute() {
+        return calculateCharge();
+    }
+
+    private double calculateCharge() {
+        return customer.getRate() * usage;
+    }
+}
+```",1
+REPLACE COMMAND WITH FUNCTION,"class ChargeCalculator {
+  constructor (customer, usage){
+    this._customer = customer;
+    this._usage = usage;
+  }
+  execute() {
+    return this._customer.rate * this._usage;
+  }
+}","function charge(customer, usage) {
+  return customer.rate * usage;
+}",Instruc,"```java
+class ChargeCalculator {
+  private Customer customer;
+  private int usage;
+
+  public ChargeCalculator(Customer customer, int usage) {
+    this.customer = customer;
+    this.usage = usage;
+  }
+
+  public double calculateCharge() {
+    return calculateRate(customer, usage);
+  }
+
+  private double calculateRate(Customer customer, int usage) {
+    return customer.getRate() * usage;
+  }
+}
+```",1
+REPLACE COMMAND WITH FUNCTION,"class ChargeCalculator {
+  constructor (customer, usage){
+    this._customer = customer;
+    this._usage = usage;
+  }
+  execute() {
+    return this._customer.rate * this._usage;
+  }
+}","function charge(customer, usage) {
+  return customer.rate * usage;
+}",Context,"```java
+class ChargeCalculator {
+    private Customer customer;
+    private double usage;
+
+    public ChargeCalculator(Customer customer, double usage) {
+        this.customer = customer;
+        this.usage = usage;
+    }
+
+    public double execute() {
+        return customer.getRate() * usage;
+    }
+}
+```",1
+CHANGE FUNCTION DECLARATION,function circum(radius) {...},function circumference(radius) {...},ZeroShot,"```java
+public double circum(double radius) {
+    // Implementation goes here
+}
+```",1
+CHANGE FUNCTION DECLARATION,function circum(radius) {...},function circumference(radius) {...},Instruc,"```java
+public double circum(double radius) {
+    return 2 * Math.PI * radius;
+}
+```",1
+CHANGE FUNCTION DECLARATION,function circum(radius) {...},function circumference(radius) {...},Context,"```java
+public class Circle {
+
+    public static double calculateCircumference(double radius) {
+        return 2 * Math.PI * radius;
+    }
+}
+```",1
+CHANGE FUNCTION DECLARATION,function circum(radius) {...},function circumference(radius) {...},Rules,"```java
+public double circum(double radius) {
+    // function body
+}
+```",1
+RENAME FIELD,"class Organization {
+  get name() {...}
+}","class Organization {
+  get title() {...}
+}",ZeroShot,"```java
+class Organization {
+    private String organizationName;
+
+    public String getOrganizationName() {
+        return organizationName;
+    }
+}
+```",1
+RENAME FIELD,"class Organization {
+  get name() {...}
+}","class Organization {
+  get title() {...}
+}",Instruc,"```java
+class Organization {
+    private String organizationName;
+
+    public String getOrganizationName() {
+        return organizationName;
+    }
+
+    // Other methods and constructor can be defined as needed
+}
+```",1
+RENAME FIELD,"class Organization {
+  get name() {...}
+}","class Organization {
+  get title() {...}
+}",Context,"```java
+class Organization {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```",1
+REPLACE INLINE CODE WITH FUNCTION CALL,"let appliesToMass = false;
+for(const s of states) {
+    if (s === “MA”) appliesToMass = true;
+}",appliesToMass = states.includes(“MA”);,ZeroShot,"```java
+boolean appliesToMass = checkAppliesToMass(states);
+
+private boolean checkAppliesToMass(String[] states) {
+    for (String s : states) {
+        if (s.equals(""MA"")) {
+            return true;
+        }
+    }
+    return false;
+}
+```",1
+REPLACE INLINE CODE WITH FUNCTION CALL,"let appliesToMass = false;
+for(const s of states) {
+    if (s === “MA”) appliesToMass = true;
+}",appliesToMass = states.includes(“MA”);,Instruc,"```java
+boolean appliesToMass = false;
+for (String s : states) {
+    if (s.equals(""MA"")) {
+        appliesToMass = Test();
+        break;
+    }
+}
+```",0
+REPLACE INLINE CODE WITH FUNCTION CALL,"let appliesToMass = false;
+for(const s of states) {
+    if (s === “MA”) appliesToMass = true;
+}",appliesToMass = states.includes(“MA”);,Context,"```java
+boolean appliesToMass = Arrays.asList(states).contains(""MA"");
+```",1
+MOVE FUNCTION,"class Account {
+    get overdraftCharge() {...}","class AccountType {
+    get overdraftCharge() {...}",ZeroShot,"```java
+class Account {
+    private double overdraftAmount;
+
+    public double getOverdraftCharge() {
+        return calculateOverdraftCharge();
+    }
+
+    private double calculateOverdraftCharge() {
+        // Calculation logic for overdraft charge goes here
+        return overdraftAmount; // Placeholder logic
+    }
+}
+```",1
+MOVE FUNCTION,"class Account {
+    get overdraftCharge() {...}","class AccountType {
+    get overdraftCharge() {...}",Instruc,"```java
+class Account {
+    public double overdraftCharge() {
+        // implementation...
+    }
+}
+
+class PremiumAccount extends Account {
+    @Override
+    public double overdraftCharge() {
+        // implementation for PremiumAccount...
+    }
+}
+```",1
+MOVE FUNCTION,"class Account {
+    get overdraftCharge() {...}","class AccountType {
+    get overdraftCharge() {...}",Context,"```java
+class Account {
+    public double getOverdraftCharge() {
+        // Implementation of overdraft charge calculation
+    }
+}
+```",1
+MOVE FUNCTION,"class Account {
+    get overdraftCharge() {...}","class AccountType {
+    get overdraftCharge() {...}",Rules,"```java
+class Account {
+    get overdraftCharge() {...}
+}
+
+class Customer {
+    get overdraftCharge() {...}
+}
+```",0
+SPLIT VARIABLE,"let temp = 2 * (height + width);
+console.log(temp);
+temp = height * width;
+console.log(temp);","const perimeter = 2 * (height + width);
+console.log(perimeter);
+const area = height * width;
+console.log(area);",ZeroShot,"```java
+int perimeter = 2 * (height + width);
+System.out.println(perimeter);
+int area = height * width;
+System.out.println(area);
+```",1
+SPLIT VARIABLE,"let temp = 2 * (height + width);
+console.log(temp);
+temp = height * width;
+console.log(temp);","const perimeter = 2 * (height + width);
+console.log(perimeter);
+const area = height * width;
+console.log(area);",Instruc,"```java
+let areaPerimeter = 2 * (height + width);
+console.log(areaPerimeter);
+let area = height * width;
+console.log(area);
+```",1
+SPLIT VARIABLE,"let temp = 2 * (height + width);
+console.log(temp);
+temp = height * width;
+console.log(temp);","const perimeter = 2 * (height + width);
+console.log(perimeter);
+const area = height * width;
+console.log(area);",Context,"```java
+int perimeter = 2 * (height + width);
+System.out.println(perimeter);
+
+int area = height * width;
+System.out.println(area);
+```",1
+SPLIT VARIABLE,"let temp = 2 * (height + width);
+console.log(temp);
+temp = height * width;
+console.log(temp);","const perimeter = 2 * (height + width);
+console.log(perimeter);
+const area = height * width;
+console.log(area);",Rules,"```java
+int temp1 = 2 * (height + width);
+System.out.println(temp1);
+
+int temp2 = height * width;
+System.out.println(temp2);
+```",1
+REPLACE QUERY WITH PARAMETER,"targetTemperature(aPlan)
+
+function targetTemperature(aPlan) {
+    currentTemperature = thermostat.currentTemperature;
+    // rest of function...
+}","targetTemperature(aPlan, thermostat.currentTemperature)
+
+function targetTemperature(aPlan, currentTemperature) {
+  // rest of function...
+}",ZeroShot,"```java
+public void targetTemperature(Plan aPlan) {
+    double currentTemperature = thermostat.getCurrentTemperature();
+    // rest of function...
+}
+```",1
+REPLACE QUERY WITH PARAMETER,"targetTemperature(aPlan)
+
+function targetTemperature(aPlan) {
+    currentTemperature = thermostat.currentTemperature;
+    // rest of function...
+}","targetTemperature(aPlan, thermostat.currentTemperature)
+
+function targetTemperature(aPlan, currentTemperature) {
+  // rest of function...
+}",Instruc,"```java
+public double targetTemperature(Plan aPlan) {
+    return calculateTargetTemperature(thermostat.currentTemperature, aPlan);
+}
+
+private double calculateTargetTemperature(double currentTemperature, Plan aPlan) {
+    // rest of function...
+}
+```",1
+REPLACE QUERY WITH PARAMETER,"targetTemperature(aPlan)
+
+function targetTemperature(aPlan) {
+    currentTemperature = thermostat.currentTemperature;
+    // rest of function...
+}","targetTemperature(aPlan, thermostat.currentTemperature)
+
+function targetTemperature(aPlan, currentTemperature) {
+  // rest of function...
+}",Context,"```java
+public void targetTemperature(Plan aPlan) {
+    double currentTemperature = thermostat.getCurrentTemperature();
+    // rest of function...
+}
+```",1
+INTRODUCE SPECIAL CASE,if (aCustomer === “unknown”) customerName = “occupant”;,"class UnknownCustomer {
+    get name() {return “occupant”;}",ZeroShot,"```java
+if (isUnknownCustomer(aCustomer)) {
+    customerName = ""occupant"";
+}
+
+private boolean isUnknownCustomer(String customer) {
+    return ""unknown"".equals(customer);
+}
+```",1
+INTRODUCE SPECIAL CASE,if (aCustomer === “unknown”) customerName = “occupant”;,"class UnknownCustomer {
+    get name() {return “occupant”;}",Instruc,"```java
+class Customer {
+    private String name;
+
+    public Customer(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isSpecialCase() {
+        return ""unknown"".equals(name);
+    }
+}
+
+class SpecialCaseCustomer extends Customer {
+    public SpecialCaseCustomer() {
+        super(""occupant"");
+    }
+
+    @Override
+    public boolean isSpecialCase() {
+        return true;
+    }
+}
+
+public class CustomerHandler {
+    public String getCustomerName(Customer aCustomer) {
+        if (aCustomer.isSpecialCase()) {
+            return new SpecialCaseCustomer().getName();
+        } else {
+            return aCustomer.getName();
+        }
+    }
+}
+```",1
+INTRODUCE SPECIAL CASE,if (aCustomer === “unknown”) customerName = “occupant”;,"class UnknownCustomer {
+    get name() {return “occupant”;}",Context,"```java
+customerName = ""unknown"".equals(aCustomer) ? ""occupant"" : customerName;
+```",0
+INTRODUCE SPECIAL CASE,if (aCustomer === “unknown”) customerName = “occupant”;,"class UnknownCustomer {
+    get name() {return “occupant”;}",Rules,"```java
+customerName = Customer.NULL.getName();
+```",1
+REMOVE DEAD CODE,"if(false) {
+  doSomethingThatUsedToMatter();
+}",,ZeroShot,"```java
+```",1
+REMOVE DEAD CODE,"if(false) {
+  doSomethingThatUsedToMatter();
+}",,Instruc,"```java
+// No code needed as the condition is always false.
+```",1
+REMOVE DEAD CODE,"if(false) {
+  doSomethingThatUsedToMatter();
+}",,Context,"```java
+// No operation needed as the condition is always false
+```",1
+RENAME VARIABLE,let a = height * width;,let area = height * width;,ZeroShot,"```java
+let area = height * width;
+```",1
+RENAME VARIABLE,let a = height * width;,let area = height * width;,Instruc,"```java
+int area = height * width;
+```",1
+RENAME VARIABLE,let a = height * width;,let area = height * width;,Context,"```java
+int area = height * width;
+```",1
+REPLACE TYPE CODE WITH SUBCLASSES,"function createEmployee(name, type) {
+  return new Employee(name, type);
+}","function createEmployee(name, type) {
+  switch (type) {
+    case “engineer”: return new Engineer(name);
+    case “salesman”: return new Salesman(name);
+    case “manager”:  return new Manager (name);
+  }",ZeroShot,"```java
+abstract class Employee {
+    protected String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public abstract String getType();
+}
+
+class FullTimeEmployee extends Employee {
+    public FullTimeEmployee(String name) {
+        super(name);
+    }
+
+    @Override
+    public String getType() {
+        return ""Full-Time"";
+    }
+}
+
+class PartTimeEmployee extends Employee {
+    public PartTimeEmployee(String name) {
+        super(name);
+    }
+
+    @Override
+    public String getType() {
+        return ""Part-Time"";
+    }
+}
+
+class ContractEmployee extends Employee {
+    public ContractEmployee(String name) {
+        super(name);
+    }
+
+    @Override
+    public String getType() {
+        return ""Contract"";
+    }
+}
+
+public class EmployeeFactory {
+    public static Employee createEmployee(String name, String type) {
+        switch (type) {
+            case ""FullTime"":
+                return new FullTimeEmployee(name);
+            case ""PartTime"":
+                return new PartTimeEmployee(name);
+            case ""Contract"":
+                return new ContractEmployee(name);
+            default:
+                throw new IllegalArgumentException(""Unknown employee type: "" + type);
+        }
+    }
+}
+```",1
+REPLACE TYPE CODE WITH SUBCLASSES,"function createEmployee(name, type) {
+  return new Employee(name, type);
+}","function createEmployee(name, type) {
+  switch (type) {
+    case “engineer”: return new Engineer(name);
+    case “salesman”: return new Salesman(name);
+    case “manager”:  return new Manager (name);
+  }",Instruc,"```java
+abstract class Employee {
+    protected String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public abstract String getType();
+}
+
+class FullTimeEmployee extends Employee {
+    public FullTimeEmployee(String name) {
+        super(name);
+    }
+
+    @Override
+    public String getType() {
+        return ""FullTime"";
+    }
+}
+
+class PartTimeEmployee extends Employee {
+    public PartTimeEmployee(String name) {
+        super(name);
+    }
+
+    @Override
+    public String getType() {
+        return ""PartTime"";
+    }
+}
+
+class ContractorEmployee extends Employee {
+    public ContractorEmployee(String name) {
+        super(name);
+    }
+
+    @Override
+    public String getType() {
+        return ""Contractor"";
+    }
+}
+
+class EmployeeFactory {
+    public static Employee createEmployee(String name, String type) {
+        switch (type) {
+            case ""FullTime"":
+                return new FullTimeEmployee(name);
+            case ""PartTime"":
+                return new PartTimeEmployee(name);
+            case ""Contractor"":
+                return new ContractorEmployee(name);
+            default:
+                throw new IllegalArgumentException(""Unknown employee type"");
+        }
+    }
+}
+```",1
+REPLACE TYPE CODE WITH SUBCLASSES,"function createEmployee(name, type) {
+  return new Employee(name, type);
+}","function createEmployee(name, type) {
+  switch (type) {
+    case “engineer”: return new Engineer(name);
+    case “salesman”: return new Salesman(name);
+    case “manager”:  return new Manager (name);
+  }",Context,"```java
+public Employee createEmployee(String name, String type) {
+    return new Employee(name, type);
+}
+```",0
+REPLACE TYPE CODE WITH SUBCLASSES,"function createEmployee(name, type) {
+  return new Employee(name, type);
+}","function createEmployee(name, type) {
+  switch (type) {
+    case “engineer”: return new Engineer(name);
+    case “salesman”: return new Salesman(name);
+    case “manager”:  return new Manager (name);
+  }",Rules,"```java
+abstract class Employee {
+    String name;
+
+    Employee(String name) {
+        this.name = name;
+    }
+}
+
+class FullTimeEmployee extends Employee {
+    FullTimeEmployee(String name) {
+        super(name);
+    }
+}
+
+class PartTimeEmployee extends Employee {
+    PartTimeEmployee(String name) {
+        super(name);
+    }
+}
+
+class EmployeeFactory {
+    public static Employee createEmployee(String name, String type) {
+        if (type.equals(""FullTime"")) {
+            return new FullTimeEmployee(name);
+        } else if (type.equals(""PartTime"")) {
+            return new PartTimeEmployee(name);
+        }
+        throw new IllegalArgumentException(""Unknown employee type"");
+    }
+}
+```",1
+INLINE FUNCTION,"function getRating(driver) {
+  return moreThanFiveLateDeliveries(driver) ? 2 : 1;
+}
+
+function moreThanFiveLateDeliveries(driver) {
+  return driver.numberOfLateDeliveries > 5;
+}","function getRating(driver) {
+  return (driver.numberOfLateDeliveries > 5) ? 2 : 1;
+}",ZeroShot,"```java
+function getRating(driver) {
+    return driver.numberOfLateDeliveries > 5 ? 2 : 1;
+}
+```",1
+INLINE FUNCTION,"function getRating(driver) {
+  return moreThanFiveLateDeliveries(driver) ? 2 : 1;
+}
+
+function moreThanFiveLateDeliveries(driver) {
+  return driver.numberOfLateDeliveries > 5;
+}","function getRating(driver) {
+  return (driver.numberOfLateDeliveries > 5) ? 2 : 1;
+}",Instruc,"```java
+public int getRating(Driver driver) {
+    return driver.numberOfLateDeliveries > 5 ? 2 : 1;
+}
+```",1
+INLINE FUNCTION,"function getRating(driver) {
+  return moreThanFiveLateDeliveries(driver) ? 2 : 1;
+}
+
+function moreThanFiveLateDeliveries(driver) {
+  return driver.numberOfLateDeliveries > 5;
+}","function getRating(driver) {
+  return (driver.numberOfLateDeliveries > 5) ? 2 : 1;
+}",Context,"```java
+public class Driver {
+    private int numberOfLateDeliveries;
+
+    public Driver(int numberOfLateDeliveries) {
+        this.numberOfLateDeliveries = numberOfLateDeliveries;
+    }
+
+    public int getRating() {
+        return hasMoreThanFiveLateDeliveries() ? 2 : 1;
+    }
+
+    private boolean hasMoreThanFiveLateDeliveries() {
+        return this.numberOfLateDeliveries > 5;
+    }
+}
+```",1
+INLINE FUNCTION,"function getRating(driver) {
+  return moreThanFiveLateDeliveries(driver) ? 2 : 1;
+}
+
+function moreThanFiveLateDeliveries(driver) {
+  return driver.numberOfLateDeliveries > 5;
+}","function getRating(driver) {
+  return (driver.numberOfLateDeliveries > 5) ? 2 : 1;
+}",Rules,"```java
+function getRating(driver) {
+  return driver.numberOfLateDeliveries > 5 ? 2 : 1;
+}
+```",1
+COMBINE FUNCTIONS INTO CLASS,"function base(aReading) {...}
+function taxableCharge(aReading) {...}
+function calculateBaseCharge(aReading) {...}","class Reading {
+  base() {...}
+  taxableCharge() {...}
+  calculateBaseCharge() {...}
+}",ZeroShot,"```java
+class ChargeCalculator {
+    private double chargeRate;
+
+    public ChargeCalculator(double chargeRate) {
+        this.chargeRate = chargeRate;
+    }
+
+    public double calculateCharge(Reading aReading) {
+        return base(aReading) + taxableCharge(aReading);
+    }
+
+    private double base(Reading aReading) {
+        return aReading.getUsage() * chargeRate;
+    }
+
+    private double taxableCharge(Reading aReading) {
+        return Math.max(0, base(aReading) - 100);
+    }
+}
+
+class Reading {
+    private double usage;
+
+    public Reading(double usage) {
+        this.usage = usage;
+    }
+
+    public double getUsage() {
+        return usage;
+    }
+}
+```",1
+COMBINE FUNCTIONS INTO CLASS,"function base(aReading) {...}
+function taxableCharge(aReading) {...}
+function calculateBaseCharge(aReading) {...}","class Reading {
+  base() {...}
+  taxableCharge() {...}
+  calculateBaseCharge() {...}
+}",Instruc,"```java
+class Reading {
+    private double value;
+
+    public Reading(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public double base() {
+        // Logic for base
+    }
+
+    public double taxableCharge() {
+        // Logic for taxableCharge
+    }
+
+    public double calculateBaseCharge() {
+        // Logic for calculateBaseCharge
+    }
+}
+```",1
+COMBINE FUNCTIONS INTO CLASS,"function base(aReading) {...}
+function taxableCharge(aReading) {...}
+function calculateBaseCharge(aReading) {...}","class Reading {
+  base() {...}
+  taxableCharge() {...}
+  calculateBaseCharge() {...}
+}",Context,"```java
+class ChargeCalculator {
+    
+    public double calculateBaseCharge(Reading aReading) {
+        return base(aReading) + taxableCharge(aReading);
+    }
+
+    private double base(Reading aReading) {
+        return aReading.getBaseAmount();
+    }
+
+    private double taxableCharge(Reading aReading) {
+        return Math.max(0, aReading.getTaxableAmount());
+    }
+}
+
+class Reading {
+    private double baseAmount;
+    private double taxableAmount;
+
+    public Reading(double baseAmount, double taxableAmount) {
+        this.baseAmount = baseAmount;
+        this.taxableAmount = taxableAmount;
+    }
+
+    public double getBaseAmount() {
+        return baseAmount;
+    }
+
+    public double getTaxableAmount() {
+        return taxableAmount;
+    }
+}
+```",1
+MOVE FIELD,"class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this._discountRate;}","class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this.plan.discountRate;}",ZeroShot,"```java
+class Customer {
+    private Plan plan;
+    private double discountRate;
+
+    public Plan getPlan() {
+        return plan;
+    }
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
+}
+```",1
+MOVE FIELD,"class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this._discountRate;}","class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this.plan.discountRate;}",Instruc,"```java
+class Customer {
+    private Plan plan;  // Assumed Plan is a class representing the customer's plan
+    private double discountRate;
+
+    public Plan getPlan() {
+        return plan;
+    }
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
+}
+```",1
+MOVE FIELD,"class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this._discountRate;}","class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this.plan.discountRate;}",Context,"```java
+class Customer {
+    private Plan plan;
+    private double discountRate;
+
+    public Plan getPlan() {
+        return plan;
+    }
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
+}
+```",1
+MOVE FIELD,"class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this._discountRate;}","class Customer {
+  get plan() {return this._plan;}
+  get discountRate() {return this.plan.discountRate;}",Rules,"```java
+class Customer {
+  private Plan _plan;
+  private double _discountRate;
+
+  public Plan getPlan() {
+    return _plan;
+  }
+
+  public double getDiscountRate() {
+    return _discountRate;
+  }
+}
+
+class Order {
+  private Plan _plan;
+  private double _discountRate;
+
+  public Plan getPlan() {
+    return _plan;
+  }
+
+  public double getDiscountRate() {
+    return _discountRate;
+  }
+}
+```",0
+REPLACE TEMP WITH QUERY,"const basePrice = this._quantity * this._itemPrice;
+if (basePrice > 1000)
+  return basePrice * 0.95;
+else
+  return basePrice * 0.98;","get basePrice() {this._quantity * this._itemPrice;}
+
+// ...
+
+if (this.basePrice > 1000)
+  return this.basePrice * 0.95;
+else
+  return this.basePrice * 0.98;",ZeroShot,"```java
+double basePrice = this._quantity * this._itemPrice;
+double discountRate = (basePrice > 1000) ? 0.95 : 0.98;
+return basePrice * discountRate;
+```",1
+REPLACE TEMP WITH QUERY,"const basePrice = this._quantity * this._itemPrice;
+if (basePrice > 1000)
+  return basePrice * 0.95;
+else
+  return basePrice * 0.98;","get basePrice() {this._quantity * this._itemPrice;}
+
+// ...
+
+if (this.basePrice > 1000)
+  return this.basePrice * 0.95;
+else
+  return this.basePrice * 0.98;",Instruc,"```java
+public double calculateDiscountedPrice() {
+    double basePrice = calculateBasePrice();
+    return basePrice > 1000 ? basePrice * 0.95 : basePrice * 0.98;
+}
+
+private double calculateBasePrice() {
+    return this._quantity * this._itemPrice;
+}
+```",1
+REPLACE TEMP WITH QUERY,"const basePrice = this._quantity * this._itemPrice;
+if (basePrice > 1000)
+  return basePrice * 0.95;
+else
+  return basePrice * 0.98;","get basePrice() {this._quantity * this._itemPrice;}
+
+// ...
+
+if (this.basePrice > 1000)
+  return this.basePrice * 0.95;
+else
+  return this.basePrice * 0.98;",Context,"```java
+double calculatePrice(int quantity, double itemPrice) {
+    double basePrice = quantity * itemPrice;
+    double discount = (basePrice > 1000) ? 0.95 : 0.98;
+    return basePrice * discount;
+}
+```",1
+REPLACE TEMP WITH QUERY,"const basePrice = this._quantity * this._itemPrice;
+if (basePrice > 1000)
+  return basePrice * 0.95;
+else
+  return basePrice * 0.98;","get basePrice() {this._quantity * this._itemPrice;}
+
+// ...
+
+if (this.basePrice > 1000)
+  return this.basePrice * 0.95;
+else
+  return this.basePrice * 0.98;",Rules,"```java
+if (this._quantity * this._itemPrice > 1000) {
+  return this._quantity * this._itemPrice * 0.95;
+} else {
+  return this._quantity * this._itemPrice * 0.98;
+}
+```",0
+CHANGE VALUE TO REFERENCE,let customer = new Customer(customerData);,let customer = customerRepository.get(customerData.id);,ZeroShot,"```java
+Customer customer = new Customer(customerData);
+```",0
+CHANGE VALUE TO REFERENCE,let customer = new Customer(customerData);,let customer = customerRepository.get(customerData.id);,Instruc,"```java
+public class CustomerRepository {
+    // Assume this class has methods to manage Customer instances
+    public Customer findCustomer(CustomerData customerData) {
+        // Logic to find or create a Customer based on customerData
+    }
+}
+
+public class Customer {
+    // Customer properties and methods
+}
+
+public class HostObject {
+    private Customer customer;
+
+    public HostObject(CustomerData customerData, CustomerRepository repository) {
+        this.customer = repository.findCustomer(customerData);
+    }
+}
+```",1
+CHANGE VALUE TO REFERENCE,let customer = new Customer(customerData);,let customer = customerRepository.get(customerData.id);,Context,"```java
+Customer customer = new Customer(customerData);
+```",0
+CHANGE VALUE TO REFERENCE,let customer = new Customer(customerData);,let customer = customerRepository.get(customerData.id);,Rules,"```java
+Customer customer = CustomerFactory.createCustomer(customerData);
+```",1
+MOVE STATEMENTS INTO FUNCTION,"result.push(`<p>title: ${person.photo.title}</p>`);
+result.concat(photoData(person.photo));
+
+function photoData(aPhoto) {
+  return [
+    `<p>location: ${aPhoto.location}</p>`,
+    `<p>date: ${aPhoto.date.toDateString()}</p>`,
+  ];
+}","result.concat(photoData(person.photo));
+
+function photoData(aPhoto) {
+  return [
+    `<p>title: ${aPhoto.title}</p>`,
+    `<p>location: ${aPhoto.location}</p>`,
+    `<p>date: ${aPhoto.date.toDateString()}</p>`,
+  ];
+}",ZeroShot,"```java
+public class PhotoProcessor {
+    public void processPerson(Person person, List<String> result) {
+        result.add(String.format(""<p>title: %s</p>"", person.photo.title));
+        result.addAll(photoData(person.photo));
+    }
+
+    private List<String> photoData(Photo aPhoto) {
+        List<String> photoDetails = new ArrayList<>();
+        photoDetails.add(String.format(""<p>location: %s</p>"", aPhoto.location));
+        photoDetails.add(String.format(""<p>date: %s</p>"", aPhoto.date.toString()));
+        return photoDetails;
+    }
+}
+```",1
+MOVE STATEMENTS INTO FUNCTION,"result.push(`<p>title: ${person.photo.title}</p>`);
+result.concat(photoData(person.photo));
+
+function photoData(aPhoto) {
+  return [
+    `<p>location: ${aPhoto.location}</p>`,
+    `<p>date: ${aPhoto.date.toDateString()}</p>`,
+  ];
+}","result.concat(photoData(person.photo));
+
+function photoData(aPhoto) {
+  return [
+    `<p>title: ${aPhoto.title}</p>`,
+    `<p>location: ${aPhoto.location}</p>`,
+    `<p>date: ${aPhoto.date.toDateString()}</p>`,
+  ];
+}",Instruc,"```javascript
+function generatePhotoHTML(person) {
+  const result = [];
+  result.push(`<p>title: ${person.photo.title}</p>`);
+  result.concat(photoData(person.photo));
+  return result;
+}
+
+function photoData(aPhoto) {
+  return [
+    `<p>location: ${aPhoto.location}</p>`,
+    `<p>date: ${aPhoto.date.toDateString()}</p>`,
+  ];
+}
+```",0
+MOVE STATEMENTS INTO FUNCTION,"result.push(`<p>title: ${person.photo.title}</p>`);
+result.concat(photoData(person.photo));
+
+function photoData(aPhoto) {
+  return [
+    `<p>location: ${aPhoto.location}</p>`,
+    `<p>date: ${aPhoto.date.toDateString()}</p>`,
+  ];
+}","result.concat(photoData(person.photo));
+
+function photoData(aPhoto) {
+  return [
+    `<p>title: ${aPhoto.title}</p>`,
+    `<p>location: ${aPhoto.location}</p>`,
+    `<p>date: ${aPhoto.date.toDateString()}</p>`,
+  ];
+}",Context,"```java
+result.push(formatPhotoTitle(person.photo));
+result.concat(getPhotoDetails(person.photo));
+
+private String formatPhotoTitle(Photo photo) {
+    return String.format(""<p>title: %s</p>"", photo.title);
+}
+
+private List<String> getPhotoDetails(Photo photo) {
+    return Arrays.asList(
+        String.format(""<p>location: %s</p>"", photo.location),
+        String.format(""<p>date: %s</p>"", photo.date.toDateString())
+    );
+}
+```",1
+SEPARATE QUERY FROM MODIFIER,"function getTotalOutstandingAndSendBill() {
+  const result = customer.invoices.reduce((total, each) => each.amount + total, 0);
+  sendBill();
+  return result;
+}","function totalOutstanding() {
+  return customer.invoices.reduce((total, each) => each.amount + total, 0);  
+}
+function sendBill() {
+  emailGateway.send(formatBill(customer));
+}",ZeroShot,"```java
+public class BillingService {
+    private Customer customer;
+
+    public BillingService(Customer customer) {
+        this.customer = customer;
+    }
+
+    public int getTotalOutstanding() {
+        return calculateTotalOutstanding();
+    }
+
+    public void sendBill() {
+        // Logic to send the bill
+    }
+
+    private int calculateTotalOutstanding() {
+        return customer.getInvoices().stream()
+                .mapToInt(Invoice::getAmount)
+                .sum();
+    }
+
+    public void processBilling() {
+        int totalOutstanding = getTotalOutstanding();
+        sendBill();
+    }
+}
+```",1
+SEPARATE QUERY FROM MODIFIER,"function getTotalOutstandingAndSendBill() {
+  const result = customer.invoices.reduce((total, each) => each.amount + total, 0);
+  sendBill();
+  return result;
+}","function totalOutstanding() {
+  return customer.invoices.reduce((total, each) => each.amount + total, 0);  
+}
+function sendBill() {
+  emailGateway.send(formatBill(customer));
+}",Instruc,"```java
+public class CustomerBilling {
+    
+    public int getTotalOutstanding() {
+        return customer.getInvoices().stream()
+                .mapToInt(Invoice::getAmount)
+                .sum();
+    }
+    
+    public void getTotalOutstandingAndSendBill() {
+        int totalOutstanding = getTotalOutstanding();
+        sendBill();
+    }
+    
+    private void sendBill() {
+        // Logic to send the bill
+    }
+}
+```",1
+SEPARATE QUERY FROM MODIFIER,"function getTotalOutstandingAndSendBill() {
+  const result = customer.invoices.reduce((total, each) => each.amount + total, 0);
+  sendBill();
+  return result;
+}","function totalOutstanding() {
+  return customer.invoices.reduce((total, each) => each.amount + total, 0);  
+}
+function sendBill() {
+  emailGateway.send(formatBill(customer));
+}",Context,"```java
+public class BillingService {
+    private Customer customer;
+
+    public BillingService(Customer customer) {
+        this.customer = customer;
+    }
+
+    public double getTotalOutstandingAndSendBill() {
+        double totalOutstanding = calculateTotalOutstanding();
+        sendBill();
+        return totalOutstanding;
+    }
+
+    private double calculateTotalOutstanding() {
+        return customer.getInvoices().stream()
+                .mapToDouble(Invoice::getAmount)
+                .sum();
+    }
+
+    private void sendBill() {
+        // Implementation for sending the bill
+    }
+}
+```",1
+SEPARATE QUERY FROM MODIFIER,"function getTotalOutstandingAndSendBill() {
+  const result = customer.invoices.reduce((total, each) => each.amount + total, 0);
+  sendBill();
+  return result;
+}","function totalOutstanding() {
+  return customer.invoices.reduce((total, each) => each.amount + total, 0);  
+}
+function sendBill() {
+  emailGateway.send(formatBill(customer));
+}",Rules,"```javascript
+function getTotalOutstanding() {
+  return customer.invoices.reduce((total, each) => each.amount + total, 0);
+}
+
+function sendBill() {
+  // Implementation to send the bill
+}
+
+function getTotalOutstandingAndSendBill() {
+  const result = getTotalOutstanding();
+  sendBill();
+  return result;
+}
+```",1
+HIDE DELEGATE,manager = aPerson.department.manager;,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",ZeroShot,"```java
+class Person {
+    Department department;
+
+    public Manager getManager() {
+        return department.getManager();
+    }
+}
+
+class Department {
+    private Manager manager;
+
+    public Manager getManager() {
+        return manager;
+    }
+}
+
+class Manager {
+    // Manager class implementation
+}
+
+// Usage
+Person aPerson = new Person();
+Manager manager = aPerson.getManager();
+```",1
+HIDE DELEGATE,manager = aPerson.department.manager;,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",Instruc,"```java
+public class Department {
+    private Manager manager;
+
+    public Manager getManager() {
+        return manager;
+    }
+
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
+
+    // Delegating method to get manager's details
+    public String getManagerDetails() {
+        return manager.getDetails();
+    }
+}
+
+public class Person {
+    private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    // Adjusted method to access manager's details
+    public String getDepartmentManagerDetails() {
+        return department.getManagerDetails();
+    }
+}
+
+public class Manager {
+    private String name;
+
+    public String getDetails() {
+        return name;
+    }
+
+    // Other Manager methods...
+}
+```",1
+HIDE DELEGATE,manager = aPerson.department.manager;,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",Context,"```java
+Manager manager = aPerson.getDepartment().getManager();
+```",1
+HIDE DELEGATE,manager = aPerson.department.manager;,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",Rules,"```java
+manager = aPerson.department.manager;
+```",0
+PULL UP METHOD,"class Employee {...}
+
+class Salesman extends Employee {
+  get name() {...}
+}
+
+class Engineer extends Employee {
+  get name() {...}
+}","class Employee {
+  get name() {...}
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",ZeroShot,"```java
+class Employee {
+    public String getName() {
+        // common implementation
+    }
+}
+
+class Salesman extends Employee {
+    @Override
+    public String getName() {
+        // Salesman-specific implementation
+    }
+}
+
+class Engineer extends Employee {
+    @Override
+    public String getName() {
+        // Engineer-specific implementation
+    }
+}
+```",0
+PULL UP METHOD,"class Employee {...}
+
+class Salesman extends Employee {
+  get name() {...}
+}
+
+class Engineer extends Employee {
+  get name() {...}
+}","class Employee {
+  get name() {...}
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",Instruc,"```java
+class Employee {
+    public String getName() {
+        // Implementation specific to Employee
+        return """"; // Placeholder for actual implementation
+    }
+}
+
+class Salesman extends Employee {
+    @Override
+    public String getName() {
+        // Salesman specific implementation
+        return ""Salesman Name""; // Placeholder for actual implementation
+    }
+}
+
+class Engineer extends Employee {
+    @Override
+    public String getName() {
+        // Engineer specific implementation
+        return ""Engineer Name""; // Placeholder for actual implementation
+    }
+}
+```",1
+PULL UP METHOD,"class Employee {...}
+
+class Salesman extends Employee {
+  get name() {...}
+}
+
+class Engineer extends Employee {
+  get name() {...}
+}","class Employee {
+  get name() {...}
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",Context,"```java
+abstract class Employee {
+    public abstract String getName();
+}
+
+class Salesman extends Employee {
+    @Override
+    public String getName() {
+        // Implementation of getting the name for Salesman
+    }
+}
+
+class Engineer extends Employee {
+    @Override
+    public String getName() {
+        // Implementation of getting the name for Engineer
+    }
+}
+```",1
+PULL UP METHOD,"class Employee {...}
+
+class Salesman extends Employee {
+  get name() {...}
+}
+
+class Engineer extends Employee {
+  get name() {...}
+}","class Employee {
+  get name() {...}
+}
+
+class Salesman extends Employee {...}
+class Engineer extends Employee {...}",Rules,"```java
+class Employee {
+    public String getName() {
+        // common name retrieval logic
+    }
+}
+
+class Salesman extends Employee {
+    @Override
+    public String getName() {
+        // Salesman specific name retrieval logic
+    }
+}
+
+class Engineer extends Employee {
+    @Override
+    public String getName() {
+        // Engineer specific name retrieval logic
+    }
+}
+```",0
+SLIDE STATEMENTS,"const pricingPlan = retrievePricingPlan();
+const order = retreiveOrder();
+let charge;
+const chargePerUnit = pricingPlan.unit;","const pricingPlan = retrievePricingPlan();
+const chargePerUnit = pricingPlan.unit;
+const order = retreiveOrder();
+let charge;",ZeroShot,"```java
+PricingPlan pricingPlan = retrievePricingPlan();
+Order order = retrieveOrder();
+double charge;
+double chargePerUnit = pricingPlan.getUnit();
+```",1
+SLIDE STATEMENTS,"const pricingPlan = retrievePricingPlan();
+const order = retreiveOrder();
+let charge;
+const chargePerUnit = pricingPlan.unit;","const pricingPlan = retrievePricingPlan();
+const chargePerUnit = pricingPlan.unit;
+const order = retreiveOrder();
+let charge;",Instruc,"```javascript
+const pricingPlan = retrievePricingPlan();
+const chargePerUnit = pricingPlan.unit;
+const order = retreiveOrder();
+let charge;
+```",1
+SLIDE STATEMENTS,"const pricingPlan = retrievePricingPlan();
+const order = retreiveOrder();
+let charge;
+const chargePerUnit = pricingPlan.unit;","const pricingPlan = retrievePricingPlan();
+const chargePerUnit = pricingPlan.unit;
+const order = retreiveOrder();
+let charge;",Context,"```java
+PricingPlan pricingPlan = retrievePricingPlan();
+Order order = retrieveOrder();
+double charge = pricingPlan.getUnitCharge();
+```",1
+SLIDE STATEMENTS,"const pricingPlan = retrievePricingPlan();
+const order = retreiveOrder();
+let charge;
+const chargePerUnit = pricingPlan.unit;","const pricingPlan = retrievePricingPlan();
+const chargePerUnit = pricingPlan.unit;
+const order = retreiveOrder();
+let charge;",Rules,"```javascript
+const pricingPlan = retrievePricingPlan();
+const order = retrieveOrder();
+const chargePerUnit = pricingPlan.unit;
+let charge;
+```",1
+EXTRACT CLASS,"class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}","class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}",ZeroShot,"```java
+class Office {
+    private String areaCode;
+    private String number;
+
+    public Office(String areaCode, String number) {
+        this.areaCode = areaCode;
+        this.number = number;
+    }
+
+    public String getAreaCode() {
+        return areaCode;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+}
+
+class Person {
+    private Office office;
+
+    public Person(Office office) {
+        this.office = office;
+    }
+
+    public String getOfficeAreaCode() {
+        return office.getAreaCode();
+    }
+
+    public String getOfficeNumber() {
+        return office.getNumber();
+    }
+}
+```",1
+EXTRACT CLASS,"class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}","class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}",Instruc,"```java
+class Person {
+    private OfficeDetails officeDetails;
+
+    public Person(String officeAreaCode, String officeNumber) {
+        this.officeDetails = new OfficeDetails(officeAreaCode, officeNumber);
+    }
+
+    public String getOfficeAreaCode() {
+        return officeDetails.getOfficeAreaCode();
+    }
+
+    public String getOfficeNumber() {
+        return officeDetails.getOfficeNumber();
+    }
+}
+
+class OfficeDetails {
+    private String officeAreaCode;
+    private String officeNumber;
+
+    public OfficeDetails(String officeAreaCode, String officeNumber) {
+        this.officeAreaCode = officeAreaCode;
+        this.officeNumber = officeNumber;
+    }
+
+    public String getOfficeAreaCode() {
+        return officeAreaCode;
+    }
+
+    public String getOfficeNumber() {
+        return officeNumber;
+    }
+}
+```",1
+EXTRACT CLASS,"class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}","class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}",Context,"```java
+class Person {
+    private String officeAreaCode;
+    private String officeNumber;
+
+    public String getOfficeAreaCode() {
+        return officeAreaCode;
+    }
+
+    public String getOfficeNumber() {
+        return officeNumber;
+    }
+}
+```",0
+EXTRACT CLASS,"class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}","class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}",Rules,"```java
+class Person {
+    private String _officeAreaCode;
+    private String _officeNumber;
+
+    public String getOfficeAreaCode() {
+        return this._officeAreaCode;
+    }
+
+    public String getOfficeNumber() {
+        return this._officeNumber;
+    }
+}
+
+class Office {
+    private String areaCode;
+    private String number;
+
+    public String getAreaCode() {
+        return this.areaCode;
+    }
+
+    public String getNumber() {
+        return this.number;
+    }
+
+    public Office(String areaCode, String number) {
+        this.areaCode = areaCode;
+        this.number = number;
+    }
+}
+```",0
+CONSOLIDATE CONDITIONAL EXPRESSION,"if (anEmployee.seniority < 2) return 0;
+if (anEmployee.monthsDisabled > 12) return 0;
+if (anEmployee.isPartTime) return 0;","if (isNotEligibleForDisability()) return 0;
+
+function isNotEligibleForDisability() {
+return ((anEmployee.seniority < 2)
+        || (anEmployee.monthsDisabled > 12)
+        || (anEmployee.isPartTime));
+}",ZeroShot,"```java
+if (anEmployee.seniority < 2 || anEmployee.monthsDisabled > 12 || anEmployee.isPartTime) return 0;
+```",1
+CONSOLIDATE CONDITIONAL EXPRESSION,"if (anEmployee.seniority < 2) return 0;
+if (anEmployee.monthsDisabled > 12) return 0;
+if (anEmployee.isPartTime) return 0;","if (isNotEligibleForDisability()) return 0;
+
+function isNotEligibleForDisability() {
+return ((anEmployee.seniority < 2)
+        || (anEmployee.monthsDisabled > 12)
+        || (anEmployee.isPartTime));
+}",Instruc,"```java
+if (anEmployee.seniority < 2 || anEmployee.monthsDisabled > 12 || anEmployee.isPartTime) {
+    return 0;
+}
+```",1
+CONSOLIDATE CONDITIONAL EXPRESSION,"if (anEmployee.seniority < 2) return 0;
+if (anEmployee.monthsDisabled > 12) return 0;
+if (anEmployee.isPartTime) return 0;","if (isNotEligibleForDisability()) return 0;
+
+function isNotEligibleForDisability() {
+return ((anEmployee.seniority < 2)
+        || (anEmployee.monthsDisabled > 12)
+        || (anEmployee.isPartTime));
+}",Context,"```java
+if (isIneligible(anEmployee)) return 0;
+
+private boolean isIneligible(Employee anEmployee) {
+    return anEmployee.seniority < 2 || 
+           anEmployee.monthsDisabled > 12 || 
+           anEmployee.isPartTime;
+}
+```",1
+CONSOLIDATE CONDITIONAL EXPRESSION,"if (anEmployee.seniority < 2) return 0;
+if (anEmployee.monthsDisabled > 12) return 0;
+if (anEmployee.isPartTime) return 0;","if (isNotEligibleForDisability()) return 0;
+
+function isNotEligibleForDisability() {
+return ((anEmployee.seniority < 2)
+        || (anEmployee.monthsDisabled > 12)
+        || (anEmployee.isPartTime));
+}",Rules,"```java
+if (anEmployee.seniority < 2 || anEmployee.monthsDisabled > 12 || anEmployee.isPartTime) {
+    return 0;
+}
+```",1
+PULL UP CONSTRUCTOR BODY,"class Party {...}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super();
+    this._id = id;
+    this._name = name;
+    this._monthlyCost = monthlyCost;
+  }
+}","class Party {
+  constructor(name){
+    this._name = name;
+  }
+}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super(name);
+    this._id = id;
+    this._monthlyCost = monthlyCost;
+  }
+}",ZeroShot,"```java
+class Party {
+    // Party class implementation
+}
+
+class Employee extends Party {
+    private String name;
+    private String id;
+    private double monthlyCost;
+
+    public Employee(String name, String id, double monthlyCost) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.monthlyCost = monthlyCost;
+    }
+}
+```",1
+PULL UP CONSTRUCTOR BODY,"class Party {...}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super();
+    this._id = id;
+    this._name = name;
+    this._monthlyCost = monthlyCost;
+  }
+}","class Party {
+  constructor(name){
+    this._name = name;
+  }
+}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super(name);
+    this._id = id;
+    this._monthlyCost = monthlyCost;
+  }
+}",Instruc,"```java
+class Party {
+    protected String _name;
+    protected double _monthlyCost;
+
+    public Party(String name, double monthlyCost) {
+        this._name = name;
+        this._monthlyCost = monthlyCost;
+    }
+}
+
+class Employee extends Party {
+    private String _id;
+
+    public Employee(String name, String id, double monthlyCost) {
+        super(name, monthlyCost);
+        this._id = id;
+    }
+}
+```",1
+PULL UP CONSTRUCTOR BODY,"class Party {...}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super();
+    this._id = id;
+    this._name = name;
+    this._monthlyCost = monthlyCost;
+  }
+}","class Party {
+  constructor(name){
+    this._name = name;
+  }
+}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super(name);
+    this._id = id;
+    this._monthlyCost = monthlyCost;
+  }
+}",Context,"```java
+class Party {
+    // Party class implementation
+}
+
+class Employee extends Party {
+    private String id;
+    private String name;
+    private double monthlyCost;
+
+    public Employee(String name, String id, double monthlyCost) {
+        this.id = id;
+        this.name = name;
+        this.monthlyCost = monthlyCost;
+    }
+
+    // Getters and Setters for id, name, and monthlyCost
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getMonthlyCost() {
+        return monthlyCost;
+    }
+
+    public void setMonthlyCost(double monthlyCost) {
+        this.monthlyCost = monthlyCost;
+    }
+}
+```",1
+PULL UP CONSTRUCTOR BODY,"class Party {...}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super();
+    this._id = id;
+    this._name = name;
+    this._monthlyCost = monthlyCost;
+  }
+}","class Party {
+  constructor(name){
+    this._name = name;
+  }
+}
+
+class Employee extends Party {
+  constructor(name, id, monthlyCost) {
+    super(name);
+    this._id = id;
+    this._monthlyCost = monthlyCost;
+  }
+}",Rules,"```java
+class Party {
+    private String name;
+    
+    public Party(String name) {
+        this.name = name;
+    }
+}
+
+class Employee extends Party {
+    private int id;
+    private double monthlyCost;
+    
+    public Employee(String name, int id, double monthlyCost) {
+        super(name);
+        this.id = id;
+        this.monthlyCost = monthlyCost;
+    }
+}
+```",1
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,"leadEngineer = new Employee(document.leadEngineer, 'E');",leadEngineer = createEngineer(document.leadEngineer);,ZeroShot,"```java
+public class EmployeeFactory {
+    public static Employee createLeadEngineer(String name) {
+        return new Employee(name, 'E');
+    }
+}
+
+// Usage
+leadEngineer = EmployeeFactory.createLeadEngineer(document.leadEngineer);
+```",1
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,"leadEngineer = new Employee(document.leadEngineer, 'E');",leadEngineer = createEngineer(document.leadEngineer);,Instruc,"```java
+public class Employee {
+    private String name;
+    private String role;
+
+    private Employee(String name, String role) {
+        this.name = name;
+        this.role = role;
+    }
+
+    public static Employee create(String name, String role) {
+        return new Employee(name, role);
+    }
+}
+
+// Usage
+leadEngineer = Employee.create(document.leadEngineer, ""E"");
+```",1
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,"leadEngineer = new Employee(document.leadEngineer, 'E');",leadEngineer = createEngineer(document.leadEngineer);,Context,"```java
+Employee leadEngineer = new Employee(document.getLeadEngineer(), 'E');
+```",0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,"leadEngineer = new Employee(document.leadEngineer, 'E');",leadEngineer = createEngineer(document.leadEngineer);,Rules,"```java
+public class EmployeeFactory {
+    public static Employee createEmployee(String name, char type) {
+        // Initialize the Employee object
+        return new Employee(name, type);
+    }
+}
+
+// Usage
+leadEngineer = EmployeeFactory.createEmployee(document.leadEngineer, 'E');
+```",1
+REMOVE SUBCLASS,"class Person {
+  get genderCode() {return “X”;}
+}
+class Male extends Person {
+  get genderCode() {return “M”;}
+}
+class Female extends Person {
+  get genderCode() {return “F”;}
+}","class Person {
+  get genderCode() {return this._genderCode;}
+}",ZeroShot,"```java
+class Person {
+    String genderCode() {
+        return ""X"";
+    }
+}
+
+class Male extends Person {
+    @Override
+    String genderCode() {
+        return ""M"";
+    }
+}
+
+class Female extends Person {
+    @Override
+    String genderCode() {
+        return ""F"";
+    }
+}
+```",0
+REMOVE SUBCLASS,"class Person {
+  get genderCode() {return “X”;}
+}
+class Male extends Person {
+  get genderCode() {return “M”;}
+}
+class Female extends Person {
+  get genderCode() {return “F”;}
+}","class Person {
+  get genderCode() {return this._genderCode;}
+}",Instruc,"```java
+class Person {
+    private String genderType;
+
+    public Person(String genderType) {
+        this.genderType = genderType;
+    }
+
+    public String getGenderCode() {
+        return genderType;
+    }
+
+    public static Person createPerson(String gender) {
+        return new Person(gender);
+    }
+}
+
+// Example usage:
+Person male = Person.createPerson(""M"");
+Person female = Person.createPerson(""F"");
+Person other = Person.createPerson(""X"");
+```",1
+REMOVE SUBCLASS,"class Person {
+  get genderCode() {return “X”;}
+}
+class Male extends Person {
+  get genderCode() {return “M”;}
+}
+class Female extends Person {
+  get genderCode() {return “F”;}
+}","class Person {
+  get genderCode() {return this._genderCode;}
+}",Context,"```java
+abstract class Person {
+    public abstract String getGenderCode();
+}
+
+class Male extends Person {
+    @Override
+    public String getGenderCode() {
+        return ""M"";
+    }
+}
+
+class Female extends Person {
+    @Override
+    public String getGenderCode() {
+        return ""F"";
+    }
+}
+```",0
+REMOVE SUBCLASS,"class Person {
+  get genderCode() {return “X”;}
+}
+class Male extends Person {
+  get genderCode() {return “M”;}
+}
+class Female extends Person {
+  get genderCode() {return “F”;}
+}","class Person {
+  get genderCode() {return this._genderCode;}
+}",Rules,"```java
+class Person {
+    private String genderCode;
+
+    public Person(String genderCode) {
+        this.genderCode = genderCode;
+    }
+
+    public String getGenderCode() {
+        return genderCode;
+    }
+}
+
+class Male extends Person {
+    public Male() {
+        super(""M"");
+    }
+}
+
+class Female extends Person {
+    public Female() {
+        super(""F"");
+    }
+}
+```",0
+INTRODUCE PARAMETER OBJECT,"function amountInvoiced(startDate, endDate) {...}
+function amountReceived(startDate, endDate) {...}
+function amountOverdue(startDate, endDate) {...}","function amountInvoiced(aDateRange) {...}
+function amountReceived(aDateRange) {...}
+function amountOverdue(aDateRange) {...}",ZeroShot,"```java
+class DateRange {
+    private final Date startDate;
+    private final Date endDate;
+
+    public DateRange(Date startDate, Date endDate) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+}
+
+public class InvoiceProcessor {
+    public double amountInvoiced(DateRange dateRange) {
+        // logic for calculating amount invoiced
+    }
+
+    public double amountReceived(DateRange dateRange) {
+        // logic for calculating amount received
+    }
+
+    public double amountOverdue(DateRange dateRange) {
+        // logic for calculating amount overdue
+    }
+}
+```",1
+INTRODUCE PARAMETER OBJECT,"function amountInvoiced(startDate, endDate) {...}
+function amountReceived(startDate, endDate) {...}
+function amountOverdue(startDate, endDate) {...}","function amountInvoiced(aDateRange) {...}
+function amountReceived(aDateRange) {...}
+function amountOverdue(aDateRange) {...}",Instruc,"```java
+class InvoiceDateRange {
+    private final Date startDate;
+    private final Date endDate;
+
+    public InvoiceDateRange(Date startDate, Date endDate) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+}
+
+public class Invoice {
+    public void amountInvoiced(InvoiceDateRange dateRange) {
+        Date startDate = dateRange.getStartDate();
+        Date endDate = dateRange.getEndDate();
+        // logic for amountInvoiced
+    }
+
+    public void amountReceived(InvoiceDateRange dateRange) {
+        Date startDate = dateRange.getStartDate();
+        Date endDate = dateRange.getEndDate();
+        // logic for amountReceived
+    }
+
+    public void amountOverdue(InvoiceDateRange dateRange) {
+        Date startDate = dateRange.getStartDate();
+        Date endDate = dateRange.getEndDate();
+        // logic for amountOverdue
+    }
+}
+```",1
+INTRODUCE PARAMETER OBJECT,"function amountInvoiced(startDate, endDate) {...}
+function amountReceived(startDate, endDate) {...}
+function amountOverdue(startDate, endDate) {...}","function amountInvoiced(aDateRange) {...}
+function amountReceived(aDateRange) {...}
+function amountOverdue(aDateRange) {...}",Context,"```java
+public class InvoiceProcessor {
+
+    public double amountInvoiced(LocalDate startDate, LocalDate endDate) {
+        // Implementation for calculating amount invoiced
+    }
+
+    public double amountReceived(LocalDate startDate, LocalDate endDate) {
+        // Implementation for calculating amount received
+    }
+
+    public double amountOverdue(LocalDate startDate, LocalDate endDate) {
+        // Implementation for calculating amount overdue
+    }
+}
+```",0
+INTRODUCE PARAMETER OBJECT,"function amountInvoiced(startDate, endDate) {...}
+function amountReceived(startDate, endDate) {...}
+function amountOverdue(startDate, endDate) {...}","function amountInvoiced(aDateRange) {...}
+function amountReceived(aDateRange) {...}
+function amountOverdue(aDateRange) {...}",Rules,"```java
+class DateRange {
+    private Date startDate;
+    private Date endDate;
+
+    public DateRange(Date startDate, Date endDate) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+}
+
+function amountInvoiced(DateRange dateRange) {
+    Date startDate = dateRange.getStartDate();
+    Date endDate = dateRange.getEndDate();
+    // ...implementation...
+}
+
+function amountReceived(DateRange dateRange) {
+    Date startDate = dateRange.getStartDate();
+    Date endDate = dateRange.getEndDate();
+    // ...implementation...
+}
+
+function amountOverdue(DateRange dateRange) {
+    Date startDate = dateRange.getStartDate();
+    Date endDate = dateRange.getEndDate();
+    // ...implementation...
+}
+```",1
+SPLIT LOOP,"let averageAge = 0;
+let totalSalary = 0;
+for (const p of people) {
+    averageAge += p.age;
+    totalSalary += p.salary;
+}
+averageAge = averageAge / people.length;","let totalSalary = 0;
+for (const p of people) {
+    totalSalary += p.salary;
+}
+
+let averageAge = 0;
+for (const p of people) {
+    averageAge += p.age;
+}
+averageAge = averageAge / people.length;",ZeroShot,"```java
+double averageAge = calculateAverageAge(people);
+double totalSalary = calculateTotalSalary(people);
+
+private double calculateAverageAge(List<Person> people) {
+    double totalAge = 0;
+    for (Person p : people) {
+        totalAge += p.age;
+    }
+    return totalAge / people.size();
+}
+
+private double calculateTotalSalary(List<Person> people) {
+    double totalSalary = 0;
+    for (Person p : people) {
+        totalSalary += p.salary;
+    }
+    return totalSalary;
+}
+```",1
+SPLIT LOOP,"let averageAge = 0;
+let totalSalary = 0;
+for (const p of people) {
+    averageAge += p.age;
+    totalSalary += p.salary;
+}
+averageAge = averageAge / people.length;","let totalSalary = 0;
+for (const p of people) {
+    totalSalary += p.salary;
+}
+
+let averageAge = 0;
+for (const p of people) {
+    averageAge += p.age;
+}
+averageAge = averageAge / people.length;",Instruc,"```java
+double averageAge = 0;
+double totalSalary = 0;
+
+// Calculate total age
+for (Person p : people) {
+    averageAge += p.age;
+}
+
+// Calculate total salary
+for (Person p : people) {
+    totalSalary += p.salary;
+}
+
+averageAge = averageAge / people.size();
+```",1
+SPLIT LOOP,"let averageAge = 0;
+let totalSalary = 0;
+for (const p of people) {
+    averageAge += p.age;
+    totalSalary += p.salary;
+}
+averageAge = averageAge / people.length;","let totalSalary = 0;
+for (const p of people) {
+    totalSalary += p.salary;
+}
+
+let averageAge = 0;
+for (const p of people) {
+    averageAge += p.age;
+}
+averageAge = averageAge / people.length;",Context,"```java
+double averageAge = 0;
+double totalSalary = 0;
+
+for (Person person : people) {
+    averageAge += person.getAge();
+    totalSalary += person.getSalary();
+}
+
+averageAge /= people.size();
+```",1
+REPLACE PRIMITIVE WITH OBJECT,"orders.filter(o => “high” === o.priority
+                || “rush” === o.priority);  ",orders.filter(o => o.priority.higherThan(new Priority(“normal”))),ZeroShot,"```java
+class Order {
+    private String priority;
+    
+    // Constructor, getters, and setters
+    public Order(String priority) {
+        this.priority = priority;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+}
+
+class OrderFilter {
+    private static final String HIGH_PRIORITY = ""high"";
+    private static final String RUSH_PRIORITY = ""rush"";
+
+    public static boolean isHighOrRush(Order order) {
+        return HIGH_PRIORITY.equals(order.getPriority()) || RUSH_PRIORITY.equals(order.getPriority());
+    }
+}
+
+// Usage
+List<Order> orders = new ArrayList<>();
+List<Order> filteredOrders = orders.stream()
+                                    .filter(OrderFilter::isHighOrRush)
+                                    .collect(Collectors.toList());
+```",1
+REPLACE PRIMITIVE WITH OBJECT,"orders.filter(o => “high” === o.priority
+                || “rush” === o.priority);  ",orders.filter(o => o.priority.higherThan(new Priority(“normal”))),Instruc,"```java
+public class Priority {
+    private final String value;
+
+    public Priority(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+}
+
+public class Order {
+    private Priority priority;
+
+    public Priority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+}
+
+// Example usage
+List<Order> orders = // ... initialize list of orders
+List<Order> filteredOrders = orders.stream()
+    .filter(o -> ""high"".equals(o.getPriority().getValue()) || ""rush"".equals(o.getPriority().getValue()))
+    .collect(Collectors.toList());
+```",1
+REPLACE PRIMITIVE WITH OBJECT,"orders.filter(o => “high” === o.priority
+                || “rush” === o.priority);  ",orders.filter(o => o.priority.higherThan(new Priority(“normal”))),Context,"```java
+orders.stream()
+      .filter(o -> ""high"".equals(o.getPriority()) || ""rush"".equals(o.getPriority()))
+      .collect(Collectors.toList());
+```",1
+REPLACE PRIMITIVE WITH OBJECT,"orders.filter(o => “high” === o.priority
+                || “rush” === o.priority);  ",orders.filter(o => o.priority.higherThan(new Priority(“normal”))),Rules,"```java
+public class Order {
+    private Priority priority;
+
+    public Order(Priority priority) {
+        this.priority = priority;
+    }
+
+    public Priority getPriority() {
+        return priority;
+    }
+}
+
+public enum Priority {
+    HIGH, RUSH
+}
+
+// Usage
+List<Order> filteredOrders = orders.stream()
+    .filter(o -> Priority.HIGH.equals(o.getPriority()) || Priority.RUSH.equals(o.getPriority()))
+    .collect(Collectors.toList());
+```",1
+MOVE STATEMENTS TO CALLERS,"emitPhotoData(outStream, person.photo);
+
+function emitPhotoData(outStream, photo) {
+  outStream.write(`<p>title: ${photo.title}</p>\n`);
+  outStream.write(`<p>location: ${photo.location}</p>\n`);
+}","emitPhotoData(outStream, person.photo);
+outStream.write(`<p>location: ${person.photo.location}</p>\n`);
+
+function emitPhotoData(outStream, photo) {
+  outStream.write(`<p>title: ${photo.title}</p>\n`);
+}",ZeroShot,"```java
+outStream.write(`<p>title: ${person.photo.title}</p>\n`);
+outStream.write(`<p>location: ${person.photo.location}</p>\n`);
+```",1
+MOVE STATEMENTS TO CALLERS,"emitPhotoData(outStream, person.photo);
+
+function emitPhotoData(outStream, photo) {
+  outStream.write(`<p>title: ${photo.title}</p>\n`);
+  outStream.write(`<p>location: ${photo.location}</p>\n`);
+}","emitPhotoData(outStream, person.photo);
+outStream.write(`<p>location: ${person.photo.location}</p>\n`);
+
+function emitPhotoData(outStream, photo) {
+  outStream.write(`<p>title: ${photo.title}</p>\n`);
+}",Instruc,"```java
+outStream.write(""<p>title: "" + person.photo.title + ""</p>\n"");
+outStream.write(""<p>location: "" + person.photo.location + ""</p>\n"");
+```",1
+MOVE STATEMENTS TO CALLERS,"emitPhotoData(outStream, person.photo);
+
+function emitPhotoData(outStream, photo) {
+  outStream.write(`<p>title: ${photo.title}</p>\n`);
+  outStream.write(`<p>location: ${photo.location}</p>\n`);
+}","emitPhotoData(outStream, person.photo);
+outStream.write(`<p>location: ${person.photo.location}</p>\n`);
+
+function emitPhotoData(outStream, photo) {
+  outStream.write(`<p>title: ${photo.title}</p>\n`);
+}",Context,"```java
+public void emitPhotoData(PrintWriter outStream, Photo photo) {
+    outStream.printf(""<p>title: %s</p>%n"", photo.getTitle());
+    outStream.printf(""<p>location: %s</p>%n"", photo.getLocation());
+}
+```",0
+INLINE CLASS,"class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}","class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}",ZeroShot,"```java
+class Person {
+    private TelephoneNumber telephoneNumber;
+
+    public String getOfficeAreaCode() {
+        return telephoneNumber.getAreaCode();
+    }
+
+    public String getOfficeNumber() {
+        return telephoneNumber.getNumber();
+    }
+}
+
+class TelephoneNumber {
+    private String areaCode;
+    private String number;
+
+    public String getAreaCode() {
+        return areaCode;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+}
+```",0
+INLINE CLASS,"class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}","class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}",Instruc,"```java
+class Person {
+    private String _areaCode;
+    private String _number;
+
+    public Person(String areaCode, String number) {
+        this._areaCode = areaCode;
+        this._number = number;
+    }
+
+    public String getOfficeAreaCode() {
+        return this._areaCode;
+    }
+
+    public String getOfficeNumber() {
+        return this._number;
+    }
+}
+```",1
+INLINE CLASS,"class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}","class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}",Context,"```java
+class Person {
+    private TelephoneNumber telephoneNumber;
+
+    public Person(TelephoneNumber telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+    }
+
+    public String getOfficeAreaCode() {
+        return telephoneNumber.getAreaCode();
+    }
+
+    public String getOfficeNumber() {
+        return telephoneNumber.getNumber();
+    }
+}
+
+class TelephoneNumber {
+    private String areaCode;
+    private String number;
+
+    public TelephoneNumber(String areaCode, String number) {
+        this.areaCode = areaCode;
+        this.number = number;
+    }
+
+    public String getAreaCode() {
+        return areaCode;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+}
+```",1
+INLINE CLASS,"class Person {
+  get officeAreaCode() {return this._telephoneNumber.areaCode;}
+  get officeNumber()   {return this._telephoneNumber.number;}
+}
+class TelephoneNumber {
+  get areaCode() {return this._areaCode;}
+  get number()   {return this._number;}
+}","class Person {
+  get officeAreaCode() {return this._officeAreaCode;}
+  get officeNumber()   {return this._officeNumber;}",Rules,"```java
+class Person {
+    private String _areaCode;
+    private String _number;
+
+    public String getOfficeAreaCode() {
+        return _areaCode;
+    }
+
+    public String getOfficeNumber() {
+        return _number;
+    }
+}
+```",1
+REMOVE MIDDLE MAN,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",manager = aPerson.department.manager;,ZeroShot,"```java
+class Person {
+    private Department department;
+
+    public Manager getManager() {
+        return department.getManager();
+    }
+}
+
+class Department {
+    private Manager manager;
+
+    public Manager getManager() {
+        return manager;
+    }
+}
+
+class Manager {}
+```",1
+REMOVE MIDDLE MAN,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",manager = aPerson.department.manager;,Instruc,"```java
+class Person {
+    private Department department;
+
+    public Manager getManager() {
+        return department.getManager();
+    }
+}
+```",1
+REMOVE MIDDLE MAN,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",manager = aPerson.department.manager;,Context,"```java
+class Person {
+    private Department department;
+
+    public Manager getManager() {
+        return department.getManager();
+    }
+}
+
+class Department {
+    private Manager manager;
+
+    public Manager getManager() {
+        return manager;
+    }
+}
+
+class Manager {
+    // Manager class implementation
+}
+```",1
+REMOVE MIDDLE MAN,"manager = aPerson.manager;
+
+class Person {
+  get manager() {return this.department.manager;}",manager = aPerson.department.manager;,Rules,"```java
+class Person {
+    Department department;
+
+    Manager getManager() {
+        return department.getManager();
+    }
+}
+
+class Department {
+    Manager manager;
+
+    Manager getManager() {
+        return manager;
+    }
+}
+```",1
+REPLACE FUNCTION WITH COMMAND,"function score(candidate, medicalExam, scoringGuide) {
+    let result = 0;
+    let healthLevel = 0;
+// long body code
+}","class Scorer {
+  constructor(candidate, medicalExam, scoringGuide) {
+    this._candidate = candidate;
+    this._medicalExam = medicalExam;
+    this._scoringGuide = scoringGuide;
+  }
+
+  execute() {
+    this._result = 0;
+    this._healthLevel = 0;
+    // long body code
+  }
+}",ZeroShot,"```java
+public int score(Candidate candidate, MedicalExam medicalExam, ScoringGuide scoringGuide) {
+    int result = 0;
+    int healthLevel = 0;
+    // long body code
+}
+```",1
+REPLACE FUNCTION WITH COMMAND,"function score(candidate, medicalExam, scoringGuide) {
+    let result = 0;
+    let healthLevel = 0;
+// long body code
+}","class Scorer {
+  constructor(candidate, medicalExam, scoringGuide) {
+    this._candidate = candidate;
+    this._medicalExam = medicalExam;
+    this._scoringGuide = scoringGuide;
+  }
+
+  execute() {
+    this._result = 0;
+    this._healthLevel = 0;
+    // long body code
+  }
+}",Instruc,"```java
+public class ScoreCommand {
+    private final Candidate candidate;
+    private final MedicalExam medicalExam;
+    private final ScoringGuide scoringGuide;
+
+    public ScoreCommand(Candidate candidate, MedicalExam medicalExam, ScoringGuide scoringGuide) {
+        this.candidate = candidate;
+        this.medicalExam = medicalExam;
+        this.scoringGuide = scoringGuide;
+    }
+
+    public int execute() {
+        int result = 0;
+        int healthLevel = 0;
+        // long body code
+        return result;
+    }
+}
+
+// Forwarding function
+public int score(Candidate candidate, MedicalExam medicalExam, ScoringGuide scoringGuide) {
+    ScoreCommand command = new ScoreCommand(candidate, medicalExam, scoringGuide);
+    return command.execute();
+}
+```",1
+REPLACE FUNCTION WITH COMMAND,"function score(candidate, medicalExam, scoringGuide) {
+    let result = 0;
+    let healthLevel = 0;
+// long body code
+}","class Scorer {
+  constructor(candidate, medicalExam, scoringGuide) {
+    this._candidate = candidate;
+    this._medicalExam = medicalExam;
+    this._scoringGuide = scoringGuide;
+  }
+
+  execute() {
+    this._result = 0;
+    this._healthLevel = 0;
+    // long body code
+  }
+}",Context,"```java
+public class ScoringSystem {
+    public int score(Candidate candidate, MedicalExam medicalExam, ScoringGuide scoringGuide) {
+        int result = 0;
+        int healthLevel = 0;
+
+        // long body code
+
+        return result;
+    }
+}
+```",1
+REPLACE FUNCTION WITH COMMAND,"function score(candidate, medicalExam, scoringGuide) {
+    let result = 0;
+    let healthLevel = 0;
+// long body code
+}","class Scorer {
+  constructor(candidate, medicalExam, scoringGuide) {
+    this._candidate = candidate;
+    this._medicalExam = medicalExam;
+    this._scoringGuide = scoringGuide;
+  }
+
+  execute() {
+    this._result = 0;
+    this._healthLevel = 0;
+    // long body code
+  }
+}",Rules,"```java
+public class ScoringService {
+    public int score(Candidate candidate, MedicalExam medicalExam, ScoringGuide scoringGuide) {
+        return new ScoringCommand(candidate, medicalExam, scoringGuide).execute();
+    }
+}
+
+public class ScoringCommand {
+    private Candidate candidate;
+    private MedicalExam medicalExam;
+    private ScoringGuide scoringGuide;
+
+    public ScoringCommand(Candidate candidate, MedicalExam medicalExam, ScoringGuide scoringGuide) {
+        this.candidate = candidate;
+        this.medicalExam = medicalExam;
+        this.scoringGuide = scoringGuide;
+    }
+
+    public int execute() {
+        int result = 0;
+        int healthLevel = 0;
+        // long body code
+        return result;
+    }
+}
+```",1

@@ -1,0 +1,290 @@
+{
+    "L10937": {
+        "ContextCode": {
+            "methods": [
+                "public List<SrcOp> set(GrammarAST setAST, GrammarAST labelAST, boolean invert) {\n    MatchSet matchOp;\n    if (invert) {\n        matchOp = new MatchNotSet(this, setAST);\n    } else {\n        matchOp = new MatchSet(this, setAST);\n    }\n    \n    if (labelAST != null) {\n        String label = labelAST.getText();\n        Decl d = getTokenLabelDecl(label);\n        matchOp.labels.add(d);\n        getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), d);\n        \n        if (labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN) {\n            TokenListDecl l = getTokenListLabelDecl(label);\n            getCurrentRuleFunction().addContextDecl(setAST.getAltLabel(), l);\n        }\n    }\n    \n    if (controller.needsImplicitLabel(setAST, matchOp)) {\n        defineImplicitLabel(setAST, matchOp);\n    }\n    \n    AddToLabelList listLabelOp = getAddToListOpIfListLabelPresent(matchOp, labelAST);\n    return list(matchOp, listLabelOp);\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L5343": {
+        "ContextCode": {
+            "methods": [
+                "public List<ParseTreeListener> getParseListeners() {\n    return _parseListeners;\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L3671": {
+        "ContextCode": {
+            "methods": [
+                "public void reportAmbiguity(@NotNull Parser recognizer, DFA dfa, int startIndex, int stopIndex, @NotNull BitSet ambigAlts, @NotNull ATNConfigSet configs) {\n    recognizer.notifyErrorListeners(\"reportAmbiguity d=\" + dfa.decision + \": ambigAlts=\" + ambigAlts + \", input=\\'\" + recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex)) + \"\\'\");\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L3692": {
+        "ContextCode": {
+            "methods": [
+                "public void reportContextSensitivity(@NotNull Parser recognizer, @NotNull DFA dfa, int startIndex, int stopIndex, @NotNull ATNConfigSet configs) {\n    recognizer.notifyErrorListeners(\"reportContextSensitivity d=\" + dfa.decision + \", input=\\'\" + recognizer.getTokenStream().getText(Interval.of(startIndex, stopIndex)) + \"\\'\");\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L7413": {
+        "ContextCode": {
+            "methods": [
+                "protected void processParser() {\n    g.decisionLOOK = new ArrayList<>(g.atn.getNumberOfDecisions() + 1);\n    \n    for (DecisionState s : g.atn.decisionToState) {\n        g.tool.log(\"LL1\", \"\\\nDECISION \" + s.decision + \" in rule \" + g.getRule(s.ruleIndex).name);\n        \n        IntervalSet[] look;\n        \n        if (s.nonGreedy) {\n            look = new IntervalSet[s.getNumberOfTransitions() + 1];\n        } else {\n            LL1Analyzer anal = new LL1Analyzer(g.atn);\n            look = anal.getDecisionLookahead(s);\n            g.tool.log(\"LL1\", \"look=\" + Arrays.toString(look));\n        }\n        \n        Utils.setSize(g.decisionLOOK, s.decision + 1);\n        g.decisionLOOK.set(s.decision, look);\n        g.tool.log(\"LL1\", \"LL(1)? \" + disjoint(look));\n    }\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L10037": {
+        "ContextCode": {
+            "methods": [],
+            "classes": [],
+            "others": [
+                "public LL1StarBlockSingleAlt(OutputModelFactory factory, GrammarAST starRoot, List<CodeBlockForAlt> alts) {\n\tsuper(factory, starRoot, alts);\n\n\tStarLoopEntryState star = (StarLoopEntryState) starRoot.atnState;\n\tloopBackStateNumber = star.loopBackState.stateNumber;\n\tthis.decision = star.decision;\n\tIntervalSet[] altLookSets = factory.getGrammar().decisionLOOK.get(decision);\n\tIntervalSet enterLook = altLookSets[1];\n\tIntervalSet exitLook = altLookSets[2];\n\tloopExpr = addCodeForLoopLookaheadTempVar(enterLook);\n}"
+            ]
+        }
+    },
+    "L1927": {
+        "ContextCode": {
+            "methods": [
+                "protected int execATN(@NotNull CharStream input, @NotNull DFAState ds0) {\n\t\tif ( debug ) {\n\t\t\tSystem.out.format(\"start state closure=%s\\\n\", ds0.configs);\n\t\t}\n\n\t\tint t = input.LA(1);\n\t\t@NotNull\n\t\tDFAState s = ds0;\n\n\t\twhile ( true ) {\n\t\t\tif ( debug ) {\n\t\t\t\tSystem.out.format(\"execATN loop starting closure: %s\\\n\", s.configs);\n\t\t\t}\n\n\t\t\tATNConfigSet closure = s.configs;\n\t\t\tDFAState target = null;\n\t\t\tif ( s.edges != null && t >= MIN_DFA_EDGE && t <= MAX_DFA_EDGE ) {\n\t\t\t\ttarget = s.edges[t - MIN_DFA_EDGE];\n\t\t\t\tif (target == ERROR) {\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\n\t\t\t\tif (debug && target != null) {\n\t\t\t\t\tSystem.out.println(\"reuse state \"+s.stateNumber+\n\t\t\t\t\t\t\t\t\t   \" edge to \"+target.stateNumber);\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif (target == null) {\n\t\t\t\tATNConfigSet reach = new OrderedATNConfigSet();\n\n\t\t\t\tgetReachableConfigSet(input, closure, reach, t);\n\n\t\t\t\tif ( reach.isEmpty() ) {\n\t\t\t\t\t@NotNull\n\t\t\t\t\tDFAState from = s != null ? s : addDFAState(closure);\n\t\t\t\t\taddDFAEdge(from, t, ERROR);\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\n\t\t\t\ttarget = addDFAEdge(s, t, reach);\n\t\t\t}\n\n\t\t\tif (target.isAcceptState) {\n\t\t\t\tcaptureSimState(prevAccept, input, target);\n\t\t\t\tif (t == IntStream.EOF) {\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif (t != IntStream.EOF) {\n\t\t\t\tconsume(input);\n\t\t\t\tt = input.LA(1);\n\t\t\t}\n\n\t\t\ts = target;\n\t\t}\n\n\t\treturn failOrAccept(prevAccept, input, s.configs, t);\n\t}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L540": {
+        "ContextCode": {
+            "methods": [],
+            "classes": [],
+            "others": [
+                "void reportAmbiguity(@NotNull Parser recognizer,\n                      DFA dfa,\n                      int startIndex,\n                      int stopIndex,\n                      @NotNull BitSet ambigAlts,\n                      @NotNull ATNConfigSet configs);"
+            ]
+        }
+    },
+    "L561": {
+        "ContextCode": {
+            "methods": [],
+            "classes": [],
+            "others": [
+                "void reportAttemptingFullContext(Parser recognizer, DFA dfa, int startIndex, int stopIndex, ATNConfigSet configs);"
+            ]
+        }
+    },
+    "L1114": {
+        "ContextCode": {
+            "methods": [
+                "public int hashCode() {\n    int hashCode = 7;\n    hashCode = 5 * hashCode + state.stateNumber;\n    hashCode = 5 * hashCode + alt;\n    hashCode = 5 * hashCode + (context != null ? context.hashCode() : 0);\n    hashCode = 5 * hashCode + semanticContext.hashCode();\n    return hashCode;\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L4884": {
+        "ContextCode": {
+            "methods": [
+                "public void addFailure(Throwable targetException) {\n\tif (targetException instanceof MultipleFailureException) {\n\t\tMultipleFailureException mfe= (MultipleFailureException) targetException;\n\t\tfor (Throwable each : mfe.getFailures())\n\t\t\taddFailure(each);\n\t\treturn;\n\t}\n\tfNotifier.fireTestFailure(new Failure(fDescription, targetException));\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n```"
+            ]
+        }
+    },
+    "L7126": {
+        "ContextCode": {
+            "methods": [
+                "public void testCountWithExplicitFilter() throws Throwable {\n    CategoryFilter include = CategoryFilter.include(SlowTests.class);\n    Request baseRequest = Request.aClass(TestSuiteWithNoCategories.class);\n    Result result = new JUnitCore().run(baseRequest.filterWith(include));\n    assertTrue(result.wasSuccessful());\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n```"
+            ]
+        }
+    },
+    "L5431": {
+        "ContextCode": {
+            "methods": [
+                "public void unrollRecursionContexts(ParserRuleContext _parentctx) {\n    _ctx.stop = _input.LT(-1);\n    ParserRuleContext retctx = _ctx;\n\n    if (_parseListeners != null) {\n        while (_ctx != _parentctx) {\n            triggerExitRuleEvent();\n            _ctx = (ParserRuleContext)_ctx.parent;\n        }\n    } else {\n        _ctx = _parentctx;\n    }\n\n    retctx.parent = _parentctx;\n    if (_buildParseTrees) _parentctx.addChild(retctx);\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L3844": {
+        "ContextCode": {
+            "methods": [
+                "public void consume() {\n    boolean skipEofCheck;\n    if (p >= 0) {\n        skipEofCheck = (fetchedEOF) ? (p < tokens.size() - 1) : (p < tokens.size());\n    } else {\n        skipEofCheck = false;\n    }\n\n    if (!skipEofCheck && LA(1) == EOF) {\n        throw new IllegalStateException(\"cannot consume EOF\");\n    }\n\n    if (sync(p + 1)) {\n        p = adjustSeekIndex(p + 1);\n    }\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L3168": {
+        "ContextCode": {
+            "methods": [
+                "protected ATNConfigSet computeReachSet(ATNConfigSet closure, int t, boolean fullCtx) {\n    if (mergeCache == null) {\n        mergeCache = new DoubleKeyMap<PredictionContext, PredictionContext, PredictionContext>();\n    }\n\n    ATNConfigSet intermediate = new ATNConfigSet(fullCtx);\n\n    List<ATNConfig> skippedStopStates = null;\n\n    for (ATNConfig c : closure) {\n        if (c.state instanceof RuleStopState) {\n            assert c.context.isEmpty();\n            if (fullCtx || t == IntStream.EOF) {\n                if (skippedStopStates == null) {\n                    skippedStopStates = new ArrayList<ATNConfig>();\n                }\n\n                skippedStopStates.add(c);\n            }\n\n            continue;\n        }\n\n        int n = c.state.getNumberOfTransitions();\n        for (int ti = 0; ti < n; ti++) {\n            Transition trans = c.state.transition(ti);\n            ATNState target = getReachableTarget(trans, t);\n            if (target != null) {\n                intermediate.add(new ATNConfig(c, target), mergeCache);\n            }\n        }\n    }\n\n    ATNConfigSet reach = null;\n\n    if (skippedStopStates == null) {\n        if (intermediate.size() == 1 || getUniqueAlt(intermediate) != ATN.INVALID_ALT_NUMBER) {\n            reach = intermediate;\n        }\n    }\n\n    if (reach == null) {\n        reach = new ATNConfigSet(fullCtx);\n        Set<ATNConfig> closureBusy = new HashSet<ATNConfig>();\n        for (ATNConfig c : intermediate) {\n            closure(c, reach, closureBusy, false, fullCtx);\n        }\n    }\n\n    if (t == IntStream.EOF) {\n        reach = removeAllConfigsNotInRuleStopState(reach, reach == intermediate);\n    }\n\n    if (skippedStopStates != null && (!fullCtx || !PredictionMode.hasConfigInRuleStopState(reach))) {\n        assert !skippedStopStates.isEmpty();\n        for (ATNConfig c : skippedStopStates) {\n            reach.add(c, mergeCache);\n        }\n    }\n\n    if (reach.isEmpty()) return null;\n    return reach;\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L10263": {
+        "ContextCode": {
+            "methods": [
+                "public String asString() {\n\tif (start == null) return null;\n\tmarked = new HashSet<ATNState>();\n\twork = new ArrayList<ATNState>();\n\twork.add(start);\n\tStringBuilder buf = new StringBuilder();\n\tATNState s;\n\twhile (!work.isEmpty()) {\n\t\ts = work.remove(0);\n\t\tif (marked.contains(s)) continue;\n\t\tint n = s.getNumberOfTransitions();\n\t\tmarked.add(s);\n\t\tfor (int i = 0; i < n; i++) {\n\t\t\tTransition t = s.transition(i);\n\t\t\tif (!(s instanceof RuleStopState)) {\n\t\t\t\tif (t instanceof RuleTransition) work.add(((RuleTransition) t).followState);\n\t\t\t\telse work.add(t.target);\n\t\t\t}\n\t\t\tbuf.append(getStateString(s));\n\t\t\tif (t instanceof EpsilonTransition) {\n\t\t\t\tbuf.append(\"->\").append(getStateString(t.target)).append(\\'\\\n\\');\n\t\t\t} else if (t instanceof RuleTransition) {\n\t\t\t\tbuf.append(\"-\").append(g.getRule(((RuleTransition) t).ruleIndex).name).append(\"->\").append(getStateString(t.target)).append(\\'\\\n\\');\n\t\t\t} else if (t instanceof ActionTransition) {\n\t\t\t\tActionTransition a = (ActionTransition) t;\n\t\t\t\tbuf.append(\"-\").append(a.toString()).append(\"->\").append(getStateString(t.target)).append(\\'\\\n\\');\n\t\t\t} else if (t instanceof SetTransition) {\n\t\t\t\tSetTransition st = (SetTransition) t;\n\t\t\t\tboolean not = st instanceof NotSetTransition;\n\t\t\t\tif (g.isLexer()) {\n\t\t\t\t\tbuf.append(\"-\").append(not ? \"~\" : \"\").append(st.toString()).append(\"->\").append(getStateString(t.target)).append(\\'\\\n\\');\n\t\t\t\t} else {\n\t\t\t\t\tbuf.append(\"-\").append(not ? \"~\" : \"\").append(st.label().toString(g.getTokenNames())).append(\"->\").append(getStateString(t.target)).append(\\'\\\n\\');\n\t\t\t\t}\n\t\t\t} else if (t instanceof AtomTransition) {\n\t\t\t\tAtomTransition a = (AtomTransition) t;\n\t\t\t\tString label = g.getTokenDisplayName(a.label);\n\t\t\t\tbuf.append(\"-\").append(label).append(\"->\").append(getStateString(t.target)).append(\\'\\\n\\');\n\t\t\t} else {\n\t\t\t\tbuf.append(\"-\").append(t.toString()).append(\"->\").append(getStateString(t.target)).append(\\'\\\n\\');\n\t\t\t}\n\t\t}\n\t}\n\treturn buf.toString();\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L102630": {
+        "ContextCode": {
+            "methods": [],
+            "classes": [],
+            "others": [
+                "String getStateString(ATNState s) {\n    int n = s.stateNumber;\n    String stateStr = \"s\" + n;\n\n    if (s instanceof StarBlockStartState) {\n        stateStr = \"StarBlockStart_\" + n;\n    } else if (s instanceof PlusBlockStartState) {\n        stateStr = \"PlusBlockStart_\" + n;\n    } else if (s instanceof BlockStartState) {\n        stateStr = \"BlockStart_\" + n;\n    } else if (s instanceof BlockEndState) {\n        stateStr = \"BlockEnd_\" + n;\n    } else if (s instanceof RuleStartState) {\n        stateStr = \"RuleStart_\" + g.getRule(s.ruleIndex).name + \"_\" + n;\n    } else if (s instanceof RuleStopState) {\n        stateStr = \"RuleStop_\" + g.getRule(s.ruleIndex).name + \"_\" + n;\n    } else if (s instanceof PlusLoopbackState) {\n        stateStr = \"PlusLoopBack_\" + n;\n    } else if (s instanceof StarLoopbackState) {\n        stateStr = \"StarLoopBack_\" + n;\n    } else if (s instanceof StarLoopEntryState) {\n        stateStr = \"StarLoopEntry_\" + n;\n    }\n\n    return stateStr;\n}"
+            ]
+        }
+    },
+    "L15668": {
+        "ContextCode": {
+            "methods": [
+                "public String getDOT(DFA dfa, boolean isLexer) {\n    if (dfa.s0 == null) return null;\n\n    ST dot = stlib.getInstanceOf(\"dfa\");\n    dot.add(\"name\", \"DFA\" + dfa.decision);\n    dot.add(\"startState\", dfa.s0.stateNumber);\n    dot.add(\"rankdir\", rankdir);\n\n    for (DFAState d : dfa.states.keySet()) {\n        if (!d.isAcceptState) continue;\n        ST st = stlib.getInstanceOf(\"stopstate\");\n        st.add(\"name\", \"s\" + d.stateNumber);\n        st.add(\"label\", getStateLabel(d));\n        dot.add(\"states\", st);\n    }\n\n    for (DFAState d : dfa.states.keySet()) {\n        if (d.isAcceptState) continue;\n        if (d.stateNumber == Integer.MAX_VALUE) continue;\n        ST st = stlib.getInstanceOf(\"state\");\n        st.add(\"name\", \"s\" + d.stateNumber);\n        st.add(\"label\", getStateLabel(d));\n        dot.add(\"states\", st);\n    }\n\n    for (DFAState d : dfa.states.keySet()) {\n        if (d.edges != null) {\n            for (int i = 0; i < d.edges.length; i++) {\n                DFAState target = d.edges[i];\n                if (target == null) continue;\n                if (target.stateNumber == Integer.MAX_VALUE) continue;\n                int ttype = i - 1;\n                String label = String.valueOf(ttype);\n                if (isLexer) label = \"\\'\" + getEdgeLabel(String.valueOf((char) i)) + \"\\'\";\n                else if (grammar != null) label = grammar.getTokenDisplayName(ttype);\n                ST st = stlib.getInstanceOf(\"edge\");\n                st.add(\"label\", label);\n                st.add(\"src\", \"s\" + d.stateNumber);\n                st.add(\"target\", \"s\" + target.stateNumber);\n                st.add(\"arrowhead\", arrowhead);\n                dot.add(\"edges\", st);\n            }\n        }\n    }\n\n    String output = dot.render();\n    return Utils.sortLinesInString(output);\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L156680": {
+        "ContextCode": {
+            "methods": [
+                "public String getDOT(DFA dfa, boolean isLexer) {\n    if (dfa.s0 == null) return null;\n\n    ST dot = stlib.getInstanceOf(\"dfa\");\n    dot.add(\"name\", \"DFA\" + dfa.decision);\n    dot.add(\"startState\", dfa.s0.stateNumber);\n    dot.add(\"rankdir\", rankdir);\n\n    for (DFAState d : dfa.states.keySet()) {\n        if (!d.isAcceptState) {\n            ST st = stlib.getInstanceOf(\"stopstate\");\n            st.add(\"name\", \"s\" + d.stateNumber);\n            st.add(\"label\", getStateLabel(d));\n            dot.add(\"states\", st);\n        }\n    }\n\n    for (DFAState d : dfa.states.keySet()) {\n        if (d.isAcceptState || d.stateNumber == Integer.MAX_VALUE) continue;\n        ST st = stlib.getInstanceOf(\"state\");\n        st.add(\"name\", \"s\" + d.stateNumber);\n        st.add(\"label\", getStateLabel(d));\n        dot.add(\"states\", st);\n    }\n\n    for (DFAState d : dfa.states.keySet()) {\n        if (d.edges != null) {\n            for (int i = 0; i < d.edges.length; i++) {\n                DFAState target = d.edges[i];\n                if (target == null || target.stateNumber == Integer.MAX_VALUE) continue;\n                int ttype = i - 1;\n                String label = String.valueOf(ttype);\n                if (isLexer) label = \"\\'\" + getEdgeLabel(String.valueOf((char) i)) + \"\\'\";\n                else if (grammar != null) label = grammar.getTokenDisplayName(ttype);\n                ST st = stlib.getInstanceOf(\"edge\");\n                st.add(\"label\", label);\n                st.add(\"src\", \"s\" + d.stateNumber);\n                st.add(\"target\", \"s\" + target.stateNumber);\n                st.add(\"arrowhead\", arrowhead);\n                dot.add(\"edges\", st);\n            }\n        }\n    }\n\n    String output = dot.render();\n    return Utils.sortLinesInString(output);\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L3347": {
+        "ContextCode": {
+            "methods": [
+                "protected void closure(ATNConfig config, ATNConfigSet configs, Set<ATNConfig> closureBusy, boolean collectPredicates, boolean fullCtx, int depth, boolean treatEofAsEpsilon) {\n\tATNState p = config.state;\n\n\tif (!p.onlyHasEpsilonTransitions()) {\n\t\tconfigs.add(config, mergeCache);\n\t}\n\n\tfor (int i = 0; i < p.getNumberOfTransitions(); i++) {\n\t\tTransition t = p.transition(i);\n\t\tboolean continueCollecting = !(t instanceof ActionTransition) && collectPredicates;\n\t\tATNConfig c = getEpsilonTarget(config, t, continueCollecting, depth == 0, fullCtx, treatEofAsEpsilon);\n\t\tif (c != null) {\n\t\t\tif (!t.isEpsilon() && !closureBusy.add(c)) {\n\t\t\t\tcontinue;\n\t\t\t}\n\n\t\t\tint newDepth = depth;\n\t\t\tif (config.state instanceof RuleStopState) {\n\t\t\t\tassert !fullCtx;\n\t\t\t\tif (!closureBusy.add(c)) {\n\t\t\t\t\tcontinue;\n\t\t\t\t}\n\n\t\t\t\tc.reachesIntoOuterContext++;\n\t\t\t\tconfigs.dipsIntoOuterContext = true;\n\t\t\t\tassert newDepth > Integer.MIN_VALUE;\n\t\t\t\tnewDepth--;\n\t\t\t} else if (t instanceof RuleTransition) {\n\t\t\t\tif (newDepth >= 0) {\n\t\t\t\t\tnewDepth++;\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tclosureCheckingStopState(c, configs, closureBusy, continueCollecting, fullCtx, newDepth, treatEofAsEpsilon);\n\t\t}\n\t}\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L2755": {
+        "ContextCode": {
+            "methods": [
+                "protected void look(ATNState s, ATNState stopState, PredictionContext ctx, IntervalSet look, Set<ATNConfig> lookBusy, BitSet calledRuleStack, boolean seeThruPreds, boolean addEOF) {\n    ATNConfig c = new ATNConfig(s, 0, ctx);\n    if (!lookBusy.add(c)) return;\n\n    if (s == stopState) {\n        if (ctx == null) {\n            look.add(Token.EPSILON);\n            return;\n        } else if (ctx.isEmpty() && addEOF) {\n            look.add(Token.EOF);\n            return;\n        }\n    }\n\n    if (s instanceof RuleStopState) {\n        if (ctx == null) {\n            look.add(Token.EPSILON);\n            return;\n        } else if (ctx.isEmpty() && addEOF) {\n            look.add(Token.EOF);\n            return;\n        }\n\n        if (ctx != PredictionContext.EMPTY) {\n            for (int i = 0; i < ctx.size(); i++) {\n                ATNState returnState = atn.states.get(ctx.getReturnState(i));\n                boolean removed = calledRuleStack.get(returnState.ruleIndex);\n                try {\n                    calledRuleStack.clear(returnState.ruleIndex);\n                    look(returnState, stopState, ctx.getParent(i), look, lookBusy, calledRuleStack, seeThruPreds, addEOF);\n                } finally {\n                    if (removed) {\n                        calledRuleStack.set(returnState.ruleIndex);\n                    }\n                }\n            }\n            return;\n        }\n    }\n\n    int n = s.getNumberOfTransitions();\n    for (int i = 0; i < n; i++) {\n        Transition t = s.transition(i);\n        if (t.getClass() == RuleTransition.class) {\n            if (calledRuleStack.get(((RuleTransition) t).target.ruleIndex)) {\n                continue;\n            }\n\n            PredictionContext newContext = SingletonPredictionContext.create(ctx, ((RuleTransition) t).followState.stateNumber);\n\n            try {\n                calledRuleStack.set(((RuleTransition) t).target.ruleIndex);\n                look(t.target, stopState, newContext, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);\n            } finally {\n                calledRuleStack.clear(((RuleTransition) t).target.ruleIndex);\n            }\n        } else if (t instanceof PredicateTransition) {\n            if (seeThruPreds) {\n                look(t.target, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);\n            } else {\n                look.add(HIT_PRED);\n            }\n        } else if (t.isEpsilon()) {\n            look(t.target, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);\n        } else if (t.getClass() == WildcardTransition.class) {\n            look.addAll(IntervalSet.of(Token.MIN_USER_TOKEN_TYPE, atn.maxTokenType));\n        } else {\n            IntervalSet set = t.label();\n            if (set != null) {\n                if (t instanceof NotSetTransition) {\n                    set = set.complement(IntervalSet.of(Token.MIN_USER_TOKEN_TYPE, atn.maxTokenType));\n                }\n                look.addAll(set);\n            }\n        }\n    }\n}"
+            ],
+            "classes": [],
+            "others": [
+                "```java\n",
+                "\n```"
+            ]
+        }
+    },
+    "L13228": {
+        "ContextCode": {
+            "methods": [],
+            "classes": [],
+            "others": [
+                "public Map<String, Integer> load() {\n\tMap<String, Integer> tokens = new LinkedHashMap<>();\n\tint maxTokenType = -1;\n\tFile fullFile = getImportedVocabFile();\n\n\ttry {\n\t\tPattern tokenDefPattern = Pattern.compile(\"([^\\\n]+?)[ \\\\\\\t]*?=[ \\\\\\\t]*?([0-9]+)\");\n\t\tFileReader fr = new FileReader(fullFile);\n\t\tBufferedReader br = new BufferedReader(fr);\n\t\tString tokenDef = br.readLine();\n\t\tint lineNum = 1;\n\n\t\twhile (tokenDef != null) {\n\t\t\tMatcher matcher = tokenDefPattern.matcher(tokenDef);\n\t\t\tif (matcher.find()) {\n\t\t\t\tString tokenID = matcher.group(1);\n\t\t\t\tString tokenTypeS = matcher.group(2);\n\t\t\t\tint tokenType = Integer.valueOf(tokenTypeS);\n\t\t\t\ttool.log(\"grammar\", \"import \" + tokenID + \"=\" + tokenType);\n\t\t\t\ttokens.put(tokenID, tokenType);\n\t\t\t\tmaxTokenType = Math.max(maxTokenType, tokenType);\n\t\t\t\tlineNum++;\n\t\t\t} else {\n\t\t\t\tif (tokenDef.length() > 0) { // ignore blank lines\n\t\t\t\t\ttool.errMgr.toolError(ErrorType.TOKENS_FILE_SYNTAX_ERROR,\n\t\t\t\t\t\t\t\t\t\t  vocabName + CodeGenerator.VOCAB_FILE_EXTENSION,\n\t\t\t\t\t\t\t\t\t\t  \" bad token def: \" + tokenDef,\n\t\t\t\t\t\t\t\t\t\t  lineNum);\n\t\t\t\t}\n\t\t\t}\n\t\t\ttokenDef = br.readLine();\n\t\t}\n\t\tbr.close();\n\t} catch (FileNotFoundException fnfe) {\n\t\ttool.errMgr.toolError(ErrorType.CANNOT_FIND_TOKENS_FILE, fullFile);\n\t} catch (IOException ioe) {\n\t\ttool.errMgr.toolError(ErrorType.ERROR_READING_TOKENS_FILE, fullFile, ioe);\n\t} catch (Exception e) {\n\t\ttool.errMgr.toolError(ErrorType.ERROR_READING_TOKENS_FILE, fullFile, e);\n\t}\n\n\treturn tokens;\n}"
+            ]
+        }
+    },
+    "L8024": {
+        "ContextCode": {
+            "methods": [
+                "public String decode(char[] data) {\n    data = data.clone();\n\n    // don\\'t adjust the first value since that\\'s the version number\n    for (int i = 1; i < data.length; i++) {\n        data[i] = (char)(data[i] - 2);\n    }\n\n    StringBuilder buf = new StringBuilder();\n    int p = 0;\n    int version = ATNSimulator.toInt(data[p++]);\n\n    if (version != ATNSimulator.SERIALIZED_VERSION) {\n        String reason = String.format(\"Could not deserialize ATN with version %d (expected %d).\", version, ATNSimulator.SERIALIZED_VERSION);\n        throw new UnsupportedOperationException(new InvalidClassException(ATN.class.getName(), reason));\n    }\n\n    int grammarType = ATNSimulator.toInt(data[p++]);\n    int maxType = ATNSimulator.toInt(data[p++]);\n    buf.append(\"max type \").append(maxType).append(\"\\\n\");\n\n    int nstates = ATNSimulator.toInt(data[p++]);\n    for (int i = 1; i <= nstates; i++) {\n        int stype = ATNSimulator.toInt(data[p++]);\n\n        if (stype == ATNState.INVALID_TYPE) continue; // ignore bad type of states\n        int ruleIndex = ATNSimulator.toInt(data[p++]);\n        String arg = \"\";\n\n        if (stype == ATNState.LOOP_END) {\n            int loopBackStateNumber = ATNSimulator.toInt(data[p++]);\n            arg = \" \" + loopBackStateNumber;\n        } else if (stype == ATNState.PLUS_BLOCK_START || stype == ATNState.STAR_BLOCK_START || stype == ATNState.BLOCK_START) {\n            int endStateNumber = ATNSimulator.toInt(data[p++]);\n            arg = \" \" + endStateNumber;\n        }\n\n        buf.append(i - 1).append(\":\")\n                .append(ATNState.serializationNames.get(stype)).append(\" \")\n                .append(ruleIndex).append(arg).append(\"\\\n\");\n    }\n\n    int numNonGreedyStates = ATNSimulator.toInt(data[p++]);\n    for (int i = 0; i < numNonGreedyStates; i++) {\n        int stateNumber = ATNSimulator.toInt(data[p++]);\n    }\n\n    int nrules = ATNSimulator.toInt(data[p++]);\n    for (int i = 0; i < nrules; i++) {\n        int s = ATNSimulator.toInt(data[p++]);\n\n        if (g.isLexer()) {\n            int arg1 = ATNSimulator.toInt(data[p++]);\n            int arg2 = ATNSimulator.toInt(data[p++]);\n            buf.append(\"rule \").append(i).append(\":\").append(s).append(\" \").append(arg1).append(\",\").append(arg2).append(\\'\\\n\\');\n        } else {\n            buf.append(\"rule \").append(i).append(\":\").append(s).append(\\'\\\n\\');\n        }\n    }\n\n    int nmodes = ATNSimulator.toInt(data[p++]);\n    for (int i = 0; i < nmodes; i++) {\n        int s = ATNSimulator.toInt(data[p++]);\n        buf.append(\"mode \").append(i).append(\":\").append(s).append(\\'\\\n\\');\n    }\n\n    int nsets = ATNSimulator.toInt(data[p++]);\n    for (int i = 1; i <= nsets; i++) {\n        int nintervals = ATNSimulator.toInt(data[p++]);\n        buf.append(i - 1).append(\":\");\n\n        for (int j = 1; j <= nintervals; j++) {\n            if (j > 1) buf.append(\", \");\n            buf.append(getTokenName(ATNSimulator.toInt(data[p]))).append(\"..\").append(getTokenName(ATNSimulator.toInt(data[p + 1]));\n            p += 2;\n        }\n\n        buf.append(\"\\\n\");\n    }\n\n    int nedges = ATNSimulator.toInt(data[p++]);\n    for (int i = 1; i <= nedges; i++) {\n        int src = ATNSimulator.toInt(data[p]);\n        int trg = ATNSimulator.toInt(data[p + 1]);\n        int ttype = ATNSimulator.toInt(data[p + 2]);\n        int arg1 = ATNSimulator.toInt(data[p + 3]);\n        int arg2 = ATNSimulator.toInt(data[p + 4]);\n        int arg3 = ATNSimulator.toInt(data[p + 5]);\n\n        buf.append(src).append(\"->\").append(trg)\n                .append(\" \").append(Transition.serializationNames.get(ttype))\n                .append(\" \").append(arg1).append(\",\").append(arg2).append(\",\").append(arg3)\n                .append(\"\\\n\");\n\n        p += 6;\n    }\n\n    int ndecisions = ATNSimulator.toInt(data[p++]);\n    for (int i = 1; i <= ndecisions; i++) {\n        int s = ATNSimulator.toInt(data[p++]);\n        buf.append(i - 1).append(\":\").append(s).append(\"\\\n\");\n    }\n\n    return buf.toString();\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L9806": {
+        "ContextCode": {
+            "methods": [
+                "public void defineImplicitLabel(GrammarAST ast, LabeledOp op) {\n    Decl d;\n    if (ast.getType() == ANTLRParser.SET || ast.getType() == ANTLRParser.WILDCARD) {\n        String implLabel = gen.target.getImplicitSetLabel(String.valueOf(ast.token.getTokenIndex()));\n        d = getTokenLabelDecl(implLabel);\n        ((TokenDecl) d).isImplicit = true;\n    } else if (ast.getType() == ANTLRParser.RULE_REF) {\n        Rule r = g.getRule(ast.getText());\n        String implLabel = gen.target.getImplicitRuleLabel(ast.getText());\n        String ctxName = gen.target.getRuleFunctionContextStructName(r);\n        d = new RuleContextDecl(this, implLabel, ctxName);\n        ((RuleContextDecl) d).isImplicit = true;\n    } else {\n        String implLabel = gen.target.getImplicitTokenLabel(ast.getText());\n        d = getTokenLabelDecl(implLabel);\n        ((TokenDecl) d).isImplicit = true;\n    }\n    op.getLabels().add(d);\n    getCurrentRuleFunction().addContextDecl(ast.getAltLabel(), d);\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L1506": {
+        "ContextCode": {
+            "methods": [
+                "public void addTransition(Transition e) {\n    boolean hasEpsilonTransition = e.isEpsilon();\n\n    if (transitions.isEmpty()) {\n        epsilonOnlyTransitions = hasEpsilonTransition;\n    } else if (epsilonOnlyTransitions != hasEpsilonTransition) {\n        System.err.format(\"ATN state %d has both epsilon and non-epsilon transitions.\\\n\", stateNumber);\n        epsilonOnlyTransitions = false;\n    }\n\n    transitions.add(e);\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L1991": {
+        "ContextCode": {
+            "methods": [
+                "protected boolean closure(@NotNull CharStream input, @NotNull LexerATNConfig config, @NotNull ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative) {\n\tif ( config.state instanceof RuleStopState ) {\n\t\tif ( config.context == null || config.context.hasEmptyPath() ) {\n\t\t\tif (config.context == null || config.context.isEmpty()) {\n\t\t\t\tconfigs.add(config);\n\t\t\t\treturn true;\n\t\t\t} else {\n\t\t\t\tconfigs.add(new LexerATNConfig(config, config.state, PredictionContext.EMPTY));\n\t\t\t\tcurrentAltReachedAcceptState = true;\n\t\t\t}\n\t\t}\n\n\t\tif ( config.context!=null && !config.context.isEmpty() ) {\n\t\t\tfor (SingletonPredictionContext ctx : config.context) {\n\t\t\t\tif ( !ctx.isEmpty() ) {\n\t\t\t\t\tPredictionContext newContext = ctx.parent;\n\t\t\t\t\tif ( ctx.returnState==PredictionContext.EMPTY_RETURN_STATE ) {\n\t\t\t\t\t\tLexerATNConfig c = new LexerATNConfig(config, config.state, ctx);\n\t\t\t\t\t\tconfigs.add(c);\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\t\t\t\t\tATNState returnState = atn.states.get(ctx.returnState);\n\t\t\t\t\tLexerATNConfig c = new LexerATNConfig(returnState, config.alt, newContext);\n\t\t\t\t\tcurrentAltReachedAcceptState = closure(input, c, configs, currentAltReachedAcceptState, speculative);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\treturn currentAltReachedAcceptState;\n\t}\n\n\tif ( !config.state.onlyHasEpsilonTransitions() ) {\n\t\tif (!currentAltReachedAcceptState || !config.hasPassedThroughNonGreedyDecision()) {\n\t\t\tconfigs.add(config);\n\t\t}\n\t}\n\n\tATNState p = config.state;\n\tfor (int i=0; i<p.getNumberOfTransitions(); i++) {\n\t\tTransition t = p.transition(i);\n\t\tLexerATNConfig c = getEpsilonTarget(input, config, t, configs, speculative);\n\t\tif ( c!=null ) {\n\t\t\tcurrentAltReachedAcceptState = closure(input, c, configs, currentAltReachedAcceptState, speculative);\n\t\t}\n\t}\n\n\treturn currentAltReachedAcceptState;\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L19910": {
+        "ContextCode": {
+            "methods": [
+                "protected boolean closure(CharStream input, LexerATNConfig config, ATNConfigSet configs, boolean currentAltReachedAcceptState, boolean speculative) {\n\tif (config.state instanceof RuleStopState) {\n\t\tif (config.context == null || config.context.hasEmptyPath()) {\n\t\t\tif (config.context == null || config.context.isEmpty()) {\n\t\t\t\tconfigs.add(config);\n\t\t\t\treturn true;\n\t\t\t} else {\n\t\t\t\tconfigs.add(new LexerATNConfig(config, config.state, PredictionContext.EMPTY));\n\t\t\t\tcurrentAltReachedAcceptState = true;\n\t\t\t}\n\t\t}\n\n\t\tif (config.context != null && !config.context.isEmpty()) {\n\t\t\tfor (SingletonPredictionContext ctx : config.context) {\n\t\t\t\tif (!ctx.isEmpty()) {\n\t\t\t\t\tPredictionContext newContext = ctx.parent;\n\t\t\t\t\tif (ctx.returnState == PredictionContext.EMPTY_RETURN_STATE) {\n\t\t\t\t\t\tLexerATNConfig c = new LexerATNConfig(config, config.state, ctx);\n\t\t\t\t\t\tconfigs.add(c);\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\t\t\t\t\tATNState returnState = atn.states.get(ctx.returnState);\n\t\t\t\t\tLexerATNConfig c = new LexerATNConfig(returnState, config.alt, newContext);\n\t\t\t\t\tcurrentAltReachedAcceptState = closure(input, c, configs, currentAltReachedAcceptState, speculative);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\treturn currentAltReachedAcceptState;\n\t}\n\n\tif (!config.state.onlyHasEpsilonTransitions()) {\n\t\tif (!currentAltReachedAcceptState || !config.hasPassedThroughNonGreedyDecision()) {\n\t\t\tconfigs.add(config);\n\t\t}\n\t}\n\n\tATNState p = config.state;\n\tfor (int i = 0; i < p.getNumberOfTransitions(); i++) {\n\t\tTransition t = p.transition(i);\n\t\tLexerATNConfig c = getEpsilonTarget(input, config, t, configs, speculative);\n\t\tif (c != null) {\n\t\t\tcurrentAltReachedAcceptState = closure(input, c, configs, currentAltReachedAcceptState, speculative);\n\t\t}\n\t}\n\n\treturn currentAltReachedAcceptState;\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L2113": {
+        "ContextCode": {
+            "methods": [
+                "protected void _LOOK(@NotNull ATNState s, @Nullable PredictionContext ctx,\n                         @NotNull IntervalSet look,\n                         @NotNull Set<ATNConfig> lookBusy,\n                         boolean seeThruPreds, boolean addEOF) {\n    ATNConfig c = new ATNConfig(s, 0, ctx);\n    if (!lookBusy.add(c)) return;\n\n    if (s instanceof RuleStopState) {\n        if (ctx == null) {\n            look.add(Token.EPSILON);\n            return;\n        } else if (ctx.isEmpty() && addEOF) {\n            look.add(Token.EOF);\n            return;\n        }\n\n        if (ctx != PredictionContext.EMPTY) {\n            for (SingletonPredictionContext p : ctx) {\n                ATNState returnState = atn.states.get(p.returnState);\n                _LOOK(returnState, p.parent, look, lookBusy, seeThruPreds, addEOF);\n            }\n            return;\n        }\n    }\n\n    int n = s.getNumberOfTransitions();\n    for (int i = 0; i < n; i++) {\n        Transition t = s.transition(i);\n        if (t.getClass() == RuleTransition.class) {\n            PredictionContext newContext = SingletonPredictionContext.create(ctx, ((RuleTransition) t).followState.stateNumber);\n            _LOOK(t.target, newContext, look, lookBusy, seeThruPreds, addEOF);\n        } else if (t instanceof PredicateTransition) {\n            if (seeThruPreds) {\n                _LOOK(t.target, ctx, look, lookBusy, seeThruPreds, addEOF);\n            } else {\n                look.add(HIT_PRED);\n            }\n        } else if (t.isEpsilon()) {\n            _LOOK(t.target, ctx, look, lookBusy, seeThruPreds, addEOF);\n        } else if (t.getClass() == WildcardTransition.class) {\n            look.addAll(IntervalSet.of(Token.MIN_USER_TOKEN_TYPE, atn.maxTokenType));\n        } else {\n            IntervalSet set = t.label();\n            if (set != null) {\n                if (t instanceof NotSetTransition) {\n                    set = set.complement(IntervalSet.of(Token.MIN_USER_TOKEN_TYPE, atn.maxTokenType));\n                }\n                look.addAll(set);\n            }\n        }\n    }\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L2427": {
+        "ContextCode": {
+            "methods": [
+                "protected void closure(ATNConfig config, ATNConfigSet configs, Set<ATNConfig> closureBusy, boolean collectPredicates, boolean fullCtx, int depth) {\n\tATNState p = config.state;\n\n\tif (!p.onlyHasEpsilonTransitions()) {\n\t\tconfigs.add(config, mergeCache);\n\t}\n\n\tfor (int i = 0; i < p.getNumberOfTransitions(); i++) {\n\t\tTransition t = p.transition(i);\n\n\t\tboolean continueCollecting = !(t instanceof ActionTransition) && collectPredicates;\n\t\tATNConfig c = getEpsilonTarget(config, t, continueCollecting, depth == 0, fullCtx);\n\n\t\tif (c != null) {\n\t\t\tint newDepth = depth;\n\n\t\t\tif (config.state instanceof RuleStopState) {\n\t\t\t\tassert !fullCtx;\n\n\t\t\t\tc.reachesIntoOuterContext++;\n\t\t\t\tconfigs.dipsIntoOuterContext = true;\n\t\t\t\tassert newDepth > Integer.MIN_VALUE;\n\t\t\t\tnewDepth--;\n\n\t\t\t} else if (t instanceof RuleTransition) {\n\t\t\t\tif (newDepth >= 0) {\n\t\t\t\t\tnewDepth++;\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tclosureCheckingStopState(c, configs, closureBusy, continueCollecting, fullCtx, newDepth);\n\t\t}\n\t}\n}"
+            ],
+            "classes": [],
+            "others": []
+        }
+    },
+    "L9795": {
+        "ContextCode": {
+            "methods": [],
+            "classes": [],
+            "others": [
+                "public InvokeRule(ParserFactory factory, GrammarAST ast, GrammarAST labelAST) {\n\tsuper(factory, ast);\n\n\tif ( ast.atnState != null ) {\n\t\tRuleTransition ruleTrans = (RuleTransition) ast.atnState.transition(0);\n\t\tstateNumber = ast.atnState.stateNumber;\n\t}\n\n\tthis.name = ast.getText();\n\tCodeGenerator gen = factory.getGenerator();\n\tRule r = factory.getGrammar().getRule(name);\n\tctxName = gen.target.getRuleFunctionContextStructName(r);\n\n\tRuleFunction rf = factory.getCurrentRuleFunction();\n\n\tif ( labelAST != null ) {\n\t\tString label = labelAST.getText();\n\n\t\tif ( labelAST.parent.getType() == ANTLRParser.PLUS_ASSIGN ) {\n\t\t\tfactory.defineImplicitLabel(ast, this);\n\t\t\tString listLabel = gen.target.getListLabel(label);\n\t\t\tRuleContextListDecl l = new RuleContextListDecl(factory, listLabel, ctxName);\n\t\t\trf.addContextDecl(ast.getAltLabel(), l);\n\t\t} else {\n\t\t\tRuleContextDecl d = new RuleContextDecl(factory, label, ctxName);\n\t\t\tlabels.add(d);\n\t\t\trf.addContextDecl(ast.getAltLabel(), d);\n\t\t}\n\t}\n\n\tif ( ast.getChildCount() > 0 ) {\n\t\tActionAST arg = (ActionAST) ast.getChild(0);\n\t\targExprsChunks = ActionTranslator.translateAction(factory, rf, arg.token, arg);\n\t}\n\n\tif ( factory.getCurrentOuterMostAlt().ruleRefsInActions.containsKey(ast.getText()) ) {\n\t\tString label = gen.target.getImplicitRuleLabel(ast.getText());\n\t\tRuleContextDecl d = new RuleContextDecl(factory, label, ctxName);\n\t\tlabels.add(d);\n\t\trf.addContextDecl(ast.getAltLabel(), d);\n\t}\n}"
+            ]
+        }
+    },
+    "L9861": {
+        "ContextCode": {
+            "methods": [],
+            "classes": [],
+            "others": [
+                "public Lexer(OutputModelFactory factory, LexerFile file) {\n    this.factory = factory;\n    this.file = file;\n    Grammar g = factory.getGrammar();\n    grammarFileName = new File(g.fileName).getName();\n    name = g.getRecognizerName();\n    tokens = new LinkedHashMap<String,Integer>();\n    LexerGrammar lg = (LexerGrammar)g;\n    atn = new SerializedATN(factory, lg.atn);\n    modes = lg.modes.keySet();\n\n    for (String t : g.tokenNameToTypeMap.keySet()) {\n        Integer ttype = g.tokenNameToTypeMap.get(t);\n        if ( ttype > 0 ) tokens.put(t, ttype);\n    }\n\n    tokenNames = g.getTokenDisplayNames();\n    for (int i = 0; i < tokenNames.length; i++) {\n        if ( tokenNames[i] == null ) continue;\n        CodeGenerator gen = factory.getGenerator();\n        if ( tokenNames[i].charAt(0) == \\'\\\\\\'\\' ) {\n            boolean addQuotes = false;\n            tokenNames[i] = gen.target.getTargetStringLiteralFromANTLRStringLiteral(gen, tokenNames[i], addQuotes);\n            tokenNames[i] = \"\\\\\"\\'\"+tokenNames[i]+\"\\'\\\\\"\";\n        }\n        else {\n            tokenNames[i] = gen.target.getTargetStringLiteralFromString(tokenNames[i], true);\n        }\n    }\n\n    ruleNames = g.rules.keySet();\n\n    if ( g.getOptionString(\"superClass\") != null ) {\n        superClass = new ActionText(null, g.getOptionString(\"superClass\"));\n    }\n    else {\n        superClass = new DefaultLexerSuperClass();\n    }\n}"
+            ]
+        }
+    }
+}

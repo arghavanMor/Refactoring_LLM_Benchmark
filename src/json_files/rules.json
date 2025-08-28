@@ -1,0 +1,339 @@
+{
+    "CHANGE FUNCTION DECLARATION": {
+        "ADD PARAMETER": {
+            "Ref-Finder ID": "1",
+            "Rule": "added_parameter(mFullName, X, addedParam) \u2192 add_parameter(mFullname, addedParam)",
+            "Description": "A parameter is added to a method."
+        },
+        "REMOVE PARAMETER": {
+            "Ref-Finder ID": "45",
+            "Rule": "deleted_parameter(mFullName, X, deletedParam) \u2192 remove_parameter(mFullname, deletedParam)",
+            "Description": "A parameter is removed from a method."
+        },
+        "RENAME METHOD": {
+            "Ref-Finder ID": "47",
+            "Rule": "added_method(newmFullName, newmShortName, tFullName) \u2227 deleted_method(mFullName, mShortName, tFullName) \u2227 similarbody(newmFullName, newmBody, mFullname, mBody) \u2192 rename_method(mFullName, newmFullName, tFullName)",
+            "Description": "A method is renamed to give a better idea of its func-tion"
+        }
+    },
+    "CHANGE BIDIRECTIONAL ASSOCIATION TO UNIDIRECTIONAL": {
+        "Ref-Finder ID": "2",
+        "Rule": "before_field(fFullName, X, t2FullName) \u2227 after_field(fFullName, X, t2FullName) \u2227 before_fieldoftype(fFullName, tpFullName) \u2227 after_fieldoftype(fFullName, tpFullName) \u2227 deleted_field(f2FullName, X, tFullName) \u2227 deleted_fieldoftype(f2FullName, t2pFullName) \u2227 ((tFullName.equals(tpFullName) \u2227 t2pFullName.contains(t2FullName) ) \u2228 ( t2FullName.equals(t2pFullName) \u2227 tpFullName.contains(tFullName) ) ) \u2192 change_bi_to_uni(tFullName, t2FullName)",
+        "Description": "You have a two-way as-sociation but one class no longer needs features from the other. Drop the un-needed end of the associa-tion."
+    },
+    "CHANGE REFERENCE TO VALUE": {
+        "Ref-Finder ID": "3",
+        "Rule": "deleted_method(mFactFullName, X, tFullName) \u2227 before_method(mCtorFullName, init(), tFullName) \u2227 deleted_calls(mFactFullName, mCtorFullName) \u2227 added_calls(mClientFullName, mCtorFullName) \u2227 deleted_calls(mClientFullName, mFactFull-Name) \u2227 deleted_methodmodifier(mCtorFullName, private) \u2227 after_fieldoftype(X, tFullName) \u2227 after_fieldoftype(X, tFullName) \u2227 after_method(X, equals(), tFullName) \u2227 after_method(x, hashCode(), tFullName) \u2192 change_reference_to_value(tFullName)",
+        "Description": "You have a reference object that is small, immutable, and awkward to manage. Turn it into a value object."
+    },
+    "CHANGE UNIDIRECTIONAL ASSOCIATION TO BIDIRECTIONAL": {
+        "Ref-Finder ID": "4",
+        "Rule": "before field(fFullName, X, t2FullName) \u2227 after_field(fFullName, X, t2FullName) \u2227 before_fieldoftype(fFullName, tpFullName) \u2227 after_fieldoftype(fFullName, tpFullName) \u2227 added_field(f2FullName, X, tFullName) \u2227 added_fieldoftype(f2FullName, t2pFullName) \u2227 ( ( tFullName.equals(tpFullName) \u2227 t2pFullName.contains(t2FullName) ) \u2228 ( t2FullName.equals(t2pFullName) \u2227 tpFullName.contains(tFullName) ) ) \u2192 change_uni_to_bi(tFullName, t2FullName)",
+        "Description": "You have two classes that need to use each other\u2019s features, but there is only a one-way link. Add back pointers (and change mod-ifiers to update both sets)."
+    },
+    "CHANGE VALUE TO REFERENCE": {
+        "Ref-Finder ID": "5",
+        "Rule": "replace constructor with method(mCtorFullName, mFactFullName) \u2227 added_method(mFactFullName, X, tFullName) \u2227 before_fieldoftype(X, tFullName) \u2227 after_fieldoftype(X, tFullName) \u2227 NOT(after_method(X, equals(), tFullName); after_method(X, hashCode(), tFullName)) \u2192 change_value_to_reference(tFullName)",
+        "Description": "You have a class with many equal instances that you want to replace with a single object. Turn the object into a reference object."
+    },
+    "COLLAPSE HIERARCHY": {
+        "Ref-Finder ID": "6",
+        "Rule": "(deleted_subtype(tParentFullName, tChild-FullName) \u2227 (pull_up_field(fShortName, tChildFullName, tParentFullName) \u2228 pull_up_method(mShortName, tChild-FullName, tParentFullName))) \u2228 (before_subtype(tParentFullName, tChildFullName) \u2227 deleted_type(tParentFullName, tParentShortName, package) \u2227 (push_down_field(fShortName, tParentFullName, tChildFullName) \u2228 push_down_method(mShortName, tParent-FullName, tChildFullName) )) \u2192 collapse_hierarchy(tParentFullName, tChildFullname)",
+        "Description": "A superclass and subclass are not very different. Merge them together"
+    },
+    "CONSOLIDATE CONDITIONAL EXPRESSION": {
+        "Ref-Finder ID": "7",
+        "Rule": "(deleted_conditional(old_cond1, ifPart, elsePart, mFullName) \u2227 deleted_conditional(old_cond2, ifPart, elsePart, mFullName) \u2227 added_conditional(new_cond, ifPart, elsePart, mFullName) \u2227 extract_method(mFullName, X, extMthdBody, X) \u2227 extMthdBody.contains(old_cond1) \u2227 extMthdBody.contains(old_cond2)) \u2228 (deleted_conditional(old_cond1, ifPart, elsePart, mFullName) \u2227 deleted_conditional(old_cond2, ifPart, elsePart, mFullName) \u2227 added_conditional(new_cond, ifPart, elsePart, mFullName) \u2227 new_cond.contains(old_cond1) \u2227 new_cond.contains(old_cond2)) \u2192 consolidate_cond_expression(mFullName)",
+        "Description": "You have a sequence of con-ditional tests with the same result. Combine them into a single conditional expres-sion and extract it."
+    },
+    "SLIDE STATEMENTS": {
+        "Ref-Finder ID": "8",
+        "Rule": "deleted_conditional(cond, old_ifPart, old_elsePart, mfullName) \u2227 added_conditional(cond, new_ifPart, new_elsePart, mFullName) \u2227 after_methodbody(mFullName, mbody) \u2227 similar_fragments(old_elsePart, new_elsePart, mbody) \u2227 similar_fragments(old_ifPart, new_ifPart, mbody) \u2192 consolidate duplicate_cond_fragments(mfullName)",
+        "Description": "You have a complicated conditional (if-then-else) statement. Extract methods from the condition, then part, and else parts."
+    },
+    "CONVERT PROCEDURAL DESIGN TO OBJECTS": {
+        "Ref-Finder ID": "9",
+        "Rule": "We have no way to measure the \u201cproceduralness\u201d of code.",
+        "Description": "You have code written in a procedural style. Turn the data records into objects, break up the behavior, and move the behavior to the objects."
+    },
+    "DECOMPOSE CONDITIONAL": {
+        "Ref-Finder ID": "10",
+        "Rule": "deleted_conditional(condition, ifBlock, elseBlock, mFullName) \u2227 extract_method(mFullName, m1FullName, conditionB, t1FullName) \u2227 extract_method(mFullName, m2FullName, ifBlockB, t2FullName) \u2227 extract_method(mFullName, m3FullName, elseBlockB, t3FullName) \u2192 decompose_conditional(condition, ifBlock, elseBlock, mFullName)",
+        "Description": "You have a complicated conditional. Extract methods from the condition, then and else parts"
+    },
+    "DUPLICATE OBSERVED DATA": {
+        "Ref-Finder ID": "11",
+        "Rule": "We have no way to detect the observer",
+        "Description": "You have domain data avail-able only in a GUI control, and domain methods need access. Copy the data to a domain object. Set up an observer to synchronize the two pieces of data."
+    },
+    "ENCAPSULATE COLLECTION": {
+        "Ref-Finder ID": "12",
+        "Rule": "before_field(fFullName, X, tFullName) \u2227 after_field(fFullName, X, tFullName) \u2227 before_accesses(fFullName, getmFullName) \u2227 after_accesses(fFullName, getmFullName) \u2227 added_calls(getmFullName, unmodmFullName) \u2227 after_method(getmFullName, getmShortName, tFullName) \u2227 added_method(addmFullName, addmShortName, tFullName) \u2227 added_accesses(fFullName, addmFullName) \u2227 added_method(remmFUllName, remmShortName, tFullName) \u2227 added_accesses(fFullName, remmFullName) \u2227 deleted_method(setmFullName, setmShortName, tFullName) \u2227 deleted_accesses(fFullName, setmFullName) \u2227 getmShortName.startsWith(get) \u2227 addmShortName.startsWith(add) \u2227 remmShortName.startsWith(remove) \u2227 setmShortName.startsWith(set) \u2227 unmodmFullName.startsWith(java.util.Collections.unmodifiable) \u2192 encapsulate_collection(fFullName)",
+        "Description": "A method returns a col-lection. Make it return a read-only view and provide add/remove methods"
+    },
+    "ENCAPSULATE DOWNCAST": {
+        "Ref-Finder ID": "13",
+        "Rule": "added_cast(X, tFullName, mFullName) \u2227 added_return(mFullName, tFullName) \u2227 deleted_return(mFullName, oldtFullName) \u2227 ( after_subtype(oldtFullName, tFullName) \u2228 ( after_subtype(oldtFullName, othertFullName) \u2227 after_subtype(othertFullName, tFullName) ) ) \u2192 encapsulate_downcast(mFullName, tFullName)",
+        "Description": "A method returns an ob-ject that needs to be down-casted by its callers. Move the downcast to within the method."
+    },
+    "ENCAPSULATE VARIABLE": {
+        "Ref-Finder ID": "67",
+        "Rule": "encapsulate_field(fFullName) \u2227 there are no access to the field besides the new getter and setter \u2192  self_encapsulate_field(fFullName)",
+        "Description": "You are accessing a field directly, but the coupling to the field is becoming awkward. Create getting and setting methods for the field and only use those to access the field."
+    },
+    "EXTRACT CLASS": {
+        "Ref-Finder ID": "15",
+        "Rule": "added_type(newtFullName, newtShortName, pkg2) \u2227 before_type(tFullName, tShortName, pkg) \u2227 after_type(tFullName, tShortName, pkg) \u2227 added_field(fFullname, X, tFullname) \u2227 added_fieldoftype(fFullName, newtFullName) \u2227 ( move_field(fShortName, tFullName, newtFullName) \u2228 move_method(mShortName, tFullName, newtFullName) ) \u2192 extract_class(newtFullName, tFullName)",
+        "Description": "You have a class doing the work of two. Create a new class and move the relevant fields and methods to the new class."
+    },
+    "EXTRACT HIERARCHY": {
+        "Ref-Finder ID": "16",
+        "Rule": "replace_type_code_with_subclasses(tFullName) \u2228 replace_type_code_with_state(tFullName, X) \u2228 (replace_conditional_with_polymorphism(mFullName) \u2227 before_method(mFullName, X, tFullName)) \u2192 extract_hierarchy(tFullName)",
+        "Description": "You have a class that is doing too much work, at least in part through many conditional statements. Cre-ate a hierarchy of classes in which each subclass repre-sents a special case."
+    },
+    "EXTRACT INTERFACE": {
+        "Ref-Finder ID": "17",
+        "Rule": "added_type(interfacetFullName, X, X) \u2227 added_implements(interfacetFullName, othertFullName) \u2227 before_type(othertFullName, X, X) \u2192 extract_interface(interfacetFullName, othertFullName)",
+        "Description": "Several clients use the same subset of a class\u2019s interface, or two classes have part of their interfaces in common. Extract the subset into an interface."
+    },
+    "EXTRACT FUNCTION": {
+        "Ref-Finder ID": "18",
+        "Rule": "added_method(newmFullName, newmShortName, tFullName) \u2227 similarbody(newmFullName, newmBody, mFullname, mBody) \u2227 after_method(mFullName, X, tFullName) \u2227 added_calls(mFullName, newmFullName) \u2192 extract_method(mFullName, newmFullName, newmBody, tFullName)",
+        "Description": "You have a code fragment that can be grouped to-gether. Turn the fragment into a method whose name explains the purpose of the method."
+    },
+    "REPLACE TYPE CODE WITH SUBCLASSES": {
+        "Ref-Finder ID": "66",
+        "Rule": "before_field(fFullName1, fShortName1, tFullName) \u2227 before_field(fFullName2, fShortName2, tFullName) \u2227 NOT(equals(fFullName1, fFullName2) \u2227 before_fieldmodifier(fFullName1, static) \u2227 before_fieldmodifier(fFullName2, static) \u2227 before_fieldmodifier(fFullName1, final) \u2227 before_fieldmodifier(fFullName2, final) \u2227 deleted_field(tCodeFullName, X, tFullName) \u2227 added_type(tCodeFullName1, tCodeShortName1, X) \u2227 added_type(tCodeFullName2, tCodeShortName2, X) \u2227 NOT(equals(tCodeFullName1, tCodeFullName2)) \u2227 added_subtype(tFullName, tCodeFullName1) \u2227 added_subtype(tFullName, tCodeFullName2) \u2227 similar(fShortName1, tCodeShortName1) \u2227 similar(fShortName2, tCodeShortName2))",
+        "Description": "You have an immutable type code that affects the behavior of a class. Replace the type with subclasses."
+    },
+    "EXTRACT SUPERCLASS": {
+        "Ref-Finder ID": "20",
+        "Rule": "added_subtype(tFullName, subtFullName) \u2227 NOT(before_type(tFullName, X, X)) \u2227 (move_field(fShortName, subtFullName, tFullName) \u2228 move_method(mShortName, subTFullName, tFullName)) \u2192 extract_superclass(subtFullName, tFullName)",
+        "Description": "You have two classes with similar features. Create a superclass and move the common features to the su-perclass."
+    },
+    "FORM TEMPLATE METHOD": {
+        "Ref-Finder ID": "21",
+        "Rule": "same_body(calleeMFullName1, new mbody1, mFullName1, mbody1) \u2227 same_body(calleeMFullName2, new_mbody2, mFullName2, mbody2) \u2227 NOT(equals(mFullName1, mFullName2)) \u2227 NOT(equals(sub_tFullName1, sub_tFullName2)) \u2227 added_method(mFullname, mShortName, super_tFullName) \u2227 deleted_method(mFullName1, mShortName, sub_tFullName1) \u2227 deleted_method(mFullName2, mShortName, sub_tFullName2) \u2227 added_calls(mFullName, calleeMFullName) \u2227 added_inheritedmethod(calleemShortName, super_tFullName, sub_tFullName1) \u2227 added_inheritedmethod(calleemShortName, super_tFullName, sub_tFullName2) \u2227 after_method(calleeMFullName1, calleemShortName, sub_tFullName1) \u2227 after_method(calleeMFullName2, calleemShortName, sub_tFullName2) \u2227 after_method(calleeMFullName, calleemShortName, super_tFullName) \u2227 after_subtype(super_tFullName, sub_tFullName1) \u2227 after_subtype(super_tFullName, sub_tFullName2) \u2192 form_template_method(super_tFullName, sub_tFullName1, sub_tFullName2, mFullName)",
+        "Description": "You have two methods in subclasses that perform sim-ilar steps in the same or-der, yet the steps are differ-ent. Get the steps into meth-ods with the same signature, so that the original methods become the same. Then you can pull them up."
+    },
+    "HIDE DELEGATE": {
+        "Ref-Finder ID": "22",
+        "Rule": "after_method(clientmFullName, X, clienttFullName) \u2227 deleted_calls(clientmFullName, delegatemFullName) \u2227 added_calls(clientmFullName, servermFullName) \u2227 added_method(servermFullName, X, servertFullName) \u2227 added_calls(servermFullName, delegatemFullName) \u2227 before_field(delegatefFullName, X, servert-FullName) \u2227 after_field(delegatefFullName, X, servertFullName) \u2227 before_fieldoftype(delegatefFullName, delegatetFull-Name) \u2227 after_fieldoftype(delegatefFullName, delegatetFullName) \u2227 after_method(delegatemFullName, X, delegatetFullName) \u2227 NOT(equals(servertFullName, clienttFullName)) \u2227 NOT(equals(servertFullName, delegatetFullName)) \u2192 hide_delegate(delegatetFullName, servertFullName, clienttFullName)",
+        "Description": "A client is calling a delegate class of an object. Create methods on the server to hide the delegate."
+    },
+    "HIDE METHOD": {
+        "Ref-Finder ID": "23",
+        "Rule": "deleted_methodmodifier(mFullName, public) \u2227 added_methodmodifier(mFullName, private) \u2192 hide_method(mFullName)",
+        "Description": "A method is not used by any other class. Make the method private."
+    },
+    "INLINE CLASS": {
+        "Ref-Finder ID": "24",
+        "Rule": "deleted_type(oldtFullName, oldtShortName, pkg2) \u2227 before_type(tFullName, tShortName, pkg) \u2227 after_type(tFullName, tShortName, pkg) \u2227 deleted_field(fFullname, X, tFullname) \u2227 deleted_fieldoftype(fFullName, oldtFullName) \u2227 ( move_field(fShortName, oldtFullName, tFullName) \u2228 move_method(mShortName, oldtFullName, tFullName) ) \u2192 inline_class(oldtFullName, tFullName)",
+        "Description": "A class isn\u2019t doing very much. Move its functional-ity into another class and delete it."
+    },
+    "INLINE FUNCTION": {
+        "Ref-Finder ID": "25",
+        "Rule": "deleted_method(oldmFullName, oldmShortName, tFullName) \u2227 similarbody(oldmFullName, oldmBody, mFullName, mBody) \u2227 before_method(mFullName, X, tFullName) \u2192 inline_method(mFullName, oldmFullName, oldmBody, tFullName)",
+        "Description": "A method\u2019s body is just as clear as it\u2019s name. Replace the call to the method with that method\u2019s body. (Oppo-site of extract method)."
+    },
+    "INLINE VARIABLE": {
+        "Ref-Finder ID": "26",
+        "Rule": "deleted_localvar(mFullName, X, identifier, expression) \u2227 NOT(added_localvar(mFullName, X, identifier, X)) \u2227 NOT(added_localvar(mFullName, X, X, expression)) \u2227 deleted_methodbody(mFullName, mBody) \u2227 added_methodbody(mFullName, newmBody) \u2192 introduce_explaining_variable(identifier, expression, mFullName)",
+        "Description": "You have a temp that is as-signed to once with a simple expression, and the temp is getting in the way of other refactorings. Replace all ref-erences to that temp with the expression."
+    },
+    "INTRODUCE ASSERTION": {
+        "Ref-Finder ID": "27",
+        "Rule": "deleted_methodbody(mFullName, oldmBody) \u2227 added_methodbody(mFullName, newmBody) \u2192 introduce_assertion(mFullName)",
+        "Description": "A section of code assumes something about the state of the program. Make the assumption explicit with an assertion."
+    },
+    "EXTRACT VARIABLE": {
+        "Ref-Finder ID": "28",
+        "Rule": "added_localvar(mFullName, X, identifier, expression) \u2227 NOT(deleted_localvar(mFullName, X, identifier, X)) \u2227 NOT(deleted_localvar(mFullName, X, X, expression)) \u2227 deleted_methodbody(mFullName, mBody) \u2227 added_methodbody(mFullName, newmBody) \u2192 introduce_explaining_variable(identifier, expression, mFullName)",
+        "Description": "You have a complicated ex-pression. Put the result of the expression, or parts of the expression, in a tempo-rary variable with a name that explains the purpose."
+    },
+    "INTRODUCE FOREIGN METHOD": {
+        "Ref-Finder ID": "29",
+        "Rule": "Qualitative evaluation of where a function belongs is beyond the scope of this project",
+        "Description": "A server class you are using needs an additional method, but you can\u2019t modify the class. Create a method in the client class with an in-stance of the server class as its first argument."
+    },
+    "INTRODUCE LOCAL EXTENSION": {
+        "Ref-Finder ID": "30",
+        "Rule": "(added_subtype(tSuperFullName, tSubFullName) \u2228 (added_type(tSubFullName, X, X) \u2227 added_field(superInstanceFieldFullName, X, tSubFullName) \u2227 added_fieldoftype(superInstanceFieldFullName, tSuperFullName) )) \u2227 added_method(subCtorFullName, init(), tSubFullName) \u2227 move_method(mShortName, tClientFullName, tSubFullName) \u2227 before_method(mBeforeFullName, mShortName, tClientFullName) \u2227 after_method(mAfterFullName, mShortName, tSubFullName) \u2227 deleted_calls(mClientFullName, mBeforeFullName) \u2227 added_calls(mClientFullName, mAfterFullName) \u2192 introduce_local_extension(tSubFullName, tSuperFullName)",
+        "Description": "A server class you are using needs several addi-tional methods, but you can\u2019t modify the class. Cre-ate a new class that con-tains these extra methods. Make this extension a sub-class or wrapper of the orig-inal server."
+    },
+    "INTRODUCE SPECIAL CASE": {
+        "Ref-Finder ID": "31",
+        "Rule": "deleted_conditional(nullCond, X, X, mFullName) \u2227 NOT(added_conditional(nullCond, X, X, mFullName)) \u2227 before_calls(mFullName, servermFullName) \u2227 after_calls(mFullName, servermFullName) \u2227 after_method(servermFullName, X, servertFullName) \u2227 added_type(nulltFullName, X, X) \u2227 added_subtype(servertFullName, nulltFullName) \u2192 introduce_null_object(nulltFullName, servertFullName)",
+        "Description": "You have repeated chacks for a null value. Replace the null value with a null object."
+    },
+    "INTRODUCE PARAMETER OBJECT": {
+        "Ref-Finder ID": "32",
+        "Rule": "remove_parameter(mFullName, old param1) \u2227 remove_parameter(mFullName, old param2) \u2227 NOT(equals(old param1, old param2)) \u2227 add_parameter(mFullName, new param) \u2227 added_type(tFullName, tShortName, X) \u2227 added_field(fFullName1, X, tFullName) \u2227 added_fieldoftype(fFullName2, old_param1_type) \u2227 added_field(fFullName2, X, tFullName) \u2227 added_fieldoftype(fFullName2, old_param2_type) \u2227 NOT(equals(fFullName1, fFullName2)) \u2192 introduce_parameter_object(mFullName, tFullName)",
+        "Description": "You have a group of pa-rameters that naturally go together. Replace them with an object."
+    },
+    "MOVE FIELD": {
+        "Ref-Finder ID": "33",
+        "Rule": "deleted field(fromFieldFullName, field-ShortName, fromClassFullName) \u2227 added field(toFieldFullName, field-ShortName, toClassFullName) \u2227 deleted accesses(fromFieldFullName, accessorMethodFullName) \u2227 added access(toFieldFullName, accessorMethod-FullName) \u2192 move field(fieldShortName, fromClassFullName, toClassFullName)",
+        "Description": "A field is moved to a class in which it will be used more."
+    },
+    "MOVE FUNCTION": {
+        "Ref-Finder ID": "34",
+        "Rule": "deleted_method(mFullName, mShortName, t1FullName) \u2227 added_method(newmFullName, mShortName, t2FullName) \u2227 similarbody(newmFullName, newmBody, mFullName, mBody) \u2227 NOT(equals(t1FullName, t2FullName)) \u2192 move_method(mShortName, t1Fullname, t2FullName)",
+        "Description": "A method is moved to a class in which it will be used more"
+    },
+    "PARAMETERIZE FUNCTION": {
+        "Ref-Finder ID": "35",
+        "Rule": "deleted_method(m1FullName, m1ShortName, tFullName) \u2227 before_parameter(m1FullName, params1, X) \u2227 deleted_method(m2FullName, m2ShortName, tFullName) \u2227 before_parameter(m2FullName, params2, X) \u2227 NOT(equals(m1ShortName, m2ShortName)) \u2227 added_method(newmFullName, newmShortName, tFullName) \u2227 after_parameter(newmFullName, newparams, X) \u2192 parameterize_method(newmFullName)",
+        "Description": "Several Methods do similar things but with different val-ues contained in the method body. Create one method that uses a parameter for the different values."
+    },
+    "PRESERVE WHOLE OBJECT": {
+        "Ref-Finder ID": "36",
+        "Rule": "deleted_calls(clientmFullName, objmFullName) \u2227 after_method(objmFullName, X, objtFullName) \u2227 before_calls(clientmFullName, mFullName) \u2227 after_calls(clientmFullName, mFullName) \u2227 added_calls(mFullName, objmFullName) \u2227 added_parameter(mFullName, X, objParamName) \u2227 deleted_parameter(mFullName, X, oldParamName) \u2227 objParamName_of_type objtFullName \u2227 oldParamName_not_of_type_objtFullName \u2192 preserve_whole_object(mFullName, objParamShortType)",
+        "Description": "You are getting several val-ues from an object and pass-ing these values as parame-ters in a method call. Send the whole object instead."
+    },
+    "PULL UP CONSTRUCTOR BODY": {
+        "Ref-Finder ID": "37",
+        "Rule": "added_method(supermFullName, \u00a1init\u00bf(), supertFullName) \u2227 before_subtype(supertFullName, subtFullName) \u2227 after_subtype(supertFullName, subtFullName) \u2227 before_method(submFullName, \u00a1init\u00bf(), subtFullName) \u2227 after_method(submFullName, \u00a1init\u00bf(), subtFullName) \u2227 added_calls(submFullName, supermFullName) \u2192 pull_up_constructor_body(supertFullName)",
+        "Description": "You have constructors on subclasses with mostly identical bodies. Create a superclass constructor; call this from the subclass methods."
+    },
+    "PULL UP FIELD": {
+        "Ref-Finder ID": "38",
+        "Rule": "move_field(fShortName, tChildFullName, tParentFullName) \u2227 before_subtype(tParentFullName, tChildFullName) \u2192 pull_up_field(fShortName, tChildFullName, tParentFullName)",
+        "Description": "A field is moved from a class to its superclass"
+    },
+    "PULL UP METHOD": {
+        "Ref-Finder ID": "39",
+        "Rule": "move_method(fShortName, tChildFullName, tParentFullName) \u2227 before_subtype(tParentFullName, tChildFullName) \u2192 pull_up_method(fShortName, tChildFullName, tParentFullName)",
+        "Description": "A method is moved from a class to its superclass"
+    },
+    "PUSH DOWN FIELD": {
+        "Ref-Finder ID": "40",
+        "Rule": "move_field(fShortName, tParentFullName, tChildFullName) \u2227 before_subtype(tParentFullName, tChildFullName) \u2192 push_down_field(fShortName, tParentFullName, tChildFullName)",
+        "Description": "A field is moved to a sub-class"
+    },
+    "PUSH DOWN METHOD": {
+        "Ref-Finder ID": "41",
+        "Rule": "move_method(fShortName, tParentFullName, tChildFullName) \u2227 before_subtype(tParentFullName, tChildFullName) \u2192 push_down_method(fShortName, tParentFullName, tChildFullName)",
+        "Description": "A method is moved to a subclass"
+    },
+    "SPLIT VARIABLE": {
+        "Ref-Finder ID": "70",
+        "Rule": "Requires in-depth alias analysis.",
+        "Description": "You have a temporary variable assigned to more than once, but is not a loop variable nor a collecting temporary variable. Make a separate temporary variable for each assignment."
+    },
+    "REMOVE CONTROL FLAG": {
+        "Ref-Finder ID": "43",
+        "Rule": "deleted_localvar(mFullName, boolean, identifier, expression) \u2227 deleted_conditional(condition, X, X, mFullName) \u2227 NOT(added_conditional(condition, X, X, mFullName)) \u2192 remove_control_flag(identifier, mFullName)",
+        "Description": "You have a variable that is acting as a control flag for a series of boolean expres-sions. Use a break or return instead."
+    },
+    "REMOVE MIDDLE MAN": {
+        "Ref-Finder ID": "44",
+        "Rule": "after_method(clientmFullName, X, clienttFullName) \u2227 added_calls(clientmFullName, delegatemFullName) \u2227 deleted_calls(clientmFullName, servermFullName) \u2227 deleted_method(servermFullName, X, servertFullName) \u2227 deleted_calls(servermFullName, delegatemFullName) \u2227 before_field(delegatefFullName, X, servertFullName) \u2227 after_field(delegatefFullName, X, servertFull-Name) \u2227 before_fieldoftype(delegatefFullName, delegatetFullName) \u2227 after_fieldoftype(delegatefFullName, delegatet-FullName) \u2227 after_method(delegatemFullName, X, delegatetFullName) \u2192 remove_middle_man(delegatetFullName, servertFullName, clienttFullName)",
+        "Description": "A class is doing too much simple delegation. Get the client to call the delegate directly."
+    },
+    "REMOVE SETTING METHOD": {
+        "Ref-Finder ID": "46",
+        "Rule": "added_fieldmodifier(fFullName, final) \u2227 deleted_setter(mFullName, fFullName) \u2192 remove_setting method(mFullName, fFullName)",
+        "Description": "A field should be set at creation time and never altered. Remove any setting method for that field."
+    },
+    "REPLACE ARRAY WITH OBJECT": {
+        "Ref-Finder ID": "48",
+        "Rule": "deleted_fieldoftype(fFullName, oldtFullName) \u2227 added_fieldoftype(fFullName, newtFullName) \u2227 added_type(newtFullName, X, X) \u2227 oldtFullName.endsWith([]) \u2192 replace_array_with_object(fFullName, newtFullName)",
+        "Description": "You have an array in which certain elements mean dif-ferent things. Replace the array with an object that has a field for each element"
+    },
+    "REPLACE CONDITIONAL WITH POLYMORPHISM": {
+        "Ref-Finder ID": "49",
+        "Rule": "deleted_conditional(condition, X, X, mFullName) \u2227 before_method(mFullName, mShortName, tFullName) \u2227 after_subtype(tFullName, subtFullName) \u2227 added_method(submFullName, mShortName, subtFullName) \u2227 similarbody(submFullName, newmBody, mFullname, mBody) \u2192 replace_conditional_with_polymorphism(mFullName)",
+        "Description": "You have a conditional that chooses different behavior depending on the type of an object. Move each leg of the conditional to an over-riding method in a subclass. Make the original method abstract."
+    },
+    "REPLACE CONSTRUCTOR WITH FACTORY FUNCTION": {
+        "Ref-Finder ID": "50",
+        "Rule": "added_method(mFactFullName, X, tFullName) \u2227 after_method(mCtorFullName, init(), tFullName) \u2227 added _alls(mFactFullName, mCtorFullName) \u2227 deleted_calls(mClientFullName, mCtorFullName) \u2227 added_calls(mClientFullName, mFactFullName) \u2227 added_methodmodifier(mCtorFullName, private) \u2192 replace_constructor_with_factory_method( mCtorFullName, mFactFullName)",
+        "Description": "You want to do more than simple construction when you create an object. Re-place the constructor with a factory method."
+    },
+    "REPLACE PRIMITIVE WITH OBJECT": {
+        "Ref-Finder ID": "64",
+        "Rule": "deleted_field(X, fShortName1, tFullName) \u2227 deleted_field(X, fShortName2, tFullName) \u2227 added_field(new_fFullName1, fShortName1, tCodeFullName) \u2227 added_field(new fFullName2, fShortName2, tCodeFullName) \u2227 added_type(tCodeFullName, X, X) \u2227 added_fieldmodifier(new fFullName1, static) \u2227 added_fieldmodifier(new_fFullName2, static) \u2227 deleted_fieldmodifier(old_fFullName1, static) \u2227 deleted_fieldmodifier(old fFullName2, static) \u2227 added_fieldoftype(new_fFullName1, tCodeFullName) \u2227 added_fieldoftype(new_fFullName2, tCodeFullName) \u2227 deleted_fieldoftype(fFullName, X) \u2227 added_fieldoftype(fFullName, tCodeFullName) \u2192 replace_type_code_with_class(tFullName, tCodeFullName)",
+        "Description": "A class has a numeric type code that does not affect its behavior. Replace the number with a new class."
+    },
+    "REPLACE DELEGATION WITH INHERITANCE": {
+        "Ref-Finder ID": "52",
+        "Rule": "added_subtype(delegate, delegatingObj) \u2227 deleted_fieldoftype(fFullName, delegate) \u2227 deleted_field(fFullName, X, delegatingObj) \u2192 replace_delegation_with_inheritance(delegate, delegatingObj)",
+        "Description": "You\u2019re using delegation and are often writing many sim-ple delegations for the entire interface. Make the delegat-ing class a subclass of the delegate."
+    },
+    "REPLACE ERROR CODE WITH EXCEPTION": {
+        "Ref-Finder ID": "53",
+        "Rule": "deleted_return(mFullName, oldReturnType) \u2227 added_return(mFullName, void) \u2227 added_throws(mFullName, tFullName) \u2192 replace_error_code_with_exception(mFullName, oldReturnType, tFullName)",
+        "Description": "A method returns a special code to indicate an error. Throw an exception instead."
+    },
+    "REPLACE EXCEPTION WITH TEST": {
+        "Ref-Finder ID": "54",
+        "Rule": "deleted_trycatch(tryBlock, catchBlocks, X, mFullName) \u2227 added_conditional(condition, ifBlock, elseBlock, mFullName) \u2192 replace_exception_with_test(catchStatement, condition, mFullName)",
+        "Description": "You are throwing an ex-ception on a condition the caller could have checked first. Change the caller to make the test first."
+    },
+    "REPLACE SUPERCLASS WITH DELEGATE": {
+        "Ref-Finder ID": "55",
+        "Rule": "deleted_subtype(delegate, delegatingObj) \u2227 added_fieldoftype(fFullName, delegate) \u2227 added_field(fFullName, X, delegatingObj) \u2192 replace_inheritance_with_delegation(delegate, delegatingObj)",
+        "Description": "A subclass uses only part of a superclass\u2019s interface or does not want to inherit data. Create a field for the superclass, adjust methods to delegate to the superclass, and remove the subclassing."
+    },
+    "REPLACE MAGIC NUMBER WITH SYMBOLIC CONSTANT": {
+        "Ref-Finder ID": "56",
+        "Rule": "added_field(fFullName, X, X) \u2227 added_fieldmodifier(fFullName, final) \u2227 added_accesses(fFullName, mFullName) \u2227 before_method(mFullName, X, X)\u2192 replace_magic_number_with_constant(mFullName, fFullName)",
+        "Description": "You have a literal number with a particular meaning. Create a constant, name it after the meaning, and re-place the number with it."
+    },
+    "REPLACE FUNCTION WITH COMMAND": {
+        "Ref-Finder ID": "57",
+        "Rule": "added_type(tFullName, tShortName, pkg) \u2227 added_field(fFullName, fShortName, tFullName) \u2227 added_fieldoftype(fFullName, callingtFullName) \u2227 added_method(newmFullName, newmShortName, tFullName) \u2227 after_method(mFullName, mShortName, callingtFullName) \u2227 deleted_methodbody(mFullName, mBody) \u2227 similarbody(newmFullName, newmBody, mFullName, mBody) \u2227 added_calls(mFullName, newmFullName) \u2192 replace_method_with_method_object(mFullName, tFullName)",
+        "Description": "You have a long method that uses local variables in such a way that you cannot ap-ply Extract Method or sim-ilar refactorings. Turn the method into its own object so that the local variables become fields of that object. Other refactorings can now be applied."
+    },
+    "REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES": {
+        "Ref-Finder ID": "58",
+        "Rule": "deleted_conditional(old_cond1, old_ifPart1, old_elsePart1, mFullName) \u2227 added_conditional(new_cond1, new_ifPart1, , mFullName) \u2227 added_conditional(new_cond2, new_ifPart2, , mFullName) \u2227 similar(old_cond1, new_cond1) \u2227 similar(old_ifPart1,new_ifPart1) \u2227 similar(new_ifPart2, old_elsePart1) \u2227 similar(new_cond2, old_elsePart1) \u2192 replace_nested_cond_guard_clauses(mFullName)",
+        "Description": "A method has conditional behavior that does not make clear the normal path of ex-ecution. Use guard clauses for all the special cases."
+    },
+    "REMOVE FLAG ARGUMENT": {
+        "Ref-Finder ID": "59",
+        "Rule": "added_method(m1FullName, m1ShortName, tFullName) \u2227 after_parameter(m1FullName, params1, X) \u2227 added_method(m2FullName, m2ShortName, tFullName) \u2227 after_parameter(m2FullName, params2, X) \u2227 NOT(equals(m1ShortName, m2ShortName)) \u2227 deleted_method(oldmFullName, oldmShortName, tFullName) \u2227 before_parameter(oldmFullName, oldparams, X) \u2192 replace_param_explicit_methods(oldmFullName)",
+        "Description": "You have a method that runs different code depending on the values of an enumerated parameter. Create a separate method for each value of the parameter."
+    },
+    "REPLACE PARAMETER WITH QUERY": {
+        "Ref-Finder ID": "60",
+        "Rule": "deleted_calls(clientmFullName, othermFullName) \u2227 before_calls(clientmFullName, mFullName) \u2227 after_calls(clientmFullName, mFullName) \u2227 added_calls(mFullName, othermFullName) \u2227 deleted_parameter(mFullName, X, paramName) \u2227 NOT(added_parameter(mFullName, X, X)) \u2192 replace_param_with_method(mFullName, paramName, othermFullName)",
+        "Description": "An object invokes a method, then passes the result as a parameter for a method. The receiver can also invoke this method. Removet he param-eter and let the receiver in-voke the method."
+    },
+    "ENCAPSULATE RECORD": {
+        "Ref-Finder ID": "61",
+        "Rule": "Fowler\u2019s definition is too vague, and he provides no example.",
+        "Description": "You need to interface with a record structure in a trad-tional programming envi-ronment. Make a dumb data object for the record."
+    },
+    "REMOVE SUBCLASS": {
+        "Ref-Finder ID": "62",
+        "Rule": "replace_constructor_with_factory_method( mFull-Name, X) \u2227 after_method(mFullName, X, supertFullName) \u2227 deleted_subtype(supertFullName, subtFullName) \u2227 added_field(X, fShortName, supertFullName) \u2227 before_type(subtFullName, subtShortName, X) \u2192 replace_subclass_with_field(supertFullName, subtShortName, fShortName)",
+        "Description": "You have subclasses that vary only in methods that return constant data. Change the methods to superclass fields and eliminate the subclasses."
+    },
+    "REPLACE TEMP WITH QUERY": {
+        "Ref-Finder ID": "63",
+        "Rule": "extract_method(mFullName, newmFullName, X, X) \u2227 added_calls(mFullName, newmFullName) \u2227 deleted_accesses(fFullName, mFullName) \u2227 added_accesses(fFullName, newmFullName) \u2192 replace_temp_with_query(mFullName, newmFullName)",
+        "Description": "You are using a temporary variable to hold the result of an expression. Extract the expression into a method. Replace all references to the temp with the new method. The new method can then be used in other methods."
+    },
+    "SEPARATE DOMAIN FROM PRESENTATION": {
+        "Ref-Finder ID": "68",
+        "Rule": "No way to verify business logic vs user interface.",
+        "Description": "You have a GUI class that contains domain logic. Separate the domain logic into separate domain classes."
+    },
+    "SEPARATE QUERY FROM MODIFIER": {
+        "Ref-Finder ID": "69",
+        "Rule": "before_field(f1FullName, X, tFullName) \u2227 after_field(f1FullName, X, tFullName) \u2227 before_field(f2FullName, X, tFullName) \u2227 after_field(f2FullName, X, tFullName) \u2227 deleted_method(oldmFullName, oldmShortName, tFullName) \u2227 deleted_accesses(f1FullName, oldmFullName) \u2227 deleted_accesses(f2FullName, oldmFullName) \u2227 added_method(m1FullName, m1ShortName, tFullName) \u2227 added_accesses(f1FullName, m1FullName) \u2227 added_method(m2FullName, m2ShortName, tFullName) \u2227 added_accesses(f2FullName, m2FullName) \u2227 not(equals(m1FullName, m2FullName))",
+        "Description": "You have a method that returns a value but also changes the state of an object. Create two methods, one for the query and one for the modification."
+    },
+    "SUBSTITUTE ALGORITHM": {
+        "Ref-Finder ID": "71",
+        "Rule": "Requires qualitative evaluation of code.",
+        "Description": "You want to replace an algorithm with one that is clearer. Replace the body of the method with the new algorithm."
+    },
+    "TEASE APART INHERITANCE": {
+        "Ref-Finder ID": "72",
+        "Rule": "before_type(gptFullName, X, X) \u2227 after_type(gptFullName, X, X) \u2227 before_subtype(gptFullName, p1tFullName) \u2227 after_subtype(gptFullName, p1tFullName) \u2227 before_subtype(gptFullName, p2tFullName) \u2227 after_subtype(gptFullName, p2tFullName) \u2227 NOT(equals(p1tFullName, p2tFullName)) \u2227 deleted_subtype(p1tFullName, t1FullName) \u2227 deleted_subtype(p2tFullName, t2FullName) \u2227 added_field(fFullName, X, gptFullName) \u2227 added_fieldoftype(fFullName, newptFullName) \u2227 added_type(newptFullName, X, X) \u2227 added_subtype(newptFullName, newt1FullName) \u2227 added_subtype(newptFullName, newt2FullName) \u2227 ( move_field(X, t1FullName, newt1FullName) \u2228 move_method(X, t1FullName, newt1FullName) \u2228 equals(t1FullName, newt1FullName) ) \u2227 ( move_field(X, t2FullName, newt2FullName) \u2228 move_method(X, t2FullName, newt2FullName) \u2228 equals(t2FullName, newt2FullName) )",
+        "Description": "You have an inheritance hierarchy that is doing two jobs at once. Create two hierarchies and use delegation to invoke one from the other."
+    }
+}

@@ -1,0 +1,2 @@
+class AccountType {
+    get overdraftCharge() {...}

@@ -1,0 +1,3 @@
+Apply the <refactoring method> refactoring on the following code to generate Java code: <code>
+
+Clean the output to only show the final version of the code and do not include non-programming language.

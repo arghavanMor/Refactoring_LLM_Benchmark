@@ -1,0 +1,266 @@
+{
+  "original_total_test": 1108,
+  "original_total_failed_test": 0,
+  "original_total_test_error": 0,
+  "L4884&INLINE_TEMP&ZeroShotCode&1740505853.520391": {
+    "refactoring_id": "L4884",
+    "refactoring_type": "INLINE_TEMP",
+    "prompt_approach_item": "ZeroShotCode",
+    "refactored": 1,
+    "commit_hash": "5b2f5a5562e20c2a5dacfbf43750e7a278e5b2aa",
+    "compiled": 0
+  },
+  "L4884&INLINE_TEMP&InstrucCode&1740505853.520391": {
+    "refactoring_id": "L4884",
+    "refactoring_type": "INLINE_TEMP",
+    "prompt_approach_item": "InstrucCode",
+    "refactored": 1,
+    "commit_hash": "f9966df59e570cc2b95de49614f7276d97591f17",
+    "compiled": 0
+  },
+  "L4884&INLINE_TEMP&FewShotCode&1740505853.520391": {
+    "refactoring_id": "L4884",
+    "refactoring_type": "INLINE_TEMP",
+    "prompt_approach_item": "FewShotCode",
+    "refactored": 1,
+    "commit_hash": "1d9676384b3caf5b59aa80bd54a12f7bc1ed8f55",
+    "compiled": 0
+  },
+  "L4884&INLINE_TEMP&ContextCode&1740505853.520391": {
+    "refactoring_id": "L4884",
+    "refactoring_type": "INLINE_TEMP",
+    "prompt_approach_item": "ContextCode",
+    "refactored": 1,
+    "commit_hash": "f45845a64f0ae0465196a67cea1bb41986150291",
+    "compiled": 0
+  },
+  "L4884&INLINE_TEMP&RulesCode&1740505853.520391": {
+    "refactoring_id": "L4884",
+    "refactoring_type": "INLINE_TEMP",
+    "prompt_approach_item": "RulesCode",
+    "refactored": 1,
+    "commit_hash": "b84f4f924b3065eaafea873f3430f12f9aa99c40",
+    "compiled": 0
+  },
+  "L5882&EXTRACT_METHOD&ZeroShotCode&1740505865.599158": {
+    "refactoring_id": "L5882",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ZeroShotCode",
+    "refactored": 1,
+    "commit_hash": "89e9de8fb81009fe0b4a709ebaa75f519659a2e1",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5882&EXTRACT_METHOD&InstrucCode&1740505865.599158": {
+    "refactoring_id": "L5882",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "InstrucCode",
+    "refactored": 1,
+    "commit_hash": "09e39e5776c958345ba88e9eabbb09f8884e41be",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5882&EXTRACT_METHOD&FewShotCode&1740505865.599158": {
+    "refactoring_id": "L5882",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "FewShotCode",
+    "refactored": 1,
+    "commit_hash": "bd1cdff3a13c8bbc03d11ca9ad5556742835d659",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5882&EXTRACT_METHOD&ContextCode&1740505865.599158": {
+    "refactoring_id": "L5882",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ContextCode",
+    "refactored": 1,
+    "commit_hash": "84a56d490a3f011d1b1a757171cf1da9e9e478e9",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5882&EXTRACT_METHOD&RulesCode&1740505865.599158": {
+    "refactoring_id": "L5882",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "RulesCode",
+    "refactored": 1,
+    "commit_hash": "82cddc48ebb9668b10064b60731b00acce5472b7",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5880&EXTRACT_METHOD&ZeroShotCode&1740505921.194638": {
+    "refactoring_id": "L5880",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ZeroShotCode",
+    "refactored": 1,
+    "commit_hash": "d8608e43df6f8abb43b3a3f35ce9ed863c9cf45d",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5880&EXTRACT_METHOD&InstrucCode&1740505921.194638": {
+    "refactoring_id": "L5880",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "InstrucCode",
+    "refactored": 1,
+    "commit_hash": "bbf7bea13756b23f66fc108b8c7d3ab401177979",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5880&EXTRACT_METHOD&FewShotCode&1740505921.194638": {
+    "refactoring_id": "L5880",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "FewShotCode",
+    "refactored": 1,
+    "commit_hash": "892b43cce72024c18bbaf41ca83a74cfcf127d45",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5880&EXTRACT_METHOD&ContextCode&1740505921.194638": {
+    "refactoring_id": "L5880",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ContextCode",
+    "refactored": 1,
+    "commit_hash": "ed8121adc360448fa6e34920fe7ce0c0b51a7cb6",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L5880&EXTRACT_METHOD&RulesCode&1740505921.194638": {
+    "refactoring_id": "L5880",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "RulesCode",
+    "refactored": 1,
+    "commit_hash": "158d3da855e8298bdec51ff0863692180608ca86",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L4889&EXTRACT_METHOD&ZeroShotCode&1740505976.348548": {
+    "refactoring_id": "L4889",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ZeroShotCode",
+    "refactored": 1,
+    "commit_hash": "e88b093fbeb3c62abc3caf636bb86b02dc2a3769",
+    "compiled": 0
+  },
+  "L4889&EXTRACT_METHOD&InstrucCode&1740505976.348548": {
+    "refactoring_id": "L4889",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "InstrucCode",
+    "refactored": 1,
+    "commit_hash": "f4f7dc581e67a381e97ba36bd28b5217179eed34",
+    "compiled": 0
+  },
+  "L4889&EXTRACT_METHOD&FewShotCode&1740505976.348548": {
+    "refactoring_id": "L4889",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "FewShotCode",
+    "refactored": 1,
+    "commit_hash": "2dda3faa3895a2778cfe194b46225fa7580b66c9",
+    "compiled": 0
+  },
+  "L4889&EXTRACT_METHOD&ContextCode&1740505976.348548": {
+    "refactoring_id": "L4889",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ContextCode",
+    "refactored": 1,
+    "commit_hash": "e18f6c94aafcc014a2b71684d0459ff51ee11106",
+    "compiled": 0
+  },
+  "L4889&EXTRACT_METHOD&RulesCode&1740505976.348548": {
+    "refactoring_id": "L4889",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "RulesCode",
+    "refactored": 1,
+    "commit_hash": "96eb80d44202072a6f8d7395b53d9f3d52b044dd",
+    "compiled": 0
+  },
+  "L7126&INTRODUCE_ASSERTION&ZeroShotCode&1740505987.988833": {
+    "refactoring_id": "L7126",
+    "refactoring_type": "INTRODUCE_ASSERTION",
+    "prompt_approach_item": "ZeroShotCode",
+    "refactored": 0
+  },
+  "L7126&INTRODUCE_ASSERTION&InstrucCode&1740505987.988833": {
+    "refactoring_id": "L7126",
+    "refactoring_type": "INTRODUCE_ASSERTION",
+    "prompt_approach_item": "InstrucCode",
+    "refactored": 0
+  },
+  "L7126&INTRODUCE_ASSERTION&FewShotCode&1740505987.988833": {
+    "refactoring_id": "L7126",
+    "refactoring_type": "INTRODUCE_ASSERTION",
+    "prompt_approach_item": "FewShotCode",
+    "refactored": 0
+  },
+  "L7126&INTRODUCE_ASSERTION&ContextCode&1740505987.988833": {
+    "refactoring_id": "L7126",
+    "refactoring_type": "INTRODUCE_ASSERTION",
+    "prompt_approach_item": "ContextCode",
+    "refactored": 0
+  },
+  "L7126&INTRODUCE_ASSERTION&RulesCode&1740505987.988833": {
+    "refactoring_id": "L7126",
+    "refactoring_type": "INTRODUCE_ASSERTION",
+    "prompt_approach_item": "RulesCode",
+    "refactored": 0
+  },
+  "L126&EXTRACT_METHOD&ZeroShotCode&1740505988.805003": {
+    "refactoring_id": "L126",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ZeroShotCode",
+    "refactored": 1,
+    "commit_hash": "7df76e8520d0e1d45d2b3086bdee881c2b0ca873",
+    "compiled": 1,
+    "total_test": 1108,
+    "total_failed_test": 0,
+    "total_error_test": 0
+  },
+  "L126&EXTRACT_METHOD&InstrucCode&1740505988.805003": {
+    "refactoring_id": "L126",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "InstrucCode",
+    "refactored": 0
+  },
+  "L126&EXTRACT_METHOD&FewShotCode&1740505988.805003": {
+    "refactoring_id": "L126",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "FewShotCode",
+    "refactored": 0
+  },
+  "L126&EXTRACT_METHOD&ContextCode&1740505988.805003": {
+    "refactoring_id": "L126",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "ContextCode",
+    "refactored": 0
+  },
+  "L126&EXTRACT_METHOD&RulesCode&1740505988.805003": {
+    "refactoring_id": "L126",
+    "refactoring_type": "EXTRACT_METHOD",
+    "prompt_approach_item": "RulesCode",
+    "refactored": 0
+  },
+  "refactoring_status_list": 21,
+  "refactoring_status_list_length": 30,
+  "refactoring_ratio": 0.7,
+  "compilation_status_list": 11,
+  "compilation_status_list_length": 21,
+  "compilation_ratio": 0.5238095238095238
+}
