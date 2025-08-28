@@ -3,5 +3,3 @@ __pycache__/
 OpenAI_key.txt
 DeepSeek_key.txt
 /.venv
-
-/src/results
