@@ -81,3 +81,19 @@ DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total method calls,Mann-Whitney,0.02
 DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,0.1667947555853302
 DeepSeek Fowler,DeepSeek Fowler,ContextCode,CodeBleu,Mann-Whitney,2.2339545361289408e-10
 DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,0.1667947555853302
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9245928393791115
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.544580634018714
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.9196118733790807
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,RulesCode,Total CC,Mann-Whitney,0.688577496907276
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.7517130225937687
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,FewShotCode,Total CC,Mann-Whitney,0.688577496907276
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.8249859612347321
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.5978346597833741
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9201578543514022
+GPT Ref-Finder,GPT Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.997494246460434
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,Total CC,Mann-Whitney,0.9042234750161555
+GPT Ref-Finder,GPT Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.9744468760504695
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9877146755002513
+GPT Ref-Finder,GPT Ref-Finder,FewShotCode,Total CC,Mann-Whitney,0.9042234750161555
+GPT Ref-Finder,GPT Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.9010177227920074
+GPT Ref-Finder,GPT Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.8905857162202454
