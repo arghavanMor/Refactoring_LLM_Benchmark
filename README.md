@@ -23,17 +23,9 @@ This repository provides:
 
 ---
 
-## 🧠 Key Idea
-
-We compare:
-
-- 📘 Step-by-step developer guidelines extracted from Martin Fowler catalog
-- ⚙️ Rule-based representations (tool-oriented) of the same types of refactoring 
-- 🎯 Objective-based instructions (high-level goal only)  
-
----
-
 ## 🏗️ Repository Structure
+```text
+.
 ├── Data/ # Benchmark collected from examples in Fowler Book + real-world refactoring scenarios collected from ANTLR42 and JUnit3
 ├── src/ # Core implementation
 ├── generator/ # LLM-based refactoring generation
