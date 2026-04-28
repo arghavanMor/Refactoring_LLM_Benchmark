@@ -7,6 +7,8 @@ This repository provides the **replication package** for the paper:
 
 It enables researchers and practitioners to evaluate how **Large Language Models (LLMs)** perform a diverse ranges of code refactoring under different instruction strategies.
 
+![Pipeline Overview](methodology.png)
+
 ---
 
 ## 🚀 Overview
