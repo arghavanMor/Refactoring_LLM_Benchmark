@@ -1,5 +1,4 @@
-# 🔧 Refactoring LLM Benchmark  
-**Bridging Human Expertise and Machine Understanding**
+# 🔧 Refactoring with LLM: Bridging Human Expertise and Machine Understanding
 
 This repository provides the **replication package** for the paper:
 
