@@ -105,4 +105,12 @@ pip install -r requirements.txt
 ```
 python scripts/run_pipeline.py
 ```
+4....
 
+```
+@article{refactoring_llm_2025,
+  title={Refactoring with LLMs: Bridging Human Expertise and Machine Understanding},
+  author={Yonnel Chen Kuang Piao, Jean Carlors Paul, Leuson Da Silva, Arghavan Moradi Dakhel, Mohammad Hamdaqa, Foutse Khomh},
+  year={2025}
+}
+```
