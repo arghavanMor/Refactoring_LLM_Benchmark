@@ -106,7 +106,7 @@ pip install -r requirements.txt
 ```
 python scripts/run_pipeline.py
 ```
-4....
+### 4. Citation
 
 ```
 @article{refactoring_llm_2025,
