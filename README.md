@@ -53,7 +53,7 @@ This repository provides:
 
 3. Query LLMs  
 
-4. Apply generated refactoring  
+4. [Apply generated refactoring](https://github.com/arghavanMor/Refactoring_LLM_Benchmark/blob/refactoring_in_process/README.md)  
    - AST-based integration  
    - Code replacement  
 
