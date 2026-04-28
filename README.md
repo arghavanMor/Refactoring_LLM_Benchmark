@@ -33,7 +33,7 @@ This repository provides:
 ├── evaluation/ # Metrics & validation
 ├── scripts/ # Execution scripts
 └── README.md
-
+```
 
 ---
 
@@ -80,9 +80,6 @@ We evaluate LLM outputs across:
 - Fan-out (FOUT)  
 
 ---
-
-## 📦 Replication Package
-
 This repository also includes:
 
 - ✅ Instruction templates  
@@ -99,3 +96,13 @@ git clone https://github.com/arghavanMor/Refactoring_LLM_Benchmark.git
 cd Refactoring_LLM_Benchmark
 ```
 ### 2. Setup environment
+```
+conda create -n refactoring-llm python=3.10
+conda activate refactoring-llm
+pip install -r requirements.txt
+```
+### 3. Run pipeline
+```
+python scripts/run_pipeline.py
+```
+
