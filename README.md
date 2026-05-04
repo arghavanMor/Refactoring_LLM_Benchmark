@@ -27,7 +27,7 @@ This repository provides:
 ## 🏗️ Repository Structure
 ```text
 .
-├── Data/ # Benchmark collected from examples in Fowler Book + real-world refactoring scenarios collected from ANTLR42 and JUnit3
+├── Data/ # Benchmark collected from examples in Fowler Book + real-world refactoring scenarios collected from ANTLR4 and JUnit4
 ├── src/ # Core implementation
 ├── generator/ # LLM-based refactoring generation
 ├── integrator/ # Applying refactoring into projects
