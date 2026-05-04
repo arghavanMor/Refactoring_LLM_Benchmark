@@ -18,7 +18,7 @@ This repository provides:
 
 - 📊 A benchmark dataset covering **61 refactoring types** collected based on Fowler catalog
 - 🧠 Multiple **instruction strategies** (step-by-step, rule-based, objective, etc.)  
-- ⚙️ A full auotmated pipeline to apply LLM-generated refactorings into the benchmark repositories (ANTLR42 and JUnit3)
+- ⚙️ A full auotmated pipeline to apply LLM-generated refactorings into the benchmark repositories (ANTLR4 and JUnit4)
 - 📈 An automated evaluation framework to assess the semantic preservation after refactoring by test suite excecution
 
 
