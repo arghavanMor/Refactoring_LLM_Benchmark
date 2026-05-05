@@ -1,0 +1,3 @@
+old method;new method
+org.antlr.v4.codegen.model.LL1StarBlockSingleAlt.<init>()@/antlr4_base1/tool/src/org/antlr/v4/codegen/model/LL1StarBlockSingleAlt.java:42:1;org.antlr.v4.codegen.model.LL1StarBlockSingleAlt.<init>()@/antlr4_base2/tool/src/org/antlr/v4/codegen/model/LL1StarBlockSingleAlt.java:42:1
+org.antlr.v4.analysis.AnalysisPipeline.processParser()@/antlr4_base1/tool/src/org/antlr/v4/analysis/AnalysisPipeline.java:82:1;org.antlr.v4.analysis.AnalysisPipeline.processParser()@/antlr4_base2/tool/src/org/antlr/v4/analysis/AnalysisPipeline.java:82:1

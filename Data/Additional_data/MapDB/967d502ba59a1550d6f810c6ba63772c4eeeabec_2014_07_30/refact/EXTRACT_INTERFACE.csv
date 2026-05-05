@@ -1,0 +1,2 @@
+class in old;class in new;interface
+org.mapdb.DataInput2@/mapdb_base1/src/main/java/org/mapdb/DataInput2.java:24:0;org.mapdb.DataInput2@/mapdb_base2/src/main/java/org/mapdb/DataInput2.java:23:0;org.mapdb.DataIO.DataInputInternal@/mapdb_base2/src/main/java/org/mapdb/DataIO.java:17:4

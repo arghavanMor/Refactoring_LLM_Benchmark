@@ -1,0 +1,13 @@
+Failed test: 
+testMultiTokenDeletionDuringLoop2
+testSingleTokenDeletionDuringLoop2
+testFairlyLargeGraph
+testMultiTokenDeletionBeforeLoop2
+testSimpleTokenDependence
+testParserLexerCombo
+testConjuringUpToken
+compileJdk
+testTokenizingPattern
+testConjuringUpTokenFromSet
+
+Test error: 

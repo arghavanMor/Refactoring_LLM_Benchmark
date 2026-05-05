@@ -1,0 +1,12 @@
+Following are step-by-step instructions on how to apply the <refactoring method> refactoring:
+
+<steps>
+
+Now, given the following code, apply the <refactoring method> refactoring on it to generate Java code: <code>
+
+Previous error to avoid:
+<previous_error>
+
+Make sure the generated code does not reproduce this error.
+
+Clean the output to only show the final version of the code and do not include non-programming language.

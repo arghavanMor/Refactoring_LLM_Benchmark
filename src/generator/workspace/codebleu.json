@@ -1,0 +1,188 @@
+{
+    "L10937": {
+        "RefactMethod": "EXTRACT VARIABLE",
+        "ZeroShotCodeBleu": 0.659019786102151,
+        "InstrucCodeBleu": 0.8092932938602099,
+        "FewShotCodeBleu": 0.6594033596951839
+    },
+    "L5343": {
+        "RefactMethod": "EXTRACT VARIABLE",
+        "ZeroShotCodeBleu": 0.37829003266791517,
+        "InstrucCodeBleu": 0.4162230719267561,
+        "FewShotCodeBleu": 0.4162230719267561
+    },
+    "L3671": {
+        "RefactMethod": "EXTRACT VARIABLE",
+        "ZeroShotCodeBleu": 0.3899232001063133,
+        "InstrucCodeBleu": 0.3899232001063133,
+        "FewShotCodeBleu": 0.3899232001063133
+    },
+    "L3692": {
+        "RefactMethod": "EXTRACT VARIABLE",
+        "ZeroShotCodeBleu": 0.5310964339527691,
+        "InstrucCodeBleu": 0.5095794713057864,
+        "FewShotCodeBleu": 0.5310964339527691
+    },
+    "L7413": {
+        "RefactMethod": "INTRODUCE ASSERTION",
+        "ZeroShotCodeBleu": 0.5326121351378279,
+        "InstrucCodeBleu": 0.7127372264616754,
+        "FewShotCodeBleu": 0.5193807899246712
+    },
+    "L10037": {
+        "RefactMethod": "INTRODUCE ASSERTION",
+        "ZeroShotCodeBleu": 0.822404622691024,
+        "InstrucCodeBleu": 0.822404622691024,
+        "FewShotCodeBleu": 0.8182819952102394
+    },
+    "L1927": {
+        "RefactMethod": "EXTRACT FUNCTION",
+        "ZeroShotCodeBleu": 0.2930532088400392,
+        "InstrucCodeBleu": 0.5643866923023564,
+        "FewShotCodeBleu": 0.2616991584826658
+    },
+    "L540": {
+        "RefactMethod": "INTRODUCE PARAMETER OBJECT",
+        "ZeroShotCodeBleu": 0.4468952279768172,
+        "InstrucCodeBleu": 0.382613990419913,
+        "FewShotCodeBleu": 0.4468952279768172
+    },
+    "L561": {
+        "RefactMethod": "INTRODUCE PARAMETER OBJECT",
+        "ZeroShotCodeBleu": 0.48446638810334774,
+        "InstrucCodeBleu": 0.4165448653999704,
+        "FewShotCodeBleu": 0.6142777080414461
+    },
+    "L1114": {
+        "RefactMethod": "REPLACE FUNCTION WITH COMMAND",
+        "ZeroShotCodeBleu": 0.25212495853215244,
+        "InstrucCodeBleu": 0.3245580459596445,
+        "FewShotCodeBleu": 0.27896512720046585
+    },
+    "L4884": {
+        "RefactMethod": "INLINE VARIABLE",
+        "ZeroShotCodeBleu": 0.5243640853589062,
+        "InstrucCodeBleu": 0.5243640853589062,
+        "FewShotCodeBleu": 0.5243640853589062
+    },
+    "L7126": {
+        "RefactMethod": "INTRODUCE ASSERTION",
+        "ZeroShotCodeBleu": 0.8682499195071064,
+        "InstrucCodeBleu": 0.8466693119697692,
+        "FewShotCodeBleu": 0.8682499195071064
+    },
+    "L5431": {
+        "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
+        "ZeroShotCodeBleu": 0.7563613762079995,
+        "InstrucCodeBleu": 0.7201037148792907,
+        "FewShotCodeBleu": 0.7897049303693603
+    },
+    "L3844": {
+        "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
+        "ZeroShotCodeBleu": 0.39058515996446985,
+        "InstrucCodeBleu": 0.40417449035690045,
+        "FewShotCodeBleu": 0.568737366177657
+    },
+    "L3168": {
+        "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
+        "ZeroShotCodeBleu": 0.5233355090919584,
+        "InstrucCodeBleu": 0.5347564950150697,
+        "FewShotCodeBleu": 0.5233355090919584
+    },
+    "L10263": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.9537479318795696,
+        "InstrucCodeBleu": 0.9537479318795696,
+        "FewShotCodeBleu": 0.9537479318795696
+    },
+    "L102630": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.5617559957652061,
+        "InstrucCodeBleu": 0.40321915549223497,
+        "FewShotCodeBleu": 0.9814658752718773
+    },
+    "L15668": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.9099454963465754,
+        "InstrucCodeBleu": 0.9880228484250114,
+        "FewShotCodeBleu": 0.7122837542345004
+    },
+    "L156680": {
+        "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
+        "ZeroShotCodeBleu": 0.7668023497194498,
+        "InstrucCodeBleu": 0.6871050557060594,
+        "FewShotCodeBleu": 0.9553619441375932
+    },
+    "L3347": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.503102466574946,
+        "InstrucCodeBleu": 0.427115467955419,
+        "FewShotCodeBleu": 0.4985055648144572
+    },
+    "L2755": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.8362542141260627,
+        "InstrucCodeBleu": 0.8445552256017769,
+        "FewShotCodeBleu": 0.8362542141260627
+    },
+    "L13228": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.6508348768688546,
+        "InstrucCodeBleu": 0.6470291150389853,
+        "FewShotCodeBleu": 0.6658622783298698
+    },
+    "L8024": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.7179359421601956,
+        "InstrucCodeBleu": 0.7434226937793702,
+        "FewShotCodeBleu": 0.6013111670440108
+    },
+    "L9806": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.5476639352040596,
+        "InstrucCodeBleu": 0.6610181547008218,
+        "FewShotCodeBleu": 0.66433070006172
+    },
+    "L1506": {
+        "RefactMethod": "CONSOLIDATE CONDITIONAL EXPRESSION",
+        "ZeroShotCodeBleu": 0.3780914574119857,
+        "InstrucCodeBleu": 0.36033944462760126,
+        "FewShotCodeBleu": 0.36962843262995543
+    },
+    "L1991": {
+        "RefactMethod": "REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES",
+        "ZeroShotCodeBleu": 0.6136442223408651,
+        "InstrucCodeBleu": 0.7976142955503157,
+        "FewShotCodeBleu": 0.6136442223408651
+    },
+    "L19910": {
+        "RefactMethod": "INTRODUCE SPECIAL CASE",
+        "ZeroShotCodeBleu": 0.6832265325510916,
+        "InstrucCodeBleu": 0.7948161494483589,
+        "FewShotCodeBleu": 0.6832265325510916
+    },
+    "L2113": {
+        "RefactMethod": "REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES",
+        "ZeroShotCodeBleu": 0.49364623294128995,
+        "InstrucCodeBleu": 0.5489510978144977,
+        "FewShotCodeBleu": 0.47627057645985715
+    },
+    "L2427": {
+        "RefactMethod": "REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES",
+        "ZeroShotCodeBleu": 0.5359203582432234,
+        "InstrucCodeBleu": 0.5278328909452719,
+        "FewShotCodeBleu": 0.5359203582432234
+    },
+    "L9795": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.8387875887200514,
+        "InstrucCodeBleu": 0.9476394133399341,
+        "FewShotCodeBleu": 0.6115080137501568
+    },
+    "L9861": {
+        "RefactMethod": "SLIDE STATEMENTS",
+        "ZeroShotCodeBleu": 0.7216119015233924,
+        "InstrucCodeBleu": 0.8529511535187202,
+        "FewShotCodeBleu": 0.8584272087622463
+    }
+}

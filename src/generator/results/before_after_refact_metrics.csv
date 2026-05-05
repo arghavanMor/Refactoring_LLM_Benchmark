@@ -1,0 +1,325 @@
+Refactoring Type,ID,Prompt,Metric,Value
+Extract Variable,L10937,BeforeRefact,Total CC,4
+Extract Variable,L10937,BeforeRefact,Total method calls,15
+Extract Variable,L10937,BeforeRefact,Total lines of code,17
+Extract Variable,L10937,AfterRefact,Total CC,4
+Extract Variable,L10937,AfterRefact,Total method calls,15
+Extract Variable,L10937,AfterRefact,Total lines of code,21
+Extract Variable,L5343,BeforeRefact,Total CC,0
+Extract Variable,L5343,BeforeRefact,Total method calls,0
+Extract Variable,L5343,BeforeRefact,Total lines of code,2
+Extract Variable,L5343,AfterRefact,Total CC,1
+Extract Variable,L5343,AfterRefact,Total method calls,1
+Extract Variable,L5343,AfterRefact,Total lines of code,6
+Extract Variable,L3671,BeforeRefact,Total CC,0
+Extract Variable,L3671,BeforeRefact,Total method calls,4
+Extract Variable,L3671,BeforeRefact,Total lines of code,8
+Extract Variable,L3671,AfterRefact,Total CC,2
+Extract Variable,L3671,AfterRefact,Total method calls,7
+Extract Variable,L3671,AfterRefact,Total lines of code,17
+Extract Variable,L3692,BeforeRefact,Total CC,0
+Extract Variable,L3692,BeforeRefact,Total method calls,4
+Extract Variable,L3692,BeforeRefact,Total lines of code,9
+Extract Variable,L3692,AfterRefact,Total CC,0
+Extract Variable,L3692,AfterRefact,Total method calls,6
+Extract Variable,L3692,AfterRefact,Total lines of code,12
+Introduce Assertion,L7413,BeforeRefact,Total CC,1
+Introduce Assertion,L7413,BeforeRefact,Total method calls,11
+Introduce Assertion,L7413,BeforeRefact,Total lines of code,16
+Introduce Assertion,L7413,AfterRefact,Total CC,1
+Introduce Assertion,L7413,AfterRefact,Total method calls,12
+Introduce Assertion,L7413,AfterRefact,Total lines of code,17
+Introduce Assertion,L10037,BeforeRefact,Total CC,0
+Introduce Assertion,L10037,BeforeRefact,Total method calls,3
+Introduce Assertion,L10037,BeforeRefact,Total lines of code,9
+Introduce Assertion,L10037,AfterRefact,Total CC,0
+Introduce Assertion,L10037,AfterRefact,Total method calls,3
+Introduce Assertion,L10037,AfterRefact,Total lines of code,10
+Extract Function,L1927,BeforeRefact,Total CC,15
+Extract Function,L1927,BeforeRefact,Total method calls,13
+Extract Function,L1927,BeforeRefact,Total lines of code,43
+Extract Function,L1927,AfterRefact,Total CC,14
+Extract Function,L1927,AfterRefact,Total method calls,16
+Extract Function,L1927,AfterRefact,Total lines of code,50
+Change Function Declaration,L540,BeforeRefact,Total CC,0
+Change Function Declaration,L540,BeforeRefact,Total method calls,0
+Change Function Declaration,L540,BeforeRefact,Total lines of code,3
+Change Function Declaration,L540,AfterRefact,Total CC,0
+Change Function Declaration,L540,AfterRefact,Total method calls,0
+Change Function Declaration,L540,AfterRefact,Total lines of code,6
+Change Function Declaration,L561,BeforeRefact,Total CC,0
+Change Function Declaration,L561,BeforeRefact,Total method calls,0
+Change Function Declaration,L561,BeforeRefact,Total lines of code,3
+Change Function Declaration,L561,AfterRefact,Total CC,0
+Change Function Declaration,L561,AfterRefact,Total method calls,0
+Change Function Declaration,L561,AfterRefact,Total lines of code,5
+Consolidate Conditional Expression,L5431,BeforeRefact,Total CC,3
+Consolidate Conditional Expression,L5431,BeforeRefact,Total method calls,3
+Consolidate Conditional Expression,L5431,BeforeRefact,Total lines of code,13
+Consolidate Conditional Expression,L5431,AfterRefact,Total CC,4
+Consolidate Conditional Expression,L5431,AfterRefact,Total method calls,3
+Consolidate Conditional Expression,L5431,AfterRefact,Total lines of code,16
+Consolidate Conditional Expression,L3844,BeforeRefact,Total CC,5
+Consolidate Conditional Expression,L3844,BeforeRefact,Total method calls,5
+Consolidate Conditional Expression,L3844,BeforeRefact,Total lines of code,19
+Consolidate Conditional Expression,L3844,AfterRefact,Total CC,5
+Consolidate Conditional Expression,L3844,AfterRefact,Total method calls,5
+Consolidate Conditional Expression,L3844,AfterRefact,Total lines of code,19
+Consolidate Conditional Expression,L3168,BeforeRefact,Total CC,18
+Consolidate Conditional Expression,L3168,BeforeRefact,Total method calls,18
+Consolidate Conditional Expression,L3168,BeforeRefact,Total lines of code,56
+Consolidate Conditional Expression,L3168,AfterRefact,Total CC,19
+Consolidate Conditional Expression,L3168,AfterRefact,Total method calls,18
+Consolidate Conditional Expression,L3168,AfterRefact,Total lines of code,57
+Slide Statements,L10263,BeforeRefact,Total CC,14
+Slide Statements,L10263,BeforeRefact,Total method calls,63
+Slide Statements,L10263,BeforeRefact,Total lines of code,49
+Slide Statements,L10263,AfterRefact,Total CC,14
+Slide Statements,L10263,AfterRefact,Total method calls,63
+Slide Statements,L10263,AfterRefact,Total lines of code,49
+Slide Statements,L102630,BeforeRefact,Total CC,9
+Slide Statements,L102630,BeforeRefact,Total method calls,2
+Slide Statements,L102630,BeforeRefact,Total lines of code,13
+Slide Statements,L102630,AfterRefact,Total CC,9
+Slide Statements,L102630,AfterRefact,Total method calls,2
+Slide Statements,L102630,AfterRefact,Total lines of code,13
+Slide Statements,L15668,BeforeRefact,Total CC,10
+Slide Statements,L15668,BeforeRefact,Total method calls,29
+Slide Statements,L15668,BeforeRefact,Total lines of code,41
+Slide Statements,L15668,AfterRefact,Total CC,10
+Slide Statements,L15668,AfterRefact,Total method calls,29
+Slide Statements,L15668,AfterRefact,Total lines of code,41
+Consolidate Conditional Expression,L156680,BeforeRefact,Total CC,10
+Consolidate Conditional Expression,L156680,BeforeRefact,Total method calls,29
+Consolidate Conditional Expression,L156680,BeforeRefact,Total lines of code,41
+Consolidate Conditional Expression,L156680,AfterRefact,Total CC,10
+Consolidate Conditional Expression,L156680,AfterRefact,Total method calls,29
+Consolidate Conditional Expression,L156680,AfterRefact,Total lines of code,41
+Slide Statements,L3347,BeforeRefact,Total CC,11
+Slide Statements,L3347,BeforeRefact,Total method calls,10
+Slide Statements,L3347,BeforeRefact,Total lines of code,42
+Slide Statements,L3347,AfterRefact,Total CC,14
+Slide Statements,L3347,AfterRefact,Total method calls,13
+Slide Statements,L3347,AfterRefact,Total lines of code,48
+Slide Statements,L2755,BeforeRefact,Total CC,21
+Slide Statements,L2755,BeforeRefact,Total method calls,34
+Slide Statements,L2755,BeforeRefact,Total lines of code,85
+Slide Statements,L2755,AfterRefact,Total CC,21
+Slide Statements,L2755,AfterRefact,Total method calls,34
+Slide Statements,L2755,AfterRefact,Total lines of code,85
+Slide Statements,L13228,BeforeRefact,Total CC,6
+Slide Statements,L13228,BeforeRefact,Total method calls,18
+Slide Statements,L13228,BeforeRefact,Total lines of code,47
+Slide Statements,L13228,AfterRefact,Total CC,8
+Slide Statements,L13228,AfterRefact,Total method calls,19
+Slide Statements,L13228,AfterRefact,Total lines of code,63
+Slide Statements,L8024,BeforeRefact,Total CC,17
+Slide Statements,L8024,BeforeRefact,Total method calls,90
+Slide Statements,L8024,BeforeRefact,Total lines of code,84
+Slide Statements,L8024,AfterRefact,Total CC,22
+Slide Statements,L8024,AfterRefact,Total method calls,97
+Slide Statements,L8024,AfterRefact,Total lines of code,102
+Slide Statements,L9806,BeforeRefact,Total CC,3
+Slide Statements,L9806,BeforeRefact,Total method calls,20
+Slide Statements,L9806,BeforeRefact,Total lines of code,22
+Slide Statements,L9806,AfterRefact,Total CC,3
+Slide Statements,L9806,AfterRefact,Total method calls,24
+Slide Statements,L9806,AfterRefact,Total lines of code,22
+Consolidate Conditional Expression,L1506,BeforeRefact,Total CC,2
+Consolidate Conditional Expression,L1506,BeforeRefact,Total method calls,5
+Consolidate Conditional Expression,L1506,BeforeRefact,Total lines of code,9
+Consolidate Conditional Expression,L1506,AfterRefact,Total CC,2
+Consolidate Conditional Expression,L1506,AfterRefact,Total method calls,8
+Consolidate Conditional Expression,L1506,AfterRefact,Total lines of code,12
+Replace Nested Conditional with Guard Clauses,L1991,BeforeRefact,Total CC,18
+Replace Nested Conditional with Guard Clauses,L1991,BeforeRefact,Total method calls,23
+Replace Nested Conditional with Guard Clauses,L1991,BeforeRefact,Total lines of code,56
+Replace Nested Conditional with Guard Clauses,L1991,AfterRefact,Total CC,17
+Replace Nested Conditional with Guard Clauses,L1991,AfterRefact,Total method calls,25
+Replace Nested Conditional with Guard Clauses,L1991,AfterRefact,Total lines of code,48
+Introduce Special Case,L19910,BeforeRefact,Total CC,18
+Introduce Special Case,L19910,BeforeRefact,Total method calls,23
+Introduce Special Case,L19910,BeforeRefact,Total lines of code,56
+Introduce Special Case,L19910,AfterRefact,Total CC,17
+Introduce Special Case,L19910,AfterRefact,Total method calls,25
+Introduce Special Case,L19910,AfterRefact,Total lines of code,48
+Replace Nested Conditional with Guard Clauses,L2113,BeforeRefact,Total CC,14
+Replace Nested Conditional with Guard Clauses,L2113,BeforeRefact,Total method calls,22
+Replace Nested Conditional with Guard Clauses,L2113,BeforeRefact,Total lines of code,56
+Replace Nested Conditional with Guard Clauses,L2113,AfterRefact,Total CC,21
+Replace Nested Conditional with Guard Clauses,L2113,AfterRefact,Total method calls,34
+Replace Nested Conditional with Guard Clauses,L2113,AfterRefact,Total lines of code,86
+Replace Nested Conditional with Guard Clauses,L2427,BeforeRefact,Total CC,8
+Replace Nested Conditional with Guard Clauses,L2427,BeforeRefact,Total method calls,7
+Replace Nested Conditional with Guard Clauses,L2427,BeforeRefact,Total lines of code,35
+Replace Nested Conditional with Guard Clauses,L2427,AfterRefact,Total CC,9
+Replace Nested Conditional with Guard Clauses,L2427,AfterRefact,Total method calls,8
+Replace Nested Conditional with Guard Clauses,L2427,AfterRefact,Total lines of code,38
+Slide Statements,L9795,BeforeRefact,Total CC,5
+Slide Statements,L9795,BeforeRefact,Total method calls,27
+Slide Statements,L9795,BeforeRefact,Total lines of code,35
+Slide Statements,L9795,AfterRefact,Total CC,5
+Slide Statements,L9795,AfterRefact,Total method calls,30
+Slide Statements,L9795,AfterRefact,Total lines of code,35
+Slide Statements,L9861,BeforeRefact,Total CC,5
+Slide Statements,L9861,BeforeRefact,Total method calls,15
+Slide Statements,L9861,BeforeRefact,Total lines of code,37
+Slide Statements,L9861,AfterRefact,Total CC,5
+Slide Statements,L9861,AfterRefact,Total method calls,17
+Slide Statements,L9861,AfterRefact,Total lines of code,37
+Introduce Assertion,L7413,BeforeRefact,Total CC,1
+Introduce Assertion,L7413,BeforeRefact,Total method calls,11
+Introduce Assertion,L7413,BeforeRefact,Total lines of code,16
+Introduce Assertion,L7413,AfterRefact,Total CC,1
+Introduce Assertion,L7413,AfterRefact,Total method calls,12
+Introduce Assertion,L7413,AfterRefact,Total lines of code,17
+Replace Magic Literal,L25880,BeforeRefact,Total CC,0
+Replace Magic Literal,L25880,BeforeRefact,Total method calls,0
+Replace Magic Literal,L25880,BeforeRefact,Total lines of code,2
+Replace Magic Literal,L25880,AfterRefact,Total CC,0
+Replace Magic Literal,L25880,AfterRefact,Total method calls,4
+Replace Magic Literal,L25880,AfterRefact,Total lines of code,6
+Replace Magic Literal,L3650,BeforeRefact,Total CC,1
+Replace Magic Literal,L3650,BeforeRefact,Total method calls,0
+Replace Magic Literal,L3650,BeforeRefact,Total lines of code,9
+Replace Magic Literal,L3650,AfterRefact,Total CC,0
+Replace Magic Literal,L3650,AfterRefact,Total method calls,4
+Replace Magic Literal,L3650,AfterRefact,Total lines of code,5
+Replace Function with Command,L2093,BeforeRefact,Total CC,14
+Replace Function with Command,L2093,BeforeRefact,Total method calls,2
+Replace Function with Command,L2093,BeforeRefact,Total lines of code,22
+Replace Function with Command,L2093,AfterRefact,Total CC,0
+Replace Function with Command,L2093,AfterRefact,Total method calls,1
+Replace Function with Command,L2093,AfterRefact,Total lines of code,2
+Replace Function with Command,L2083,BeforeRefact,Total CC,11
+Replace Function with Command,L2083,BeforeRefact,Total method calls,4
+Replace Function with Command,L2083,BeforeRefact,Total lines of code,36
+Replace Function with Command,L2083,AfterRefact,Total CC,0
+Replace Function with Command,L2083,AfterRefact,Total method calls,1
+Replace Function with Command,L2083,AfterRefact,Total lines of code,6
+Replace Function with Command,L2079,BeforeRefact,Total CC,0
+Replace Function with Command,L2079,BeforeRefact,Total method calls,2
+Replace Function with Command,L2079,BeforeRefact,Total lines of code,4
+Replace Function with Command,L2079,AfterRefact,Total CC,0
+Replace Function with Command,L2079,AfterRefact,Total method calls,1
+Replace Function with Command,L2079,AfterRefact,Total lines of code,2
+Replace Function with Command,L2075,BeforeRefact,Total CC,0
+Replace Function with Command,L2075,BeforeRefact,Total method calls,2
+Replace Function with Command,L2075,BeforeRefact,Total lines of code,3
+Replace Function with Command,L2075,AfterRefact,Total CC,0
+Replace Function with Command,L2075,AfterRefact,Total method calls,1
+Replace Function with Command,L2075,AfterRefact,Total lines of code,2
+Replace Function with Command,L1276,BeforeRefact,Total CC,12
+Replace Function with Command,L1276,BeforeRefact,Total method calls,3
+Replace Function with Command,L1276,BeforeRefact,Total lines of code,23
+Replace Function with Command,L1276,AfterRefact,Total CC,10
+Replace Function with Command,L1276,AfterRefact,Total method calls,3
+Replace Function with Command,L1276,AfterRefact,Total lines of code,24
+Extract Function,L7856,BeforeRefact,Total CC,0
+Extract Function,L7856,BeforeRefact,Total method calls,3
+Extract Function,L7856,BeforeRefact,Total lines of code,10
+Extract Function,L7856,AfterRefact,Total CC,2
+Extract Function,L7856,AfterRefact,Total method calls,6
+Extract Function,L7856,AfterRefact,Total lines of code,24
+Split Variable,L3524,BeforeRefact,Total CC,0
+Split Variable,L3524,BeforeRefact,Total method calls,0
+Split Variable,L3524,BeforeRefact,Total lines of code,7
+Split Variable,L3524,AfterRefact,Total CC,0
+Split Variable,L3524,AfterRefact,Total method calls,0
+Split Variable,L3524,AfterRefact,Total lines of code,5
+Change Function Declaration,L2447,BeforeRefact,Total CC,5
+Change Function Declaration,L2447,BeforeRefact,Total method calls,7
+Change Function Declaration,L2447,BeforeRefact,Total lines of code,13
+Change Function Declaration,L2447,AfterRefact,Total CC,4
+Change Function Declaration,L2447,AfterRefact,Total method calls,6
+Change Function Declaration,L2447,AfterRefact,Total lines of code,15
+Change Function Declaration,L24470,BeforeRefact,Total CC,5
+Change Function Declaration,L24470,BeforeRefact,Total method calls,7
+Change Function Declaration,L24470,BeforeRefact,Total lines of code,13
+Change Function Declaration,L24470,AfterRefact,Total CC,4
+Change Function Declaration,L24470,AfterRefact,Total method calls,6
+Change Function Declaration,L24470,AfterRefact,Total lines of code,15
+Change Function Declaration,L2288,BeforeRefact,Total CC,15
+Change Function Declaration,L2288,BeforeRefact,Total method calls,24
+Change Function Declaration,L2288,BeforeRefact,Total lines of code,70
+Change Function Declaration,L2288,AfterRefact,Total CC,13
+Change Function Declaration,L2288,AfterRefact,Total method calls,21
+Change Function Declaration,L2288,AfterRefact,Total lines of code,62
+Replace Function with Command,L2588,BeforeRefact,Total CC,0
+Replace Function with Command,L2588,BeforeRefact,Total method calls,0
+Replace Function with Command,L2588,BeforeRefact,Total lines of code,2
+Replace Function with Command,L2588,AfterRefact,Total CC,0
+Replace Function with Command,L2588,AfterRefact,Total method calls,4
+Replace Function with Command,L2588,AfterRefact,Total lines of code,6
+Change Function Declaration,L3072,BeforeRefact,Total CC,0
+Change Function Declaration,L3072,BeforeRefact,Total method calls,0
+Change Function Declaration,L3072,BeforeRefact,Total lines of code,6
+Change Function Declaration,L3072,AfterRefact,Total CC,0
+Change Function Declaration,L3072,AfterRefact,Total method calls,0
+Change Function Declaration,L3072,AfterRefact,Total lines of code,7
+Change Function Declaration,L2113,BeforeRefact,Total CC,14
+Change Function Declaration,L2113,BeforeRefact,Total method calls,22
+Change Function Declaration,L2113,BeforeRefact,Total lines of code,55
+Change Function Declaration,L2113,AfterRefact,Total CC,21
+Change Function Declaration,L2113,AfterRefact,Total method calls,34
+Change Function Declaration,L2113,AfterRefact,Total lines of code,85
+Split Variable,L5418,BeforeRefact,Total CC,3
+Split Variable,L5418,BeforeRefact,Total method calls,2
+Split Variable,L5418,BeforeRefact,Total lines of code,10
+Split Variable,L5418,AfterRefact,Total CC,3
+Split Variable,L5418,AfterRefact,Total method calls,2
+Split Variable,L5418,AfterRefact,Total lines of code,9
+Extract Function,L3446,BeforeRefact,Total CC,1
+Extract Function,L3446,BeforeRefact,Total method calls,8
+Extract Function,L3446,BeforeRefact,Total lines of code,9
+Extract Function,L3446,AfterRefact,Total CC,1
+Extract Function,L3446,AfterRefact,Total method calls,9
+Extract Function,L3446,AfterRefact,Total lines of code,12
+Change Function Declaration,L3949,BeforeRefact,Total CC,0
+Change Function Declaration,L3949,BeforeRefact,Total method calls,0
+Change Function Declaration,L3949,BeforeRefact,Total lines of code,2
+Change Function Declaration,L3949,AfterRefact,Total CC,0
+Change Function Declaration,L3949,AfterRefact,Total method calls,0
+Change Function Declaration,L3949,AfterRefact,Total lines of code,3
+Change Function Declaration,L8052,BeforeRefact,Total CC,0
+Change Function Declaration,L8052,BeforeRefact,Total method calls,0
+Change Function Declaration,L8052,BeforeRefact,Total lines of code,2
+Change Function Declaration,L8052,AfterRefact,Total CC,0
+Change Function Declaration,L8052,AfterRefact,Total method calls,0
+Change Function Declaration,L8052,AfterRefact,Total lines of code,2
+Inline Variable,L4884,BeforeRefact,Total CC,1
+Inline Variable,L4884,BeforeRefact,Total method calls,3
+Inline Variable,L4884,BeforeRefact,Total lines of code,8
+Inline Variable,L4884,AfterRefact,Total CC,1
+Inline Variable,L4884,AfterRefact,Total method calls,2
+Inline Variable,L4884,AfterRefact,Total lines of code,7
+Extract Function,L5882,BeforeRefact,Total CC,3
+Extract Function,L5882,BeforeRefact,Total method calls,9
+Extract Function,L5882,BeforeRefact,Total lines of code,16
+Extract Function,L5882,AfterRefact,Total CC,3
+Extract Function,L5882,AfterRefact,Total method calls,10
+Extract Function,L5882,AfterRefact,Total lines of code,20
+Extract Function,L5880,BeforeRefact,Total CC,3
+Extract Function,L5880,BeforeRefact,Total method calls,9
+Extract Function,L5880,BeforeRefact,Total lines of code,16
+Extract Function,L5880,AfterRefact,Total CC,3
+Extract Function,L5880,AfterRefact,Total method calls,11
+Extract Function,L5880,AfterRefact,Total lines of code,23
+Extract Function,L4889,BeforeRefact,Total CC,1
+Extract Function,L4889,BeforeRefact,Total method calls,3
+Extract Function,L4889,BeforeRefact,Total lines of code,8
+Extract Function,L4889,AfterRefact,Total CC,1
+Extract Function,L4889,AfterRefact,Total method calls,4
+Extract Function,L4889,AfterRefact,Total lines of code,11
+Introduce Assertion,L7126,BeforeRefact,Total CC,0
+Introduce Assertion,L7126,BeforeRefact,Total method calls,6
+Introduce Assertion,L7126,BeforeRefact,Total lines of code,5
+Introduce Assertion,L7126,AfterRefact,Total CC,0
+Introduce Assertion,L7126,AfterRefact,Total method calls,8
+Introduce Assertion,L7126,AfterRefact,Total lines of code,6
+Extract Function,L126,BeforeRefact,Total CC,4
+Extract Function,L126,BeforeRefact,Total method calls,18
+Extract Function,L126,BeforeRefact,Total lines of code,20
+Extract Function,L126,AfterRefact,Total CC,4
+Extract Function,L126,AfterRefact,Total method calls,19
+Extract Function,L126,AfterRefact,Total lines of code,24

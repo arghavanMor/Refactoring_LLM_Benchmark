@@ -1,0 +1,103 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ANTLR 4                                                            [pom]
+[INFO] ANTLR 4 Runtime Annotations                                        [jar]
+[INFO] ANTLR 4 Runtime                                                    [jar]
+[INFO] ANTLR 4 Tool                                                       [jar]
+[INFO] ANTLR 4 Maven plugin                                      [maven-plugin]
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-master >-----------------------
+[INFO] Building ANTLR 4 4.2                                               [1/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ antlr4-master ---
+[INFO] 
+[INFO] --------------------< org.antlr:antlr4-annotations >--------------------
+[INFO] Building ANTLR 4 Runtime Annotations 4.2                           [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ antlr4-annotations ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ antlr4-annotations ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ antlr4-annotations ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/JavaAnnotations/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 6
+[WARNING] source value 6 is obsolete and will be removed in a future release
+[WARNING] target value 1.6 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-runtime >----------------------
+[INFO] Building ANTLR 4 Runtime 4.2                                       [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ antlr4-runtime ---
+[INFO] 
+[INFO] --- antlr4-maven-plugin:4.1:antlr4 (default) @ antlr4-runtime ---
+[INFO] ANTLR 4: Processing source directory /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src
+[INFO] Processing grammar: org/antlr/v4/runtime/tree/xpath/XPathLexer.g4
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ antlr4-runtime ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ antlr4-runtime ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 162 source files to /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] bootstrap class path not set in conjunction with -source 6
+[WARNING] source value 6 is obsolete and will be removed in a future release
+[WARNING] target value 1.6 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/target/generated-sources/antlr4/org/antlr/v4/runtime/tree/xpath/XPathLexer.java:[89,29] deserialize(char[]) in org.antlr.v4.runtime.atn.ATNSimulator has been deprecated
+[INFO] 5 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/ParserATNSimulator.java:[1476,47] cannot find symbol
+  symbol:   variable fullCtx
+  location: class org.antlr.v4.runtime.atn.ParserATNSimulator
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/ParserATNSimulator.java:[1479,51] cannot find symbol
+  symbol:   variable fullCtx
+  location: class org.antlr.v4.runtime.atn.ParserATNSimulator
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ANTLR 4 4.2:
+[INFO] 
+[INFO] ANTLR 4 ............................................ SUCCESS [  0.083 s]
+[INFO] ANTLR 4 Runtime Annotations ........................ SUCCESS [  0.318 s]
+[INFO] ANTLR 4 Runtime .................................... FAILURE [  0.613 s]
+[INFO] ANTLR 4 Tool ....................................... SKIPPED
+[INFO] ANTLR 4 Maven plugin ............................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.059 s
+[INFO] Finished at: 2025-07-06T15:22:15-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project antlr4-runtime: Compilation failure: Compilation failure: 
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/ParserATNSimulator.java:[1476,47] cannot find symbol
+[ERROR]   symbol:   variable fullCtx
+[ERROR]   location: class org.antlr.v4.runtime.atn.ParserATNSimulator
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/ParserATNSimulator.java:[1479,51] cannot find symbol
+[ERROR]   symbol:   variable fullCtx
+[ERROR]   location: class org.antlr.v4.runtime.atn.ParserATNSimulator
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :antlr4-runtime

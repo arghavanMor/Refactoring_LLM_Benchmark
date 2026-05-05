@@ -1,0 +1,31 @@
+Failed test: 
+testLRWithLabels
+testParserLexerCombo
+testSimpleTokenDependence
+testSemPred
+testFairlyLargeGraph
+testExpressions
+testCtxSensitiveDFATwoDiffInput
+compileJdk
+testJavaExpressions
+testConjuringUpToken
+testSimple
+testPrefixOpWithActionAndLabel
+testReturnValueAndActions
+testInvalidEmptyInput
+testTernaryExpr
+testMultiTokenDeletionBeforeLoop2
+testConjuringUpTokenFromSet
+testInvalidATNStateRemoval
+testDuplicatedLeftRecursiveCall
+testSingleTokenDeletionDuringLoop2
+testLabelsOnOpSubrule
+testAmbigLR
+testMultiTokenDeletionDuringLoop2
+testDeclarations
+testReturnValueAndActionsAndLabels
+testLR
+
+Test error: 
+testCheckForNonLeftRecursiveRule
+testCheckForLeftRecursiveEmptyFollow

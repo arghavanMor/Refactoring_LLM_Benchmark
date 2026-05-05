@@ -1,0 +1,263 @@
+{
+    "L5418&SPLIT_VARIABLE&ContextCode&1751819621.401906_7975bfc660213f4adfd52bde09ebb18115a128a4.txt": [
+        "cannot find symbol symbol: variable altNum"
+    ],
+    "L2755&SLIDE_STATEMENTS&ContextCode&1751818353.691056_dc0540d3bf9678d67bbfbfef8eb9ce9e7e8f4743.txt": [
+        "cannot find symbol symbol: method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.HashSet<org.antlr.v4.runtime.atn.ATNConfig>,java.util.BitSet,boolean,boolean)",
+        "cannot find symbol symbol: variable calledRuleStack",
+        "cannot find symbol symbol: variable lookBusy",
+        "cannot find symbol symbol: method _LOOK(org.antlr.v4.runtime.atn.ATNState,<nulltype>,org.antlr.v4.runtime.atn.EmptyPredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.Set<org.antlr.v4.runtime.atn.ATNConfig>,java.util.BitSet,boolean,boolean)"
+    ],
+    "L2083&REPLACE_FUNCTION_WITH_COMMAND&InstrucCode&1751819072.659633_1951e4bc4d008d2198e7e3f4768a70b30d0c7b8f.txt": [
+        "cannot find symbol symbol: variable sets",
+        "non-static variable this cannot be referenced from a static context",
+        "cannot find symbol symbol: variable arg1",
+        "illegal parenthesized expression",
+        "cannot find symbol symbol: variable arg2",
+        "cannot find symbol symbol: variable trg",
+        "cannot find symbol symbol: variable arg3",
+        "cannot find symbol symbol: variable type"
+    ],
+    "L2588&REPLACE_FUNCTION_WITH_COMMAND&InstrucCode&1751819471.831002_e23a3f3d2cb637b46e6b1bf5d712b005388aca62.txt": [
+        "cannot find symbol symbol: variable parentHashCode",
+        "cannot find symbol symbol: variable returnStateHashCode",
+        "non-static variable this cannot be referenced from a static context"
+    ],
+    "L2093&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1751819009.790799_f6831b3722a705b50605c5cc320be0dd72e2c020.txt": [
+        "non-static variable this cannot be referenced from a static context",
+        "illegal parenthesized expression",
+        "cannot find symbol symbol: variable result",
+        "cannot find symbol symbol: variable type",
+        "cannot find symbol symbol: variable ruleIndex"
+    ],
+    "L2588&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1751819471.831002_8d8d0added66a1291c2d78af758112c463f0d311.txt": [
+        "incompatible types: int cannot be converted to org.antlr.v4.runtime.atn.PredictionContext[]",
+        "cannot find symbol symbol: variable parentHashCode",
+        "cannot find symbol symbol: method calculateHashCode(int,int)",
+        "cannot find symbol symbol: variable result",
+        "cannot find symbol symbol: variable returnStateHashCode"
+    ],
+    "L2075&REPLACE_FUNCTION_WITH_COMMAND&InstrucCode&1751819151.285588_0f16baf9edfd7bb8174556907a6303a7538ac1a0.txt": [
+        "method toInt32(char[],int) is already defined in class org.antlr.v4.runtime.atn.ATNSimulator",
+        "cannot find symbol symbol: variable data",
+        "non-static variable this cannot be referenced from a static context",
+        "cannot find symbol symbol: variable offset"
+    ],
+    "L2288&CHANGE_FUNCTION_DECLARATION&RulesCode&1751819383.567777_3b09238317ceac7a76c4c94a01beb78da5000160.txt": [
+        "cannot find symbol symbol: variable outerContext",
+        "method execATNWithFullContext in class org.antlr.v4.runtime.atn.ParserATNSimulator cannot be applied to given types;"
+    ],
+    "L3168&CONSOLIDATE_CONDITIONAL_EXPRESSION&ContextCode&1751817974.81684_569145dd38899c0b2108754b1beb0048ac99b825.txt": [
+        "diamond operator is not supported in -source 6"
+    ],
+    "L3072&CHANGE_FUNCTION_DECLARATION&RulesCode&1751819533.935053_22cbe76c6bab70bea3964559e95536224924715a.txt": [
+        "org.antlr.v4.runtime.BaseErrorListener is not abstract and does not override abstract method reportContextSensitivity(org.antlr.v4.runtime.Parser,org.antlr.v4.runtime.dfa.DFA,int,int,org.antlr.v4.runtime.atn.ATNConfigSet) in org.antlr.v4.runtime.ANTLRErrorListener"
+    ],
+    "L2113&CHANGE_FUNCTION_DECLARATION&ContextCode&1751818679.347835_35b54a6e07d391c83e71281d6463b52f1db34f75.txt": [
+        "cannot find symbol symbol: variable seeThruPreds",
+        "cannot find symbol symbol: variable addEOF",
+        "cannot find symbol symbol: variable lookBusy"
+    ],
+    "L3072&CHANGE_FUNCTION_DECLARATION&InstrucCode&1751819533.935053_869d520af1d4497a9ac9553b9ce32cbae89ca9bc.txt": [
+        "org.antlr.v4.runtime.BaseErrorListener is not abstract and does not override abstract method reportContextSensitivity(org.antlr.v4.runtime.Parser,org.antlr.v4.runtime.dfa.DFA,int,int,org.antlr.v4.runtime.atn.ATNConfigSet) in org.antlr.v4.runtime.ANTLRErrorListener"
+    ],
+    "L2079&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1751819136.9476_1034e5b8790df0de6dc38f9670aa7489cec4dd3f.txt": [
+        "Illegal static declaration in inner class org.antlr.v4.runtime.atn.ATNSimulator.UUIDConverter",
+        "method toLong(char[],int) is already defined in class org.antlr.v4.runtime.atn.ATNSimulator"
+    ],
+    "L156680&CONSOLIDATE_CONDITIONAL_EXPRESSION&FewShotCode&1751818138.025262_05e6545a9eb40e5f6b7123bb5ba569b584bc1301.txt": [
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L13228&SLIDE_STATEMENTS&ContextCode&1751818442.174485_e13a425982b616fa24dbc1acfd1bf71130a1f1d8.txt": [
+        "cannot find symbol symbol: method load()"
+    ],
+    "L156680&CONSOLIDATE_CONDITIONAL_EXPRESSION&ContextCode&1751818138.025262_dede02fcab8638c0b29fbaefef079e76c3ffcfd1.txt": [
+        "method addNonAcceptStates(org.antlr.v4.runtime.dfa.DFA,org.stringtemplate.v4.ST) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method addAcceptStates(org.antlr.v4.runtime.dfa.DFA,org.stringtemplate.v4.ST) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method addEdges(org.antlr.v4.runtime.dfa.DFA,org.stringtemplate.v4.ST,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getEdgeLabel(int,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L2755&SLIDE_STATEMENTS&ZeroShotCode&1751818353.691056_0512c0339acb89d4a36f31dfd0676d08e591b810.txt": [
+        "cannot find symbol symbol: variable seeThruPreds",
+        "cannot find symbol symbol: variable lookBusy"
+    ],
+    "L5343&EXTRACT_VARIABLE&ZeroShotCode&1751817269.860266_04127c8c8c3ef92af628951f00cea08c3d646ec7.txt": [
+        "cannot find symbol symbol: variable parseListeners"
+    ],
+    "L2113&CHANGE_FUNCTION_DECLARATION&RulesCode&1751818679.347835_335d4686a334e571063ce08995acfacba14ca7de.txt": [
+        "cannot find symbol symbol: variable addEOF",
+        "method _LOOK in class org.antlr.v4.runtime.atn.LL1Analyzer cannot be applied to given types;"
+    ],
+    "L2113&CHANGE_FUNCTION_DECLARATION&FewShotCode&1751818619.877825_3e81440eeddf0bb0302d20b763df0c3403ebb87d.txt": [
+        "cannot find symbol symbol: method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.EmptyPredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.Set<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)",
+        "cannot find symbol symbol: method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.HashSet<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)"
+    ],
+    "L2083&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1751819072.659633_865c9ae0ae21d66858dcdea49d04407cfa6079f5.txt": [
+        "cannot find symbol symbol: variable sets",
+        "non-static variable this cannot be referenced from a static context",
+        "cannot find symbol symbol: variable arg1",
+        "illegal parenthesized expression",
+        "cannot find symbol symbol: variable arg2",
+        "cannot find symbol symbol: variable trg",
+        "cannot find symbol symbol: variable arg3",
+        "cannot find symbol symbol: variable type"
+    ],
+    "L1276&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1751819216.11493_57d0ea54a2aaf53e6880973f37142cb0554d04aa.txt": [
+        "non-static variable this cannot be referenced from a static context"
+    ],
+    "L2113&CHANGE_FUNCTION_DECLARATION&RulesCode&1751818619.877825_da09fd50d49ad40bbda7842866b0dfdc67c2f77f.txt": [
+        "cannot find symbol symbol: variable addEOF",
+        "method _LOOK in class org.antlr.v4.runtime.atn.LL1Analyzer cannot be applied to given types;"
+    ],
+    "L2113&CHANGE_FUNCTION_DECLARATION&ContextCode&1751818619.877825_c6f770860358bd3a6294cf96bbd517ce9fc28ca7.txt": [
+        "cannot find symbol symbol: variable seeThruPreds",
+        "cannot find symbol symbol: variable addEOF",
+        "cannot find symbol symbol: variable lookBusy"
+    ],
+    "L5418&SPLIT_VARIABLE&FewShotCode&1751819621.401906_bf45a881aeb312d34c35178007b3ec0ffed4e785.txt": [
+        "cannot find symbol symbol: variable altNum"
+    ],
+    "L2079&REPLACE_FUNCTION_WITH_COMMAND&ZeroShotCode&1751819136.9476_7f1c2f1c78bff71529762e5b40d2400353a16bcd.txt": [
+        "toUUID(char[],int) is not public in org.antlr.v4.runtime.atn.ATNSimulator; cannot be accessed from outside package"
+    ],
+    "L15668&SLIDE_STATEMENTS&ZeroShotCode&1751818120.814911_dff8180fbbadb93f2781056dfde53e00a1fd5453.txt": [
+        "method addStopStates(org.stringtemplate.v4.ST,org.antlr.v4.runtime.dfa.DFA) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method addEdges(org.stringtemplate.v4.ST,org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method addRegularStates(org.stringtemplate.v4.ST,org.antlr.v4.runtime.dfa.DFA) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA"
+    ],
+    "L15668&SLIDE_STATEMENTS&RulesCode&1751818120.814911_ad70939611a97766606a29517e94339bf0696f32.txt": [
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L15668&SLIDE_STATEMENTS&FewShotCode&1751818120.814911_684c3c80525ebbf014351072843f32222918f956.txt": [
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L15668&SLIDE_STATEMENTS&InstrucCode&1751818120.814911_d52eedb79ec8383e4a71055d9196b6d2290891a0.txt": [
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L5418&SPLIT_VARIABLE&InstrucCode&1751819621.401906_00c4830d84a69e341c24ce0644e930e6b469e5c6.txt": [
+        "cannot find symbol symbol: variable altNum"
+    ],
+    "L156680&CONSOLIDATE_CONDITIONAL_EXPRESSION&RulesCode&1751818138.025262_103484419509916c82cc63a3804c17d780692b52.txt": [
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L156680&CONSOLIDATE_CONDITIONAL_EXPRESSION&ZeroShotCode&1751818138.025262_e0c2b775787c5585abe4165b386b1ea673b14fd1.txt": [
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L5343&EXTRACT_VARIABLE&ContextCode&1751817269.860266_28d43a606c575a9557ac45ad28cd4dc6f4953a04.txt": [
+        "diamond operator is not supported in -source 6"
+    ],
+    "L2083&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1751819072.659633_2b1bc6f6f0147cb0c494a2f825f60624b2cd0404.txt": [
+        "non-static variable this cannot be referenced from a static context"
+    ],
+    "L2113&CHANGE_FUNCTION_DECLARATION&FewShotCode&1751818679.347835_3e3a39bbb616d694469e62e2f459e8a62bc9dbb6.txt": [
+        "cannot find symbol symbol: method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.EmptyPredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.Set<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)",
+        "cannot find symbol symbol: method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.HashSet<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)"
+    ],
+    "L13228&SLIDE_STATEMENTS&ZeroShotCode&1751818442.174485_45d476e9ee34cb19897d460eddd73294a5291d7a.txt": [
+        "cannot find symbol symbol: method load()"
+    ],
+    "L2093&REPLACE_FUNCTION_WITH_COMMAND&InstrucCode&1751819009.790799_c0a29a4bf9d5fde83c20f98a014ce9db2306c829.txt": [
+        "illegal parenthesized expression",
+        "cannot find symbol symbol: variable ruleIndex",
+        "cannot find symbol symbol: variable type",
+        "non-static variable this cannot be referenced from a static context"
+    ],
+    "L2288&CHANGE_FUNCTION_DECLARATION&FewShotCode&1751819383.567777_a86b9ae485ad56ee3b280bc013762d0056d6348c.txt": [
+        "cannot find symbol symbol: method execATNWithFullContext(org.antlr.v4.runtime.dfa.DFA,org.antlr.v4.runtime.dfa.DFAState,org.antlr.v4.runtime.atn.ATNConfigSet,org.antlr.v4.runtime.TokenStream,int,org.antlr.v4.runtime.ParserRuleContext,int)"
+    ],
+    "L2075&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1751819151.285588_e37353a819dc7d79c5f280e27fa8f3da18ad77c5.txt": [
+        "cannot find symbol symbol: variable highOrder",
+        "cannot find symbol symbol: variable lowOrder",
+        "incompatible types: possible lossy conversion from long to int",
+        "cannot find symbol symbol: variable data",
+        "method toInt32(char[],int) is already defined in class org.antlr.v4.runtime.atn.ATNSimulator",
+        "cannot find symbol symbol: variable offset",
+        "cannot find symbol symbol: variable result",
+        "cannot find symbol symbol: method toLong(char[],int)"
+    ],
+    "L2079&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1751819136.9476_8ff8eb28922bf87121df4ad38db53acd1a71dee2.txt": [
+        "method toLong(char[],int) is already defined in class org.antlr.v4.runtime.atn.ATNSimulator",
+        "cannot find symbol symbol: variable uuid",
+        "cannot find symbol symbol: variable data",
+        "cannot find symbol symbol: variable mostSigBits",
+        "cannot find symbol symbol: method toUUID(char[],int)",
+        "cannot find symbol symbol: variable offset",
+        "cannot find symbol symbol: variable leastSigBits"
+    ],
+    "L5418&SPLIT_VARIABLE&ZeroShotCode&1751819621.401906_992189003fa420d831032342fd19c0933d4c6efe.txt": [
+        "cannot find symbol symbol: variable altNum"
+    ],
+    "L2588&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1751819471.831002_301ab5469f65ccf4d8719c04b6839e8c0943e058.txt": [
+        "cannot find symbol symbol: method calculateHashCode(int,int)",
+        "cannot find symbol symbol: variable MULTIPLIER1",
+        "cannot find symbol symbol: variable MULTIPLIER2",
+        "incompatible types: int cannot be converted to org.antlr.v4.runtime.atn.PredictionContext[]"
+    ],
+    "L2093&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1751819009.790799_c715d609254f0d05ddcc4d629eb6daab41ebc778.txt": [
+        "Illegal static declaration in inner class org.antlr.v4.runtime.atn.ATNSimulator.StateFactory"
+    ],
+    "L1276&REPLACE_FUNCTION_WITH_COMMAND&InstrucCode&1751819216.11493_64ec5f260391b57675ddc6529df453eb5f54859f.txt": [
+        "non-static variable this cannot be referenced from a static context",
+        "cannot find symbol symbol: variable a",
+        "illegal parenthesized expression",
+        "cannot find symbol symbol: variable mergeCache",
+        "cannot find symbol symbol: variable rootIsWildcard",
+        "cannot find symbol symbol: variable b",
+        "Illegal static declaration in inner class org.antlr.v4.runtime.atn.PredictionContext.MergePredictionContextCommand"
+    ],
+    "L2079&REPLACE_FUNCTION_WITH_COMMAND&InstrucCode&1751819136.9476_7660e658aeb79836c7dcd71ba3aef2b3ac34f54c.txt": [
+        "method toLong(char[],int) is already defined in class org.antlr.v4.runtime.atn.ATNSimulator",
+        "cannot find symbol symbol: variable data",
+        "cannot find symbol symbol: variable offset",
+        "non-static variable this cannot be referenced from a static context"
+    ],
+    "L15668&SLIDE_STATEMENTS&ContextCode&1751818120.814911_f8002a42a580458735fcc28605d39c7ee3ebfd7f.txt": [
+        "method addNonAcceptStates(org.stringtemplate.v4.ST,org.antlr.v4.runtime.dfa.DFA) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method addAcceptStates(org.stringtemplate.v4.ST,org.antlr.v4.runtime.dfa.DFA) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method getEdgeLabelForState(int,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method addEdges(org.stringtemplate.v4.ST,org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator",
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA"
+    ],
+    "L156680&CONSOLIDATE_CONDITIONAL_EXPRESSION&InstrucCode&1751818138.025262_5fb92a70bcfd644fa3d1f60ed9429e4ba01bfa8c.txt": [
+        "incompatible types: org.antlr.v4.runtime.atn.RuleStartState cannot be converted to org.antlr.v4.runtime.dfa.DFA",
+        "method getDOT(org.antlr.v4.runtime.dfa.DFA,boolean) is already defined in class org.antlr.v4.tool.DOTGenerator"
+    ],
+    "L2079&REPLACE_FUNCTION_WITH_COMMAND&ContextCode&1751819136.9476_31cb9cc4f7e48e0015371eb88649aa848fca3db2.txt": [
+        "toUUID(char[],int) is not public in org.antlr.v4.runtime.atn.ATNSimulator; cannot be accessed from outside package"
+    ],
+    "L2075&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1751819151.285588_39782e5c74bf16a6020949d18d012a91cff772e3.txt": [
+        "missing return statement"
+    ],
+    "L5418&SPLIT_VARIABLE&RulesCode&1751819621.401906_517670cac4f004057e16d92fde98736629c1e59e.txt": [
+        "cannot find symbol symbol: variable altNum"
+    ],
+    "Error_summary": {
+        "cannot find symbol symbol: variable": 61,
+        "is already defined in class": 26,
+        "cannot be applied to given types": 3,
+        "incompatible types": 13,
+        "cannot find symbol symbol: method": 13,
+        "cannot be referenced from a static context": 10,
+        "is not abstract and does not override abstract method": 2,
+        "Illegal static declaration in inner class": 3,
+        "illegal parenthesized expression": 5,
+        "cannot be accessed from outside package": 2,
+        "diamond operator is not supported in -source 6": 2,
+        "cannot assign a value to final variable": 0,
+        "missing return statement": 1,
+        "modifier static not allowed here": 0,
+        "method does not override or implement a method from a supertype": 0,
+        "error_quantity": 141
+    }
+}

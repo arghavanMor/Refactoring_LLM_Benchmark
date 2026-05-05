@@ -1,0 +1,2 @@
+old method;new method;constant
+com.cloudera.oryx.common.servcomp.Namespaces.getPaddedGenerationID()@/oryx_base1/common-servcomp/src/main/java/com/cloudera/oryx/common/servcomp/Namespaces.java:92:2;com.cloudera.oryx.common.servcomp.Namespaces.getPaddedGenerationID()@/oryx_base2/common-servcomp/src/main/java/com/cloudera/oryx/common/servcomp/Namespaces.java:100:2;com.cloudera.oryx.common.servcomp.Namespaces.DIGITS_IN_GENERATION_ID@/oryx_base2/common-servcomp/src/main/java/com/cloudera/oryx/common/servcomp/Namespaces.java:39:27

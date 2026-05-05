@@ -1,0 +1,275 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ANTLR 4                                                            [pom]
+[INFO] ANTLR 4 Runtime                                                    [jar]
+[INFO] ANTLR 4 Tool                                                       [jar]
+[INFO] ANTLR 4 Maven plugin                                      [maven-plugin]
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-master >-----------------------
+[INFO] Building ANTLR 4 4.1-SNAPSHOT                                      [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ antlr4-master ---
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-runtime >----------------------
+[INFO] Building ANTLR 4 Runtime 4.1-SNAPSHOT                              [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ antlr4-runtime ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ antlr4-runtime ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ antlr4-runtime ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 125 source files to /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] bootstrap class path not set in conjunction with -source 6
+[WARNING] source value 6 is obsolete and will be removed in a future release
+[WARNING] target value 1.6 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/misc/Interval.java:[33,8] Class org.antlr.v4.runtime.misc.Interval overrides equals, but neither it nor any superclass overrides hashCode method
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,47] redundant cast to org.antlr.v4.runtime.atn.SingletonPredictionContext
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,79] redundant cast to org.antlr.v4.runtime.atn.SingletonPredictionContext
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[185,44] redundant cast to org.antlr.v4.runtime.atn.SingletonPredictionContext
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[188,44] redundant cast to org.antlr.v4.runtime.atn.SingletonPredictionContext
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,39] redundant cast to org.antlr.v4.runtime.atn.ArrayPredictionContext
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,67] redundant cast to org.antlr.v4.runtime.atn.ArrayPredictionContext
+[INFO] 11 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[758,30] method execute() is already defined in class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[763,30] method execute() is already defined in class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,14] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,27] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,41] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,46] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,52] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,74] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,65] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[171,20] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[172,13] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[172,56] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,76] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,108] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,111] cannot find symbol
+  symbol:   variable rootIsWildcard
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,127] cannot find symbol
+  symbol:   variable mergeCache
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[177,13] cannot find symbol
+  symbol:   variable rootIsWildcard
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[177,12] illegal parenthesized expression
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[178,17] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[179,24] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[180,17] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[181,24] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[184,13] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[185,13] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[185,73] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[187,13] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[188,13] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[188,73] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,64] cannot find symbol
+  symbol:   variable a
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,92] cannot find symbol
+  symbol:   variable b
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,95] cannot find symbol
+  symbol:   variable rootIsWildcard
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,111] cannot find symbol
+  symbol:   variable mergeCache
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[245,40] cannot find symbol
+  symbol:   method merge(org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,boolean,org.antlr.v4.runtime.misc.DoubleKeyMap<org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext>)
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[445,54] cannot find symbol
+  symbol:   method merge(org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,boolean,org.antlr.v4.runtime.misc.DoubleKeyMap<org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext>)
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[802,17] cannot assign a value to final variable a
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[805,17] cannot assign a value to final variable b
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/ATNConfigSet.java:[176,42] cannot find symbol
+  symbol:   method merge(org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,boolean,org.antlr.v4.runtime.misc.DoubleKeyMap<org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext>)
+  location: class org.antlr.v4.runtime.atn.PredictionContext
+[INFO] 37 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ANTLR 4 4.1-SNAPSHOT:
+[INFO] 
+[INFO] ANTLR 4 ............................................ SUCCESS [  0.086 s]
+[INFO] ANTLR 4 Runtime .................................... FAILURE [  0.617 s]
+[INFO] ANTLR 4 Tool ....................................... SKIPPED
+[INFO] ANTLR 4 Maven plugin ............................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.746 s
+[INFO] Finished at: 2025-07-06T15:36:36-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project antlr4-runtime: Compilation failure: Compilation failure: 
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[758,30] method execute() is already defined in class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[763,30] method execute() is already defined in class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,14] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,27] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,41] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,46] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,52] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,74] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[170,65] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[171,20] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[172,13] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[172,56] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,76] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,108] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,111] cannot find symbol
+[ERROR]   symbol:   variable rootIsWildcard
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[173,127] cannot find symbol
+[ERROR]   symbol:   variable mergeCache
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[177,13] cannot find symbol
+[ERROR]   symbol:   variable rootIsWildcard
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[177,12] illegal parenthesized expression
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[178,17] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[179,24] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[180,17] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[181,24] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[184,13] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[185,13] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[185,73] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[187,13] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[188,13] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[188,73] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,64] cannot find symbol
+[ERROR]   symbol:   variable a
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,92] cannot find symbol
+[ERROR]   symbol:   variable b
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,95] cannot find symbol
+[ERROR]   symbol:   variable rootIsWildcard
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[190,111] cannot find symbol
+[ERROR]   symbol:   variable mergeCache
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[245,40] cannot find symbol
+[ERROR]   symbol:   method merge(org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,boolean,org.antlr.v4.runtime.misc.DoubleKeyMap<org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext>)
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[445,54] cannot find symbol
+[ERROR]   symbol:   method merge(org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,boolean,org.antlr.v4.runtime.misc.DoubleKeyMap<org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext>)
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[802,17] cannot assign a value to final variable a
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/PredictionContext.java:[805,17] cannot assign a value to final variable b
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/ATNConfigSet.java:[176,42] cannot find symbol
+[ERROR]   symbol:   method merge(org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,boolean,org.antlr.v4.runtime.misc.DoubleKeyMap<org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.atn.PredictionContext>)
+[ERROR]   location: class org.antlr.v4.runtime.atn.PredictionContext
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :antlr4-runtime

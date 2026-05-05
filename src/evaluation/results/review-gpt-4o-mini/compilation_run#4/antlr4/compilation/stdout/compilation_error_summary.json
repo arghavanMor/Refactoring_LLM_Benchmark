@@ -1,0 +1,36 @@
+{
+    "L2093&REPLACE_FUNCTION_WITH_COMMAND&RulesCode&1774464330.531859_22d796e1b1ace5af3972c03617852ac6eb5943b9.txt": [
+        "[435,37] non-static variable this cannot be referenced from a static context"
+    ],
+    "L19910&INTRODUCE_SPECIAL_CASE&ContextCode&1774464267.634822_42e3441d4a67a756d5a32d19bda18b6138670e0f.txt": [
+        "[651,44] cannot find symbol symbol: variable currentAltReachedAcceptState"
+    ],
+    "L2447&CHANGE_FUNCTION_DECLARATION&InstrucCode&1774464366.08739_9e5064a3c2b464581129e153d376555bc18a5d52.txt": [
+        "[301,13] no suitable method found for accept(org.antlr.v4.runtime.CharStream,int,int,int,int,int)"
+    ],
+    "L2093&REPLACE_FUNCTION_WITH_COMMAND&FewShotCode&1774464330.531859_ece54b67fb3abda910fdb0c07b96437e1b197fd6.txt": [
+        "[435,16] non-static variable this cannot be referenced from a static context",
+        "[440,16] cannot find symbol symbol: variable type",
+        "[440,15] illegal parenthesized expression",
+        "[480,114] cannot find symbol symbol: variable type",
+        "[483,23] cannot find symbol symbol: variable ruleIndex"
+    ],
+    "Error_summary": {
+        "cannot find symbol symbol: variable": 4,
+        "is already defined in class": 0,
+        "cannot be applied to given types": 0,
+        "incompatible types": 0,
+        "cannot find symbol symbol: method": 0,
+        "cannot be referenced from a static context": 2,
+        "is not abstract and does not override abstract method": 0,
+        "Illegal static declaration in inner class": 0,
+        "illegal parenthesized expression": 1,
+        "cannot be accessed from outside package": 0,
+        "diamond operator is not supported in -source 6": 0,
+        "cannot assign a value to final variable": 0,
+        "missing return statement": 0,
+        "modifier static not allowed here": 0,
+        "method does not override or implement a method from a supertype": 0,
+        "error_quantity": 7
+    }
+}
