@@ -41,7 +41,7 @@ This tool applies the transformations directly to the target codebase using **Ja
 Before running the system, update the configuration file:
 
 ```
-src/utils/config.json
+src/integrator/scripts/config.json
 ```
 
 ### Required fields:
