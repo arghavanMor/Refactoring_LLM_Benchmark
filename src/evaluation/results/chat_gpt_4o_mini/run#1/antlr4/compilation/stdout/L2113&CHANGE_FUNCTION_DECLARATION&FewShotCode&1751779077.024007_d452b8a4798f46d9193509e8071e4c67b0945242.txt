@@ -1,0 +1,79 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ANTLR 4                                                            [pom]
+[INFO] ANTLR 4 Runtime                                                    [jar]
+[INFO] ANTLR 4 Tool                                                       [jar]
+[INFO] ANTLR 4 Maven plugin                                      [maven-plugin]
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-master >-----------------------
+[INFO] Building ANTLR 4 4.0-SNAPSHOT                                      [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ antlr4-master ---
+[INFO] 
+[INFO] ----------------------< org.antlr:antlr4-runtime >----------------------
+[INFO] Building ANTLR 4 Runtime 4.0-SNAPSHOT                              [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ antlr4-runtime ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ antlr4-runtime ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ antlr4-runtime ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 123 source files to /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] bootstrap class path not set in conjunction with -source 6
+[WARNING] source value 6 is obsolete and will be removed in a future release
+[WARNING] target value 1.6 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[WARNING] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/misc/Interval.java:[33,8] Class org.antlr.v4.runtime.misc.Interval overrides equals, but neither it nor any superclass overrides hashCode method
+[INFO] 5 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/LL1Analyzer.java:[71,13] cannot find symbol
+  symbol:   method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.EmptyPredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.Set<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)
+  location: class org.antlr.v4.runtime.atn.LL1Analyzer
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/LL1Analyzer.java:[95,9] cannot find symbol
+  symbol:   method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.HashSet<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)
+  location: class org.antlr.v4.runtime.atn.LL1Analyzer
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for ANTLR 4 4.0-SNAPSHOT:
+[INFO] 
+[INFO] ANTLR 4 ............................................ SUCCESS [  0.085 s]
+[INFO] ANTLR 4 Runtime .................................... FAILURE [  0.725 s]
+[INFO] ANTLR 4 Tool ....................................... SKIPPED
+[INFO] ANTLR 4 Maven plugin ............................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.852 s
+[INFO] Finished at: 2025-07-06T01:18:03-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.0:compile (default-compile) on project antlr4-runtime: Compilation failure: Compilation failure: 
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/LL1Analyzer.java:[71,13] cannot find symbol
+[ERROR]   symbol:   method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.EmptyPredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.Set<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)
+[ERROR]   location: class org.antlr.v4.runtime.atn.LL1Analyzer
+[ERROR] /Users/jeancarlorspaul/IdeaProjects/antlr4/runtime/Java/src/org/antlr/v4/runtime/atn/LL1Analyzer.java:[95,9] cannot find symbol
+[ERROR]   symbol:   method _LOOK(org.antlr.v4.runtime.atn.ATNState,org.antlr.v4.runtime.atn.PredictionContext,org.antlr.v4.runtime.misc.IntervalSet,java.util.HashSet<org.antlr.v4.runtime.atn.ATNConfig>,boolean,boolean)
+[ERROR]   location: class org.antlr.v4.runtime.atn.LL1Analyzer
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :antlr4-runtime

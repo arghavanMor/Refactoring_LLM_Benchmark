@@ -1,0 +1,5 @@
+Given this initial code: "<initial code>", the <refactoring method> was attempted and this was the final result:
+
+"<final code>".
+
+Answer "1" if it was a success, "0" if it was a failure, and nothing else.

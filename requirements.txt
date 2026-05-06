@@ -1,0 +1,17 @@
+tqdm
+openai
+scikit-learn
+numpy
+pandas
+pyccmetrics
+pymupdf
+scipy
+prettytable
+PyTokenCounter
+seaborn
+Cython
+gitpython
+tiktoken
+lizard
+tree-sitter==0.23.1
+codebleu

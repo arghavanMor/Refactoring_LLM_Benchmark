@@ -1,0 +1,902 @@
+{
+    "L10937": {
+        "cyclomatic_complexity": 5,
+        "token_count": 165,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L5343": {
+        "cyclomatic_complexity": 1,
+        "token_count": 8,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3671": {
+        "cyclomatic_complexity": 1,
+        "token_count": 65,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3692": {
+        "cyclomatic_complexity": 1,
+        "token_count": 58,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L7413": {
+        "cyclomatic_complexity": 3,
+        "token_count": 181,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L10037": {
+        "cyclomatic_complexity": 1,
+        "token_count": 92,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L1927": {
+        "cyclomatic_complexity": 16,
+        "token_count": 301,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 2,
+            "run#3": 2,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L5431": {
+        "cyclomatic_complexity": 4,
+        "token_count": 77,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3844": {
+        "cyclomatic_complexity": 6,
+        "token_count": 95,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3168": {
+        "cyclomatic_complexity": 22,
+        "token_count": 413,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L10263": {
+        "cyclomatic_complexity": 15,
+        "token_count": 557,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L102630": {
+        "cyclomatic_complexity": 10,
+        "token_count": 166,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L15668": {
+        "cyclomatic_complexity": 14,
+        "token_count": 424,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L156680": {
+        "cyclomatic_complexity": 14,
+        "token_count": 424,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3347": {
+        "cyclomatic_complexity": 12,
+        "token_count": 258,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L2755": {
+        "cyclomatic_complexity": 22,
+        "token_count": 602,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L13228": {
+        "cyclomatic_complexity": 7,
+        "token_count": 296,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 4,
+            "run#3": 4,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L8024": {
+        "cyclomatic_complexity": 18,
+        "token_count": 1040,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L9806": {
+        "cyclomatic_complexity": 4,
+        "token_count": 221,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L1506": {
+        "cyclomatic_complexity": 3,
+        "token_count": 60,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 2,
+            "run#3": 2,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L1991": {
+        "cyclomatic_complexity": 20,
+        "token_count": 459,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L19910": {
+        "cyclomatic_complexity": 20,
+        "token_count": 459,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L2113": {
+        "cyclomatic_complexity": 16,
+        "token_count": 406,
+        "chat_gpt_4o_mini": {
+            "run#1": 10,
+            "run#2": 20,
+            "run#3": 20,
+            "run#4": 10,
+            "run#5": 10
+        },
+        "deep_seek": {
+            "run#1": 10,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 10,
+            "run#5": 10
+        }
+    },
+    "L2427": {
+        "cyclomatic_complexity": 9,
+        "token_count": 216,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L9795": {
+        "cyclomatic_complexity": 6,
+        "token_count": 334,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 6,
+            "run#3": 6,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L9861": {
+        "cyclomatic_complexity": 7,
+        "token_count": 309,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 4,
+            "run#3": 4,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L25880": {
+        "cyclomatic_complexity": 1,
+        "token_count": 23,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L3650": {
+        "cyclomatic_complexity": 3,
+        "token_count": 52,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L2093": {
+        "cyclomatic_complexity": 14,
+        "token_count": 231,
+        "chat_gpt_4o_mini": {
+            "run#1": 3,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 3,
+            "run#5": 3
+        },
+        "deep_seek": {
+            "run#1": 3,
+            "run#2": 4,
+            "run#3": 4,
+            "run#4": 4,
+            "run#5": 4
+        }
+    },
+    "L2083": {
+        "cyclomatic_complexity": 12,
+        "token_count": 277,
+        "chat_gpt_4o_mini": {
+            "run#1": 2,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 2,
+            "run#2": 4,
+            "run#3": 4,
+            "run#4": 4,
+            "run#5": 4
+        }
+    },
+    "L2079": {
+        "cyclomatic_complexity": 1,
+        "token_count": 43,
+        "chat_gpt_4o_mini": {
+            "run#1": 4,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 4,
+            "run#2": 4,
+            "run#3": 4,
+            "run#4": 4,
+            "run#5": 4
+        }
+    },
+    "L2075": {
+        "cyclomatic_complexity": 1,
+        "token_count": 44,
+        "chat_gpt_4o_mini": {
+            "run#1": 4,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 4,
+            "run#2": 3,
+            "run#3": 3,
+            "run#4": 3,
+            "run#5": 3
+        }
+    },
+    "L1276": {
+        "cyclomatic_complexity": 13,
+        "token_count": 165,
+        "chat_gpt_4o_mini": {
+            "run#1": 4,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 4,
+            "run#5": 4
+        },
+        "deep_seek": {
+            "run#1": 4,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L7856": {
+        "cyclomatic_complexity": 1,
+        "token_count": 76,
+        "chat_gpt_4o_mini": {
+            "run#1": 4,
+            "run#2": 8,
+            "run#3": 8,
+            "run#4": 4,
+            "run#5": 4
+        },
+        "deep_seek": {
+            "run#1": 4,
+            "run#2": 4,
+            "run#3": 4,
+            "run#4": 4,
+            "run#5": 4
+        }
+    },
+    "L3524": {
+        "cyclomatic_complexity": 1,
+        "token_count": 34,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L2447": {
+        "cyclomatic_complexity": 6,
+        "token_count": 122,
+        "chat_gpt_4o_mini": {
+            "run#1": 1,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 1,
+            "run#5": 1
+        },
+        "deep_seek": {
+            "run#1": 1,
+            "run#2": 1,
+            "run#3": 1,
+            "run#4": 1,
+            "run#5": 1
+        }
+    },
+    "L24470": {
+        "cyclomatic_complexity": 6,
+        "token_count": 122,
+        "chat_gpt_4o_mini": {
+            "run#1": 1,
+            "run#2": 2,
+            "run#3": 2,
+            "run#4": 1,
+            "run#5": 1
+        },
+        "deep_seek": {
+            "run#1": 1,
+            "run#2": 1,
+            "run#3": 1,
+            "run#4": 1,
+            "run#5": 1
+        }
+    },
+    "L2288": {
+        "cyclomatic_complexity": 16,
+        "token_count": 412,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L2588": {
+        "cyclomatic_complexity": 1,
+        "token_count": 23,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3072": {
+        "cyclomatic_complexity": 1,
+        "token_count": 19,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L5418": {
+        "cyclomatic_complexity": 4,
+        "token_count": 61,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3446": {
+        "cyclomatic_complexity": 2,
+        "token_count": 71,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 10,
+            "run#3": 10,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L3949": {
+        "cyclomatic_complexity": 1,
+        "token_count": 11,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L8052": {
+        "cyclomatic_complexity": 1,
+        "token_count": 12,
+        "chat_gpt_4o_mini": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        },
+        "deep_seek": {
+            "run#1": 0,
+            "run#2": 0,
+            "run#3": 0,
+            "run#4": 0,
+            "run#5": 0
+        }
+    },
+    "L4884": {
+        "cyclomatic_complexity": 3,
+        "token_count": 54,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L5882": {
+        "cyclomatic_complexity": 4,
+        "token_count": 98,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L5880": {
+        "cyclomatic_complexity": 4,
+        "token_count": 98,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L4889": {
+        "cyclomatic_complexity": 3,
+        "token_count": 54,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L7126": {
+        "cyclomatic_complexity": 1,
+        "token_count": 58,
+        "chat_gpt_4o_mini": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        },
+        "deep_seek": {
+            "run#1": 5,
+            "run#2": 5,
+            "run#3": 5,
+            "run#4": 5,
+            "run#5": 5
+        }
+    },
+    "L126": {
+        "cyclomatic_complexity": 6,
+        "token_count": 169,
+        "chat_gpt_4o_mini": {
+            "run#1": 1,
+            "run#2": 1,
+            "run#3": 1,
+            "run#4": 1,
+            "run#5": 1
+        },
+        "deep_seek": {
+            "run#1": 4,
+            "run#2": 4,
+            "run#3": 4,
+            "run#4": 4,
+            "run#5": 4
+        }
+    }
+}

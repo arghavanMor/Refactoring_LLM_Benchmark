@@ -1,0 +1,1709 @@
+Refactoring method,Prompt,Metric,Average Value
+PULL UP FIELD,ZeroShotCode,CodeBleu,0.579
+PULL UP FIELD,ZeroShotCode,Total CC,0.0
+PULL UP FIELD,ZeroShotCode,Total method calls,0.0
+PULL UP FIELD,ZeroShotCode,Total lines of code,8.0
+PULL UP FIELD,FewShotCode,CodeBleu,
+PULL UP FIELD,FewShotCode,Total CC,
+PULL UP FIELD,FewShotCode,Total method calls,
+PULL UP FIELD,FewShotCode,Total lines of code,
+PULL UP FIELD,InstrucCode,CodeBleu,0.599
+PULL UP FIELD,InstrucCode,Total CC,0.0
+PULL UP FIELD,InstrucCode,Total method calls,0.0
+PULL UP FIELD,InstrucCode,Total lines of code,8.0
+PULL UP FIELD,ContextCode,CodeBleu,0.507
+PULL UP FIELD,ContextCode,Total CC,0.0
+PULL UP FIELD,ContextCode,Total method calls,0.0
+PULL UP FIELD,ContextCode,Total lines of code,23.0
+PULL UP FIELD,RulesCode,CodeBleu,0.667
+PULL UP FIELD,RulesCode,Total CC,0.0
+PULL UP FIELD,RulesCode,Total method calls,0.0
+PULL UP FIELD,RulesCode,Total lines of code,8.0
+PULL UP FIELD,BeforeRefact,CodeBleu,
+PULL UP FIELD,BeforeRefact,Total CC,0.0
+PULL UP FIELD,BeforeRefact,Total method calls,0.0
+PULL UP FIELD,BeforeRefact,Total lines of code,6.0
+PULL UP FIELD,AfterRefact,CodeBleu,
+PULL UP FIELD,AfterRefact,Total CC,0.0
+PULL UP FIELD,AfterRefact,Total method calls,0.0
+PULL UP FIELD,AfterRefact,Total lines of code,4.0
+PRESERVE WHOLE OBJECT,ZeroShotCode,CodeBleu,0.372
+PRESERVE WHOLE OBJECT,ZeroShotCode,Total CC,0.0
+PRESERVE WHOLE OBJECT,ZeroShotCode,Total method calls,1.0
+PRESERVE WHOLE OBJECT,ZeroShotCode,Total lines of code,2.0
+PRESERVE WHOLE OBJECT,FewShotCode,CodeBleu,
+PRESERVE WHOLE OBJECT,FewShotCode,Total CC,
+PRESERVE WHOLE OBJECT,FewShotCode,Total method calls,
+PRESERVE WHOLE OBJECT,FewShotCode,Total lines of code,
+PRESERVE WHOLE OBJECT,InstrucCode,CodeBleu,0.372
+PRESERVE WHOLE OBJECT,InstrucCode,Total CC,0.0
+PRESERVE WHOLE OBJECT,InstrucCode,Total method calls,1.0
+PRESERVE WHOLE OBJECT,InstrucCode,Total lines of code,2.0
+PRESERVE WHOLE OBJECT,ContextCode,CodeBleu,0.337
+PRESERVE WHOLE OBJECT,ContextCode,Total CC,0.8
+PRESERVE WHOLE OBJECT,ContextCode,Total method calls,1.8
+PRESERVE WHOLE OBJECT,ContextCode,Total lines of code,4.8
+PRESERVE WHOLE OBJECT,RulesCode,CodeBleu,0.372
+PRESERVE WHOLE OBJECT,RulesCode,Total CC,0.0
+PRESERVE WHOLE OBJECT,RulesCode,Total method calls,1.0
+PRESERVE WHOLE OBJECT,RulesCode,Total lines of code,2.0
+PRESERVE WHOLE OBJECT,BeforeRefact,CodeBleu,
+PRESERVE WHOLE OBJECT,BeforeRefact,Total CC,1.0
+PRESERVE WHOLE OBJECT,BeforeRefact,Total method calls,1.0
+PRESERVE WHOLE OBJECT,BeforeRefact,Total lines of code,2.0
+PRESERVE WHOLE OBJECT,AfterRefact,CodeBleu,
+PRESERVE WHOLE OBJECT,AfterRefact,Total CC,1.0
+PRESERVE WHOLE OBJECT,AfterRefact,Total method calls,1.0
+PRESERVE WHOLE OBJECT,AfterRefact,Total lines of code,0.0
+SPLIT PHASE,ZeroShotCode,CodeBleu,0.125
+SPLIT PHASE,ZeroShotCode,Total CC,0.0
+SPLIT PHASE,ZeroShotCode,Total method calls,4.0
+SPLIT PHASE,ZeroShotCode,Total lines of code,6.8
+SPLIT PHASE,FewShotCode,CodeBleu,
+SPLIT PHASE,FewShotCode,Total CC,
+SPLIT PHASE,FewShotCode,Total method calls,
+SPLIT PHASE,FewShotCode,Total lines of code,
+SPLIT PHASE,InstrucCode,CodeBleu,0.219
+SPLIT PHASE,InstrucCode,Total CC,0.0
+SPLIT PHASE,InstrucCode,Total method calls,6.0
+SPLIT PHASE,InstrucCode,Total lines of code,23.8
+SPLIT PHASE,ContextCode,CodeBleu,0.127
+SPLIT PHASE,ContextCode,Total CC,0.0
+SPLIT PHASE,ContextCode,Total method calls,3.8
+SPLIT PHASE,ContextCode,Total lines of code,4.8
+SPLIT PHASE,RulesCode,CodeBleu,
+SPLIT PHASE,RulesCode,Total CC,
+SPLIT PHASE,RulesCode,Total method calls,
+SPLIT PHASE,RulesCode,Total lines of code,
+SPLIT PHASE,BeforeRefact,CodeBleu,
+SPLIT PHASE,BeforeRefact,Total CC,0.0
+SPLIT PHASE,BeforeRefact,Total method calls,3.0
+SPLIT PHASE,BeforeRefact,Total lines of code,2.0
+SPLIT PHASE,AfterRefact,CodeBleu,
+SPLIT PHASE,AfterRefact,Total CC,0.0
+SPLIT PHASE,AfterRefact,Total method calls,5.0
+SPLIT PHASE,AfterRefact,Total lines of code,11.0
+COLLAPSE HIERARCHY,ZeroShotCode,CodeBleu,0.324
+COLLAPSE HIERARCHY,ZeroShotCode,Total CC,0.0
+COLLAPSE HIERARCHY,ZeroShotCode,Total method calls,0.0
+COLLAPSE HIERARCHY,ZeroShotCode,Total lines of code,3.0
+COLLAPSE HIERARCHY,FewShotCode,CodeBleu,
+COLLAPSE HIERARCHY,FewShotCode,Total CC,
+COLLAPSE HIERARCHY,FewShotCode,Total method calls,
+COLLAPSE HIERARCHY,FewShotCode,Total lines of code,
+COLLAPSE HIERARCHY,InstrucCode,CodeBleu,0.317
+COLLAPSE HIERARCHY,InstrucCode,Total CC,0.0
+COLLAPSE HIERARCHY,InstrucCode,Total method calls,0.0
+COLLAPSE HIERARCHY,InstrucCode,Total lines of code,7.2
+COLLAPSE HIERARCHY,ContextCode,CodeBleu,0.366
+COLLAPSE HIERARCHY,ContextCode,Total CC,0.0
+COLLAPSE HIERARCHY,ContextCode,Total method calls,0.8
+COLLAPSE HIERARCHY,ContextCode,Total lines of code,25.8
+COLLAPSE HIERARCHY,RulesCode,CodeBleu,0.319
+COLLAPSE HIERARCHY,RulesCode,Total CC,0.0
+COLLAPSE HIERARCHY,RulesCode,Total method calls,0.0
+COLLAPSE HIERARCHY,RulesCode,Total lines of code,3.0
+COLLAPSE HIERARCHY,BeforeRefact,CodeBleu,
+COLLAPSE HIERARCHY,BeforeRefact,Total CC,0.0
+COLLAPSE HIERARCHY,BeforeRefact,Total method calls,0.0
+COLLAPSE HIERARCHY,BeforeRefact,Total lines of code,1.0
+COLLAPSE HIERARCHY,AfterRefact,CodeBleu,
+COLLAPSE HIERARCHY,AfterRefact,Total CC,0.0
+COLLAPSE HIERARCHY,AfterRefact,Total method calls,0.0
+COLLAPSE HIERARCHY,AfterRefact,Total lines of code,0.0
+REPLACE SUBCLASS WITH DELEGATE,ZeroShotCode,CodeBleu,0.242
+REPLACE SUBCLASS WITH DELEGATE,ZeroShotCode,Total CC,1.0
+REPLACE SUBCLASS WITH DELEGATE,ZeroShotCode,Total method calls,3.0
+REPLACE SUBCLASS WITH DELEGATE,ZeroShotCode,Total lines of code,29.4
+REPLACE SUBCLASS WITH DELEGATE,FewShotCode,CodeBleu,
+REPLACE SUBCLASS WITH DELEGATE,FewShotCode,Total CC,
+REPLACE SUBCLASS WITH DELEGATE,FewShotCode,Total method calls,
+REPLACE SUBCLASS WITH DELEGATE,FewShotCode,Total lines of code,
+REPLACE SUBCLASS WITH DELEGATE,InstrucCode,CodeBleu,0.42
+REPLACE SUBCLASS WITH DELEGATE,InstrucCode,Total CC,1.4
+REPLACE SUBCLASS WITH DELEGATE,InstrucCode,Total method calls,2.0
+REPLACE SUBCLASS WITH DELEGATE,InstrucCode,Total lines of code,27.4
+REPLACE SUBCLASS WITH DELEGATE,ContextCode,CodeBleu,0.282
+REPLACE SUBCLASS WITH DELEGATE,ContextCode,Total CC,0.0
+REPLACE SUBCLASS WITH DELEGATE,ContextCode,Total method calls,2.0
+REPLACE SUBCLASS WITH DELEGATE,ContextCode,Total lines of code,21.0
+REPLACE SUBCLASS WITH DELEGATE,RulesCode,CodeBleu,
+REPLACE SUBCLASS WITH DELEGATE,RulesCode,Total CC,
+REPLACE SUBCLASS WITH DELEGATE,RulesCode,Total method calls,
+REPLACE SUBCLASS WITH DELEGATE,RulesCode,Total lines of code,
+REPLACE SUBCLASS WITH DELEGATE,BeforeRefact,CodeBleu,
+REPLACE SUBCLASS WITH DELEGATE,BeforeRefact,Total CC,0.0
+REPLACE SUBCLASS WITH DELEGATE,BeforeRefact,Total method calls,0.0
+REPLACE SUBCLASS WITH DELEGATE,BeforeRefact,Total lines of code,9.0
+REPLACE SUBCLASS WITH DELEGATE,AfterRefact,CodeBleu,
+REPLACE SUBCLASS WITH DELEGATE,AfterRefact,Total CC,1.0
+REPLACE SUBCLASS WITH DELEGATE,AfterRefact,Total method calls,0.0
+REPLACE SUBCLASS WITH DELEGATE,AfterRefact,Total lines of code,11.0
+CHANGE REFERENCE TO VALUE,ZeroShotCode,CodeBleu,0.298
+CHANGE REFERENCE TO VALUE,ZeroShotCode,Total CC,0.0
+CHANGE REFERENCE TO VALUE,ZeroShotCode,Total method calls,2.2
+CHANGE REFERENCE TO VALUE,ZeroShotCode,Total lines of code,20.4
+CHANGE REFERENCE TO VALUE,FewShotCode,CodeBleu,
+CHANGE REFERENCE TO VALUE,FewShotCode,Total CC,
+CHANGE REFERENCE TO VALUE,FewShotCode,Total method calls,
+CHANGE REFERENCE TO VALUE,FewShotCode,Total lines of code,
+CHANGE REFERENCE TO VALUE,InstrucCode,CodeBleu,0.29
+CHANGE REFERENCE TO VALUE,InstrucCode,Total CC,3.0
+CHANGE REFERENCE TO VALUE,InstrucCode,Total method calls,5.0
+CHANGE REFERENCE TO VALUE,InstrucCode,Total lines of code,33.2
+CHANGE REFERENCE TO VALUE,ContextCode,CodeBleu,0.289
+CHANGE REFERENCE TO VALUE,ContextCode,Total CC,0.0
+CHANGE REFERENCE TO VALUE,ContextCode,Total method calls,2.0
+CHANGE REFERENCE TO VALUE,ContextCode,Total lines of code,16.0
+CHANGE REFERENCE TO VALUE,RulesCode,CodeBleu,0.316
+CHANGE REFERENCE TO VALUE,RulesCode,Total CC,4.2
+CHANGE REFERENCE TO VALUE,RulesCode,Total method calls,7.4
+CHANGE REFERENCE TO VALUE,RulesCode,Total lines of code,37.4
+CHANGE REFERENCE TO VALUE,BeforeRefact,CodeBleu,
+CHANGE REFERENCE TO VALUE,BeforeRefact,Total CC,0.0
+CHANGE REFERENCE TO VALUE,BeforeRefact,Total method calls,0.0
+CHANGE REFERENCE TO VALUE,BeforeRefact,Total lines of code,1.0
+CHANGE REFERENCE TO VALUE,AfterRefact,CodeBleu,
+CHANGE REFERENCE TO VALUE,AfterRefact,Total CC,0.0
+CHANGE REFERENCE TO VALUE,AfterRefact,Total method calls,0.0
+CHANGE REFERENCE TO VALUE,AfterRefact,Total lines of code,3.0
+ENCAPSULATE RECORD,ZeroShotCode,CodeBleu,0.208
+ENCAPSULATE RECORD,ZeroShotCode,Total CC,0.0
+ENCAPSULATE RECORD,ZeroShotCode,Total method calls,0.0
+ENCAPSULATE RECORD,ZeroShotCode,Total lines of code,22.0
+ENCAPSULATE RECORD,FewShotCode,CodeBleu,
+ENCAPSULATE RECORD,FewShotCode,Total CC,
+ENCAPSULATE RECORD,FewShotCode,Total method calls,
+ENCAPSULATE RECORD,FewShotCode,Total lines of code,
+ENCAPSULATE RECORD,InstrucCode,CodeBleu,0.264
+ENCAPSULATE RECORD,InstrucCode,Total CC,0.0
+ENCAPSULATE RECORD,InstrucCode,Total method calls,4.0
+ENCAPSULATE RECORD,InstrucCode,Total lines of code,27.2
+ENCAPSULATE RECORD,ContextCode,CodeBleu,0.208
+ENCAPSULATE RECORD,ContextCode,Total CC,0.0
+ENCAPSULATE RECORD,ContextCode,Total method calls,0.2
+ENCAPSULATE RECORD,ContextCode,Total lines of code,24.2
+ENCAPSULATE RECORD,RulesCode,CodeBleu,0.202
+ENCAPSULATE RECORD,RulesCode,Total CC,0.0
+ENCAPSULATE RECORD,RulesCode,Total method calls,0.0
+ENCAPSULATE RECORD,RulesCode,Total lines of code,21.6
+ENCAPSULATE RECORD,BeforeRefact,CodeBleu,
+ENCAPSULATE RECORD,BeforeRefact,Total CC,0.0
+ENCAPSULATE RECORD,BeforeRefact,Total method calls,0.0
+ENCAPSULATE RECORD,BeforeRefact,Total lines of code,0.0
+ENCAPSULATE RECORD,AfterRefact,CodeBleu,
+ENCAPSULATE RECORD,AfterRefact,Total CC,0.0
+ENCAPSULATE RECORD,AfterRefact,Total method calls,0.0
+ENCAPSULATE RECORD,AfterRefact,Total lines of code,9.0
+PUSH DOWN METHOD,ZeroShotCode,CodeBleu,0.513
+PUSH DOWN METHOD,ZeroShotCode,Total CC,0.0
+PUSH DOWN METHOD,ZeroShotCode,Total method calls,0.0
+PUSH DOWN METHOD,ZeroShotCode,Total lines of code,10.6
+PUSH DOWN METHOD,FewShotCode,CodeBleu,
+PUSH DOWN METHOD,FewShotCode,Total CC,
+PUSH DOWN METHOD,FewShotCode,Total method calls,
+PUSH DOWN METHOD,FewShotCode,Total lines of code,
+PUSH DOWN METHOD,InstrucCode,CodeBleu,0.615
+PUSH DOWN METHOD,InstrucCode,Total CC,0.0
+PUSH DOWN METHOD,InstrucCode,Total method calls,0.0
+PUSH DOWN METHOD,InstrucCode,Total lines of code,9.0
+PUSH DOWN METHOD,ContextCode,CodeBleu,0.462
+PUSH DOWN METHOD,ContextCode,Total CC,0.0
+PUSH DOWN METHOD,ContextCode,Total method calls,0.0
+PUSH DOWN METHOD,ContextCode,Total lines of code,12.8
+PUSH DOWN METHOD,RulesCode,CodeBleu,0.61
+PUSH DOWN METHOD,RulesCode,Total CC,0.0
+PUSH DOWN METHOD,RulesCode,Total method calls,0.0
+PUSH DOWN METHOD,RulesCode,Total lines of code,9.0
+PUSH DOWN METHOD,BeforeRefact,CodeBleu,
+PUSH DOWN METHOD,BeforeRefact,Total CC,0.0
+PUSH DOWN METHOD,BeforeRefact,Total method calls,0.0
+PUSH DOWN METHOD,BeforeRefact,Total lines of code,4.0
+PUSH DOWN METHOD,AfterRefact,CodeBleu,
+PUSH DOWN METHOD,AfterRefact,Total CC,0.0
+PUSH DOWN METHOD,AfterRefact,Total method calls,0.0
+PUSH DOWN METHOD,AfterRefact,Total lines of code,4.0
+EXTRACT FUNCTION,ZeroShotCode,CodeBleu,0.236
+EXTRACT FUNCTION,ZeroShotCode,Total CC,0.0
+EXTRACT FUNCTION,ZeroShotCode,Total method calls,6.0
+EXTRACT FUNCTION,ZeroShotCode,Total lines of code,20.8
+EXTRACT FUNCTION,FewShotCode,CodeBleu,
+EXTRACT FUNCTION,FewShotCode,Total CC,
+EXTRACT FUNCTION,FewShotCode,Total method calls,
+EXTRACT FUNCTION,FewShotCode,Total lines of code,
+EXTRACT FUNCTION,InstrucCode,CodeBleu,0.223
+EXTRACT FUNCTION,InstrucCode,Total CC,0.0
+EXTRACT FUNCTION,InstrucCode,Total method calls,6.0
+EXTRACT FUNCTION,InstrucCode,Total lines of code,12.6
+EXTRACT FUNCTION,ContextCode,CodeBleu,0.214
+EXTRACT FUNCTION,ContextCode,Total CC,0.0
+EXTRACT FUNCTION,ContextCode,Total method calls,5.2
+EXTRACT FUNCTION,ContextCode,Total lines of code,7.6
+EXTRACT FUNCTION,RulesCode,CodeBleu,0.239
+EXTRACT FUNCTION,RulesCode,Total CC,0.0
+EXTRACT FUNCTION,RulesCode,Total method calls,6.0
+EXTRACT FUNCTION,RulesCode,Total lines of code,13.2
+EXTRACT FUNCTION,BeforeRefact,CodeBleu,
+EXTRACT FUNCTION,BeforeRefact,Total CC,0.0
+EXTRACT FUNCTION,BeforeRefact,Total method calls,4.0
+EXTRACT FUNCTION,BeforeRefact,Total lines of code,5.0
+EXTRACT FUNCTION,AfterRefact,CodeBleu,
+EXTRACT FUNCTION,AfterRefact,Total CC,0.0
+EXTRACT FUNCTION,AfterRefact,Total method calls,5.0
+EXTRACT FUNCTION,AfterRefact,Total lines of code,8.0
+INTRODUCE ASSERTION,ZeroShotCode,CodeBleu,0.592
+INTRODUCE ASSERTION,ZeroShotCode,Total CC,1.0
+INTRODUCE ASSERTION,ZeroShotCode,Total method calls,0.0
+INTRODUCE ASSERTION,ZeroShotCode,Total lines of code,3.0
+INTRODUCE ASSERTION,FewShotCode,CodeBleu,
+INTRODUCE ASSERTION,FewShotCode,Total CC,
+INTRODUCE ASSERTION,FewShotCode,Total method calls,
+INTRODUCE ASSERTION,FewShotCode,Total lines of code,
+INTRODUCE ASSERTION,InstrucCode,CodeBleu,0.703
+INTRODUCE ASSERTION,InstrucCode,Total CC,2.0
+INTRODUCE ASSERTION,InstrucCode,Total method calls,0.0
+INTRODUCE ASSERTION,InstrucCode,Total lines of code,4.0
+INTRODUCE ASSERTION,ContextCode,CodeBleu,0.209
+INTRODUCE ASSERTION,ContextCode,Total CC,0.0
+INTRODUCE ASSERTION,ContextCode,Total method calls,0.0
+INTRODUCE ASSERTION,ContextCode,Total lines of code,4.0
+INTRODUCE ASSERTION,RulesCode,CodeBleu,0.623
+INTRODUCE ASSERTION,RulesCode,Total CC,1.0
+INTRODUCE ASSERTION,RulesCode,Total method calls,0.0
+INTRODUCE ASSERTION,RulesCode,Total lines of code,5.0
+INTRODUCE ASSERTION,BeforeRefact,CodeBleu,
+INTRODUCE ASSERTION,BeforeRefact,Total CC,1.0
+INTRODUCE ASSERTION,BeforeRefact,Total method calls,0.0
+INTRODUCE ASSERTION,BeforeRefact,Total lines of code,1.0
+INTRODUCE ASSERTION,AfterRefact,CodeBleu,
+INTRODUCE ASSERTION,AfterRefact,Total CC,1.0
+INTRODUCE ASSERTION,AfterRefact,Total method calls,0.0
+INTRODUCE ASSERTION,AfterRefact,Total lines of code,2.0
+EXTRACT VARIABLE,ZeroShotCode,CodeBleu,0.684
+EXTRACT VARIABLE,ZeroShotCode,Total CC,0.0
+EXTRACT VARIABLE,ZeroShotCode,Total method calls,2.0
+EXTRACT VARIABLE,ZeroShotCode,Total lines of code,5.0
+EXTRACT VARIABLE,FewShotCode,CodeBleu,
+EXTRACT VARIABLE,FewShotCode,Total CC,
+EXTRACT VARIABLE,FewShotCode,Total method calls,
+EXTRACT VARIABLE,FewShotCode,Total lines of code,
+EXTRACT VARIABLE,InstrucCode,CodeBleu,0.68
+EXTRACT VARIABLE,InstrucCode,Total CC,0.0
+EXTRACT VARIABLE,InstrucCode,Total method calls,2.0
+EXTRACT VARIABLE,InstrucCode,Total lines of code,5.0
+EXTRACT VARIABLE,ContextCode,CodeBleu,0.644
+EXTRACT VARIABLE,ContextCode,Total CC,0.0
+EXTRACT VARIABLE,ContextCode,Total method calls,2.0
+EXTRACT VARIABLE,ContextCode,Total lines of code,5.0
+EXTRACT VARIABLE,RulesCode,CodeBleu,0.684
+EXTRACT VARIABLE,RulesCode,Total CC,0.0
+EXTRACT VARIABLE,RulesCode,Total method calls,2.0
+EXTRACT VARIABLE,RulesCode,Total lines of code,5.0
+EXTRACT VARIABLE,BeforeRefact,CodeBleu,
+EXTRACT VARIABLE,BeforeRefact,Total CC,0.0
+EXTRACT VARIABLE,BeforeRefact,Total method calls,2.0
+EXTRACT VARIABLE,BeforeRefact,Total lines of code,2.0
+EXTRACT VARIABLE,AfterRefact,CodeBleu,
+EXTRACT VARIABLE,AfterRefact,Total CC,0.0
+EXTRACT VARIABLE,AfterRefact,Total method calls,2.0
+EXTRACT VARIABLE,AfterRefact,Total lines of code,3.0
+INLINE VARIABLE,ZeroShotCode,CodeBleu,0.289
+INLINE VARIABLE,ZeroShotCode,Total CC,0.0
+INLINE VARIABLE,ZeroShotCode,Total method calls,0.0
+INLINE VARIABLE,ZeroShotCode,Total lines of code,2.0
+INLINE VARIABLE,FewShotCode,CodeBleu,
+INLINE VARIABLE,FewShotCode,Total CC,
+INLINE VARIABLE,FewShotCode,Total method calls,
+INLINE VARIABLE,FewShotCode,Total lines of code,
+INLINE VARIABLE,InstrucCode,CodeBleu,0.289
+INLINE VARIABLE,InstrucCode,Total CC,0.0
+INLINE VARIABLE,InstrucCode,Total method calls,0.0
+INLINE VARIABLE,InstrucCode,Total lines of code,2.0
+INLINE VARIABLE,ContextCode,CodeBleu,0.752
+INLINE VARIABLE,ContextCode,Total CC,0.0
+INLINE VARIABLE,ContextCode,Total method calls,0.0
+INLINE VARIABLE,ContextCode,Total lines of code,2.0
+INLINE VARIABLE,RulesCode,CodeBleu,0.289
+INLINE VARIABLE,RulesCode,Total CC,0.0
+INLINE VARIABLE,RulesCode,Total method calls,0.0
+INLINE VARIABLE,RulesCode,Total lines of code,2.0
+INLINE VARIABLE,BeforeRefact,CodeBleu,
+INLINE VARIABLE,BeforeRefact,Total CC,0.0
+INLINE VARIABLE,BeforeRefact,Total method calls,0.0
+INLINE VARIABLE,BeforeRefact,Total lines of code,1.0
+INLINE VARIABLE,AfterRefact,CodeBleu,
+INLINE VARIABLE,AfterRefact,Total CC,0.0
+INLINE VARIABLE,AfterRefact,Total method calls,0.0
+INLINE VARIABLE,AfterRefact,Total lines of code,0.0
+ENCAPSULATE COLLECTION,ZeroShotCode,CodeBleu,0.305
+ENCAPSULATE COLLECTION,ZeroShotCode,Total CC,0.0
+ENCAPSULATE COLLECTION,ZeroShotCode,Total method calls,3.4
+ENCAPSULATE COLLECTION,ZeroShotCode,Total lines of code,13.8
+ENCAPSULATE COLLECTION,FewShotCode,CodeBleu,
+ENCAPSULATE COLLECTION,FewShotCode,Total CC,
+ENCAPSULATE COLLECTION,FewShotCode,Total method calls,
+ENCAPSULATE COLLECTION,FewShotCode,Total lines of code,
+ENCAPSULATE COLLECTION,InstrucCode,CodeBleu,0.315
+ENCAPSULATE COLLECTION,InstrucCode,Total CC,0.0
+ENCAPSULATE COLLECTION,InstrucCode,Total method calls,3.0
+ENCAPSULATE COLLECTION,InstrucCode,Total lines of code,19.0
+ENCAPSULATE COLLECTION,ContextCode,CodeBleu,0.307
+ENCAPSULATE COLLECTION,ContextCode,Total CC,0.0
+ENCAPSULATE COLLECTION,ContextCode,Total method calls,1.0
+ENCAPSULATE COLLECTION,ContextCode,Total lines of code,10.0
+ENCAPSULATE COLLECTION,RulesCode,CodeBleu,0.305
+ENCAPSULATE COLLECTION,RulesCode,Total CC,0.0
+ENCAPSULATE COLLECTION,RulesCode,Total method calls,3.0
+ENCAPSULATE COLLECTION,RulesCode,Total lines of code,13.0
+ENCAPSULATE COLLECTION,BeforeRefact,CodeBleu,
+ENCAPSULATE COLLECTION,BeforeRefact,Total CC,0.0
+ENCAPSULATE COLLECTION,BeforeRefact,Total method calls,0.0
+ENCAPSULATE COLLECTION,BeforeRefact,Total lines of code,2.0
+ENCAPSULATE COLLECTION,AfterRefact,CodeBleu,
+ENCAPSULATE COLLECTION,AfterRefact,Total CC,0.0
+ENCAPSULATE COLLECTION,AfterRefact,Total method calls,1.0
+ENCAPSULATE COLLECTION,AfterRefact,Total lines of code,3.0
+ENCAPSULATE VARIABLE,ZeroShotCode,CodeBleu,0.16
+ENCAPSULATE VARIABLE,ZeroShotCode,Total CC,0.0
+ENCAPSULATE VARIABLE,ZeroShotCode,Total method calls,0.8
+ENCAPSULATE VARIABLE,ZeroShotCode,Total lines of code,24.4
+ENCAPSULATE VARIABLE,FewShotCode,CodeBleu,
+ENCAPSULATE VARIABLE,FewShotCode,Total CC,
+ENCAPSULATE VARIABLE,FewShotCode,Total method calls,
+ENCAPSULATE VARIABLE,FewShotCode,Total lines of code,
+ENCAPSULATE VARIABLE,InstrucCode,CodeBleu,0.222
+ENCAPSULATE VARIABLE,InstrucCode,Total CC,0.0
+ENCAPSULATE VARIABLE,InstrucCode,Total method calls,1.0
+ENCAPSULATE VARIABLE,InstrucCode,Total lines of code,31.0
+ENCAPSULATE VARIABLE,ContextCode,CodeBleu,0.129
+ENCAPSULATE VARIABLE,ContextCode,Total CC,0.0
+ENCAPSULATE VARIABLE,ContextCode,Total method calls,0.0
+ENCAPSULATE VARIABLE,ContextCode,Total lines of code,18.0
+ENCAPSULATE VARIABLE,RulesCode,CodeBleu,0.192
+ENCAPSULATE VARIABLE,RulesCode,Total CC,0.0
+ENCAPSULATE VARIABLE,RulesCode,Total method calls,0.0
+ENCAPSULATE VARIABLE,RulesCode,Total lines of code,28.4
+ENCAPSULATE VARIABLE,BeforeRefact,CodeBleu,
+ENCAPSULATE VARIABLE,BeforeRefact,Total CC,0.0
+ENCAPSULATE VARIABLE,BeforeRefact,Total method calls,0.0
+ENCAPSULATE VARIABLE,BeforeRefact,Total lines of code,0.0
+ENCAPSULATE VARIABLE,AfterRefact,CodeBleu,
+ENCAPSULATE VARIABLE,AfterRefact,Total CC,0.0
+ENCAPSULATE VARIABLE,AfterRefact,Total method calls,2.0
+ENCAPSULATE VARIABLE,AfterRefact,Total lines of code,2.0
+PUSH DOWN FIELD,ZeroShotCode,CodeBleu,0.569
+PUSH DOWN FIELD,ZeroShotCode,Total CC,0.0
+PUSH DOWN FIELD,ZeroShotCode,Total method calls,0.0
+PUSH DOWN FIELD,ZeroShotCode,Total lines of code,9.0
+PUSH DOWN FIELD,FewShotCode,CodeBleu,
+PUSH DOWN FIELD,FewShotCode,Total CC,
+PUSH DOWN FIELD,FewShotCode,Total method calls,
+PUSH DOWN FIELD,FewShotCode,Total lines of code,
+PUSH DOWN FIELD,InstrucCode,CodeBleu,0.531
+PUSH DOWN FIELD,InstrucCode,Total CC,0.0
+PUSH DOWN FIELD,InstrucCode,Total method calls,0.0
+PUSH DOWN FIELD,InstrucCode,Total lines of code,7.2
+PUSH DOWN FIELD,ContextCode,CodeBleu,0.506
+PUSH DOWN FIELD,ContextCode,Total CC,0.0
+PUSH DOWN FIELD,ContextCode,Total method calls,0.0
+PUSH DOWN FIELD,ContextCode,Total lines of code,14.0
+PUSH DOWN FIELD,RulesCode,CodeBleu,0.56
+PUSH DOWN FIELD,RulesCode,Total CC,0.0
+PUSH DOWN FIELD,RulesCode,Total method calls,0.0
+PUSH DOWN FIELD,RulesCode,Total lines of code,9.0
+PUSH DOWN FIELD,BeforeRefact,CodeBleu,
+PUSH DOWN FIELD,BeforeRefact,Total CC,0.0
+PUSH DOWN FIELD,BeforeRefact,Total method calls,0.0
+PUSH DOWN FIELD,BeforeRefact,Total lines of code,3.0
+PUSH DOWN FIELD,AfterRefact,CodeBleu,
+PUSH DOWN FIELD,AfterRefact,Total CC,0.0
+PUSH DOWN FIELD,AfterRefact,Total method calls,0.0
+PUSH DOWN FIELD,AfterRefact,Total lines of code,4.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ZeroShotCode,CodeBleu,0.551
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ZeroShotCode,Total CC,3.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ZeroShotCode,Total method calls,4.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ZeroShotCode,Total lines of code,13.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,FewShotCode,CodeBleu,
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,FewShotCode,Total CC,
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,FewShotCode,Total method calls,
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,FewShotCode,Total lines of code,
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,InstrucCode,CodeBleu,0.913
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,InstrucCode,Total CC,3.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,InstrucCode,Total method calls,4.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,InstrucCode,Total lines of code,7.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ContextCode,CodeBleu,0.551
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ContextCode,Total CC,3.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ContextCode,Total method calls,4.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,ContextCode,Total lines of code,13.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,RulesCode,CodeBleu,0.863
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,RulesCode,Total CC,3.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,RulesCode,Total method calls,4.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,RulesCode,Total lines of code,8.2
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,BeforeRefact,CodeBleu,
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,BeforeRefact,Total CC,3.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,BeforeRefact,Total method calls,4.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,BeforeRefact,Total lines of code,15.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,AfterRefact,CodeBleu,
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,AfterRefact,Total CC,3.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,AfterRefact,Total method calls,4.0
+REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,AfterRefact,Total lines of code,5.0
+REMOVE SETTING METHOD,ZeroShotCode,CodeBleu,0.355
+REMOVE SETTING METHOD,ZeroShotCode,Total CC,0.0
+REMOVE SETTING METHOD,ZeroShotCode,Total method calls,0.0
+REMOVE SETTING METHOD,ZeroShotCode,Total lines of code,7.6
+REMOVE SETTING METHOD,FewShotCode,CodeBleu,
+REMOVE SETTING METHOD,FewShotCode,Total CC,
+REMOVE SETTING METHOD,FewShotCode,Total method calls,
+REMOVE SETTING METHOD,FewShotCode,Total lines of code,
+REMOVE SETTING METHOD,InstrucCode,CodeBleu,0.35
+REMOVE SETTING METHOD,InstrucCode,Total CC,0.0
+REMOVE SETTING METHOD,InstrucCode,Total method calls,0.0
+REMOVE SETTING METHOD,InstrucCode,Total lines of code,10.0
+REMOVE SETTING METHOD,ContextCode,CodeBleu,0.35
+REMOVE SETTING METHOD,ContextCode,Total CC,0.0
+REMOVE SETTING METHOD,ContextCode,Total method calls,0.0
+REMOVE SETTING METHOD,ContextCode,Total lines of code,10.0
+REMOVE SETTING METHOD,RulesCode,CodeBleu,0.35
+REMOVE SETTING METHOD,RulesCode,Total CC,0.0
+REMOVE SETTING METHOD,RulesCode,Total method calls,0.0
+REMOVE SETTING METHOD,RulesCode,Total lines of code,10.0
+REMOVE SETTING METHOD,BeforeRefact,CodeBleu,
+REMOVE SETTING METHOD,BeforeRefact,Total CC,0.0
+REMOVE SETTING METHOD,BeforeRefact,Total method calls,0.0
+REMOVE SETTING METHOD,BeforeRefact,Total lines of code,2.0
+REMOVE SETTING METHOD,AfterRefact,CodeBleu,
+REMOVE SETTING METHOD,AfterRefact,Total CC,0.0
+REMOVE SETTING METHOD,AfterRefact,Total method calls,0.0
+REMOVE SETTING METHOD,AfterRefact,Total lines of code,1.0
+REPLACE DERIVED VARIABLE WITH QUERY,ZeroShotCode,CodeBleu,0.297
+REPLACE DERIVED VARIABLE WITH QUERY,ZeroShotCode,Total CC,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,ZeroShotCode,Total method calls,1.0
+REPLACE DERIVED VARIABLE WITH QUERY,ZeroShotCode,Total lines of code,10.0
+REPLACE DERIVED VARIABLE WITH QUERY,FewShotCode,CodeBleu,
+REPLACE DERIVED VARIABLE WITH QUERY,FewShotCode,Total CC,
+REPLACE DERIVED VARIABLE WITH QUERY,FewShotCode,Total method calls,
+REPLACE DERIVED VARIABLE WITH QUERY,FewShotCode,Total lines of code,
+REPLACE DERIVED VARIABLE WITH QUERY,InstrucCode,CodeBleu,0.295
+REPLACE DERIVED VARIABLE WITH QUERY,InstrucCode,Total CC,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,InstrucCode,Total method calls,1.2
+REPLACE DERIVED VARIABLE WITH QUERY,InstrucCode,Total lines of code,10.6
+REPLACE DERIVED VARIABLE WITH QUERY,ContextCode,CodeBleu,0.333
+REPLACE DERIVED VARIABLE WITH QUERY,ContextCode,Total CC,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,ContextCode,Total method calls,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,ContextCode,Total lines of code,9.0
+REPLACE DERIVED VARIABLE WITH QUERY,RulesCode,CodeBleu,
+REPLACE DERIVED VARIABLE WITH QUERY,RulesCode,Total CC,
+REPLACE DERIVED VARIABLE WITH QUERY,RulesCode,Total method calls,
+REPLACE DERIVED VARIABLE WITH QUERY,RulesCode,Total lines of code,
+REPLACE DERIVED VARIABLE WITH QUERY,BeforeRefact,CodeBleu,
+REPLACE DERIVED VARIABLE WITH QUERY,BeforeRefact,Total CC,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,BeforeRefact,Total method calls,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,BeforeRefact,Total lines of code,5.0
+REPLACE DERIVED VARIABLE WITH QUERY,AfterRefact,CodeBleu,
+REPLACE DERIVED VARIABLE WITH QUERY,AfterRefact,Total CC,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,AfterRefact,Total method calls,0.0
+REPLACE DERIVED VARIABLE WITH QUERY,AfterRefact,Total lines of code,1.0
+SUBSTITUTE ALGORITHM,ZeroShotCode,CodeBleu,0.18
+SUBSTITUTE ALGORITHM,ZeroShotCode,Total CC,3.0
+SUBSTITUTE ALGORITHM,ZeroShotCode,Total method calls,3.0
+SUBSTITUTE ALGORITHM,ZeroShotCode,Total lines of code,9.0
+SUBSTITUTE ALGORITHM,FewShotCode,CodeBleu,
+SUBSTITUTE ALGORITHM,FewShotCode,Total CC,
+SUBSTITUTE ALGORITHM,FewShotCode,Total method calls,
+SUBSTITUTE ALGORITHM,FewShotCode,Total lines of code,
+SUBSTITUTE ALGORITHM,InstrucCode,CodeBleu,0.18
+SUBSTITUTE ALGORITHM,InstrucCode,Total CC,3.0
+SUBSTITUTE ALGORITHM,InstrucCode,Total method calls,3.0
+SUBSTITUTE ALGORITHM,InstrucCode,Total lines of code,9.0
+SUBSTITUTE ALGORITHM,ContextCode,CodeBleu,0.18
+SUBSTITUTE ALGORITHM,ContextCode,Total CC,3.0
+SUBSTITUTE ALGORITHM,ContextCode,Total method calls,3.0
+SUBSTITUTE ALGORITHM,ContextCode,Total lines of code,9.0
+SUBSTITUTE ALGORITHM,RulesCode,CodeBleu,0.18
+SUBSTITUTE ALGORITHM,RulesCode,Total CC,3.0
+SUBSTITUTE ALGORITHM,RulesCode,Total method calls,3.0
+SUBSTITUTE ALGORITHM,RulesCode,Total lines of code,9.0
+SUBSTITUTE ALGORITHM,BeforeRefact,CodeBleu,
+SUBSTITUTE ALGORITHM,BeforeRefact,Total CC,4.0
+SUBSTITUTE ALGORITHM,BeforeRefact,Total method calls,0.0
+SUBSTITUTE ALGORITHM,BeforeRefact,Total lines of code,13.0
+SUBSTITUTE ALGORITHM,AfterRefact,CodeBleu,
+SUBSTITUTE ALGORITHM,AfterRefact,Total CC,0.0
+SUBSTITUTE ALGORITHM,AfterRefact,Total method calls,2.0
+SUBSTITUTE ALGORITHM,AfterRefact,Total lines of code,3.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,ZeroShotCode,CodeBleu,0.316
+REPLACE CONDITIONAL WITH POLYMORPHISM,ZeroShotCode,Total CC,2.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,ZeroShotCode,Total method calls,0.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,ZeroShotCode,Total lines of code,36.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,FewShotCode,CodeBleu,
+REPLACE CONDITIONAL WITH POLYMORPHISM,FewShotCode,Total CC,
+REPLACE CONDITIONAL WITH POLYMORPHISM,FewShotCode,Total method calls,
+REPLACE CONDITIONAL WITH POLYMORPHISM,FewShotCode,Total lines of code,
+REPLACE CONDITIONAL WITH POLYMORPHISM,InstrucCode,CodeBleu,0.313
+REPLACE CONDITIONAL WITH POLYMORPHISM,InstrucCode,Total CC,6.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,InstrucCode,Total method calls,0.6
+REPLACE CONDITIONAL WITH POLYMORPHISM,InstrucCode,Total lines of code,51.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,ContextCode,CodeBleu,0.229
+REPLACE CONDITIONAL WITH POLYMORPHISM,ContextCode,Total CC,2.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,ContextCode,Total method calls,0.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,ContextCode,Total lines of code,11.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,RulesCode,CodeBleu,0.316
+REPLACE CONDITIONAL WITH POLYMORPHISM,RulesCode,Total CC,2.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,RulesCode,Total method calls,0.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,RulesCode,Total lines of code,36.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,BeforeRefact,CodeBleu,
+REPLACE CONDITIONAL WITH POLYMORPHISM,BeforeRefact,Total CC,6.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,BeforeRefact,Total method calls,0.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,BeforeRefact,Total lines of code,8.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,AfterRefact,CodeBleu,
+REPLACE CONDITIONAL WITH POLYMORPHISM,AfterRefact,Total CC,2.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,AfterRefact,Total method calls,0.0
+REPLACE CONDITIONAL WITH POLYMORPHISM,AfterRefact,Total lines of code,11.0
+DECOMPOSE CONDITIONAL,ZeroShotCode,CodeBleu,0.15
+DECOMPOSE CONDITIONAL,ZeroShotCode,Total CC,1.0
+DECOMPOSE CONDITIONAL,ZeroShotCode,Total method calls,3.0
+DECOMPOSE CONDITIONAL,ZeroShotCode,Total lines of code,9.0
+DECOMPOSE CONDITIONAL,FewShotCode,CodeBleu,
+DECOMPOSE CONDITIONAL,FewShotCode,Total CC,
+DECOMPOSE CONDITIONAL,FewShotCode,Total method calls,
+DECOMPOSE CONDITIONAL,FewShotCode,Total lines of code,
+DECOMPOSE CONDITIONAL,InstrucCode,CodeBleu,0.167
+DECOMPOSE CONDITIONAL,InstrucCode,Total CC,1.0
+DECOMPOSE CONDITIONAL,InstrucCode,Total method calls,5.0
+DECOMPOSE CONDITIONAL,InstrucCode,Total lines of code,14.2
+DECOMPOSE CONDITIONAL,ContextCode,CodeBleu,0.142
+DECOMPOSE CONDITIONAL,ContextCode,Total CC,2.0
+DECOMPOSE CONDITIONAL,ContextCode,Total method calls,2.0
+DECOMPOSE CONDITIONAL,ContextCode,Total lines of code,3.0
+DECOMPOSE CONDITIONAL,RulesCode,CodeBleu,0.14
+DECOMPOSE CONDITIONAL,RulesCode,Total CC,1.6
+DECOMPOSE CONDITIONAL,RulesCode,Total method calls,5.0
+DECOMPOSE CONDITIONAL,RulesCode,Total lines of code,16.2
+DECOMPOSE CONDITIONAL,BeforeRefact,CodeBleu,
+DECOMPOSE CONDITIONAL,BeforeRefact,Total CC,2.0
+DECOMPOSE CONDITIONAL,BeforeRefact,Total method calls,2.0
+DECOMPOSE CONDITIONAL,BeforeRefact,Total lines of code,3.0
+DECOMPOSE CONDITIONAL,AfterRefact,CodeBleu,
+DECOMPOSE CONDITIONAL,AfterRefact,Total CC,1.0
+DECOMPOSE CONDITIONAL,AfterRefact,Total method calls,3.0
+DECOMPOSE CONDITIONAL,AfterRefact,Total lines of code,3.0
+EXTRACT SUPERCLASS,ZeroShotCode,CodeBleu,0.805
+EXTRACT SUPERCLASS,ZeroShotCode,Total CC,0.0
+EXTRACT SUPERCLASS,ZeroShotCode,Total method calls,1.0
+EXTRACT SUPERCLASS,ZeroShotCode,Total lines of code,14.4
+EXTRACT SUPERCLASS,FewShotCode,CodeBleu,
+EXTRACT SUPERCLASS,FewShotCode,Total CC,
+EXTRACT SUPERCLASS,FewShotCode,Total method calls,
+EXTRACT SUPERCLASS,FewShotCode,Total lines of code,
+EXTRACT SUPERCLASS,InstrucCode,CodeBleu,0.689
+EXTRACT SUPERCLASS,InstrucCode,Total CC,0.0
+EXTRACT SUPERCLASS,InstrucCode,Total method calls,1.0
+EXTRACT SUPERCLASS,InstrucCode,Total lines of code,24.6
+EXTRACT SUPERCLASS,ContextCode,CodeBleu,0.426
+EXTRACT SUPERCLASS,ContextCode,Total CC,0.0
+EXTRACT SUPERCLASS,ContextCode,Total method calls,0.0
+EXTRACT SUPERCLASS,ContextCode,Total lines of code,26.2
+EXTRACT SUPERCLASS,RulesCode,CodeBleu,0.779
+EXTRACT SUPERCLASS,RulesCode,Total CC,0.0
+EXTRACT SUPERCLASS,RulesCode,Total method calls,0.8
+EXTRACT SUPERCLASS,RulesCode,Total lines of code,13.6
+EXTRACT SUPERCLASS,BeforeRefact,CodeBleu,
+EXTRACT SUPERCLASS,BeforeRefact,Total CC,0.0
+EXTRACT SUPERCLASS,BeforeRefact,Total method calls,0.0
+EXTRACT SUPERCLASS,BeforeRefact,Total lines of code,9.0
+EXTRACT SUPERCLASS,AfterRefact,CodeBleu,
+EXTRACT SUPERCLASS,AfterRefact,Total CC,0.0
+EXTRACT SUPERCLASS,AfterRefact,Total method calls,0.0
+EXTRACT SUPERCLASS,AfterRefact,Total lines of code,11.0
+REPLACE LOOP WITH PIPELINE,ZeroShotCode,CodeBleu,0.037
+REPLACE LOOP WITH PIPELINE,ZeroShotCode,Total CC,0.0
+REPLACE LOOP WITH PIPELINE,ZeroShotCode,Total method calls,8.0
+REPLACE LOOP WITH PIPELINE,ZeroShotCode,Total lines of code,5.0
+REPLACE LOOP WITH PIPELINE,FewShotCode,CodeBleu,
+REPLACE LOOP WITH PIPELINE,FewShotCode,Total CC,
+REPLACE LOOP WITH PIPELINE,FewShotCode,Total method calls,
+REPLACE LOOP WITH PIPELINE,FewShotCode,Total lines of code,
+REPLACE LOOP WITH PIPELINE,InstrucCode,CodeBleu,0.037
+REPLACE LOOP WITH PIPELINE,InstrucCode,Total CC,0.0
+REPLACE LOOP WITH PIPELINE,InstrucCode,Total method calls,8.0
+REPLACE LOOP WITH PIPELINE,InstrucCode,Total lines of code,5.0
+REPLACE LOOP WITH PIPELINE,ContextCode,CodeBleu,0.031
+REPLACE LOOP WITH PIPELINE,ContextCode,Total CC,1.0
+REPLACE LOOP WITH PIPELINE,ContextCode,Total method calls,4.0
+REPLACE LOOP WITH PIPELINE,ContextCode,Total lines of code,7.0
+REPLACE LOOP WITH PIPELINE,RulesCode,CodeBleu,
+REPLACE LOOP WITH PIPELINE,RulesCode,Total CC,
+REPLACE LOOP WITH PIPELINE,RulesCode,Total method calls,
+REPLACE LOOP WITH PIPELINE,RulesCode,Total lines of code,
+REPLACE LOOP WITH PIPELINE,BeforeRefact,CodeBleu,
+REPLACE LOOP WITH PIPELINE,BeforeRefact,Total CC,0.0
+REPLACE LOOP WITH PIPELINE,BeforeRefact,Total method calls,1.0
+REPLACE LOOP WITH PIPELINE,BeforeRefact,Total lines of code,4.0
+REPLACE LOOP WITH PIPELINE,AfterRefact,CodeBleu,
+REPLACE LOOP WITH PIPELINE,AfterRefact,Total CC,0.0
+REPLACE LOOP WITH PIPELINE,AfterRefact,Total method calls,2.0
+REPLACE LOOP WITH PIPELINE,AfterRefact,Total lines of code,3.0
+REPLACE SUPERCLASS WITH DELEGATE,ZeroShotCode,CodeBleu,0.348
+REPLACE SUPERCLASS WITH DELEGATE,ZeroShotCode,Total CC,0.0
+REPLACE SUPERCLASS WITH DELEGATE,ZeroShotCode,Total method calls,0.0
+REPLACE SUPERCLASS WITH DELEGATE,ZeroShotCode,Total lines of code,13.2
+REPLACE SUPERCLASS WITH DELEGATE,FewShotCode,CodeBleu,
+REPLACE SUPERCLASS WITH DELEGATE,FewShotCode,Total CC,
+REPLACE SUPERCLASS WITH DELEGATE,FewShotCode,Total method calls,
+REPLACE SUPERCLASS WITH DELEGATE,FewShotCode,Total lines of code,
+REPLACE SUPERCLASS WITH DELEGATE,InstrucCode,CodeBleu,0.226
+REPLACE SUPERCLASS WITH DELEGATE,InstrucCode,Total CC,0.2
+REPLACE SUPERCLASS WITH DELEGATE,InstrucCode,Total method calls,8.0
+REPLACE SUPERCLASS WITH DELEGATE,InstrucCode,Total lines of code,25.2
+REPLACE SUPERCLASS WITH DELEGATE,ContextCode,CodeBleu,0.365
+REPLACE SUPERCLASS WITH DELEGATE,ContextCode,Total CC,0.0
+REPLACE SUPERCLASS WITH DELEGATE,ContextCode,Total method calls,0.0
+REPLACE SUPERCLASS WITH DELEGATE,ContextCode,Total lines of code,9.0
+REPLACE SUPERCLASS WITH DELEGATE,RulesCode,CodeBleu,0.35
+REPLACE SUPERCLASS WITH DELEGATE,RulesCode,Total CC,0.0
+REPLACE SUPERCLASS WITH DELEGATE,RulesCode,Total method calls,0.0
+REPLACE SUPERCLASS WITH DELEGATE,RulesCode,Total lines of code,13.0
+REPLACE SUPERCLASS WITH DELEGATE,BeforeRefact,CodeBleu,
+REPLACE SUPERCLASS WITH DELEGATE,BeforeRefact,Total CC,0.0
+REPLACE SUPERCLASS WITH DELEGATE,BeforeRefact,Total method calls,0.0
+REPLACE SUPERCLASS WITH DELEGATE,BeforeRefact,Total lines of code,1.0
+REPLACE SUPERCLASS WITH DELEGATE,AfterRefact,CodeBleu,
+REPLACE SUPERCLASS WITH DELEGATE,AfterRefact,Total CC,0.0
+REPLACE SUPERCLASS WITH DELEGATE,AfterRefact,Total method calls,0.0
+REPLACE SUPERCLASS WITH DELEGATE,AfterRefact,Total lines of code,5.0
+COMBINE FUNCTIONS INTO TRANSFORM,ZeroShotCode,CodeBleu,0.217
+COMBINE FUNCTIONS INTO TRANSFORM,ZeroShotCode,Total CC,0.0
+COMBINE FUNCTIONS INTO TRANSFORM,ZeroShotCode,Total method calls,2.2
+COMBINE FUNCTIONS INTO TRANSFORM,ZeroShotCode,Total lines of code,26.0
+COMBINE FUNCTIONS INTO TRANSFORM,FewShotCode,CodeBleu,
+COMBINE FUNCTIONS INTO TRANSFORM,FewShotCode,Total CC,
+COMBINE FUNCTIONS INTO TRANSFORM,FewShotCode,Total method calls,
+COMBINE FUNCTIONS INTO TRANSFORM,FewShotCode,Total lines of code,
+COMBINE FUNCTIONS INTO TRANSFORM,InstrucCode,CodeBleu,0.282
+COMBINE FUNCTIONS INTO TRANSFORM,InstrucCode,Total CC,0.0
+COMBINE FUNCTIONS INTO TRANSFORM,InstrucCode,Total method calls,8.6
+COMBINE FUNCTIONS INTO TRANSFORM,InstrucCode,Total lines of code,31.6
+COMBINE FUNCTIONS INTO TRANSFORM,ContextCode,CodeBleu,0.144
+COMBINE FUNCTIONS INTO TRANSFORM,ContextCode,Total CC,0.0
+COMBINE FUNCTIONS INTO TRANSFORM,ContextCode,Total method calls,2.6
+COMBINE FUNCTIONS INTO TRANSFORM,ContextCode,Total lines of code,19.0
+COMBINE FUNCTIONS INTO TRANSFORM,RulesCode,CodeBleu,
+COMBINE FUNCTIONS INTO TRANSFORM,RulesCode,Total CC,
+COMBINE FUNCTIONS INTO TRANSFORM,RulesCode,Total method calls,
+COMBINE FUNCTIONS INTO TRANSFORM,RulesCode,Total lines of code,
+COMBINE FUNCTIONS INTO TRANSFORM,BeforeRefact,CodeBleu,
+COMBINE FUNCTIONS INTO TRANSFORM,BeforeRefact,Total CC,0.0
+COMBINE FUNCTIONS INTO TRANSFORM,BeforeRefact,Total method calls,0.0
+COMBINE FUNCTIONS INTO TRANSFORM,BeforeRefact,Total lines of code,1.0
+COMBINE FUNCTIONS INTO TRANSFORM,AfterRefact,CodeBleu,
+COMBINE FUNCTIONS INTO TRANSFORM,AfterRefact,Total CC,0.0
+COMBINE FUNCTIONS INTO TRANSFORM,AfterRefact,Total method calls,3.0
+COMBINE FUNCTIONS INTO TRANSFORM,AfterRefact,Total lines of code,6.0
+PARAMETERIZE FUNCTION,ZeroShotCode,CodeBleu,0.144
+PARAMETERIZE FUNCTION,ZeroShotCode,Total CC,0.0
+PARAMETERIZE FUNCTION,ZeroShotCode,Total method calls,3.8
+PARAMETERIZE FUNCTION,ZeroShotCode,Total lines of code,4.0
+PARAMETERIZE FUNCTION,FewShotCode,CodeBleu,
+PARAMETERIZE FUNCTION,FewShotCode,Total CC,
+PARAMETERIZE FUNCTION,FewShotCode,Total method calls,
+PARAMETERIZE FUNCTION,FewShotCode,Total lines of code,
+PARAMETERIZE FUNCTION,InstrucCode,CodeBleu,0.348
+PARAMETERIZE FUNCTION,InstrucCode,Total CC,0.0
+PARAMETERIZE FUNCTION,InstrucCode,Total method calls,2.0
+PARAMETERIZE FUNCTION,InstrucCode,Total lines of code,4.0
+PARAMETERIZE FUNCTION,ContextCode,CodeBleu,0.251
+PARAMETERIZE FUNCTION,ContextCode,Total CC,0.0
+PARAMETERIZE FUNCTION,ContextCode,Total method calls,3.0
+PARAMETERIZE FUNCTION,ContextCode,Total lines of code,4.0
+PARAMETERIZE FUNCTION,RulesCode,CodeBleu,0.328
+PARAMETERIZE FUNCTION,RulesCode,Total CC,0.0
+PARAMETERIZE FUNCTION,RulesCode,Total method calls,1.6
+PARAMETERIZE FUNCTION,RulesCode,Total lines of code,4.0
+PARAMETERIZE FUNCTION,BeforeRefact,CodeBleu,
+PARAMETERIZE FUNCTION,BeforeRefact,Total CC,0.0
+PARAMETERIZE FUNCTION,BeforeRefact,Total method calls,2.0
+PARAMETERIZE FUNCTION,BeforeRefact,Total lines of code,5.0
+PARAMETERIZE FUNCTION,AfterRefact,CodeBleu,
+PARAMETERIZE FUNCTION,AfterRefact,Total CC,0.0
+PARAMETERIZE FUNCTION,AfterRefact,Total method calls,1.0
+PARAMETERIZE FUNCTION,AfterRefact,Total lines of code,2.0
+REMOVE FLAG ARGUMENT,ZeroShotCode,CodeBleu,0.352
+REMOVE FLAG ARGUMENT,ZeroShotCode,Total CC,0.0
+REMOVE FLAG ARGUMENT,ZeroShotCode,Total method calls,0.0
+REMOVE FLAG ARGUMENT,ZeroShotCode,Total lines of code,7.0
+REMOVE FLAG ARGUMENT,FewShotCode,CodeBleu,
+REMOVE FLAG ARGUMENT,FewShotCode,Total CC,
+REMOVE FLAG ARGUMENT,FewShotCode,Total method calls,
+REMOVE FLAG ARGUMENT,FewShotCode,Total lines of code,
+REMOVE FLAG ARGUMENT,InstrucCode,CodeBleu,0.392
+REMOVE FLAG ARGUMENT,InstrucCode,Total CC,0.0
+REMOVE FLAG ARGUMENT,InstrucCode,Total method calls,0.0
+REMOVE FLAG ARGUMENT,InstrucCode,Total lines of code,7.0
+REMOVE FLAG ARGUMENT,ContextCode,CodeBleu,0.258
+REMOVE FLAG ARGUMENT,ContextCode,Total CC,2.2
+REMOVE FLAG ARGUMENT,ContextCode,Total method calls,1.2
+REMOVE FLAG ARGUMENT,ContextCode,Total lines of code,9.6
+REMOVE FLAG ARGUMENT,RulesCode,CodeBleu,0.342
+REMOVE FLAG ARGUMENT,RulesCode,Total CC,0.0
+REMOVE FLAG ARGUMENT,RulesCode,Total method calls,0.0
+REMOVE FLAG ARGUMENT,RulesCode,Total lines of code,7.0
+REMOVE FLAG ARGUMENT,BeforeRefact,CodeBleu,
+REMOVE FLAG ARGUMENT,BeforeRefact,Total CC,2.0
+REMOVE FLAG ARGUMENT,BeforeRefact,Total method calls,0.0
+REMOVE FLAG ARGUMENT,BeforeRefact,Total lines of code,9.0
+REMOVE FLAG ARGUMENT,AfterRefact,CodeBleu,
+REMOVE FLAG ARGUMENT,AfterRefact,Total CC,0.0
+REMOVE FLAG ARGUMENT,AfterRefact,Total method calls,0.0
+REMOVE FLAG ARGUMENT,AfterRefact,Total lines of code,1.0
+REPLACE PARAMETER WITH QUERY,ZeroShotCode,CodeBleu,0.531
+REPLACE PARAMETER WITH QUERY,ZeroShotCode,Total CC,0.0
+REPLACE PARAMETER WITH QUERY,ZeroShotCode,Total method calls,0.0
+REPLACE PARAMETER WITH QUERY,ZeroShotCode,Total lines of code,4.0
+REPLACE PARAMETER WITH QUERY,FewShotCode,CodeBleu,
+REPLACE PARAMETER WITH QUERY,FewShotCode,Total CC,
+REPLACE PARAMETER WITH QUERY,FewShotCode,Total method calls,
+REPLACE PARAMETER WITH QUERY,FewShotCode,Total lines of code,
+REPLACE PARAMETER WITH QUERY,InstrucCode,CodeBleu,0.531
+REPLACE PARAMETER WITH QUERY,InstrucCode,Total CC,0.0
+REPLACE PARAMETER WITH QUERY,InstrucCode,Total method calls,0.0
+REPLACE PARAMETER WITH QUERY,InstrucCode,Total lines of code,4.0
+REPLACE PARAMETER WITH QUERY,ContextCode,CodeBleu,0.174
+REPLACE PARAMETER WITH QUERY,ContextCode,Total CC,0.0
+REPLACE PARAMETER WITH QUERY,ContextCode,Total method calls,1.8
+REPLACE PARAMETER WITH QUERY,ContextCode,Total lines of code,5.6
+REPLACE PARAMETER WITH QUERY,RulesCode,CodeBleu,0.484
+REPLACE PARAMETER WITH QUERY,RulesCode,Total CC,0.0
+REPLACE PARAMETER WITH QUERY,RulesCode,Total method calls,0.2
+REPLACE PARAMETER WITH QUERY,RulesCode,Total lines of code,4.0
+REPLACE PARAMETER WITH QUERY,BeforeRefact,CodeBleu,
+REPLACE PARAMETER WITH QUERY,BeforeRefact,Total CC,0.0
+REPLACE PARAMETER WITH QUERY,BeforeRefact,Total method calls,1.0
+REPLACE PARAMETER WITH QUERY,BeforeRefact,Total lines of code,2.0
+REPLACE PARAMETER WITH QUERY,AfterRefact,CodeBleu,
+REPLACE PARAMETER WITH QUERY,AfterRefact,Total CC,0.0
+REPLACE PARAMETER WITH QUERY,AfterRefact,Total method calls,1.0
+REPLACE PARAMETER WITH QUERY,AfterRefact,Total lines of code,3.0
+REPLACE COMMAND WITH FUNCTION,ZeroShotCode,CodeBleu,0.303
+REPLACE COMMAND WITH FUNCTION,ZeroShotCode,Total CC,0.0
+REPLACE COMMAND WITH FUNCTION,ZeroShotCode,Total method calls,1.0
+REPLACE COMMAND WITH FUNCTION,ZeroShotCode,Total lines of code,12.0
+REPLACE COMMAND WITH FUNCTION,FewShotCode,CodeBleu,
+REPLACE COMMAND WITH FUNCTION,FewShotCode,Total CC,
+REPLACE COMMAND WITH FUNCTION,FewShotCode,Total method calls,
+REPLACE COMMAND WITH FUNCTION,FewShotCode,Total lines of code,
+REPLACE COMMAND WITH FUNCTION,InstrucCode,CodeBleu,0.625
+REPLACE COMMAND WITH FUNCTION,InstrucCode,Total CC,0.0
+REPLACE COMMAND WITH FUNCTION,InstrucCode,Total method calls,0.0
+REPLACE COMMAND WITH FUNCTION,InstrucCode,Total lines of code,6.0
+REPLACE COMMAND WITH FUNCTION,ContextCode,CodeBleu,0.303
+REPLACE COMMAND WITH FUNCTION,ContextCode,Total CC,0.0
+REPLACE COMMAND WITH FUNCTION,ContextCode,Total method calls,1.0
+REPLACE COMMAND WITH FUNCTION,ContextCode,Total lines of code,12.0
+REPLACE COMMAND WITH FUNCTION,RulesCode,CodeBleu,
+REPLACE COMMAND WITH FUNCTION,RulesCode,Total CC,
+REPLACE COMMAND WITH FUNCTION,RulesCode,Total method calls,
+REPLACE COMMAND WITH FUNCTION,RulesCode,Total lines of code,
+REPLACE COMMAND WITH FUNCTION,BeforeRefact,CodeBleu,
+REPLACE COMMAND WITH FUNCTION,BeforeRefact,Total CC,0.0
+REPLACE COMMAND WITH FUNCTION,BeforeRefact,Total method calls,0.0
+REPLACE COMMAND WITH FUNCTION,BeforeRefact,Total lines of code,8.0
+REPLACE COMMAND WITH FUNCTION,AfterRefact,CodeBleu,
+REPLACE COMMAND WITH FUNCTION,AfterRefact,Total CC,0.0
+REPLACE COMMAND WITH FUNCTION,AfterRefact,Total method calls,0.0
+REPLACE COMMAND WITH FUNCTION,AfterRefact,Total lines of code,2.0
+CHANGE FUNCTION DECLARATION,ZeroShotCode,CodeBleu,0.25
+CHANGE FUNCTION DECLARATION,ZeroShotCode,Total CC,0.0
+CHANGE FUNCTION DECLARATION,ZeroShotCode,Total method calls,0.0
+CHANGE FUNCTION DECLARATION,ZeroShotCode,Total lines of code,3.0
+CHANGE FUNCTION DECLARATION,FewShotCode,CodeBleu,
+CHANGE FUNCTION DECLARATION,FewShotCode,Total CC,
+CHANGE FUNCTION DECLARATION,FewShotCode,Total method calls,
+CHANGE FUNCTION DECLARATION,FewShotCode,Total lines of code,
+CHANGE FUNCTION DECLARATION,InstrucCode,CodeBleu,0.25
+CHANGE FUNCTION DECLARATION,InstrucCode,Total CC,0.0
+CHANGE FUNCTION DECLARATION,InstrucCode,Total method calls,0.0
+CHANGE FUNCTION DECLARATION,InstrucCode,Total lines of code,3.0
+CHANGE FUNCTION DECLARATION,ContextCode,CodeBleu,0.25
+CHANGE FUNCTION DECLARATION,ContextCode,Total CC,0.0
+CHANGE FUNCTION DECLARATION,ContextCode,Total method calls,0.0
+CHANGE FUNCTION DECLARATION,ContextCode,Total lines of code,4.0
+CHANGE FUNCTION DECLARATION,RulesCode,CodeBleu,0.255
+CHANGE FUNCTION DECLARATION,RulesCode,Total CC,0.8
+CHANGE FUNCTION DECLARATION,RulesCode,Total method calls,0.8
+CHANGE FUNCTION DECLARATION,RulesCode,Total lines of code,7.0
+CHANGE FUNCTION DECLARATION,BeforeRefact,CodeBleu,
+CHANGE FUNCTION DECLARATION,BeforeRefact,Total CC,0.0
+CHANGE FUNCTION DECLARATION,BeforeRefact,Total method calls,0.0
+CHANGE FUNCTION DECLARATION,BeforeRefact,Total lines of code,0.0
+CHANGE FUNCTION DECLARATION,AfterRefact,CodeBleu,
+CHANGE FUNCTION DECLARATION,AfterRefact,Total CC,0.0
+CHANGE FUNCTION DECLARATION,AfterRefact,Total method calls,0.0
+CHANGE FUNCTION DECLARATION,AfterRefact,Total lines of code,0.0
+RENAME FIELD,ZeroShotCode,CodeBleu,0.717
+RENAME FIELD,ZeroShotCode,Total CC,0.0
+RENAME FIELD,ZeroShotCode,Total method calls,0.0
+RENAME FIELD,ZeroShotCode,Total lines of code,4.0
+RENAME FIELD,FewShotCode,CodeBleu,
+RENAME FIELD,FewShotCode,Total CC,
+RENAME FIELD,FewShotCode,Total method calls,
+RENAME FIELD,FewShotCode,Total lines of code,
+RENAME FIELD,InstrucCode,CodeBleu,0.343
+RENAME FIELD,InstrucCode,Total CC,0.0
+RENAME FIELD,InstrucCode,Total method calls,0.0
+RENAME FIELD,InstrucCode,Total lines of code,10.0
+RENAME FIELD,ContextCode,CodeBleu,0.349
+RENAME FIELD,ContextCode,Total CC,0.0
+RENAME FIELD,ContextCode,Total method calls,0.0
+RENAME FIELD,ContextCode,Total lines of code,7.0
+RENAME FIELD,RulesCode,CodeBleu,
+RENAME FIELD,RulesCode,Total CC,
+RENAME FIELD,RulesCode,Total method calls,
+RENAME FIELD,RulesCode,Total lines of code,
+RENAME FIELD,BeforeRefact,CodeBleu,
+RENAME FIELD,BeforeRefact,Total CC,0.0
+RENAME FIELD,BeforeRefact,Total method calls,0.0
+RENAME FIELD,BeforeRefact,Total lines of code,2.0
+RENAME FIELD,AfterRefact,CodeBleu,
+RENAME FIELD,AfterRefact,Total CC,0.0
+RENAME FIELD,AfterRefact,Total method calls,0.0
+RENAME FIELD,AfterRefact,Total lines of code,2.0
+REPLACE INLINE CODE WITH FUNCTION CALL,ZeroShotCode,CodeBleu,0.182
+REPLACE INLINE CODE WITH FUNCTION CALL,ZeroShotCode,Total CC,0.0
+REPLACE INLINE CODE WITH FUNCTION CALL,ZeroShotCode,Total method calls,1.0
+REPLACE INLINE CODE WITH FUNCTION CALL,ZeroShotCode,Total lines of code,2.0
+REPLACE INLINE CODE WITH FUNCTION CALL,FewShotCode,CodeBleu,
+REPLACE INLINE CODE WITH FUNCTION CALL,FewShotCode,Total CC,
+REPLACE INLINE CODE WITH FUNCTION CALL,FewShotCode,Total method calls,
+REPLACE INLINE CODE WITH FUNCTION CALL,FewShotCode,Total lines of code,
+REPLACE INLINE CODE WITH FUNCTION CALL,InstrucCode,CodeBleu,0.182
+REPLACE INLINE CODE WITH FUNCTION CALL,InstrucCode,Total CC,0.0
+REPLACE INLINE CODE WITH FUNCTION CALL,InstrucCode,Total method calls,1.0
+REPLACE INLINE CODE WITH FUNCTION CALL,InstrucCode,Total lines of code,2.0
+REPLACE INLINE CODE WITH FUNCTION CALL,ContextCode,CodeBleu,0.182
+REPLACE INLINE CODE WITH FUNCTION CALL,ContextCode,Total CC,0.0
+REPLACE INLINE CODE WITH FUNCTION CALL,ContextCode,Total method calls,1.0
+REPLACE INLINE CODE WITH FUNCTION CALL,ContextCode,Total lines of code,2.0
+REPLACE INLINE CODE WITH FUNCTION CALL,RulesCode,CodeBleu,
+REPLACE INLINE CODE WITH FUNCTION CALL,RulesCode,Total CC,
+REPLACE INLINE CODE WITH FUNCTION CALL,RulesCode,Total method calls,
+REPLACE INLINE CODE WITH FUNCTION CALL,RulesCode,Total lines of code,
+REPLACE INLINE CODE WITH FUNCTION CALL,BeforeRefact,CodeBleu,
+REPLACE INLINE CODE WITH FUNCTION CALL,BeforeRefact,Total CC,0.0
+REPLACE INLINE CODE WITH FUNCTION CALL,BeforeRefact,Total method calls,0.0
+REPLACE INLINE CODE WITH FUNCTION CALL,BeforeRefact,Total lines of code,3.0
+REPLACE INLINE CODE WITH FUNCTION CALL,AfterRefact,CodeBleu,
+REPLACE INLINE CODE WITH FUNCTION CALL,AfterRefact,Total CC,0.0
+REPLACE INLINE CODE WITH FUNCTION CALL,AfterRefact,Total method calls,1.0
+REPLACE INLINE CODE WITH FUNCTION CALL,AfterRefact,Total lines of code,0.0
+MOVE FUNCTION,ZeroShotCode,CodeBleu,0.314
+MOVE FUNCTION,ZeroShotCode,Total CC,0.0
+MOVE FUNCTION,ZeroShotCode,Total method calls,0.0
+MOVE FUNCTION,ZeroShotCode,Total lines of code,7.0
+MOVE FUNCTION,FewShotCode,CodeBleu,
+MOVE FUNCTION,FewShotCode,Total CC,
+MOVE FUNCTION,FewShotCode,Total method calls,
+MOVE FUNCTION,FewShotCode,Total lines of code,
+MOVE FUNCTION,InstrucCode,CodeBleu,0.337
+MOVE FUNCTION,InstrucCode,Total CC,0.2
+MOVE FUNCTION,InstrucCode,Total method calls,1.6
+MOVE FUNCTION,InstrucCode,Total lines of code,12.0
+MOVE FUNCTION,ContextCode,CodeBleu,0.304
+MOVE FUNCTION,ContextCode,Total CC,0.0
+MOVE FUNCTION,ContextCode,Total method calls,0.0
+MOVE FUNCTION,ContextCode,Total lines of code,5.0
+MOVE FUNCTION,RulesCode,CodeBleu,0.695
+MOVE FUNCTION,RulesCode,Total CC,0.0
+MOVE FUNCTION,RulesCode,Total method calls,0.0
+MOVE FUNCTION,RulesCode,Total lines of code,6.0
+MOVE FUNCTION,BeforeRefact,CodeBleu,
+MOVE FUNCTION,BeforeRefact,Total CC,0.0
+MOVE FUNCTION,BeforeRefact,Total method calls,0.0
+MOVE FUNCTION,BeforeRefact,Total lines of code,1.0
+MOVE FUNCTION,AfterRefact,CodeBleu,
+MOVE FUNCTION,AfterRefact,Total CC,0.0
+MOVE FUNCTION,AfterRefact,Total method calls,0.0
+MOVE FUNCTION,AfterRefact,Total lines of code,1.0
+SPLIT VARIABLE,ZeroShotCode,CodeBleu,0.633
+SPLIT VARIABLE,ZeroShotCode,Total CC,0.0
+SPLIT VARIABLE,ZeroShotCode,Total method calls,2.0
+SPLIT VARIABLE,ZeroShotCode,Total lines of code,5.0
+SPLIT VARIABLE,FewShotCode,CodeBleu,
+SPLIT VARIABLE,FewShotCode,Total CC,
+SPLIT VARIABLE,FewShotCode,Total method calls,
+SPLIT VARIABLE,FewShotCode,Total lines of code,
+SPLIT VARIABLE,InstrucCode,CodeBleu,0.627
+SPLIT VARIABLE,InstrucCode,Total CC,0.0
+SPLIT VARIABLE,InstrucCode,Total method calls,2.0
+SPLIT VARIABLE,InstrucCode,Total lines of code,5.0
+SPLIT VARIABLE,ContextCode,CodeBleu,0.633
+SPLIT VARIABLE,ContextCode,Total CC,0.0
+SPLIT VARIABLE,ContextCode,Total method calls,2.0
+SPLIT VARIABLE,ContextCode,Total lines of code,5.0
+SPLIT VARIABLE,RulesCode,CodeBleu,0.633
+SPLIT VARIABLE,RulesCode,Total CC,0.0
+SPLIT VARIABLE,RulesCode,Total method calls,2.0
+SPLIT VARIABLE,RulesCode,Total lines of code,5.0
+SPLIT VARIABLE,BeforeRefact,CodeBleu,
+SPLIT VARIABLE,BeforeRefact,Total CC,0.0
+SPLIT VARIABLE,BeforeRefact,Total method calls,2.0
+SPLIT VARIABLE,BeforeRefact,Total lines of code,3.0
+SPLIT VARIABLE,AfterRefact,CodeBleu,
+SPLIT VARIABLE,AfterRefact,Total CC,0.0
+SPLIT VARIABLE,AfterRefact,Total method calls,2.0
+SPLIT VARIABLE,AfterRefact,Total lines of code,3.0
+REPLACE QUERY WITH PARAMETER,ZeroShotCode,CodeBleu,0.269
+REPLACE QUERY WITH PARAMETER,ZeroShotCode,Total CC,0.0
+REPLACE QUERY WITH PARAMETER,ZeroShotCode,Total method calls,1.0
+REPLACE QUERY WITH PARAMETER,ZeroShotCode,Total lines of code,4.0
+REPLACE QUERY WITH PARAMETER,FewShotCode,CodeBleu,
+REPLACE QUERY WITH PARAMETER,FewShotCode,Total CC,
+REPLACE QUERY WITH PARAMETER,FewShotCode,Total method calls,
+REPLACE QUERY WITH PARAMETER,FewShotCode,Total lines of code,
+REPLACE QUERY WITH PARAMETER,InstrucCode,CodeBleu,0.615
+REPLACE QUERY WITH PARAMETER,InstrucCode,Total CC,0.0
+REPLACE QUERY WITH PARAMETER,InstrucCode,Total method calls,0.0
+REPLACE QUERY WITH PARAMETER,InstrucCode,Total lines of code,3.0
+REPLACE QUERY WITH PARAMETER,ContextCode,CodeBleu,0.239
+REPLACE QUERY WITH PARAMETER,ContextCode,Total CC,0.0
+REPLACE QUERY WITH PARAMETER,ContextCode,Total method calls,1.0
+REPLACE QUERY WITH PARAMETER,ContextCode,Total lines of code,4.0
+REPLACE QUERY WITH PARAMETER,RulesCode,CodeBleu,
+REPLACE QUERY WITH PARAMETER,RulesCode,Total CC,
+REPLACE QUERY WITH PARAMETER,RulesCode,Total method calls,
+REPLACE QUERY WITH PARAMETER,RulesCode,Total lines of code,
+REPLACE QUERY WITH PARAMETER,BeforeRefact,CodeBleu,
+REPLACE QUERY WITH PARAMETER,BeforeRefact,Total CC,0.0
+REPLACE QUERY WITH PARAMETER,BeforeRefact,Total method calls,1.0
+REPLACE QUERY WITH PARAMETER,BeforeRefact,Total lines of code,3.0
+REPLACE QUERY WITH PARAMETER,AfterRefact,CodeBleu,
+REPLACE QUERY WITH PARAMETER,AfterRefact,Total CC,0.0
+REPLACE QUERY WITH PARAMETER,AfterRefact,Total method calls,1.0
+REPLACE QUERY WITH PARAMETER,AfterRefact,Total lines of code,2.0
+INTRODUCE SPECIAL CASE,ZeroShotCode,CodeBleu,0.29
+INTRODUCE SPECIAL CASE,ZeroShotCode,Total CC,0.0
+INTRODUCE SPECIAL CASE,ZeroShotCode,Total method calls,1.0
+INTRODUCE SPECIAL CASE,ZeroShotCode,Total lines of code,14.0
+INTRODUCE SPECIAL CASE,FewShotCode,CodeBleu,
+INTRODUCE SPECIAL CASE,FewShotCode,Total CC,
+INTRODUCE SPECIAL CASE,FewShotCode,Total method calls,
+INTRODUCE SPECIAL CASE,FewShotCode,Total lines of code,
+INTRODUCE SPECIAL CASE,InstrucCode,CodeBleu,0.3
+INTRODUCE SPECIAL CASE,InstrucCode,Total CC,1.0
+INTRODUCE SPECIAL CASE,InstrucCode,Total method calls,2.8
+INTRODUCE SPECIAL CASE,InstrucCode,Total lines of code,28.4
+INTRODUCE SPECIAL CASE,ContextCode,CodeBleu,0.263
+INTRODUCE SPECIAL CASE,ContextCode,Total CC,0.0
+INTRODUCE SPECIAL CASE,ContextCode,Total method calls,1.0
+INTRODUCE SPECIAL CASE,ContextCode,Total lines of code,4.0
+INTRODUCE SPECIAL CASE,RulesCode,CodeBleu,0.292
+INTRODUCE SPECIAL CASE,RulesCode,Total CC,0.2
+INTRODUCE SPECIAL CASE,RulesCode,Total method calls,2.2
+INTRODUCE SPECIAL CASE,RulesCode,Total lines of code,16.0
+INTRODUCE SPECIAL CASE,BeforeRefact,CodeBleu,
+INTRODUCE SPECIAL CASE,BeforeRefact,Total CC,1.0
+INTRODUCE SPECIAL CASE,BeforeRefact,Total method calls,0.0
+INTRODUCE SPECIAL CASE,BeforeRefact,Total lines of code,0.0
+INTRODUCE SPECIAL CASE,AfterRefact,CodeBleu,
+INTRODUCE SPECIAL CASE,AfterRefact,Total CC,0.0
+INTRODUCE SPECIAL CASE,AfterRefact,Total method calls,0.0
+INTRODUCE SPECIAL CASE,AfterRefact,Total lines of code,1.0
+REMOVE DEAD CODE,ZeroShotCode,CodeBleu,0.25
+REMOVE DEAD CODE,ZeroShotCode,Total CC,0.0
+REMOVE DEAD CODE,ZeroShotCode,Total method calls,0.0
+REMOVE DEAD CODE,ZeroShotCode,Total lines of code,1.0
+REMOVE DEAD CODE,FewShotCode,CodeBleu,
+REMOVE DEAD CODE,FewShotCode,Total CC,
+REMOVE DEAD CODE,FewShotCode,Total method calls,
+REMOVE DEAD CODE,FewShotCode,Total lines of code,
+REMOVE DEAD CODE,InstrucCode,CodeBleu,0.25
+REMOVE DEAD CODE,InstrucCode,Total CC,0.0
+REMOVE DEAD CODE,InstrucCode,Total method calls,0.0
+REMOVE DEAD CODE,InstrucCode,Total lines of code,1.0
+REMOVE DEAD CODE,ContextCode,CodeBleu,0.25
+REMOVE DEAD CODE,ContextCode,Total CC,0.0
+REMOVE DEAD CODE,ContextCode,Total method calls,0.0
+REMOVE DEAD CODE,ContextCode,Total lines of code,1.0
+REMOVE DEAD CODE,RulesCode,CodeBleu,
+REMOVE DEAD CODE,RulesCode,Total CC,
+REMOVE DEAD CODE,RulesCode,Total method calls,
+REMOVE DEAD CODE,RulesCode,Total lines of code,
+REMOVE DEAD CODE,BeforeRefact,CodeBleu,
+REMOVE DEAD CODE,BeforeRefact,Total CC,1.0
+REMOVE DEAD CODE,BeforeRefact,Total method calls,1.0
+REMOVE DEAD CODE,BeforeRefact,Total lines of code,2.0
+REMOVE DEAD CODE,AfterRefact,CodeBleu,
+REMOVE DEAD CODE,AfterRefact,Total CC,0.0
+REMOVE DEAD CODE,AfterRefact,Total method calls,0.0
+REMOVE DEAD CODE,AfterRefact,Total lines of code,0.0
+RENAME VARIABLE,ZeroShotCode,CodeBleu,0.694
+RENAME VARIABLE,ZeroShotCode,Total CC,0.0
+RENAME VARIABLE,ZeroShotCode,Total method calls,0.0
+RENAME VARIABLE,ZeroShotCode,Total lines of code,2.0
+RENAME VARIABLE,FewShotCode,CodeBleu,
+RENAME VARIABLE,FewShotCode,Total CC,
+RENAME VARIABLE,FewShotCode,Total method calls,
+RENAME VARIABLE,FewShotCode,Total lines of code,
+RENAME VARIABLE,InstrucCode,CodeBleu,0.735
+RENAME VARIABLE,InstrucCode,Total CC,0.0
+RENAME VARIABLE,InstrucCode,Total method calls,0.0
+RENAME VARIABLE,InstrucCode,Total lines of code,2.0
+RENAME VARIABLE,ContextCode,CodeBleu,0.694
+RENAME VARIABLE,ContextCode,Total CC,0.0
+RENAME VARIABLE,ContextCode,Total method calls,0.0
+RENAME VARIABLE,ContextCode,Total lines of code,2.0
+RENAME VARIABLE,RulesCode,CodeBleu,
+RENAME VARIABLE,RulesCode,Total CC,
+RENAME VARIABLE,RulesCode,Total method calls,
+RENAME VARIABLE,RulesCode,Total lines of code,
+RENAME VARIABLE,BeforeRefact,CodeBleu,
+RENAME VARIABLE,BeforeRefact,Total CC,0.0
+RENAME VARIABLE,BeforeRefact,Total method calls,0.0
+RENAME VARIABLE,BeforeRefact,Total lines of code,0.0
+RENAME VARIABLE,AfterRefact,CodeBleu,
+RENAME VARIABLE,AfterRefact,Total CC,0.0
+RENAME VARIABLE,AfterRefact,Total method calls,0.0
+RENAME VARIABLE,AfterRefact,Total lines of code,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,ZeroShotCode,CodeBleu,0.45
+REPLACE TYPE CODE WITH SUBCLASSES,ZeroShotCode,Total CC,4.0
+REPLACE TYPE CODE WITH SUBCLASSES,ZeroShotCode,Total method calls,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,ZeroShotCode,Total lines of code,48.6
+REPLACE TYPE CODE WITH SUBCLASSES,FewShotCode,CodeBleu,
+REPLACE TYPE CODE WITH SUBCLASSES,FewShotCode,Total CC,
+REPLACE TYPE CODE WITH SUBCLASSES,FewShotCode,Total method calls,
+REPLACE TYPE CODE WITH SUBCLASSES,FewShotCode,Total lines of code,
+REPLACE TYPE CODE WITH SUBCLASSES,InstrucCode,CodeBleu,0.446
+REPLACE TYPE CODE WITH SUBCLASSES,InstrucCode,Total CC,4.0
+REPLACE TYPE CODE WITH SUBCLASSES,InstrucCode,Total method calls,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,InstrucCode,Total lines of code,55.4
+REPLACE TYPE CODE WITH SUBCLASSES,ContextCode,CodeBleu,0.212
+REPLACE TYPE CODE WITH SUBCLASSES,ContextCode,Total CC,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,ContextCode,Total method calls,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,ContextCode,Total lines of code,4.0
+REPLACE TYPE CODE WITH SUBCLASSES,RulesCode,CodeBleu,0.44
+REPLACE TYPE CODE WITH SUBCLASSES,RulesCode,Total CC,3.0
+REPLACE TYPE CODE WITH SUBCLASSES,RulesCode,Total method calls,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,RulesCode,Total lines of code,39.0
+REPLACE TYPE CODE WITH SUBCLASSES,BeforeRefact,CodeBleu,
+REPLACE TYPE CODE WITH SUBCLASSES,BeforeRefact,Total CC,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,BeforeRefact,Total method calls,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,BeforeRefact,Total lines of code,2.0
+REPLACE TYPE CODE WITH SUBCLASSES,AfterRefact,CodeBleu,
+REPLACE TYPE CODE WITH SUBCLASSES,AfterRefact,Total CC,3.0
+REPLACE TYPE CODE WITH SUBCLASSES,AfterRefact,Total method calls,0.0
+REPLACE TYPE CODE WITH SUBCLASSES,AfterRefact,Total lines of code,5.0
+INLINE FUNCTION,ZeroShotCode,CodeBleu,0.465
+INLINE FUNCTION,ZeroShotCode,Total CC,1.0
+INLINE FUNCTION,ZeroShotCode,Total method calls,0.0
+INLINE FUNCTION,ZeroShotCode,Total lines of code,4.0
+INLINE FUNCTION,FewShotCode,CodeBleu,
+INLINE FUNCTION,FewShotCode,Total CC,
+INLINE FUNCTION,FewShotCode,Total method calls,
+INLINE FUNCTION,FewShotCode,Total lines of code,
+INLINE FUNCTION,InstrucCode,CodeBleu,0.465
+INLINE FUNCTION,InstrucCode,Total CC,1.0
+INLINE FUNCTION,InstrucCode,Total method calls,0.0
+INLINE FUNCTION,InstrucCode,Total lines of code,4.0
+INLINE FUNCTION,ContextCode,CodeBleu,0.415
+INLINE FUNCTION,ContextCode,Total CC,1.0
+INLINE FUNCTION,ContextCode,Total method calls,1.0
+INLINE FUNCTION,ContextCode,Total lines of code,4.0
+INLINE FUNCTION,RulesCode,CodeBleu,0.465
+INLINE FUNCTION,RulesCode,Total CC,1.0
+INLINE FUNCTION,RulesCode,Total method calls,0.0
+INLINE FUNCTION,RulesCode,Total lines of code,4.0
+INLINE FUNCTION,BeforeRefact,CodeBleu,
+INLINE FUNCTION,BeforeRefact,Total CC,1.0
+INLINE FUNCTION,BeforeRefact,Total method calls,1.0
+INLINE FUNCTION,BeforeRefact,Total lines of code,5.0
+INLINE FUNCTION,AfterRefact,CodeBleu,
+INLINE FUNCTION,AfterRefact,Total CC,1.0
+INLINE FUNCTION,AfterRefact,Total method calls,0.0
+INLINE FUNCTION,AfterRefact,Total lines of code,2.0
+COMBINE FUNCTIONS INTO CLASS,ZeroShotCode,CodeBleu,0.337
+COMBINE FUNCTIONS INTO CLASS,ZeroShotCode,Total CC,0.0
+COMBINE FUNCTIONS INTO CLASS,ZeroShotCode,Total method calls,2.6
+COMBINE FUNCTIONS INTO CLASS,ZeroShotCode,Total lines of code,13.0
+COMBINE FUNCTIONS INTO CLASS,FewShotCode,CodeBleu,
+COMBINE FUNCTIONS INTO CLASS,FewShotCode,Total CC,
+COMBINE FUNCTIONS INTO CLASS,FewShotCode,Total method calls,
+COMBINE FUNCTIONS INTO CLASS,FewShotCode,Total lines of code,
+COMBINE FUNCTIONS INTO CLASS,InstrucCode,CodeBleu,0.376
+COMBINE FUNCTIONS INTO CLASS,InstrucCode,Total CC,0.0
+COMBINE FUNCTIONS INTO CLASS,InstrucCode,Total method calls,3.0
+COMBINE FUNCTIONS INTO CLASS,InstrucCode,Total lines of code,31.0
+COMBINE FUNCTIONS INTO CLASS,ContextCode,CodeBleu,0.324
+COMBINE FUNCTIONS INTO CLASS,ContextCode,Total CC,0.0
+COMBINE FUNCTIONS INTO CLASS,ContextCode,Total method calls,3.6
+COMBINE FUNCTIONS INTO CLASS,ContextCode,Total lines of code,20.4
+COMBINE FUNCTIONS INTO CLASS,RulesCode,CodeBleu,
+COMBINE FUNCTIONS INTO CLASS,RulesCode,Total CC,
+COMBINE FUNCTIONS INTO CLASS,RulesCode,Total method calls,
+COMBINE FUNCTIONS INTO CLASS,RulesCode,Total lines of code,
+COMBINE FUNCTIONS INTO CLASS,BeforeRefact,CodeBleu,
+COMBINE FUNCTIONS INTO CLASS,BeforeRefact,Total CC,0.0
+COMBINE FUNCTIONS INTO CLASS,BeforeRefact,Total method calls,0.0
+COMBINE FUNCTIONS INTO CLASS,BeforeRefact,Total lines of code,2.0
+COMBINE FUNCTIONS INTO CLASS,AfterRefact,CodeBleu,
+COMBINE FUNCTIONS INTO CLASS,AfterRefact,Total CC,0.0
+COMBINE FUNCTIONS INTO CLASS,AfterRefact,Total method calls,0.0
+COMBINE FUNCTIONS INTO CLASS,AfterRefact,Total lines of code,4.0
+MOVE FIELD,ZeroShotCode,CodeBleu,0.397
+MOVE FIELD,ZeroShotCode,Total CC,0.0
+MOVE FIELD,ZeroShotCode,Total method calls,1.8
+MOVE FIELD,ZeroShotCode,Total lines of code,21.4
+MOVE FIELD,FewShotCode,CodeBleu,
+MOVE FIELD,FewShotCode,Total CC,
+MOVE FIELD,FewShotCode,Total method calls,
+MOVE FIELD,FewShotCode,Total lines of code,
+MOVE FIELD,InstrucCode,CodeBleu,0.388
+MOVE FIELD,InstrucCode,Total CC,0.0
+MOVE FIELD,InstrucCode,Total method calls,1.6
+MOVE FIELD,InstrucCode,Total lines of code,22.6
+MOVE FIELD,ContextCode,CodeBleu,0.321
+MOVE FIELD,ContextCode,Total CC,0.0
+MOVE FIELD,ContextCode,Total method calls,0.0
+MOVE FIELD,ContextCode,Total lines of code,11.0
+MOVE FIELD,RulesCode,CodeBleu,0.419
+MOVE FIELD,RulesCode,Total CC,0.0
+MOVE FIELD,RulesCode,Total method calls,0.8
+MOVE FIELD,RulesCode,Total lines of code,10.6
+MOVE FIELD,BeforeRefact,CodeBleu,
+MOVE FIELD,BeforeRefact,Total CC,0.0
+MOVE FIELD,BeforeRefact,Total method calls,0.0
+MOVE FIELD,BeforeRefact,Total lines of code,2.0
+MOVE FIELD,AfterRefact,CodeBleu,
+MOVE FIELD,AfterRefact,Total CC,0.0
+MOVE FIELD,AfterRefact,Total method calls,0.0
+MOVE FIELD,AfterRefact,Total lines of code,2.0
+REPLACE TEMP WITH QUERY,ZeroShotCode,CodeBleu,0.444
+REPLACE TEMP WITH QUERY,ZeroShotCode,Total CC,0.0
+REPLACE TEMP WITH QUERY,ZeroShotCode,Total method calls,3.0
+REPLACE TEMP WITH QUERY,ZeroShotCode,Total lines of code,8.0
+REPLACE TEMP WITH QUERY,FewShotCode,CodeBleu,
+REPLACE TEMP WITH QUERY,FewShotCode,Total CC,
+REPLACE TEMP WITH QUERY,FewShotCode,Total method calls,
+REPLACE TEMP WITH QUERY,FewShotCode,Total lines of code,
+REPLACE TEMP WITH QUERY,InstrucCode,CodeBleu,0.357
+REPLACE TEMP WITH QUERY,InstrucCode,Total CC,1.0
+REPLACE TEMP WITH QUERY,InstrucCode,Total method calls,3.0
+REPLACE TEMP WITH QUERY,InstrucCode,Total lines of code,10.4
+REPLACE TEMP WITH QUERY,ContextCode,CodeBleu,0.168
+REPLACE TEMP WITH QUERY,ContextCode,Total CC,1.0
+REPLACE TEMP WITH QUERY,ContextCode,Total method calls,0.0
+REPLACE TEMP WITH QUERY,ContextCode,Total lines of code,5.6
+REPLACE TEMP WITH QUERY,RulesCode,CodeBleu,0.397
+REPLACE TEMP WITH QUERY,RulesCode,Total CC,1.0
+REPLACE TEMP WITH QUERY,RulesCode,Total method calls,3.0
+REPLACE TEMP WITH QUERY,RulesCode,Total lines of code,10.2
+REPLACE TEMP WITH QUERY,BeforeRefact,CodeBleu,
+REPLACE TEMP WITH QUERY,BeforeRefact,Total CC,1.0
+REPLACE TEMP WITH QUERY,BeforeRefact,Total method calls,0.0
+REPLACE TEMP WITH QUERY,BeforeRefact,Total lines of code,4.0
+REPLACE TEMP WITH QUERY,AfterRefact,CodeBleu,
+REPLACE TEMP WITH QUERY,AfterRefact,Total CC,1.0
+REPLACE TEMP WITH QUERY,AfterRefact,Total method calls,0.0
+REPLACE TEMP WITH QUERY,AfterRefact,Total lines of code,4.0
+CHANGE VALUE TO REFERENCE,ZeroShotCode,CodeBleu,0.312
+CHANGE VALUE TO REFERENCE,ZeroShotCode,Total CC,0.0
+CHANGE VALUE TO REFERENCE,ZeroShotCode,Total method calls,2.0
+CHANGE VALUE TO REFERENCE,ZeroShotCode,Total lines of code,2.0
+CHANGE VALUE TO REFERENCE,FewShotCode,CodeBleu,
+CHANGE VALUE TO REFERENCE,FewShotCode,Total CC,
+CHANGE VALUE TO REFERENCE,FewShotCode,Total method calls,
+CHANGE VALUE TO REFERENCE,FewShotCode,Total lines of code,
+CHANGE VALUE TO REFERENCE,InstrucCode,CodeBleu,0.203
+CHANGE VALUE TO REFERENCE,InstrucCode,Total CC,0.2
+CHANGE VALUE TO REFERENCE,InstrucCode,Total method calls,4.8
+CHANGE VALUE TO REFERENCE,InstrucCode,Total lines of code,19.2
+CHANGE VALUE TO REFERENCE,ContextCode,CodeBleu,0.158
+CHANGE VALUE TO REFERENCE,ContextCode,Total CC,0.0
+CHANGE VALUE TO REFERENCE,ContextCode,Total method calls,0.0
+CHANGE VALUE TO REFERENCE,ContextCode,Total lines of code,2.0
+CHANGE VALUE TO REFERENCE,RulesCode,CodeBleu,0.212
+CHANGE VALUE TO REFERENCE,RulesCode,Total CC,0.0
+CHANGE VALUE TO REFERENCE,RulesCode,Total method calls,1.0
+CHANGE VALUE TO REFERENCE,RulesCode,Total lines of code,2.0
+CHANGE VALUE TO REFERENCE,BeforeRefact,CodeBleu,
+CHANGE VALUE TO REFERENCE,BeforeRefact,Total CC,0.0
+CHANGE VALUE TO REFERENCE,BeforeRefact,Total method calls,0.0
+CHANGE VALUE TO REFERENCE,BeforeRefact,Total lines of code,0.0
+CHANGE VALUE TO REFERENCE,AfterRefact,CodeBleu,
+CHANGE VALUE TO REFERENCE,AfterRefact,Total CC,0.0
+CHANGE VALUE TO REFERENCE,AfterRefact,Total method calls,1.0
+CHANGE VALUE TO REFERENCE,AfterRefact,Total lines of code,0.0
+MOVE STATEMENTS INTO FUNCTION,ZeroShotCode,CodeBleu,0.213
+MOVE STATEMENTS INTO FUNCTION,ZeroShotCode,Total CC,0.0
+MOVE STATEMENTS INTO FUNCTION,ZeroShotCode,Total method calls,10.8
+MOVE STATEMENTS INTO FUNCTION,ZeroShotCode,Total lines of code,11.2
+MOVE STATEMENTS INTO FUNCTION,FewShotCode,CodeBleu,
+MOVE STATEMENTS INTO FUNCTION,FewShotCode,Total CC,
+MOVE STATEMENTS INTO FUNCTION,FewShotCode,Total method calls,
+MOVE STATEMENTS INTO FUNCTION,FewShotCode,Total lines of code,
+MOVE STATEMENTS INTO FUNCTION,InstrucCode,CodeBleu,0.795
+MOVE STATEMENTS INTO FUNCTION,InstrucCode,Total CC,0.0
+MOVE STATEMENTS INTO FUNCTION,InstrucCode,Total method calls,2.0
+MOVE STATEMENTS INTO FUNCTION,InstrucCode,Total lines of code,9.0
+MOVE STATEMENTS INTO FUNCTION,ContextCode,CodeBleu,0.268
+MOVE STATEMENTS INTO FUNCTION,ContextCode,Total CC,0.0
+MOVE STATEMENTS INTO FUNCTION,ContextCode,Total method calls,6.8
+MOVE STATEMENTS INTO FUNCTION,ContextCode,Total lines of code,9.0
+MOVE STATEMENTS INTO FUNCTION,RulesCode,CodeBleu,
+MOVE STATEMENTS INTO FUNCTION,RulesCode,Total CC,
+MOVE STATEMENTS INTO FUNCTION,RulesCode,Total method calls,
+MOVE STATEMENTS INTO FUNCTION,RulesCode,Total lines of code,
+MOVE STATEMENTS INTO FUNCTION,BeforeRefact,CodeBleu,
+MOVE STATEMENTS INTO FUNCTION,BeforeRefact,Total CC,0.0
+MOVE STATEMENTS INTO FUNCTION,BeforeRefact,Total method calls,3.0
+MOVE STATEMENTS INTO FUNCTION,BeforeRefact,Total lines of code,7.0
+MOVE STATEMENTS INTO FUNCTION,AfterRefact,CodeBleu,
+MOVE STATEMENTS INTO FUNCTION,AfterRefact,Total CC,0.0
+MOVE STATEMENTS INTO FUNCTION,AfterRefact,Total method calls,3.0
+MOVE STATEMENTS INTO FUNCTION,AfterRefact,Total lines of code,7.0
+SEPARATE QUERY FROM MODIFIER,ZeroShotCode,CodeBleu,0.248
+SEPARATE QUERY FROM MODIFIER,ZeroShotCode,Total CC,0.0
+SEPARATE QUERY FROM MODIFIER,ZeroShotCode,Total method calls,6.0
+SEPARATE QUERY FROM MODIFIER,ZeroShotCode,Total lines of code,12.2
+SEPARATE QUERY FROM MODIFIER,FewShotCode,CodeBleu,
+SEPARATE QUERY FROM MODIFIER,FewShotCode,Total CC,
+SEPARATE QUERY FROM MODIFIER,FewShotCode,Total method calls,
+SEPARATE QUERY FROM MODIFIER,FewShotCode,Total lines of code,
+SEPARATE QUERY FROM MODIFIER,InstrucCode,CodeBleu,0.315
+SEPARATE QUERY FROM MODIFIER,InstrucCode,Total CC,0.0
+SEPARATE QUERY FROM MODIFIER,InstrucCode,Total method calls,5.0
+SEPARATE QUERY FROM MODIFIER,InstrucCode,Total lines of code,10.8
+SEPARATE QUERY FROM MODIFIER,ContextCode,CodeBleu,0.204
+SEPARATE QUERY FROM MODIFIER,ContextCode,Total CC,0.0
+SEPARATE QUERY FROM MODIFIER,ContextCode,Total method calls,5.4
+SEPARATE QUERY FROM MODIFIER,ContextCode,Total lines of code,10.0
+SEPARATE QUERY FROM MODIFIER,RulesCode,CodeBleu,0.315
+SEPARATE QUERY FROM MODIFIER,RulesCode,Total CC,0.0
+SEPARATE QUERY FROM MODIFIER,RulesCode,Total method calls,5.0
+SEPARATE QUERY FROM MODIFIER,RulesCode,Total lines of code,10.2
+SEPARATE QUERY FROM MODIFIER,BeforeRefact,CodeBleu,
+SEPARATE QUERY FROM MODIFIER,BeforeRefact,Total CC,0.0
+SEPARATE QUERY FROM MODIFIER,BeforeRefact,Total method calls,2.0
+SEPARATE QUERY FROM MODIFIER,BeforeRefact,Total lines of code,4.0
+SEPARATE QUERY FROM MODIFIER,AfterRefact,CodeBleu,
+SEPARATE QUERY FROM MODIFIER,AfterRefact,Total CC,0.0
+SEPARATE QUERY FROM MODIFIER,AfterRefact,Total method calls,3.0
+SEPARATE QUERY FROM MODIFIER,AfterRefact,Total lines of code,5.0
+HIDE DELEGATE,ZeroShotCode,CodeBleu,0.121
+HIDE DELEGATE,ZeroShotCode,Total CC,0.0
+HIDE DELEGATE,ZeroShotCode,Total method calls,1.0
+HIDE DELEGATE,ZeroShotCode,Total lines of code,2.0
+HIDE DELEGATE,FewShotCode,CodeBleu,
+HIDE DELEGATE,FewShotCode,Total CC,
+HIDE DELEGATE,FewShotCode,Total method calls,
+HIDE DELEGATE,FewShotCode,Total lines of code,
+HIDE DELEGATE,InstrucCode,CodeBleu,0.191
+HIDE DELEGATE,InstrucCode,Total CC,0.0
+HIDE DELEGATE,InstrucCode,Total method calls,2.0
+HIDE DELEGATE,InstrucCode,Total lines of code,7.4
+HIDE DELEGATE,ContextCode,CodeBleu,0.121
+HIDE DELEGATE,ContextCode,Total CC,0.0
+HIDE DELEGATE,ContextCode,Total method calls,2.0
+HIDE DELEGATE,ContextCode,Total lines of code,2.0
+HIDE DELEGATE,RulesCode,CodeBleu,0.121
+HIDE DELEGATE,RulesCode,Total CC,0.0
+HIDE DELEGATE,RulesCode,Total method calls,1.0
+HIDE DELEGATE,RulesCode,Total lines of code,2.0
+HIDE DELEGATE,BeforeRefact,CodeBleu,
+HIDE DELEGATE,BeforeRefact,Total CC,0.0
+HIDE DELEGATE,BeforeRefact,Total method calls,0.0
+HIDE DELEGATE,BeforeRefact,Total lines of code,0.0
+HIDE DELEGATE,AfterRefact,CodeBleu,
+HIDE DELEGATE,AfterRefact,Total CC,0.0
+HIDE DELEGATE,AfterRefact,Total method calls,0.0
+HIDE DELEGATE,AfterRefact,Total lines of code,2.0
+PULL UP METHOD,ZeroShotCode,CodeBleu,0.518
+PULL UP METHOD,ZeroShotCode,Total CC,0.0
+PULL UP METHOD,ZeroShotCode,Total method calls,0.6
+PULL UP METHOD,ZeroShotCode,Total lines of code,8.6
+PULL UP METHOD,FewShotCode,CodeBleu,
+PULL UP METHOD,FewShotCode,Total CC,
+PULL UP METHOD,FewShotCode,Total method calls,
+PULL UP METHOD,FewShotCode,Total lines of code,
+PULL UP METHOD,InstrucCode,CodeBleu,0.437
+PULL UP METHOD,InstrucCode,Total CC,0.0
+PULL UP METHOD,InstrucCode,Total method calls,1.0
+PULL UP METHOD,InstrucCode,Total lines of code,9.0
+PULL UP METHOD,ContextCode,CodeBleu,0.449
+PULL UP METHOD,ContextCode,Total CC,0.0
+PULL UP METHOD,ContextCode,Total method calls,0.0
+PULL UP METHOD,ContextCode,Total lines of code,20.0
+PULL UP METHOD,RulesCode,CodeBleu,0.645
+PULL UP METHOD,RulesCode,Total CC,0.0
+PULL UP METHOD,RulesCode,Total method calls,0.0
+PULL UP METHOD,RulesCode,Total lines of code,8.0
+PULL UP METHOD,BeforeRefact,CodeBleu,
+PULL UP METHOD,BeforeRefact,Total CC,0.0
+PULL UP METHOD,BeforeRefact,Total method calls,0.0
+PULL UP METHOD,BeforeRefact,Total lines of code,6.0
+PULL UP METHOD,AfterRefact,CodeBleu,
+PULL UP METHOD,AfterRefact,Total CC,0.0
+PULL UP METHOD,AfterRefact,Total method calls,0.0
+PULL UP METHOD,AfterRefact,Total lines of code,4.0
+SLIDE STATEMENTS,ZeroShotCode,CodeBleu,0.35
+SLIDE STATEMENTS,ZeroShotCode,Total CC,0.0
+SLIDE STATEMENTS,ZeroShotCode,Total method calls,3.0
+SLIDE STATEMENTS,ZeroShotCode,Total lines of code,5.0
+SLIDE STATEMENTS,FewShotCode,CodeBleu,
+SLIDE STATEMENTS,FewShotCode,Total CC,
+SLIDE STATEMENTS,FewShotCode,Total method calls,
+SLIDE STATEMENTS,FewShotCode,Total lines of code,
+SLIDE STATEMENTS,InstrucCode,CodeBleu,0.646
+SLIDE STATEMENTS,InstrucCode,Total CC,0.0
+SLIDE STATEMENTS,InstrucCode,Total method calls,2.0
+SLIDE STATEMENTS,InstrucCode,Total lines of code,5.0
+SLIDE STATEMENTS,ContextCode,CodeBleu,0.35
+SLIDE STATEMENTS,ContextCode,Total CC,0.0
+SLIDE STATEMENTS,ContextCode,Total method calls,3.0
+SLIDE STATEMENTS,ContextCode,Total lines of code,4.8
+SLIDE STATEMENTS,RulesCode,CodeBleu,0.623
+SLIDE STATEMENTS,RulesCode,Total CC,0.0
+SLIDE STATEMENTS,RulesCode,Total method calls,2.0
+SLIDE STATEMENTS,RulesCode,Total lines of code,5.0
+SLIDE STATEMENTS,BeforeRefact,CodeBleu,
+SLIDE STATEMENTS,BeforeRefact,Total CC,0.0
+SLIDE STATEMENTS,BeforeRefact,Total method calls,2.0
+SLIDE STATEMENTS,BeforeRefact,Total lines of code,3.0
+SLIDE STATEMENTS,AfterRefact,CodeBleu,
+SLIDE STATEMENTS,AfterRefact,Total CC,0.0
+SLIDE STATEMENTS,AfterRefact,Total method calls,2.0
+SLIDE STATEMENTS,AfterRefact,Total lines of code,3.0
+EXTRACT CLASS,ZeroShotCode,CodeBleu,0.307
+EXTRACT CLASS,ZeroShotCode,Total CC,0.0
+EXTRACT CLASS,ZeroShotCode,Total method calls,2.0
+EXTRACT CLASS,ZeroShotCode,Total lines of code,25.8
+EXTRACT CLASS,FewShotCode,CodeBleu,
+EXTRACT CLASS,FewShotCode,Total CC,
+EXTRACT CLASS,FewShotCode,Total method calls,
+EXTRACT CLASS,FewShotCode,Total lines of code,
+EXTRACT CLASS,InstrucCode,CodeBleu,0.334
+EXTRACT CLASS,InstrucCode,Total CC,0.0
+EXTRACT CLASS,InstrucCode,Total method calls,2.6
+EXTRACT CLASS,InstrucCode,Total lines of code,24.2
+EXTRACT CLASS,ContextCode,CodeBleu,0.227
+EXTRACT CLASS,ContextCode,Total CC,0.0
+EXTRACT CLASS,ContextCode,Total method calls,0.0
+EXTRACT CLASS,ContextCode,Total lines of code,11.0
+EXTRACT CLASS,RulesCode,CodeBleu,0.328
+EXTRACT CLASS,RulesCode,Total CC,0.0
+EXTRACT CLASS,RulesCode,Total method calls,3.0
+EXTRACT CLASS,RulesCode,Total lines of code,23.0
+EXTRACT CLASS,BeforeRefact,CodeBleu,
+EXTRACT CLASS,BeforeRefact,Total CC,0.0
+EXTRACT CLASS,BeforeRefact,Total method calls,0.0
+EXTRACT CLASS,BeforeRefact,Total lines of code,2.0
+EXTRACT CLASS,AfterRefact,CodeBleu,
+EXTRACT CLASS,AfterRefact,Total CC,0.0
+EXTRACT CLASS,AfterRefact,Total method calls,0.0
+EXTRACT CLASS,AfterRefact,Total lines of code,7.0
+CONSOLIDATE CONDITIONAL EXPRESSION,ZeroShotCode,CodeBleu,0.192
+CONSOLIDATE CONDITIONAL EXPRESSION,ZeroShotCode,Total CC,2.0
+CONSOLIDATE CONDITIONAL EXPRESSION,ZeroShotCode,Total method calls,0.0
+CONSOLIDATE CONDITIONAL EXPRESSION,ZeroShotCode,Total lines of code,4.0
+CONSOLIDATE CONDITIONAL EXPRESSION,FewShotCode,CodeBleu,
+CONSOLIDATE CONDITIONAL EXPRESSION,FewShotCode,Total CC,
+CONSOLIDATE CONDITIONAL EXPRESSION,FewShotCode,Total method calls,
+CONSOLIDATE CONDITIONAL EXPRESSION,FewShotCode,Total lines of code,
+CONSOLIDATE CONDITIONAL EXPRESSION,InstrucCode,CodeBleu,0.192
+CONSOLIDATE CONDITIONAL EXPRESSION,InstrucCode,Total CC,2.0
+CONSOLIDATE CONDITIONAL EXPRESSION,InstrucCode,Total method calls,0.0
+CONSOLIDATE CONDITIONAL EXPRESSION,InstrucCode,Total lines of code,4.0
+CONSOLIDATE CONDITIONAL EXPRESSION,ContextCode,CodeBleu,0.19
+CONSOLIDATE CONDITIONAL EXPRESSION,ContextCode,Total CC,2.0
+CONSOLIDATE CONDITIONAL EXPRESSION,ContextCode,Total method calls,0.6
+CONSOLIDATE CONDITIONAL EXPRESSION,ContextCode,Total lines of code,7.0
+CONSOLIDATE CONDITIONAL EXPRESSION,RulesCode,CodeBleu,0.19
+CONSOLIDATE CONDITIONAL EXPRESSION,RulesCode,Total CC,2.0
+CONSOLIDATE CONDITIONAL EXPRESSION,RulesCode,Total method calls,1.0
+CONSOLIDATE CONDITIONAL EXPRESSION,RulesCode,Total lines of code,6.2
+CONSOLIDATE CONDITIONAL EXPRESSION,BeforeRefact,CodeBleu,
+CONSOLIDATE CONDITIONAL EXPRESSION,BeforeRefact,Total CC,3.0
+CONSOLIDATE CONDITIONAL EXPRESSION,BeforeRefact,Total method calls,0.0
+CONSOLIDATE CONDITIONAL EXPRESSION,BeforeRefact,Total lines of code,2.0
+CONSOLIDATE CONDITIONAL EXPRESSION,AfterRefact,CodeBleu,
+CONSOLIDATE CONDITIONAL EXPRESSION,AfterRefact,Total CC,3.0
+CONSOLIDATE CONDITIONAL EXPRESSION,AfterRefact,Total method calls,1.0
+CONSOLIDATE CONDITIONAL EXPRESSION,AfterRefact,Total lines of code,5.0
+PULL UP CONSTRUCTOR BODY,ZeroShotCode,CodeBleu,0.861
+PULL UP CONSTRUCTOR BODY,ZeroShotCode,Total CC,0.0
+PULL UP CONSTRUCTOR BODY,ZeroShotCode,Total method calls,1.0
+PULL UP CONSTRUCTOR BODY,ZeroShotCode,Total lines of code,13.0
+PULL UP CONSTRUCTOR BODY,FewShotCode,CodeBleu,
+PULL UP CONSTRUCTOR BODY,FewShotCode,Total CC,
+PULL UP CONSTRUCTOR BODY,FewShotCode,Total method calls,
+PULL UP CONSTRUCTOR BODY,FewShotCode,Total lines of code,
+PULL UP CONSTRUCTOR BODY,InstrucCode,CodeBleu,0.861
+PULL UP CONSTRUCTOR BODY,InstrucCode,Total CC,0.0
+PULL UP CONSTRUCTOR BODY,InstrucCode,Total method calls,1.0
+PULL UP CONSTRUCTOR BODY,InstrucCode,Total lines of code,13.0
+PULL UP CONSTRUCTOR BODY,ContextCode,CodeBleu,0.406
+PULL UP CONSTRUCTOR BODY,ContextCode,Total CC,0.0
+PULL UP CONSTRUCTOR BODY,ContextCode,Total method calls,0.0
+PULL UP CONSTRUCTOR BODY,ContextCode,Total lines of code,15.6
+PULL UP CONSTRUCTOR BODY,RulesCode,CodeBleu,0.701
+PULL UP CONSTRUCTOR BODY,RulesCode,Total CC,0.0
+PULL UP CONSTRUCTOR BODY,RulesCode,Total method calls,1.0
+PULL UP CONSTRUCTOR BODY,RulesCode,Total lines of code,13.0
+PULL UP CONSTRUCTOR BODY,BeforeRefact,CodeBleu,
+PULL UP CONSTRUCTOR BODY,BeforeRefact,Total CC,0.0
+PULL UP CONSTRUCTOR BODY,BeforeRefact,Total method calls,0.0
+PULL UP CONSTRUCTOR BODY,BeforeRefact,Total lines of code,8.0
+PULL UP CONSTRUCTOR BODY,AfterRefact,CodeBleu,
+PULL UP CONSTRUCTOR BODY,AfterRefact,Total CC,0.0
+PULL UP CONSTRUCTOR BODY,AfterRefact,Total method calls,0.0
+PULL UP CONSTRUCTOR BODY,AfterRefact,Total lines of code,11.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ZeroShotCode,CodeBleu,0.32
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ZeroShotCode,Total CC,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ZeroShotCode,Total method calls,1.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ZeroShotCode,Total lines of code,2.6
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,FewShotCode,CodeBleu,
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,FewShotCode,Total CC,
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,FewShotCode,Total method calls,
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,FewShotCode,Total lines of code,
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,InstrucCode,CodeBleu,0.237
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,InstrucCode,Total CC,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,InstrucCode,Total method calls,1.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,InstrucCode,Total lines of code,5.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ContextCode,CodeBleu,0.299
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ContextCode,Total CC,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ContextCode,Total method calls,1.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,ContextCode,Total lines of code,2.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,RulesCode,CodeBleu,0.29
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,RulesCode,Total CC,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,RulesCode,Total method calls,1.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,RulesCode,Total lines of code,4.4
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,BeforeRefact,CodeBleu,
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,BeforeRefact,Total CC,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,BeforeRefact,Total method calls,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,BeforeRefact,Total lines of code,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,AfterRefact,CodeBleu,
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,AfterRefact,Total CC,0.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,AfterRefact,Total method calls,1.0
+REPLACE CONSTRUCTOR WITH FACTORY FUNCTION,AfterRefact,Total lines of code,0.0
+REMOVE SUBCLASS,ZeroShotCode,CodeBleu,0.362
+REMOVE SUBCLASS,ZeroShotCode,Total CC,0.0
+REMOVE SUBCLASS,ZeroShotCode,Total method calls,0.2
+REMOVE SUBCLASS,ZeroShotCode,Total lines of code,10.6
+REMOVE SUBCLASS,FewShotCode,CodeBleu,
+REMOVE SUBCLASS,FewShotCode,Total CC,
+REMOVE SUBCLASS,FewShotCode,Total method calls,
+REMOVE SUBCLASS,FewShotCode,Total lines of code,
+REMOVE SUBCLASS,InstrucCode,CodeBleu,0.357
+REMOVE SUBCLASS,InstrucCode,Total CC,0.0
+REMOVE SUBCLASS,InstrucCode,Total method calls,0.0
+REMOVE SUBCLASS,InstrucCode,Total lines of code,19.0
+REMOVE SUBCLASS,ContextCode,CodeBleu,0.327
+REMOVE SUBCLASS,ContextCode,Total CC,0.0
+REMOVE SUBCLASS,ContextCode,Total method calls,0.0
+REMOVE SUBCLASS,ContextCode,Total lines of code,18.0
+REMOVE SUBCLASS,RulesCode,CodeBleu,0.357
+REMOVE SUBCLASS,RulesCode,Total CC,0.0
+REMOVE SUBCLASS,RulesCode,Total method calls,0.0
+REMOVE SUBCLASS,RulesCode,Total lines of code,17.8
+REMOVE SUBCLASS,BeforeRefact,CodeBleu,
+REMOVE SUBCLASS,BeforeRefact,Total CC,0.0
+REMOVE SUBCLASS,BeforeRefact,Total method calls,0.0
+REMOVE SUBCLASS,BeforeRefact,Total lines of code,8.0
+REMOVE SUBCLASS,AfterRefact,CodeBleu,
+REMOVE SUBCLASS,AfterRefact,Total CC,0.0
+REMOVE SUBCLASS,AfterRefact,Total method calls,0.0
+REMOVE SUBCLASS,AfterRefact,Total lines of code,2.0
+INTRODUCE PARAMETER OBJECT,ZeroShotCode,CodeBleu,0.297
+INTRODUCE PARAMETER OBJECT,ZeroShotCode,Total CC,0.0
+INTRODUCE PARAMETER OBJECT,ZeroShotCode,Total method calls,0.0
+INTRODUCE PARAMETER OBJECT,ZeroShotCode,Total lines of code,23.0
+INTRODUCE PARAMETER OBJECT,FewShotCode,CodeBleu,
+INTRODUCE PARAMETER OBJECT,FewShotCode,Total CC,
+INTRODUCE PARAMETER OBJECT,FewShotCode,Total method calls,
+INTRODUCE PARAMETER OBJECT,FewShotCode,Total lines of code,
+INTRODUCE PARAMETER OBJECT,InstrucCode,CodeBleu,0.297
+INTRODUCE PARAMETER OBJECT,InstrucCode,Total CC,0.0
+INTRODUCE PARAMETER OBJECT,InstrucCode,Total method calls,0.0
+INTRODUCE PARAMETER OBJECT,InstrucCode,Total lines of code,23.0
+INTRODUCE PARAMETER OBJECT,ContextCode,CodeBleu,0.25
+INTRODUCE PARAMETER OBJECT,ContextCode,Total CC,0.0
+INTRODUCE PARAMETER OBJECT,ContextCode,Total method calls,0.0
+INTRODUCE PARAMETER OBJECT,ContextCode,Total lines of code,8.6
+INTRODUCE PARAMETER OBJECT,RulesCode,CodeBleu,0.297
+INTRODUCE PARAMETER OBJECT,RulesCode,Total CC,0.0
+INTRODUCE PARAMETER OBJECT,RulesCode,Total method calls,0.0
+INTRODUCE PARAMETER OBJECT,RulesCode,Total lines of code,23.0
+INTRODUCE PARAMETER OBJECT,BeforeRefact,CodeBleu,
+INTRODUCE PARAMETER OBJECT,BeforeRefact,Total CC,0.0
+INTRODUCE PARAMETER OBJECT,BeforeRefact,Total method calls,0.0
+INTRODUCE PARAMETER OBJECT,BeforeRefact,Total lines of code,2.0
+INTRODUCE PARAMETER OBJECT,AfterRefact,CodeBleu,
+INTRODUCE PARAMETER OBJECT,AfterRefact,Total CC,0.0
+INTRODUCE PARAMETER OBJECT,AfterRefact,Total method calls,0.0
+INTRODUCE PARAMETER OBJECT,AfterRefact,Total lines of code,2.0
+SPLIT LOOP,ZeroShotCode,CodeBleu,0.305
+SPLIT LOOP,ZeroShotCode,Total CC,0.0
+SPLIT LOOP,ZeroShotCode,Total method calls,0.0
+SPLIT LOOP,ZeroShotCode,Total lines of code,10.0
+SPLIT LOOP,FewShotCode,CodeBleu,
+SPLIT LOOP,FewShotCode,Total CC,
+SPLIT LOOP,FewShotCode,Total method calls,
+SPLIT LOOP,FewShotCode,Total lines of code,
+SPLIT LOOP,InstrucCode,CodeBleu,0.285
+SPLIT LOOP,InstrucCode,Total CC,0.0
+SPLIT LOOP,InstrucCode,Total method calls,1.8
+SPLIT LOOP,InstrucCode,Total lines of code,10.0
+SPLIT LOOP,ContextCode,CodeBleu,0.095
+SPLIT LOOP,ContextCode,Total CC,0.0
+SPLIT LOOP,ContextCode,Total method calls,7.0
+SPLIT LOOP,ContextCode,Total lines of code,3.0
+SPLIT LOOP,RulesCode,CodeBleu,
+SPLIT LOOP,RulesCode,Total CC,
+SPLIT LOOP,RulesCode,Total method calls,
+SPLIT LOOP,RulesCode,Total lines of code,
+SPLIT LOOP,BeforeRefact,CodeBleu,
+SPLIT LOOP,BeforeRefact,Total CC,0.0
+SPLIT LOOP,BeforeRefact,Total method calls,0.0
+SPLIT LOOP,BeforeRefact,Total lines of code,6.0
+SPLIT LOOP,AfterRefact,CodeBleu,
+SPLIT LOOP,AfterRefact,Total CC,0.0
+SPLIT LOOP,AfterRefact,Total method calls,1.0
+SPLIT LOOP,AfterRefact,Total lines of code,8.0
+REPLACE PRIMITIVE WITH OBJECT,ZeroShotCode,CodeBleu,0.269
+REPLACE PRIMITIVE WITH OBJECT,ZeroShotCode,Total CC,1.0
+REPLACE PRIMITIVE WITH OBJECT,ZeroShotCode,Total method calls,5.8
+REPLACE PRIMITIVE WITH OBJECT,ZeroShotCode,Total lines of code,4.4
+REPLACE PRIMITIVE WITH OBJECT,FewShotCode,CodeBleu,
+REPLACE PRIMITIVE WITH OBJECT,FewShotCode,Total CC,
+REPLACE PRIMITIVE WITH OBJECT,FewShotCode,Total method calls,
+REPLACE PRIMITIVE WITH OBJECT,FewShotCode,Total lines of code,
+REPLACE PRIMITIVE WITH OBJECT,InstrucCode,CodeBleu,0.265
+REPLACE PRIMITIVE WITH OBJECT,InstrucCode,Total CC,0.8
+REPLACE PRIMITIVE WITH OBJECT,InstrucCode,Total method calls,8.8
+REPLACE PRIMITIVE WITH OBJECT,InstrucCode,Total lines of code,19.4
+REPLACE PRIMITIVE WITH OBJECT,ContextCode,CodeBleu,0.262
+REPLACE PRIMITIVE WITH OBJECT,ContextCode,Total CC,1.0
+REPLACE PRIMITIVE WITH OBJECT,ContextCode,Total method calls,5.8
+REPLACE PRIMITIVE WITH OBJECT,ContextCode,Total lines of code,3.4
+REPLACE PRIMITIVE WITH OBJECT,RulesCode,CodeBleu,0.281
+REPLACE PRIMITIVE WITH OBJECT,RulesCode,Total CC,0.8
+REPLACE PRIMITIVE WITH OBJECT,RulesCode,Total method calls,4.8
+REPLACE PRIMITIVE WITH OBJECT,RulesCode,Total lines of code,3.6
+REPLACE PRIMITIVE WITH OBJECT,BeforeRefact,CodeBleu,
+REPLACE PRIMITIVE WITH OBJECT,BeforeRefact,Total CC,1.0
+REPLACE PRIMITIVE WITH OBJECT,BeforeRefact,Total method calls,1.0
+REPLACE PRIMITIVE WITH OBJECT,BeforeRefact,Total lines of code,1.0
+REPLACE PRIMITIVE WITH OBJECT,AfterRefact,CodeBleu,
+REPLACE PRIMITIVE WITH OBJECT,AfterRefact,Total CC,0.0
+REPLACE PRIMITIVE WITH OBJECT,AfterRefact,Total method calls,2.0
+REPLACE PRIMITIVE WITH OBJECT,AfterRefact,Total lines of code,0.0
+MOVE STATEMENTS TO CALLERS,ZeroShotCode,CodeBleu,0.185
+MOVE STATEMENTS TO CALLERS,ZeroShotCode,Total CC,0.0
+MOVE STATEMENTS TO CALLERS,ZeroShotCode,Total method calls,0.8
+MOVE STATEMENTS TO CALLERS,ZeroShotCode,Total lines of code,3.0
+MOVE STATEMENTS TO CALLERS,FewShotCode,CodeBleu,
+MOVE STATEMENTS TO CALLERS,FewShotCode,Total CC,
+MOVE STATEMENTS TO CALLERS,FewShotCode,Total method calls,
+MOVE STATEMENTS TO CALLERS,FewShotCode,Total lines of code,
+MOVE STATEMENTS TO CALLERS,InstrucCode,CodeBleu,0.158
+MOVE STATEMENTS TO CALLERS,InstrucCode,Total CC,0.0
+MOVE STATEMENTS TO CALLERS,InstrucCode,Total method calls,1.0
+MOVE STATEMENTS TO CALLERS,InstrucCode,Total lines of code,3.0
+MOVE STATEMENTS TO CALLERS,ContextCode,CodeBleu,0.216
+MOVE STATEMENTS TO CALLERS,ContextCode,Total CC,0.0
+MOVE STATEMENTS TO CALLERS,ContextCode,Total method calls,9.0
+MOVE STATEMENTS TO CALLERS,ContextCode,Total lines of code,6.0
+MOVE STATEMENTS TO CALLERS,RulesCode,CodeBleu,
+MOVE STATEMENTS TO CALLERS,RulesCode,Total CC,
+MOVE STATEMENTS TO CALLERS,RulesCode,Total method calls,
+MOVE STATEMENTS TO CALLERS,RulesCode,Total lines of code,
+MOVE STATEMENTS TO CALLERS,BeforeRefact,CodeBleu,
+MOVE STATEMENTS TO CALLERS,BeforeRefact,Total CC,0.0
+MOVE STATEMENTS TO CALLERS,BeforeRefact,Total method calls,1.0
+MOVE STATEMENTS TO CALLERS,BeforeRefact,Total lines of code,4.0
+MOVE STATEMENTS TO CALLERS,AfterRefact,CodeBleu,
+MOVE STATEMENTS TO CALLERS,AfterRefact,Total CC,0.0
+MOVE STATEMENTS TO CALLERS,AfterRefact,Total method calls,1.0
+MOVE STATEMENTS TO CALLERS,AfterRefact,Total lines of code,4.0
+INLINE CLASS,ZeroShotCode,CodeBleu,0.658
+INLINE CLASS,ZeroShotCode,Total CC,0.0
+INLINE CLASS,ZeroShotCode,Total method calls,0.0
+INLINE CLASS,ZeroShotCode,Total lines of code,6.2
+INLINE CLASS,FewShotCode,CodeBleu,
+INLINE CLASS,FewShotCode,Total CC,
+INLINE CLASS,FewShotCode,Total method calls,
+INLINE CLASS,FewShotCode,Total lines of code,
+INLINE CLASS,InstrucCode,CodeBleu,0.476
+INLINE CLASS,InstrucCode,Total CC,0.0
+INLINE CLASS,InstrucCode,Total method calls,0.0
+INLINE CLASS,InstrucCode,Total lines of code,14.6
+INLINE CLASS,ContextCode,CodeBleu,0.32
+INLINE CLASS,ContextCode,Total CC,0.0
+INLINE CLASS,ContextCode,Total method calls,2.0
+INLINE CLASS,ContextCode,Total lines of code,20.0
+INLINE CLASS,RulesCode,CodeBleu,0.576
+INLINE CLASS,RulesCode,Total CC,0.0
+INLINE CLASS,RulesCode,Total method calls,0.0
+INLINE CLASS,RulesCode,Total lines of code,6.2
+INLINE CLASS,BeforeRefact,CodeBleu,
+INLINE CLASS,BeforeRefact,Total CC,0.0
+INLINE CLASS,BeforeRefact,Total method calls,0.0
+INLINE CLASS,BeforeRefact,Total lines of code,7.0
+INLINE CLASS,AfterRefact,CodeBleu,
+INLINE CLASS,AfterRefact,Total CC,0.0
+INLINE CLASS,AfterRefact,Total method calls,0.0
+INLINE CLASS,AfterRefact,Total lines of code,2.0
+REMOVE MIDDLE MAN,ZeroShotCode,CodeBleu,0.243
+REMOVE MIDDLE MAN,ZeroShotCode,Total CC,0.0
+REMOVE MIDDLE MAN,ZeroShotCode,Total method calls,2.0
+REMOVE MIDDLE MAN,ZeroShotCode,Total lines of code,14.0
+REMOVE MIDDLE MAN,FewShotCode,CodeBleu,
+REMOVE MIDDLE MAN,FewShotCode,Total CC,
+REMOVE MIDDLE MAN,FewShotCode,Total method calls,
+REMOVE MIDDLE MAN,FewShotCode,Total lines of code,
+REMOVE MIDDLE MAN,InstrucCode,CodeBleu,0.243
+REMOVE MIDDLE MAN,InstrucCode,Total CC,0.0
+REMOVE MIDDLE MAN,InstrucCode,Total method calls,2.0
+REMOVE MIDDLE MAN,InstrucCode,Total lines of code,14.0
+REMOVE MIDDLE MAN,ContextCode,CodeBleu,0.184
+REMOVE MIDDLE MAN,ContextCode,Total CC,0.0
+REMOVE MIDDLE MAN,ContextCode,Total method calls,2.0
+REMOVE MIDDLE MAN,ContextCode,Total lines of code,7.0
+REMOVE MIDDLE MAN,RulesCode,CodeBleu,0.352
+REMOVE MIDDLE MAN,RulesCode,Total CC,0.0
+REMOVE MIDDLE MAN,RulesCode,Total method calls,0.8
+REMOVE MIDDLE MAN,RulesCode,Total lines of code,5.0
+REMOVE MIDDLE MAN,BeforeRefact,CodeBleu,
+REMOVE MIDDLE MAN,BeforeRefact,Total CC,0.0
+REMOVE MIDDLE MAN,BeforeRefact,Total method calls,0.0
+REMOVE MIDDLE MAN,BeforeRefact,Total lines of code,2.0
+REMOVE MIDDLE MAN,AfterRefact,CodeBleu,
+REMOVE MIDDLE MAN,AfterRefact,Total CC,0.0
+REMOVE MIDDLE MAN,AfterRefact,Total method calls,0.0
+REMOVE MIDDLE MAN,AfterRefact,Total lines of code,0.0
+REPLACE FUNCTION WITH COMMAND,ZeroShotCode,CodeBleu,0.342
+REPLACE FUNCTION WITH COMMAND,ZeroShotCode,Total CC,0.0
+REPLACE FUNCTION WITH COMMAND,ZeroShotCode,Total method calls,0.0
+REPLACE FUNCTION WITH COMMAND,ZeroShotCode,Total lines of code,22.4
+REPLACE FUNCTION WITH COMMAND,FewShotCode,CodeBleu,
+REPLACE FUNCTION WITH COMMAND,FewShotCode,Total CC,
+REPLACE FUNCTION WITH COMMAND,FewShotCode,Total method calls,
+REPLACE FUNCTION WITH COMMAND,FewShotCode,Total lines of code,
+REPLACE FUNCTION WITH COMMAND,InstrucCode,CodeBleu,0.312
+REPLACE FUNCTION WITH COMMAND,InstrucCode,Total CC,0.0
+REPLACE FUNCTION WITH COMMAND,InstrucCode,Total method calls,0.6
+REPLACE FUNCTION WITH COMMAND,InstrucCode,Total lines of code,17.8
+REPLACE FUNCTION WITH COMMAND,ContextCode,CodeBleu,0.07
+REPLACE FUNCTION WITH COMMAND,ContextCode,Total CC,0.0
+REPLACE FUNCTION WITH COMMAND,ContextCode,Total method calls,0.0
+REPLACE FUNCTION WITH COMMAND,ContextCode,Total lines of code,5.6
+REPLACE FUNCTION WITH COMMAND,RulesCode,CodeBleu,0.311
+REPLACE FUNCTION WITH COMMAND,RulesCode,Total CC,0.0
+REPLACE FUNCTION WITH COMMAND,RulesCode,Total method calls,1.0
+REPLACE FUNCTION WITH COMMAND,RulesCode,Total lines of code,20.0
+REPLACE FUNCTION WITH COMMAND,BeforeRefact,CodeBleu,
+REPLACE FUNCTION WITH COMMAND,BeforeRefact,Total CC,0.0
+REPLACE FUNCTION WITH COMMAND,BeforeRefact,Total method calls,0.0
+REPLACE FUNCTION WITH COMMAND,BeforeRefact,Total lines of code,3.0
+REPLACE FUNCTION WITH COMMAND,AfterRefact,CodeBleu,
+REPLACE FUNCTION WITH COMMAND,AfterRefact,Total CC,0.0
+REPLACE FUNCTION WITH COMMAND,AfterRefact,Total method calls,0.0
+REPLACE FUNCTION WITH COMMAND,AfterRefact,Total lines of code,10.0

@@ -1,0 +1,36 @@
+Exception in thread "main" com.github.javaparser.ParseProblemException: Encountered unexpected token: "exists" <IDENTIFIER>
+    at line 1, column 36.
+
+Was expecting one of:
+
+    ")"
+    ","
+    "@"
+    "["
+
+Problem stacktrace : 
+  com.github.javaparser.GeneratedJavaParser.generateParseException(GeneratedJavaParser.java:10667)
+  com.github.javaparser.GeneratedJavaParser.jj_consume_token(GeneratedJavaParser.java:10526)
+  com.github.javaparser.GeneratedJavaParser.Parameters(GeneratedJavaParser.java:1402)
+  com.github.javaparser.GeneratedJavaParser.MethodDeclaration(GeneratedJavaParser.java:1220)
+  com.github.javaparser.GeneratedJavaParser.MethodDeclarationParseStart(GeneratedJavaParser.java:5939)
+  com.github.javaparser.JavaParser.parse(JavaParser.java:123)
+  com.github.javaparser.JavaParser.parseMethodDeclaration(JavaParser.java:539)
+  com.github.javaparser.StaticJavaParser.parseMethodDeclaration(StaticJavaParser.java:480)
+  org.refactoring.RefactoringApplier.lambda$applyRefactorings$0(RefactoringApplier.java:43)
+  java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+  java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1117)
+  org.refactoring.RefactoringApplier.lambda$applyRefactorings$1(RefactoringApplier.java:37)
+  java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+  org.refactoring.RefactoringApplier.applyRefactorings(RefactoringApplier.java:36)
+  org.refactoring.RefactoringApplier.main(RefactoringApplier.java:88)
+
+	at com.github.javaparser.StaticJavaParser.handleResult(StaticJavaParser.java:260)
+	at com.github.javaparser.StaticJavaParser.parseMethodDeclaration(StaticJavaParser.java:480)
+	at org.refactoring.RefactoringApplier.lambda$applyRefactorings$0(RefactoringApplier.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1117)
+	at org.refactoring.RefactoringApplier.lambda$applyRefactorings$1(RefactoringApplier.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.refactoring.RefactoringApplier.applyRefactorings(RefactoringApplier.java:36)
+	at org.refactoring.RefactoringApplier.main(RefactoringApplier.java:88)

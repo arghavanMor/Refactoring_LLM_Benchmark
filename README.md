@@ -29,10 +29,10 @@ This repository provides:
 .
 ├── Data/ # Benchmark collected from examples in Fowler Book + real-world refactoring scenarios collected from ANTLR4 and JUnit4
 ├── src/ # Core implementation
-├── generator/ # LLM-based refactoring generation
-├── integrator/ # Applying refactoring into projects
-├── evaluation/ # Metrics & validation
-├── scripts/ # Execution scripts
+│     ├── generator/ # LLM-based refactoring generation
+│     ├── integrator/ # Applying refactoring into projects
+│     ├── evaluation/ # Metrics & validation
+│     ├── scripts/ # Execution scripts
 └── README.md
 ```
 
@@ -53,7 +53,7 @@ This repository provides:
 
 3. Query LLMs  
 
-4. [Apply generated refactoring](https://github.com/arghavanMor/Refactoring_LLM_Benchmark/blob/integrator/README.md)  
+4. Apply generated refactoring
    - AST-based integration  
    - Code replacement  
 
@@ -98,11 +98,41 @@ cd Refactoring_LLM_Benchmark
 ```
 ### 2. Setup environment
 ```
-conda create -n refactoring-llm python=3.10
+conda create -n refactoring-llm python=3.12
 conda activate refactoring-llm
 pip install -r requirements.txt
 ```
 ### 3. Run pipeline
+
+### ⚙️ Configuration
+
+Before running the pipeline, complete the following setup steps:
+
+### API Keys
+
+- Add your DeepSeek API key to `src/generator/DeepSeek_key.txt`
+- Add your OpenAI API key to `src/generator/OpenAI_key.txt`
+- Add your SonarQube token to `src/integrator/scripts/sonar_utils.py`
+
+### Pipeline Launcher
+
+In the `run_pipeline` launcher, set the following paths:
+
+```python
+gpt_api_key_path = "/../OpenAI_key.txt"
+deepseek_api_key_path = "/../DeepSeek_key.txt"
+```
+
+### Data
+
+Place a copy of the Fowler refactoring book in the `Data/` folder under the name:
+
+```
+Data/Fowler.pdf
+```
+
+
+
 ```
 python scripts/run_pipeline.py
 ```
