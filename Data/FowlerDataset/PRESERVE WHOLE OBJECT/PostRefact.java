@@ -1,0 +1,1 @@
+if (aPlan.withinRange(aRoom.daysTempRange))

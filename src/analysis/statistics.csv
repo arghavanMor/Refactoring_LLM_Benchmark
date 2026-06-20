@@ -1,0 +1,99 @@
+Source 1,Source 2,Cond1,Cond2, Cond3,Statistic Test,p-value
+DeepSeek Fowler,GPT Fowler,Metric,CodeBleu,Mann-Whitney,5.7757495283136535e-05
+DeepSeek Fowler,GPT Fowler,Metric,CodeBleu,Mann-Whitney,0.07581664880866631
+DeepSeek Fowler,GPT Fowler,Metric,Total lines of code,Mann-Whitney,0.1608296226128373
+GPT Fowler,DeepSeek Fowler,Metric,Total lines of code,Mann-Whitney,0.00033693138568118594
+DeepSeek Fowler,GPT Fowler,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.9904378533004765
+DeepSeek Fowler,GPT Fowler,RefaSctoring method,INLINE CLASS,Mann-Whitney,0.5083262891220521
+GPT Fowler,GPT Fowler,RulesCode,Total CC,Mann-Whitney,0.8166311676965988
+GPT Fowler,GPT Fowler,ZeroShotCode,Total CC,Mann-Whitney,0.934424951452286
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,0.6312544623536586
+DeepSeek Fowler,DeepSeek Fowler,ZeroShotCode,Total CC,Mann-Whitney,0.4942448649544766
+DeepSeek Fowler,DeepSeek Fowler,InstrucCode,Total CC,Mann-Whitney,0.59S2839215098912
+GPT Fowler,GPT Fowler,InstrucCode,Total CC,Mann-Whitney,0.6066133700671372
+GPT Fowler,GPT Fowler,InstrucCode,Total CC,Mann-Whitney,0.7135068264951615
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,T-test,0.9128959379206936
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total lines of code,Mann-Whitney,0.29328756159682945
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total lines of code,Mann-Whitney,0.09320864250694867
+DeepSeek Fowler,GPT Fowler,Metric,Total lines of code,Mann-Whitney,0.00033693138568118594
+DeepSeek Ref-Finder,GPT Ref-Finder,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.3960163647583038
+DeepSeek Ref-Finder,GPT Ref-Finder,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.05242519815963117
+DeepSeek Ref-Finder,GPT Ref-Finder,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.13415965532567498
+DeepSeek Ref-Finder,GPT Ref-Finder,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.05242519815963117
+DeepSeek Fowler,GPT Fowler,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.046742840490745126
+DeepSeek Fowler,GPT Fowler,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.046742840490745126
+DeepSeek Fowler,GPT Fowler,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,T-test,nan
+DeepSeek Fowler,GPT Fowler,Refactoring method,REPLACE NESTED CONDITIONAL WITH GUARD CLAUSES,Mann-Whitney,0.046742840490745126
+DeepSeek Fowler,GPT Fowler,Refactoring method,DECOMPOSE CONDITIONAL,Mann-Whitney,0.6480969053800674
+DeepSeek Fowler,GPT Fowler,Metric,CodeBleu,Mann-Whitney,5.7757495283136535e-05
+DeepSeek Fowler,GPT Fowler,Metric,Total CC,Mann-Whitney,0.6955656604246797
+DeepSeek Fowler,GPT Fowler,Metric,Total lines of code,Mann-Whitney,0.00033693138568118594
+DeepSeek Fowler,GPT Fowler,Metric,Total method calls,Mann-Whitney,0.42223310343466947
+GPT Fowler,GPT Fowler,ZeroShotCode,Total CC,Mann-Whitney,0.6191733429108309
+GPT Fowler,GPT Fowler,RulesCode,Total CC,Mann-Whitney,0.45624284260971193
+GPT Fowler,GPT Fowler,RulesCode,Total method calls,Mann-Whitney,0.012856352855416132
+DeepSeek Fowler,DeepSeek Fowler,ZeroShotCode,Total CC,Mann-Whitney,0.35658009333784313
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,0.5035009001994427
+DeepSeek Fowler,DeepSeek Fowler,RulesCode,Total lines of code,Mann-Whitney,1.1949845601013894e-15
+DeepSeek Fowler,DeepSeek Fowler,RulesCode,Total method calls,Mann-Whitney,0.00045742115060743257
+GPT Fowler,GPT Fowler,RulesCode,Total method calls,Mann-Whitney,0.012856352855416132
+GPT Fowler,GPT Fowler,RulesCode,Total lines of code,Mann-Whitney,9.104599713089878e-17
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total lines of code,Mann-Whitney,1.2111334506641567e-13
+DeepSeek Fowler,DeepSeek Fowler,RulesCode,Total method calls,Mann-Whitney,0.00045742115060743257
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9934888035210191
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9934888035210191
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total lines of code,Mann-Whitney,0.09320864250694867
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total method calls,Mann-Whitney,0.4883097315744769
+GPT Ref-Finder,GPT Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.940784564395619
+GPT Ref-Finder,GPT Ref-Finder,InstrucCode,Total lines of code,Mann-Whitney,0.10035644279991877
+GPT Ref-Finder,GPT Ref-Finder,InstrucCode,Total method calls,Mann-Whitney,0.6537536779529669
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,InstrucCode,Total method calls,Mann-Whitney,0.43680589262810854
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,InstrucCode,Total lines of code,Mann-Whitney,0.0011591053331217907
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.7644048845832647
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,CodeBleu,Mann-Whitney,3.898093771565807e-11
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,CodeBleu,Mann-Whitney,0.49725600153084093
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,CodeBleu,Mann-Whitney,0.0009417485468838824
+GPT Ref-Finder,GPT Ref-Finder,FewShotCode,CodeBleu,Mann-Whitney,9.169178637447656e-05
+GPT Ref-Finder,GPT Ref-Finder,FewShotCode,Total CC,Mann-Whitney,nan
+GPT Ref-Finder,GPT Ref-Finder,FewShotCode,Total CC,Mann-Whitney,0.9201578543514022
+GPT Ref-Finder,GPT Ref-Finder,FewShotCode,CodeBleu,Mann-Whitney,2.496155666614517e-12
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,CodeBleu,Mann-Whitney,3.898093771565807e-11
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9201578543514022
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,Total lines of code,Mann-Whitney,0.3229066472443123
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,Total method calls,Mann-Whitney,0.46757439754780983
+GPT Ref-Finder,GPT Ref-Finder,ZeroShotCode,CodeBleu,Mann-Whitney,0.00020542953596416931
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,CodeBleu,Mann-Whitney,0.49725600153084093
+GPT Ref-Finder,GPT Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.983468873542473
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total lines of code,Mann-Whitney,0.3229066472443123
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total method calls,Mann-Whitney,1.0
+GPT Fowler,GPT Fowler,RulesCode,CodeBleu,Mann-Whitney,2.5586368611617504e-10
+GPT Fowler,GPT Fowler,InstrucCode,CodeBleu,Mann-Whitney,8.564288007421244e-11
+GPT Fowler,GPT Fowler,RulesCode,Total CC,Mann-Whitney,0.07592787399183852
+GPT Fowler,GPT Fowler,RulesCode,Total lines of code,Mann-Whitney,0.0005505213086732073
+GPT Fowler,GPT Fowler,RulesCode,Total method calls,Mann-Whitney,9.181440538143728e-05
+GPT Fowler,GPT Fowler,RulesCode,CodeBleu,Mann-Whitney,2.5586368611617504e-10
+DeepSeek Fowler,DeepSeek Fowler,RulesCode,CodeBleu,Mann-Whitney,2.5047225794534755e-12
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,nan
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,0.03179243441243864
+DeepSeek Fowler,DeepSeek Fowler,ZeroShotCode,Total CC,Mann-Whitney,0.01319115288574148
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total lines of code,Mann-Whitney,5.434993897774573e-05
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total method calls,Mann-Whitney,0.02311696308311776
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,0.1667947555853302
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,CodeBleu,Mann-Whitney,2.2339545361289408e-10
+DeepSeek Fowler,DeepSeek Fowler,ContextCode,Total CC,Mann-Whitney,0.1667947555853302
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9245928393791115
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.544580634018714
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.9196118733790807
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,RulesCode,Total CC,Mann-Whitney,0.688577496907276
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.7517130225937687
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,FewShotCode,Total CC,Mann-Whitney,0.688577496907276
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.8249859612347321
+DeepSeek Ref-Finder,DeepSeek Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.5978346597833741
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9201578543514022
+GPT Ref-Finder,GPT Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.997494246460434
+GPT Ref-Finder,GPT Ref-Finder,RulesCode,Total CC,Mann-Whitney,0.9042234750161555
+GPT Ref-Finder,GPT Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.9744468760504695
+GPT Ref-Finder,GPT Ref-Finder,ContextCode,Total CC,Mann-Whitney,0.9877146755002513
+GPT Ref-Finder,GPT Ref-Finder,FewShotCode,Total CC,Mann-Whitney,0.9042234750161555
+GPT Ref-Finder,GPT Ref-Finder,InstrucCode,Total CC,Mann-Whitney,0.9010177227920074
+GPT Ref-Finder,GPT Ref-Finder,ZeroShotCode,Total CC,Mann-Whitney,0.8905857162202454
